@@ -20,12 +20,13 @@ var heat:PlayerHeat
 var dodging:CharacterDodge
 
 @onready var camera_spot:Marker3D = get_node_or_null("CameraSpot")
-@onready var body_container:SkinManager = %BodyContainer
+@onready var body_container:Node3D = %BodyContainer
 @onready var hurt_box:HurtBox = get_node_or_null("%HurtBox")
 @onready var debug_label: Label3D = get_node_or_null("%DebugLabel")
 
 
 func _ready():
+	add_to_group("character")
 	for child in get_children():
 		if child is CharacterMovement:
 			movement = child

@@ -1,0 +1,10 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/prototype/loot_drop.gd" id="1_script"]
+[ext_resource type="PackedScene" path="res://assets/meshes/apocalypse_weapons/container/container_01.tscn" id="2_mesh"]
+
+[node name="LootDrop" type="Node3D"]
+script = ExtResource("1_script")
+
+[node name="Mesh" parent="." instance=ExtResource("2_mesh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)

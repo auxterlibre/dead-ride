@@ -1,0 +1,164 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/prototype/dead_ride.gd" id="1_director"]
+[ext_resource type="Script" uid="uid://b0fxjvtgpfstj" path="res://addons/compositor_effects/vignette/post_process_vignette.gd" id="2_vignette"]
+[ext_resource type="Script" uid="uid://varrl0xf4vlu" path="res://scripts/components/camera_follow.gd" id="3_camera"]
+[ext_resource type="Script" uid="uid://c6n2deakwtghr" path="res://scripts/world/ground.gd" id="4_ground"]
+[ext_resource type="PackedScene" uid="uid://cybdinxiojqlp" path="res://scenes/vehicles/car.tscn" id="5_car"]
+[ext_resource type="PackedScene" path="res://scenes/characters/crew.tscn" id="6_crew"]
+[ext_resource type="Resource" path="res://data/crew/gunner_smg.tres" id="7_smg"]
+[ext_resource type="PackedScene" uid="uid://bvl1ed7xc5vag" path="res://scenes/characters/player.tscn" id="8_player"]
+[ext_resource type="Script" path="res://scripts/prototype/raider_spawner.gd" id="9_spawner"]
+[ext_resource type="PackedScene" uid="uid://cgqtho0svu7jw" path="res://scenes/characters/enemy.tscn" id="10_enemy"]
+[ext_resource type="PackedScene" path="res://scenes/prototype/loot_drop.tscn" id="11_loot"]
+[ext_resource type="Resource" uid="uid://d4bxxtlhn2c3l" path="res://data/enemies/survivalist.tres" id="12_survivalist"]
+[ext_resource type="Resource" path="res://data/enemies/scavenger.tres" id="13_scavenger"]
+[ext_resource type="Script" uid="uid://2m3cfu0131s8" path="res://scripts/utils/fullscreen_toggle.gd" id="14_fullscreen"]
+[ext_resource type="PackedScene" uid="uid://b38kf8ekkr0sw" path="res://scenes/ui/hud/hud.tscn" id="15_hud"]
+[ext_resource type="PackedScene" uid="uid://dywoq3hjn4vv6" path="res://scenes/ui/inventory/backpack_screen.tscn" id="16_backpack"]
+[ext_resource type="PackedScene" uid="uid://8dlcsow2hhn6" path="res://scenes/ui/menus/debug_menu.tscn" id="17_debug"]
+[ext_resource type="PackedScene" uid="uid://dlnedomshfb8l" path="res://scenes/ui/menus/settings_screen.tscn" id="18_settings"]
+[ext_resource type="PackedScene" path="res://scenes/ui/menus/pause_menu.tscn" id="19_pause"]
+[ext_resource type="PackedScene" path="res://scenes/props/rock_1_a.tscn" id="20_rock"]
+[ext_resource type="PackedScene" path="res://scenes/props/tree_2_a.tscn" id="21_tree"]
+[ext_resource type="FontFile" uid="uid://16cr15homrlp" path="res://assets/fonts/JetBrainsMono-Regular.ttf" id="22_font"]
+[ext_resource type="Script" uid="uid://cat6ypyshc0y5" path="res://scripts/data/character_data.gd" id="23_cdata"]
+[ext_resource type="Resource" path="res://data/vehicles/crew_truck.tres" id="24_truck"]
+
+[sub_resource type="Environment" id="Environment_ride"]
+ambient_light_source = 2
+ambient_light_color = Color(0.419608, 0.333333, 0.231373, 1)
+ssao_enabled = true
+sdfgi_use_occlusion = true
+sdfgi_min_cell_size = 0.78125
+sdfgi_y_scale = 0
+glow_intensity = 1.18
+glow_bloom = 0.32
+fog_light_color = Color(0.788235, 0.690196, 0.541176, 1)
+fog_light_energy = 0.47
+fog_sun_scatter = 0.15
+fog_sky_affect = 0.579
+fog_height_density = 4.1328
+volumetric_fog_density = 0.0352
+volumetric_fog_albedo = Color(0.788235, 0.74902, 0.47451, 1)
+volumetric_fog_emission = Color(0.752941, 0.690196, 0.435294, 1)
+volumetric_fog_length = 354.95
+
+[sub_resource type="CompositorEffect" id="CompositorEffect_vignette"]
+enabled = true
+effect_callback_type = 4
+script = ExtResource("2_vignette")
+
+[sub_resource type="Compositor" id="Compositor_ride"]
+compositor_effects = Array[CompositorEffect]([SubResource("CompositorEffect_vignette")])
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sand"]
+albedo_color = Color(0.76, 0.62, 0.42, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ground"]
+material = SubResource("StandardMaterial3D_sand")
+size = Vector2(400, 400)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ground"]
+size = Vector3(400, 2, 400)
+
+[node name="DeadRide" type="Node3D"]
+script = ExtResource("1_director")
+rock_scene = ExtResource("20_rock")
+tree_scene = ExtResource("21_tree")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_ride")
+compositor = SubResource("Compositor_ride")
+
+[node name="Sun" type="DirectionalLight3D" parent="WorldEnvironment"]
+transform = Transform3D(0.738491, 0.58215, -0.340195, 0, 0.504543, 0.863387, 0.674264, -0.637603, 0.3726, 0, 14, 0)
+light_energy = 0.8
+shadow_enabled = true
+shadow_bias = 0.05
+shadow_opacity = 0.88
+directional_shadow_max_distance = 40.0
+
+[node name="Ground" type="StaticBody3D" parent="."]
+collision_layer = 20
+collision_mask = 0
+script = ExtResource("4_ground")
+metadata/surface = "sand"
+
+[node name="Surface" type="MeshInstance3D" parent="Ground"]
+mesh = SubResource("PlaneMesh_ground")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+shape = SubResource("BoxShape3D_ground")
+
+[node name="Scenery" type="Node3D" parent="."]
+
+[node name="CameraFollow" type="Node3D" parent="."]
+script = ExtResource("3_camera")
+
+[node name="Camera" type="Camera3D" parent="CameraFollow"]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 5, 5)
+projection = 1
+current = true
+size = 32.0
+
+[node name="Truck" parent="." instance=ExtResource("5_car")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+data = ExtResource("24_truck")
+
+[node name="Crew" type="Node3D" parent="Truck"]
+
+[node name="GunnerLeft" parent="Truck/Crew" instance=ExtResource("6_crew")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.55, 2.3, -0.4)
+
+[node name="GunnerRight" parent="Truck/Crew" instance=ExtResource("6_crew")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, -0.55, 2.3, -0.4)
+data = ExtResource("7_smg")
+
+[node name="Player" parent="." instance=ExtResource("8_player")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0.5, 0)
+
+[node name="RaiderSpawner" type="Node3D" parent="." node_paths=PackedStringArray("truck")]
+unique_name_in_owner = true
+script = ExtResource("9_spawner")
+enemy_scene = ExtResource("10_enemy")
+loot_scene = ExtResource("11_loot")
+raider_data = Array[ExtResource("23_cdata")]([ExtResource("12_survivalist"), ExtResource("13_scavenger")])
+truck = NodePath("../Truck")
+
+[node name="FullscreenToggle" type="Node" parent="."]
+script = ExtResource("14_fullscreen")
+
+[node name="HUD" parent="." instance=ExtResource("15_hud")]
+
+[node name="Overlay" type="CanvasLayer" parent="."]
+
+[node name="Backpack" parent="Overlay" instance=ExtResource("16_backpack")]
+
+[node name="DebugMenu" parent="Overlay" instance=ExtResource("17_debug")]
+
+[node name="Settings" parent="Overlay" instance=ExtResource("18_settings")]
+
+[node name="PauseMenu" parent="Overlay" node_paths=PackedStringArray("settings") instance=ExtResource("19_pause")]
+settings = NodePath("../Settings")
+
+[node name="Prototype" type="CanvasLayer" parent="."]
+layer = 5
+
+[node name="Status" type="Label" parent="Prototype"]
+unique_name_in_owner = true
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -400.0
+offset_top = 12.0
+offset_right = 400.0
+offset_bottom = 40.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("22_font")
+theme_override_font_sizes/font_size = 18
+text = "DEAD RIDE"
+horizontal_alignment = 1

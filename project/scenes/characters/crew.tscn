@@ -1,0 +1,66 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" uid="uid://bht486pchaoui" path="res://scenes/characters/character_base.tscn" id="1_base"]
+[ext_resource type="Resource" path="res://data/crew/gunner_rifle.tres" id="2_data"]
+[ext_resource type="Script" path="res://scripts/components/character/character_movement.gd" id="3_move"]
+[ext_resource type="Script" uid="uid://uqwf2jx361m2" path="res://scripts/components/enemy/enemy_weapons.gd" id="4_weap"]
+[ext_resource type="Script" uid="uid://c7rlyutxqbf12" path="res://scripts/components/enemy/enemy_aim.gd" id="5_aim"]
+[ext_resource type="Script" path="res://scripts/components/crew/crew_gunner.gd" id="6_gunner"]
+
+[node name="Crew" instance=ExtResource("1_base")]
+collision_layer = 0
+collision_mask = 0
+data = ExtResource("2_data")
+
+[node name="Skeleton3D" parent="BodyContainer/Rig_Medium" parent_id_path=PackedInt32Array(197859434) index="0" unique_id=1078746776]
+bones/1/position = Vector3(0, 0.39174682, 0)
+bones/1/rotation = Quaternion(0.00020185931, 0.04315775, 8.7225435e-06, 0.99906826)
+bones/2/rotation = Quaternion(0.9922656, 0.05812296, 0.07046721, 0.084055185)
+bones/3/rotation = Quaternion(0.26527333, 6.43675e-08, -1.8025267e-07, 0.96417326)
+bones/4/rotation = Quaternion(-0.5314462, -0.11430703, 0.042022813, 0.83829165)
+bones/5/rotation = Quaternion(1.2340427e-05, 0.92025554, -0.39131808, -2.7333017e-06)
+bones/6/rotation = Quaternion(0.00044563593, 2.9096658e-09, 3.857325e-05, 1)
+bones/7/rotation = Quaternion(0.004615221, 3.0726017e-09, 0.00039948328, 0.9999893)
+bones/8/rotation = Quaternion(-0.5608233, 0.046326797, 0.73660207, 0.3751647)
+bones/9/rotation = Quaternion(-1.0113355e-09, 4.0394532e-08, 0.37692812, 0.92624253)
+bones/11/rotation = Quaternion(-0.21233542, 0.383886, -0.13982868, 0.8876899)
+bones/12/rotation = Quaternion(-0.0038119403, -0.03134153, -0.0002098538, 0.9995015)
+bones/13/rotation = Quaternion(-0.5338319, -0.116262674, -0.7714353, 0.3261809)
+bones/14/rotation = Quaternion(2.6062548e-11, -6.661834e-08, -0.3593355, 0.9332085)
+bones/16/rotation = Quaternion(-0.22203998, -0.3457023, 0.18433245, 0.892866)
+bones/17/rotation = Quaternion(0.9972616, -0.02951055, 0.031510573, 0.060046326)
+bones/18/rotation = Quaternion(0.27632955, -6.663524e-08, 1.948143e-07, 0.96106297)
+bones/19/rotation = Quaternion(-0.56030875, 0.114498146, -0.00882367, 0.8202843)
+bones/21/rotation = Quaternion(8.806255e-05, 8.807534e-05, -0.70678353, 0.7074299)
+bones/22/rotation = Quaternion(8.805843e-05, -8.807947e-05, 0.70678353, 0.7074299)
+
+[node name="HandSlotRight" parent="BodyContainer/Rig_Medium/Skeleton3D" index="7" unique_id=373278852]
+transform = Transform3D(-5.4802513e-05, -0.2626494, -0.9648915, -0.99999857, -0.0007457724, 0.00026080862, -0.00078855234, 0.9648904, -0.26264915, -0.42413405, 0.5353471, 0.08158806)
+
+[node name="HandSlotLeft" parent="BodyContainer/Rig_Medium/Skeleton3D" index="8" unique_id=1266539436]
+transform = Transform3D(-7.432206e-05, 0.26274136, 0.9648663, 0.999999, -0.00081008615, 0.00029832983, 0.0008603166, 0.9648654, -0.26274154, 0.42548594, 0.5380996, 0.086674005)
+
+[node name="FaceWear" parent="BodyContainer/Rig_Medium/Skeleton3D" index="9" unique_id=39931717]
+transform = Transform3D(0.9997204, -1.3387762e-09, 0.023646582, 6.924424e-05, 0.9999956, -0.0029274249, -0.023646496, 0.0029282412, 0.9997161, -4.3468322e-09, 1.2274935, 0.0034040043)
+
+[node name="CharacterAnimator" parent="." node_paths=PackedStringArray("movement")]
+movement = NodePath("../CharacterMovement")
+
+[node name="CharacterMovement" type="Node" parent="." node_paths=PackedStringArray("visual")]
+script = ExtResource("3_move")
+visual = NodePath("../BodyContainer")
+
+[node name="EnemyWeapons" type="Node" parent="." node_paths=PackedStringArray("animator", "hand_slot")]
+script = ExtResource("4_weap")
+weapon_layer = 2
+animator = NodePath("../CharacterAnimator")
+hand_slot = NodePath("../BodyContainer/Rig_Medium/Skeleton3D/HandSlotRight")
+
+[node name="EnemyAim" type="Node" parent="." node_paths=PackedStringArray("visual")]
+script = ExtResource("5_aim")
+visual = NodePath("../BodyContainer")
+
+[node name="CrewGunner" type="Node" parent="." node_paths=PackedStringArray("weapons", "aim")]
+script = ExtResource("6_gunner")
+weapons = NodePath("../EnemyWeapons")
+aim = NodePath("../EnemyAim")

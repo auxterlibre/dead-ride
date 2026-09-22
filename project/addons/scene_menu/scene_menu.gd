@@ -7,6 +7,7 @@ const PROBE_ROOT: String = "res://_tools/probes"
 const SCENES: Dictionary = {
 	"Gym": "res://_tools/gym/gym.tscn",
 	"Zoo": "res://_tools/zoo/zoo.tscn",
+	"Dead Ride": "res://scenes/prototype/dead_ride.tscn",
 	"Icon studio": "res://_tools/asset_extractor/icon_studio.tscn",
 }
 

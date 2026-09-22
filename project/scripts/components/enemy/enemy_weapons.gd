@@ -46,6 +46,16 @@ func fire_at(p_target):
 		return
 	if not can_fire():
 		return
+	var ranged:WeaponRanged = weapon_model as WeaponRanged
+	var from:Vector3 = body.global_position
+	from.y += clampf(ranged.projectile_spawn.global_position.y \
+			- body.global_position.y, FIRE_HEIGHT.x, FIRE_HEIGHT.y)
+	fire_from(from, p_target)
+
+
+func fire_from(p_from:Vector3, p_target):
+	if not can_fire():
+		return
 	if current_weapon.current_ammo <= 0:
 		bursting = false
 		reload()
@@ -56,15 +66,11 @@ func fire_at(p_target):
 	var warning:bool = miss_pending
 	miss_pending = false  # spent even vs an aware target - no free miss later
 	warning = warning and not is_aware_of_us(p_target)
-	var ranged:WeaponRanged = weapon_model as WeaponRanged
-	var from:Vector3 = body.global_position
-	from.y += clampf(ranged.projectile_spawn.global_position.y \
-			- body.global_position.y, FIRE_HEIGHT.x, FIRE_HEIGHT.y)
-	var to_target:Vector3 = p_target.global_position - from
+	var to_target:Vector3 = p_target.global_position - p_from
 	to_target.y = 0.0
 	var deviation:float = miss_deviation(to_target.length()) if warning \
 			else spread_deviation()
-	fire_shot(from, from + to_target.rotated(Vector3.UP, deviation))
+	fire_shot(p_from, p_from + to_target.rotated(Vector3.UP, deviation))
 	bloom = minf(bloom + current_weapon.recoil_value / 100.0 * recoil_factor, 1.0)
 	if warning or not automatic:
 		# The warning shot ends any burst - the target gets their beat.

@@ -39,6 +39,7 @@ var character:CharacterBody3D
 var effective_range:float
 var projectiles_per_shot:int
 var projectiles_spread:float
+var shielded: Array[RID] = []
 
 
 func _ready():
@@ -66,6 +67,7 @@ func fire(p_attack:AttackData, p_from:Vector3, p_aim_point:Vector3):
 		var to:Vector3 = p_from + direction * max_travel * 2.0
 		var hurt_query:PhysicsRayQueryParameters3D = \
 				PhysicsRayQueryParameters3D.create(p_from, to, layer)
+		hurt_query.exclude = shielded
 		hurt_query.collide_with_areas = true
 		hurt_query.collide_with_bodies = false
 		var hurt_hit:Dictionary = space.intersect_ray(hurt_query)
@@ -74,8 +76,10 @@ func fire(p_attack:AttackData, p_from:Vector3, p_aim_point:Vector3):
 		while hurt_hit and not (hurt_hit.collider is HurtBox):
 			hurt_query.exclude = hurt_query.exclude + [hurt_hit.collider.get_rid()]
 			hurt_hit = space.intersect_ray(hurt_query)
-		var surface_hit:Dictionary = space.intersect_ray(
-				PhysicsRayQueryParameters3D.create(p_from, to, SURFACES_MASK))
+		var surface_query:PhysicsRayQueryParameters3D = \
+				PhysicsRayQueryParameters3D.create(p_from, to, SURFACES_MASK)
+		surface_query.exclude = shielded
+		var surface_hit:Dictionary = space.intersect_ray(surface_query)
 		var hurt_distance:float = p_from.distance_to(hurt_hit.position) \
 				if hurt_hit else INF
 		var surface_distance:float = p_from.distance_to(surface_hit.position) \

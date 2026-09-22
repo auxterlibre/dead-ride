@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="VehicleData" format=3]
+
+[ext_resource type="Script" uid="uid://c7k25vwaq80tm" path="res://scripts/data/vehicle_data.gd" id="1_script"]
+[ext_resource type="AudioStream" uid="uid://byn3pmu8nkxub" path="res://assets/audio/vehicles/engine_malfunction.ogg" id="2_malf"]
+[ext_resource type="Resource" path="res://data/storage/station_wagon_trunk.tres" id="3_trunk"]
+
+[resource]
+script = ExtResource("1_script")
+name = "Crew Truck"
+storage = ExtResource("3_trunk")
+health_max = 60
+mass = 30
+engine_power = 45
+speed_max = 55
+brake_force = 30
+handling = 100
+fuel_tank_size = 100
+engine_malfunction_audio = ExtResource("2_malf")
