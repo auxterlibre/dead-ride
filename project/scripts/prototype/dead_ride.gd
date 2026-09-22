@@ -9,6 +9,9 @@ const RESTART_DELAY: float = 3.0
 @export var rock_scene: PackedScene
 @export var tree_scene: PackedScene
 @export var scatter_seed: int = 7
+@export var zombie_loot_chance: float = 0.15
+@export var loot_pockets: StorageData = preload("res://data/storage/body_pockets.tres")
+@export var loot_ammo: ItemData = preload("res://data/items/ammo/ammo_light.tres")
 
 var over: bool = false
 
@@ -17,12 +20,14 @@ var over: bool = false
 @onready var spawner: RaiderSpawner = %RaiderSpawner
 @onready var status: Label = %Status
 @onready var scenery: Node3D = $Scenery
+@onready var horde: Horde = %Horde
 
 
 func _ready():
 	scatter()
 	truck.add_to_group("loot_magnet")
 	Signals.player_died.connect(on_player_died)
+	horde.zombie_killed.connect(on_zombie_killed)
 	await get_tree().physics_frame
 	await get_tree().physics_frame
 	truck.add_driver(player)
@@ -31,8 +36,8 @@ func _ready():
 func _process(_p_delta: float):
 	if over:
 		return
-	status.text = "KILLS %d     LOOT %d stacks     TRUCK %d / %d     H restarts" % [
-			spawner.kills, truck.storage.entries.size(), truck.health,
+	status.text = "ZOMBIES %d  KILLS %d     RAIDERS %d     LOOT %d stacks     TRUCK %d / %d     H restarts" % [
+			horde.alive_count, horde.kills, spawner.kills, truck.storage.entries.size(), truck.health,
 			truck.data.health_max_value if truck.data else 0]
 
 
@@ -56,6 +61,17 @@ func place(p_scene: PackedScene, p_rng: RandomNumberGenerator):
 	scenery.add_child(prop)
 	prop.global_position = spot
 	prop.rotation.y = p_rng.randf_range(0.0, TAU)
+
+
+func on_zombie_killed(p_position: Vector3):
+	if randf() > zombie_loot_chance or spawner.loot_scene == null:
+		return
+	var drop: LootDrop = spawner.loot_scene.instantiate()
+	drop.storage = Inventory.new()
+	drop.storage.setup(loot_pockets)
+	drop.storage.add(loot_ammo, randi_range(3, 6))
+	add_child(drop)
+	drop.global_position = p_position
 
 
 func on_player_died():

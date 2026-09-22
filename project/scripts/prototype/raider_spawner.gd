@@ -16,20 +16,46 @@ const HEADING_CONE: float = 70.0
 @export var spawn_distance: Vector2 = Vector2(35.0, 50.0)
 @export var spawn_interval: float = 4.0
 @export var corpse_time: float = 25.0
+@export var horde: Horde
+@export var zombie_pack: Vector2i = Vector2i(18, 30)
+@export var zombies_max: int = 350
+@export var zombie_distance: Vector2 = Vector2(38.0, 58.0)
+@export var zombie_interval: float = 5.0
 
 var alive: Array[Character] = []
 var timer: float = 1.0
 var kills: int = 0
+var zombie_timer: float = 2.0
 
 
 func _physics_process(p_delta: float):
 	alive = alive.filter(func(p_raider): return is_instance_valid(p_raider) and not p_raider.is_dead)
+	spawn_zombies(p_delta)
 	timer -= p_delta
 	if timer > 0.0 or alive.size() >= max_alive or truck == null:
 		return
 	herd()
 	timer = spawn_interval
 	spawn_group()
+
+
+func spawn_zombies(p_delta: float):
+	if horde == null or truck == null:
+		return
+	zombie_timer -= p_delta
+	if zombie_timer > 0.0 or horde.alive_count >= zombies_max:
+		return
+	zombie_timer = zombie_interval
+	var centre: Vector3 = truck.global_position + heading().rotated(Vector3.UP,
+			deg_to_rad(randf_range(-HEADING_CONE, HEADING_CONE))) \
+			* randf_range(zombie_distance.x, zombie_distance.y)
+	horde.spawn_pack(clamped(centre), randi_range(zombie_pack.x, zombie_pack.y), 6.0)
+
+
+func heading() -> Vector3:
+	var forward: Vector3 = truck.global_basis.z
+	forward.y = 0.0
+	return forward.normalized() if forward.length_squared() > 0.01 else Vector3.FORWARD
 
 
 func spawn_group():

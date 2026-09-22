@@ -12,7 +12,7 @@ const SIGHT_MASK: int = 4 | 8
 @export var aim: EnemyAim
 
 var vehicle: Vehicle
-var target: Character
+var target = null
 var scan_timer: float = 0.0
 var shielded_model: Weapon
 
@@ -34,7 +34,7 @@ func _physics_process(p_delta: float):
 		return
 	shield()
 	scan_timer -= p_delta
-	if scan_timer <= 0.0:
+	if scan_timer <= 0.0 or target == null or target.is_dead:
 		scan_timer = SCAN_INTERVAL
 		target = pick_target()
 	if target == null:
@@ -62,28 +62,31 @@ func shield():
 	shielded_model = model
 
 
-func pick_target() -> Character:
-	var best: Character = null
-	var best_distance: float = INF
+func pick_target():
 	var reach: float = body.data.vision_range if body.data else 30.0
+	var best = null
+	var best_distance: float = reach
 	for node in get_tree().get_nodes_in_group("character"):
 		var other: Character = node as Character
 		if other == null or other.is_dead or not body.is_hostile_to(other):
 			continue
 		var distance: float = body.global_position.distance_to(other.global_position)
-		if distance > reach or distance >= best_distance or not sees(other):
+		if distance >= best_distance or not sees(other.global_position, other):
 			continue
 		best = other
 		best_distance = distance
+	var zombie: HordeTarget = Horde.nearest_any(body.global_position, best_distance)
+	if zombie != null and sees(zombie.global_position, null):
+		best = zombie
 	return best
 
 
-func sees(p_other: Character) -> bool:
+func sees(p_position: Vector3, p_other: Node) -> bool:
 	var query: PhysicsRayQueryParameters3D = PhysicsRayQueryParameters3D.create(
 			body.global_position + Vector3.UP * EYE_HEIGHT,
-			p_other.global_position + Vector3.UP * TARGET_HEIGHT, SIGHT_MASK)
+			p_position + Vector3.UP * TARGET_HEIGHT, SIGHT_MASK)
 	query.exclude = [vehicle.get_rid()]
 	var hit: Dictionary = body.get_world_3d().direct_space_state.intersect_ray(query)
 	if hit.is_empty():
 		return true
-	return hit.collider == p_other or p_other.is_ancestor_of(hit.collider)
+	return p_other != null and (hit.collider == p_other or p_other.is_ancestor_of(hit.collider))

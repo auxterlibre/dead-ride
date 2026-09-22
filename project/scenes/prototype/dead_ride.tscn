@@ -24,6 +24,7 @@
 [ext_resource type="FontFile" uid="uid://16cr15homrlp" path="res://assets/fonts/JetBrainsMono-Regular.ttf" id="22_font"]
 [ext_resource type="Script" uid="uid://cat6ypyshc0y5" path="res://scripts/data/character_data.gd" id="23_cdata"]
 [ext_resource type="Resource" path="res://data/vehicles/crew_truck.tres" id="24_truck"]
+[ext_resource type="PackedScene" path="res://scenes/world/horde.tscn" id="25_horde"]
 
 [sub_resource type="Environment" id="Environment_ride"]
 ambient_light_source = 2
@@ -121,13 +122,18 @@ data = ExtResource("7_smg")
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0.5, 0)
 
-[node name="RaiderSpawner" type="Node3D" parent="." node_paths=PackedStringArray("truck")]
+[node name="RaiderSpawner" type="Node3D" parent="." node_paths=PackedStringArray("truck", "horde")]
 unique_name_in_owner = true
 script = ExtResource("9_spawner")
 enemy_scene = ExtResource("10_enemy")
 loot_scene = ExtResource("11_loot")
 raider_data = Array[ExtResource("23_cdata")]([ExtResource("12_survivalist"), ExtResource("13_scavenger")])
 truck = NodePath("../Truck")
+horde = NodePath("../Horde")
+max_alive = 4
+
+[node name="Horde" parent="." instance=ExtResource("25_horde")]
+unique_name_in_owner = true
 
 [node name="FullscreenToggle" type="Node" parent="."]
 script = ExtResource("14_fullscreen")

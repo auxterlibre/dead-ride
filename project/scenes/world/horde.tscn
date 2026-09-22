@@ -1,0 +1,25 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/world/horde.gd" id="1_horde"]
+[ext_resource type="Resource" path="res://assets/animations/zombie/horde_animation_set.res" id="2_set"]
+[ext_resource type="ArrayMesh" path="res://assets/meshes/horde/preset_001.tres" id="3_mesh"]
+[ext_resource type="ArrayMesh" path="res://assets/meshes/horde/preset_002.tres" id="4_mesh"]
+[ext_resource type="ArrayMesh" path="res://assets/meshes/horde/preset_003.tres" id="5_mesh"]
+[ext_resource type="ArrayMesh" path="res://assets/meshes/horde/preset_004.tres" id="6_mesh"]
+[ext_resource type="ArrayMesh" path="res://assets/meshes/horde/preset_005.tres" id="7_mesh"]
+[ext_resource type="ArrayMesh" path="res://assets/meshes/horde/preset_006.tres" id="8_mesh"]
+[ext_resource type="ArrayMesh" path="res://assets/meshes/horde/preset_007.tres" id="9_mesh"]
+[ext_resource type="ArrayMesh" path="res://assets/meshes/horde/preset_008.tres" id="10_mesh"]
+[ext_resource type="ArrayMesh" path="res://assets/meshes/horde/preset_009.tres" id="11_mesh"]
+[ext_resource type="ArrayMesh" path="res://assets/meshes/horde/preset_010.tres" id="12_mesh"]
+[ext_resource type="ArrayMesh" path="res://assets/meshes/horde/preset_011.tres" id="13_mesh"]
+[ext_resource type="ArrayMesh" path="res://assets/meshes/horde/preset_012.tres" id="14_mesh"]
+[ext_resource type="ArrayMesh" path="res://assets/meshes/horde/preset_013.tres" id="15_mesh"]
+[ext_resource type="ArrayMesh" path="res://assets/meshes/horde/preset_014.tres" id="16_mesh"]
+[ext_resource type="ArrayMesh" path="res://assets/meshes/horde/preset_015.tres" id="17_mesh"]
+[ext_resource type="ArrayMesh" path="res://assets/meshes/horde/preset_016.tres" id="18_mesh"]
+
+[node name="Horde" type="Node3D"]
+script = ExtResource("1_horde")
+animation_set = ExtResource("2_set")
+variants = Array[Mesh]([ExtResource("3_mesh"), ExtResource("4_mesh"), ExtResource("5_mesh"), ExtResource("6_mesh"), ExtResource("7_mesh"), ExtResource("8_mesh"), ExtResource("9_mesh"), ExtResource("10_mesh"), ExtResource("11_mesh"), ExtResource("12_mesh"), ExtResource("13_mesh"), ExtResource("14_mesh"), ExtResource("15_mesh"), ExtResource("16_mesh"), ExtResource("17_mesh"), ExtResource("18_mesh")])

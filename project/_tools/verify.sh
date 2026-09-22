@@ -51,7 +51,7 @@ probe_list() {
 probe_run() {
   local rel="$1" want="$2"
   if [ "$want" = shots ]; then
-    "$GODOT" --path "$PROJECT" "res://_tools/probes/$rel.tscn" --quit-after "$FRAMES" 2>&1
+    "$GODOT" --audio-driver Dummy --path "$PROJECT" "res://_tools/probes/$rel.tscn" --quit-after "$FRAMES" 2>&1
   else
     "$GODOT" --headless --path "$PROJECT" "res://_tools/probes/$rel.tscn" --quit-after "$FRAMES" 2>&1
   fi

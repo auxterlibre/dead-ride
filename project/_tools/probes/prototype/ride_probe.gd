@@ -69,9 +69,10 @@ func _ready():
 			Input.action_release("car_accelerate")
 		spawned = maxi(spawned, spawner.alive.size())
 		if i % 600 == 599:
-			print("DBG t=%ds alive=%d kills=%d shots=%d truck_hp=%d speed=%.1f" % [
+			var zombies: Horde = find_first(ride, "Horde")
+			print("DBG t=%ds alive=%d kills=%d shots=%d truck_hp=%d speed=%.1f zombies=%d zkills=%d tick=%dus" % [
 					(i + 1) / 60, spawner.alive.size(), spawner.kills, crew_shots,
-					truck.health, truck.speed])
+					truck.health, truck.speed, zombies.alive_count if zombies else -1, zombies.kills if zombies else -1, zombies.last_tick_usec if zombies else -1])
 	Input.action_release("car_accelerate")
 	check(spawned > 0, "raiders spawn around the truck", "%d alive at peak" % spawned)
 	check(crew_shots > 0, "the crew fires on its own", "%d shots" % crew_shots)
@@ -83,4 +84,8 @@ func _ready():
 	check(drops > 0 or truck.storage.entries.size() > 1, "kills leave loot",
 			"%d drops on the ground, %d stacks in the trunk" % [drops, truck.storage.entries.size()])
 	check(not truck.is_destroyed, "the truck survives the first minute", "%d hp" % truck.health)
+	var horde: Horde = find_first(ride, "Horde")
+	check(horde != null and horde.alive_count > 0, "zombie packs spawn around the truck",
+			"%d alive" % (horde.alive_count if horde else 0))
+	check(horde != null and horde.kills > 0, "the crew kills zombies", "%d zombie kills" % (horde.kills if horde else 0))
 	finish()

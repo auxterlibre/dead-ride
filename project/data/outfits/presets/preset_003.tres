@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="OutfitData" format=3 uid="uid://dv7k5nor85ec6"]
+
+[ext_resource type="Script" uid="uid://dkdxprtqi2s8e" path="res://scripts/data/outfit_data.gd" id="1_yj5gm"]
+
+[resource]
+script = ExtResource("1_yj5gm")
+parts = PackedStringArray("body_b_2", "eyelids_2", "eyes_15", "hat_18", "head_b_1", "outwear_5", "pants_5", "shoes_9")

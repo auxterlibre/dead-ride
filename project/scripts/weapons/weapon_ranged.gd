@@ -14,6 +14,7 @@ const CORE_SHARE:float = 1.2  # the barrel bloom leads; it is what lights the sh
 
 @onready var TRACER: GDScript = load("uid://cpnbvgjbgpeaa")
 @onready var IMPACT: GDScript = load("uid://cvkksvmyimsl")
+@onready var FLESH: GDScript = load("uid://drpgq7sy0wec4")
 
 @onready var projectile_spawn:Marker3D = $ProjectileSpawn
 @onready var audio_shoot:AudioStreamPlayer3D = $AudioShoot
@@ -84,7 +85,10 @@ func fire(p_attack:AttackData, p_from:Vector3, p_aim_point:Vector3):
 				if hurt_hit else INF
 		var surface_distance:float = p_from.distance_to(surface_hit.position) \
 				if surface_hit else INF
+		var horde_hit:Dictionary = Horde.hit_test(p_from, to)
+		var horde_distance:float = horde_hit.distance if horde_hit else INF
 		var distance:float = minf(hurt_distance, surface_distance)
+		distance = minf(distance, horde_distance)
 		if is_inf(distance):
 			spawn_tracer(p_from + direction * max_travel, max_travel)
 			continue
@@ -92,6 +96,9 @@ func fire(p_attack:AttackData, p_from:Vector3, p_aim_point:Vector3):
 		if distance > max_travel:
 			# Spent bullet: fading streak stops at the obstacle, no damage.
 			spawn_tracer(p_from + direction * max_travel, distance - max_travel)
+		elif horde_distance <= minf(hurt_distance, surface_distance) + HURT_PRIORITY_MARGIN:
+			spawn_tracer(horde_hit.position)
+			schedule_horde_hit(delay, horde_hit, attack_at_distance(p_attack, distance), direction)
 		elif hurt_distance <= surface_distance + HURT_PRIORITY_MARGIN:
 			spawn_tracer(hurt_hit.position)
 			schedule_hit(delay, hurt_hit.collider,
@@ -116,6 +123,19 @@ func fire(p_attack:AttackData, p_from:Vector3, p_aim_point:Vector3):
 	if smoke_pool.size() > 0:
 		smoke_pool[smoke_index].restart()
 		smoke_index = (smoke_index + 1) % smoke_pool.size()
+
+
+func schedule_horde_hit(p_delay:float, p_hit:Dictionary, p_attack:AttackData, p_direction:Vector3):
+	var horde:Horde = p_hit.horde
+	var target:HordeTarget = HordeTarget.new(horde, p_hit.index)
+	var flesh_script:GDScript = FLESH
+	get_tree().create_timer(p_delay).timeout.connect(func():
+		if not target.alive():
+			return
+		horde.damage(target.index, p_attack, p_direction)
+		var impact:FleshImpact = flesh_script.new()
+		impact.setup(p_hit.position, p_direction, p_hit.floor_y, p_attack.damage)
+		get_tree().current_scene.add_child(impact))
 
 
 # Captures INSTANCE IDS, not nodes - a target freed mid-flight logs "Lambda capture was freed".
