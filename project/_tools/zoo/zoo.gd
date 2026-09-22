@@ -2,19 +2,75 @@
 extends Node3D
 
 const MESH_ROOT: String = "res://assets/meshes"
-const KITS: Array = [
-	{"name": "junkyard", "turn": PI},
-	{"name": "apocalypse", "turn": PI},
-	{"name": "apocalypse_weapons", "turn": PI / 2.0},
-	{"name": "zombies", "turn": PI},
-]
+const KITS: Dictionary = {
+	"junkyard": PI,
+	"apocalypse": PI,
+	"apocalypse_weapons": PI / 2.0,
+	"zombies": PI,
+}
+const ISLANDS: Array = ["characters", "weapons", "vehicles", "vegetation", "buildings",
+		"terrain", "machines", "props"]
+const DEFAULT_ISLAND: String = "props"
+const KIT_ISLAND: Dictionary = {"apocalypse_weapons": "weapons", "zombies": "weapons"}
+const FAMILY_ISLAND: Dictionary = {
+	"zombies/skeleton": "characters",
+	"apocalypse/adult": "characters",
+	"apocalypse/doberman": "characters",
+	"apocalypse/katana": "weapons",
+	"apocalypse/pistol": "weapons",
+	"apocalypse/apocalypse": "vehicles",
+	"junkyard/car": "vehicles",
+	"junkyard/wreck_car": "vehicles",
+	"junkyard/school_bus": "vehicles",
+	"junkyard/forklift": "vehicles",
+	"junkyard/cart": "vehicles",
+	"junkyard/bonnet": "vehicles",
+	"junkyard/car_door": "vehicles",
+	"junkyard/car_number": "vehicles",
+	"junkyard/car_seat": "vehicles",
+	"junkyard/wheels": "vehicles",
+	"junkyard/tire": "vehicles",
+	"junkyard/tires": "vehicles",
+	"junkyard/acacia": "vegetation",
+	"junkyard/bush": "vegetation",
+	"junkyard/cactus": "vegetation",
+	"junkyard/deadwood": "vegetation",
+	"junkyard/grass": "vegetation",
+	"apocalypse/pine": "vegetation",
+	"junkyard/building": "buildings",
+	"junkyard/cabin": "buildings",
+	"junkyard/factory": "buildings",
+	"junkyard/entry": "buildings",
+	"junkyard/wall": "buildings",
+	"junkyard/pillar": "buildings",
+	"junkyard/water_tower": "buildings",
+	"junkyard/toilet": "buildings",
+	"junkyard/container": "buildings",
+	"junkyard/billboard": "buildings",
+	"junkyard/fence": "buildings",
+	"junkyard/barrier": "buildings",
+	"junkyard/ground": "terrain",
+	"junkyard/mountain": "terrain",
+	"junkyard/rock": "terrain",
+	"junkyard/sand": "terrain",
+	"junkyard/stone": "terrain",
+	"junkyard/road": "terrain",
+	"apocalypse/road": "terrain",
+	"apocalypse/concrete": "terrain",
+	"junkyard/claw_crane": "machines",
+	"junkyard/magnet_crane": "machines",
+	"junkyard/car_press": "machines",
+	"junkyard/shredder": "machines",
+}
 const LABEL_SIZE: float = 0.18
 const LABEL_FRONT: float = 1.0
 const LABEL_LIFT: float = 0.02
 const MIN_CELL: float = 2.5
 const ROW_GAP: float = 3.0
 const FAMILY_GAP: float = 6.0
-const KIT_GAP: float = 12.0
+const ISLAND_GAP: float = 24.0
+const ISLAND_COLUMNS: int = 3
+const GROUND_MARGIN: float = 20.0
 const TITLE_FRONT: float = 3.0
 
 @export var row_width: float = 80.0
@@ -36,34 +92,61 @@ func build():
 	var exhibits: Node3D = Node3D.new()
 	exhibits.name = "Exhibits"
 	add_child(exhibits)
-	var depth: float = 0.0
+	var groups: Dictionary = {}
 	for kit in KITS:
-		depth = add_kit(exhibits, kit, depth)
+		collect(kit, groups)
+	var column: int = 0
+	var x: float = 0.0
+	var z: float = 0.0
+	var row_depth: float = 0.0
+	var far: Vector2 = Vector2.ZERO
+	for island in ISLANDS:
+		if not groups.has(island):
+			continue
+		var depth: float = add_island(exhibits, island, groups[island], Vector3(-x, 0.0, z))
+		row_depth = maxf(row_depth, depth)
+		far = Vector2(maxf(far.x, x + row_width), z + row_depth)
+		column += 1
+		x += row_width + ISLAND_GAP
+		if column == ISLAND_COLUMNS:
+			column = 0
+			x = 0.0
+			z += row_depth + ISLAND_GAP
+			row_depth = 0.0
+	fit_ground(far)
 
 
-func add_kit(p_parent: Node3D, p_kit: Dictionary, p_depth: float) -> float:
-	var dir: String = MESH_ROOT.path_join(p_kit.name)
+func collect(p_kit: String, p_groups: Dictionary) -> void:
+	var dir: String = MESH_ROOT.path_join(p_kit)
 	if not DirAccess.dir_exists_absolute(dir):
-		return p_depth
-	var section: Node3D = Node3D.new()
-	section.name = p_kit.name
-	section.position = Vector3(0.0, 0.0, p_depth)
-	p_parent.add_child(section)
-	section.add_child(label(String(p_kit.name).capitalize(),
+		return
+	for family in DirAccess.get_directories_at(dir):
+		var entries: Array = exhibits_in(dir.path_join(family), KITS[p_kit])
+		if entries.is_empty():
+			continue
+		var island: String = FAMILY_ISLAND.get("%s/%s" % [p_kit, family],
+				KIT_ISLAND.get(p_kit, DEFAULT_ISLAND))
+		var families: Dictionary = p_groups.get_or_add(island, {})
+		families.get_or_add(family, []).append_array(entries)
+
+
+func add_island(p_parent: Node3D, p_name: String, p_families: Dictionary,
+		p_position: Vector3) -> float:
+	var island: Node3D = Node3D.new()
+	island.name = p_name
+	island.position = p_position
+	p_parent.add_child(island)
+	island.add_child(label(p_name.capitalize(),
 			Vector3(2.0, LABEL_LIFT, -TITLE_FRONT * 2.0), LABEL_SIZE * 4.0))
-	var families: Array = Array(DirAccess.get_directories_at(dir))
-	families.sort()
+	var names: Array = p_families.keys()
+	names.sort()
 	var depth: float = 0.0
-	for family in families:
-		depth = add_family(section, dir.path_join(family), family, depth, p_kit.turn)
-	return p_depth + depth + KIT_GAP
+	for family in names:
+		depth = add_family(island, family, p_families[family], depth)
+	return depth
 
 
-func add_family(p_parent: Node3D, p_dir: String, p_family: String, p_depth: float,
-		p_turn: float) -> float:
-	var entries: Array = exhibits_in(p_dir, p_turn)
-	if entries.is_empty():
-		return p_depth
+func add_family(p_parent: Node3D, p_family: String, p_entries: Array, p_depth: float) -> float:
 	var group: Node3D = Node3D.new()
 	group.name = p_family
 	group.position = Vector3(0.0, 0.0, p_depth)
@@ -73,20 +156,20 @@ func add_family(p_parent: Node3D, p_dir: String, p_family: String, p_depth: floa
 	var x: float = 0.0
 	var z: float = 0.0
 	var row_depth: float = 0.0
-	for entry in entries:
+	for entry in p_entries:
 		var bounds: AABB = entry.bounds
 		var width: float = maxf(bounds.size.x, MIN_CELL) + gap
 		if x > 0.0 and x + width > row_width:
 			x = 0.0
 			z += row_depth + ROW_GAP
 			row_depth = 0.0
-		add_stand(group, entry, Vector3(-(x + width * 0.5), 0.0, z), p_turn)
+		add_stand(group, entry, Vector3(-(x + width * 0.5), 0.0, z))
 		x += width
 		row_depth = maxf(row_depth, bounds.size.z)
 	return p_depth + z + row_depth + FAMILY_GAP
 
 
-func add_stand(p_group: Node3D, p_entry: Dictionary, p_position: Vector3, p_turn: float):
+func add_stand(p_group: Node3D, p_entry: Dictionary, p_position: Vector3):
 	var stand: Node3D = Node3D.new()
 	stand.name = p_entry.name
 	stand.position = p_position
@@ -94,7 +177,7 @@ func add_stand(p_group: Node3D, p_entry: Dictionary, p_position: Vector3, p_turn
 	var bounds: AABB = p_entry.bounds
 	var model: Node3D = p_entry.node
 	model.name = "Model"
-	model.basis = Basis(Vector3.UP, p_turn)
+	model.basis = Basis(Vector3.UP, p_entry.turn)
 	model.position = Vector3(-(bounds.position.x + bounds.size.x * 0.5),
 			maxf(0.0, -bounds.position.y), -bounds.position.z)
 	stand.add_child(model)
@@ -122,7 +205,7 @@ func exhibits_in(p_dir: String, p_turn: float) -> Array:
 			node = packed.instantiate()
 		else:
 			continue
-		found.append({"name": file.get_basename(), "node": node,
+		found.append({"name": file.get_basename(), "node": node, "turn": p_turn,
 				"bounds": bounds_of(node, turned)})
 	return found
 
@@ -149,6 +232,14 @@ func bone_bounds(p_skeleton: Skeleton3D, p_xform: Transform3D) -> AABB:
 		var point: Vector3 = p_xform * p_skeleton.get_bone_global_rest(i).origin
 		box = AABB(point, Vector3.ZERO) if i == 0 else box.expand(point)
 	return box
+
+
+func fit_ground(p_far: Vector2) -> void:
+	var ground: MeshInstance3D = get_node_or_null("Ground")
+	if ground == null or not ground.mesh is PlaneMesh:
+		return
+	ground.mesh.size = p_far + Vector2.ONE * GROUND_MARGIN * 2.0
+	ground.position = Vector3(-p_far.x * 0.5, 0.0, p_far.y * 0.5)
 
 
 func label(p_text: String, p_position: Vector3, p_size: float) -> Label3D:
