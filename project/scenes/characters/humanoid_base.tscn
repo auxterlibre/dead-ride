@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://cbkmwnfmt4rup" path="res://scripts/characters/outfit_manager.gd" id="2_lbrei"]
 [ext_resource type="Script" uid="uid://vk6ue4dntky3" path="res://scripts/components/character/hand_slot.gd" id="3_odgls"]
 [ext_resource type="AnimationLibrary" uid="uid://deikge6isl4i" path="res://assets/animations/humanoid/humanoid_library.tres" id="4_nf3c3"]
-[ext_resource type="AnimationNodeBlendTree" path="res://assets/animations/humanoid/humanoid_blend_tree.tres" id="5_1qbw3"]
+[ext_resource type="AnimationNodeBlendTree" uid="uid://c1en85du5tavd" path="res://assets/animations/humanoid/humanoid_blend_tree.tres" id="5_1qbw3"]
 [ext_resource type="Script" uid="uid://dn7tcdhx3bosm" path="res://scripts/components/character/hurt_box.gd" id="6_h0y58"]
 [ext_resource type="Script" uid="uid://dx8oowl5jsitd" path="res://scripts/components/character/character_footsteps.gd" id="7_skhrn"]
 [ext_resource type="AudioStream" uid="uid://b4p5m04wm1jek" path="res://assets/audio/steps/step_stone.ogg" id="8_l141f"]
@@ -33,9 +33,9 @@ unique_name_in_owner = true
 transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0, 0, 0)
 script = ExtResource("2_lbrei")
 
-[node name="Rig" type="Node3D" parent="BodyContainer" unique_id=164908317]
+[node name="Rig" type="Node3D" parent="BodyContainer" unique_id=1719652659]
 
-[node name="GeneralSkeleton" type="Skeleton3D" parent="BodyContainer/Rig" unique_id=909531908]
+[node name="GeneralSkeleton" type="Skeleton3D" parent="BodyContainer/Rig" unique_id=1467941508]
 unique_name_in_owner = true
 motion_scale = 0.79327613
 bones/0/name = "Root"
@@ -373,6 +373,8 @@ unique_name_in_owner = true
 bone_name = "RightHandProp"
 bone_idx = 42
 script = ExtResource("3_odgls")
+grip = Transform3D(0.062387347, 0.38398707, -0.9212283, -0.8376522, 0.52198386, 0.16084632, 0.54262924, 0.76163423, 0.35421288, 0, 0, 0)
+grip_one_handed = Transform3D(0.4602797, 0.59537476, -0.6585374, -0.79243964, 0.60994554, -0.0024260879, 0.40022755, 0.5229678, 0.7525441, 0, 0, 0)
 
 [node name="HandSlotLeft" type="BoneAttachment3D" parent="BodyContainer/Rig/GeneralSkeleton" unique_id=1266539436]
 unique_name_in_owner = true

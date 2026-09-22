@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="WeaponData" format=3 uid="uid://crea3bgntuyjk"]
 
-[ext_resource type="PackedScene" path="res://scenes/items/weapons/kit/smg.tscn" id="1_model"]
+[ext_resource type="PackedScene" uid="uid://dch4b0bx0qysm" path="res://scenes/items/weapons/kit/smg.tscn" id="1_model"]
 [ext_resource type="Texture2D" uid="uid://df7877cquc1ip" path="res://assets/textures/thumbnails/weapons/smg.png" id="1_ykc8o"]
 [ext_resource type="Script" uid="uid://dmpo1qr4cr7tg" path="res://scripts/data/items/weapon_data.gd" id="2_script"]
 
@@ -18,12 +18,12 @@ max_ammo = 30
 fire_mode = 1
 fire_rate = 100
 camera_kick = 15
-aim_yaw_offset = 33.599999999999994
-model = ExtResource("1_model")
+aim_yaw_offset = -11.0
 name = "SMG"
 weight = 2.4
 size = Vector2i(2, 1)
 icon = ExtResource("1_ykc8o")
+model = ExtResource("1_model")
 rarity = 1
 price = 260
 icon_yaw = 60.0

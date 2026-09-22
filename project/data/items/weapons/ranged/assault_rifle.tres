@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="WeaponData" format=3 uid="uid://bgaiw355fdx7y"]
 
 [ext_resource type="Texture2D" uid="uid://dplec4wwtvpxv" path="res://assets/textures/thumbnails/weapons/assault_rifle.png" id="1_d0c5p"]
-[ext_resource type="PackedScene" path="res://scenes/items/weapons/kit/assault_rifle.tscn" id="2_3cgss"]
+[ext_resource type="PackedScene" uid="uid://cgam3er37hl05" path="res://scenes/items/weapons/kit/assault_rifle.tscn" id="2_3cgss"]
 [ext_resource type="Script" uid="uid://dmpo1qr4cr7tg" path="res://scripts/data/items/weapon_data.gd" id="3_p03eo"]
 
 [resource]
@@ -18,12 +18,12 @@ fire_mode = 1
 fire_rate = 30
 reload_time = 50
 camera_kick = 40
-aim_yaw_offset = -27.0
-model = ExtResource("2_3cgss")
+aim_yaw_offset = -8.4
 name = "Assault Rifle"
 weight = 3.6
 size = Vector2i(3, 2)
 icon = ExtResource("1_d0c5p")
+model = ExtResource("2_3cgss")
 rarity = 1
 price = 420
 icon_yaw = 15.0

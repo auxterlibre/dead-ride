@@ -13,5 +13,5 @@ speed = 4.0
 vision_range = 45.0
 detection_range = 20.0
 combat_range = 50.0
-body_path = "res://assets/meshes/characters/engineer/"
+body_path = "res://data/outfits/survivor_a.tres"
 weapon_inventory = Array[ExtResource("2_weapon")]([ExtResource("3_rifle")])

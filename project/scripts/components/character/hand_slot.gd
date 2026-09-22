@@ -1,6 +1,9 @@
 class_name HandSlot
 extends BoneAttachment3D
 
+@export var grip: Transform3D = Transform3D.IDENTITY
+@export var grip_one_handed: Transform3D = Transform3D.IDENTITY
+
 var weapon:Weapon = null
 
 
@@ -24,11 +27,13 @@ func deactivate():
 		weapon.set_active(false)
 
 
-func set_weapon(p_weapon:Weapon, p_character:CharacterBody3D, p_layer:int):
+func set_weapon(p_weapon:Weapon, p_character:CharacterBody3D, p_layer:int,
+		p_one_handed: bool = false):
 	if weapon != null:
 		remove_old_weapon(weapon)
 	weapon = p_weapon
 	add_child(weapon)
+	weapon.transform = grip_one_handed if p_one_handed else grip
 	weapon.character = p_character
 	weapon.layer = p_layer
 

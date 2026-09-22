@@ -125,7 +125,8 @@ func equip(p_index:int):
 		ranged.effective_range = current_weapon.effective_range_value
 		ranged.projectiles_per_shot = current_weapon.projectiles_per_shot
 		ranged.projectiles_spread = current_weapon.projectiles_spread_value
-	hand_slot.set_weapon(weapon_model, body, weapon_layer)
+	hand_slot.set_weapon(weapon_model, body, weapon_layer,
+			current_weapon.type in [Enums.WeaponType.RANGED_1H, Enums.WeaponType.MELEE_1H])
 	if current_weapon.current_ammo == -1:
 		current_weapon.current_ammo = draw_rounds(current_weapon.max_ammo)
 	apply_pose()

@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="WeaponData" format=3 uid="uid://d2oxan1t1ho3s"]
 
-[ext_resource type="PackedScene" path="res://scenes/items/weapons/kit/revolver.tscn" id="1_1wnuv"]
+[ext_resource type="PackedScene" uid="uid://bthdka1blepvw" path="res://scenes/items/weapons/kit/revolver.tscn" id="1_1wnuv"]
 [ext_resource type="Texture2D" uid="uid://h4mwiurktjgq" path="res://assets/textures/thumbnails/weapons/revolver.png" id="1_2edxd"]
 [ext_resource type="Script" uid="uid://dmpo1qr4cr7tg" path="res://scripts/data/items/weapon_data.gd" id="2_2edxd"]
 
@@ -16,7 +16,7 @@ knockback_distance = 10
 max_ammo = 6
 reload_time = 14
 camera_kick = 60
-aim_yaw_offset = 33.6
+aim_yaw_offset = -11.0
 name = "Revolver"
 weight = 0.8
 size = Vector2i(2, 1)

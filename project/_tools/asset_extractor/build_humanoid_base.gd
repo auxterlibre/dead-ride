@@ -10,6 +10,8 @@ const TREE: String = "res://assets/animations/humanoid/humanoid_blend_tree.tres"
 const OUTFIT_SCRIPT: String = "res://scripts/characters/outfit_manager.gd"
 const CAPSULE_RADIUS: float = 0.35
 const CAPSULE_HEIGHT: float = 1.75
+const GRIP_RIGHT: Transform3D = Transform3D(Basis(Quaternion(0.215749, -0.525686, -0.438703, 0.696165)), Vector3.ZERO)
+const GRIP_RIGHT_ONE_HANDED: Transform3D = Transform3D(Basis(Quaternion(0.156357, -0.315088, -0.413013, 0.840055)), Vector3.ZERO)
 
 
 func _ready():
@@ -49,6 +51,8 @@ func _ready():
 	container.move_child(rig, 0)
 	rig.add_child(skeleton)
 	attach(skeleton, hand_right, "RightHandProp")
+	hand_right.grip = GRIP_RIGHT
+	hand_right.grip_one_handed = GRIP_RIGHT_ONE_HANDED
 	attach(skeleton, hand_left, "LeftHandProp")
 	attach(skeleton, face_wear, "Head")
 	for child in face_wear.get_children():

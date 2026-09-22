@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="WeaponData" format=3 uid="uid://cjnlowp1frjup"]
 
 [ext_resource type="Texture2D" uid="uid://cov3pt58egby0" path="res://assets/textures/thumbnails/weapons/sniper_rifle.png" id="1_81gg3"]
-[ext_resource type="PackedScene" path="res://scenes/items/weapons/kit/sniper_rifle.tscn" id="2_qr0c3"]
+[ext_resource type="PackedScene" uid="uid://qqbj2pr8g0al" path="res://scenes/items/weapons/kit/sniper_rifle.tscn" id="2_qr0c3"]
 [ext_resource type="Script" uid="uid://dmpo1qr4cr7tg" path="res://scripts/data/items/weapon_data.gd" id="3_nik0j"]
 
 [resource]
@@ -20,12 +20,12 @@ fire_rate = 5
 cock_time = 1.8
 reload_time = 75
 camera_kick = 60
-aim_yaw_offset = -27.0
-model = ExtResource("2_qr0c3")
+aim_yaw_offset = -8.4
 name = "Sniper Rifle"
 weight = 12.0
 size = Vector2i(3, 2)
 icon = ExtResource("1_81gg3")
+model = ExtResource("2_qr0c3")
 rarity = 3
 price = 4800
 icon_yaw = 15.0
