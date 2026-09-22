@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://bqajjns5bkndr"]
+
+[ext_resource type="Script" uid="uid://boka0c2grgk30" path="res://scripts/world/crop.gd" id="1_crop"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sprout"]
+albedo_color = Color(0.42352942, 0.6392157, 0.23921569, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_sprout"]
+material = SubResource("StandardMaterial3D_sprout")
+top_radius = 0.02
+bottom_radius = 0.16
+height = 0.55
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dead"]
+albedo_color = Color(0.45882353, 0.36862746, 0.24313726, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_dead"]
+material = SubResource("StandardMaterial3D_dead")
+top_radius = 0.02
+bottom_radius = 0.14
+height = 0.4
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fruit"]
+albedo_color = Color(0.9647059, 0.79607844, 0.2, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_fruit"]
+material = SubResource("StandardMaterial3D_fruit")
+radius = 0.07
+height = 0.14
+
+[node name="Crop" type="Node3D" unique_id=950116531]
+script = ExtResource("1_crop")
+
+[node name="Sprout" type="MeshInstance3D" parent="." unique_id=1208611955]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.28, 0)
+mesh = SubResource("CylinderMesh_sprout")
+
+[node name="DeadSprout" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.8253356, -0.5646425, 0, 0.5646425, 0.8253356, 0, 0, 0, 1, 0, 0.17, 0)
+visible = false
+mesh = SubResource("CylinderMesh_dead")
+
+[node name="Fruit" type="Node3D" parent="."]
+visible = false
+
+[node name="FruitA" type="MeshInstance3D" parent="Fruit"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.11, 0.42, 0.02)
+mesh = SubResource("SphereMesh_fruit")
+
+[node name="FruitB" type="MeshInstance3D" parent="Fruit"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08, 0.5, 0.08)
+mesh = SubResource("SphereMesh_fruit")
+
+[node name="FruitC" type="MeshInstance3D" parent="Fruit"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.02, 0.36, -0.11)
+mesh = SubResource("SphereMesh_fruit")

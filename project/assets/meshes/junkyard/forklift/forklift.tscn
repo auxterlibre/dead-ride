@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://bk0rjyc5n7hd4"]
+
+[ext_resource type="ArrayMesh" uid="uid://dfmx6677abp6m" path="res://assets/meshes/junkyard/forklift/parts/forklift_fork.tres" id="1_anaux"]
+[ext_resource type="ArrayMesh" uid="uid://cefn4xxhvcx3n" path="res://assets/meshes/junkyard/forklift/parts/forklift.tres" id="2_15s03"]
+[ext_resource type="ArrayMesh" uid="uid://d2gvx5uo3xq7" path="res://assets/meshes/junkyard/forklift/parts/forklift_body.tres" id="3_k2ycs"]
+
+[node name="Forklift" type="Node3D" unique_id=1708223835]
+
+[node name="Skeleton3D" type="Skeleton3D" parent="." unique_id=1685018985]
+bones/0/name = "forklift_body"
+bones/0/parent = -1
+bones/0/rest = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+bones/0/enabled = true
+bones/0/position = Vector3(0, 0, 0)
+bones/0/rotation = Quaternion(0, 0, 0, 1)
+bones/0/scale = Vector3(1, 1, 1)
+bones/1/name = "forklift_fork"
+bones/1/parent = 0
+bones/1/rest = Transform3D(1, 0, 2.3841858e-07, 0, 1, 0, -2.3841858e-07, 0, 1, 0, 0.29973853, 1.4819775)
+bones/1/enabled = true
+bones/1/position = Vector3(0, 0.29973853, 1.4819775)
+bones/1/rotation = Quaternion(0, 1.1920929e-07, 0, 1)
+bones/1/scale = Vector3(1, 1, 1)
+bones/2/name = "wheel.L"
+bones/2/parent = 0
+bones/2/rest = Transform3D(0, 0.99999976, -1.7881392e-07, 5.960463e-08, 1.7881389e-07, 0.99999994, 0.9999999, -1.06581385e-14, -5.9604634e-08, 0.56396484, 0.29574835, -0.82131195)
+bones/2/enabled = true
+bones/2/position = Vector3(0.56396484, 0.29574835, -0.82131195)
+bones/2/rotation = Quaternion(-0.5, -0.5000001, -0.49999997, 0.5)
+bones/2/scale = Vector3(0.9999999, 0.99999976, 0.99999994)
+bones/3/name = "wheel.R"
+bones/3/parent = 0
+bones/3/rest = Transform3D(0, -0.99999976, 1.7881392e-07, -5.960463e-08, 1.7881389e-07, 0.99999994, -0.9999999, -1.06581385e-14, -5.9604634e-08, -0.56396484, 0.29574835, -0.82131195)
+bones/3/enabled = true
+bones/3/position = Vector3(-0.56396484, 0.29574835, -0.82131195)
+bones/3/rotation = Quaternion(-0.5, 0.5000001, 0.49999997, 0.5)
+bones/3/scale = Vector3(0.9999999, 0.99999976, 0.99999994)
+bones/4/name = "wheel_control"
+bones/4/parent = 0
+bones/4/rest = Transform3D(1, 0, 2.3841858e-07, -2.3841858e-07, 0, 1, 0, -1, 0, 0, 1.3526347, -0.7255707)
+bones/4/enabled = true
+bones/4/position = Vector3(0, 1.3526347, -0.7255707)
+bones/4/rotation = Quaternion(-0.70710677, 8.4293696e-08, -8.4293696e-08, 0.70710677)
+bones/4/scale = Vector3(1, 1, 1)
+
+[node name="forklift_fork" type="BoneAttachment3D" parent="Skeleton3D" unique_id=2125097680]
+transform = Transform3D(1, 0, 2.3841858e-07, 0, 1, 0, -2.3841858e-07, 0, 1, 0, 0.29973853, 1.4819775)
+bone_name = "forklift_fork"
+bone_idx = 1
+
+[node name="forklift_fork_001" type="MeshInstance3D" parent="Skeleton3D/forklift_fork" unique_id=779335540]
+transform = Transform3D(1, 0, -2.3841858e-07, 0, 1, 0, 2.3841858e-07, 0, 1, -0.0042052683, 0.28863055, 0.12895113)
+mesh = ExtResource("1_anaux")
+skeleton = NodePath("")
+
+[node name="wheel_L" type="BoneAttachment3D" parent="Skeleton3D" unique_id=2062368173]
+transform = Transform3D(0, 0.99999976, -1.490116e-07, 1.490116e-07, 1.7881389e-07, 0.9999999, 0.9999999, 5.960463e-08, -1.1920928e-07, 0.56396484, 0.29574835, -0.82131195)
+bone_name = "wheel.L"
+bone_idx = 2
+
+[node name="@Node3D@2" type="Node3D" parent="Skeleton3D/wheel_L" unique_id=1679170248]
+transform = Transform3D(0, 1.1920929e-07, 1, 1, 0, 0, 0, 1, -1.1920929e-07, -1.8944098e-06, 0.082338706, -5.540528e-09)
+
+[node name="forklift_002" type="MeshInstance3D" parent="Skeleton3D/wheel_L/@Node3D@2" unique_id=1698825002]
+mesh = ExtResource("2_15s03")
+skeleton = NodePath("")
+
+[node name="wheel_R" type="BoneAttachment3D" parent="Skeleton3D" unique_id=408395115]
+transform = Transform3D(0, -0.99999976, 1.490116e-07, -1.490116e-07, 1.7881389e-07, 0.9999999, -0.9999999, 5.960463e-08, -1.1920928e-07, -0.56396484, 0.29574835, -0.82131195)
+bone_name = "wheel.R"
+bone_idx = 3
+
+[node name="@Node3D@3" type="Node3D" parent="Skeleton3D/wheel_R" unique_id=1497038658]
+transform = Transform3D(0, -1.1920929e-07, -1, -1, 0, 0, 0, 1, -1.1920929e-07, 1.8944322e-06, 0.07422103, 5.994309e-08)
+
+[node name="forklift_001" type="MeshInstance3D" parent="Skeleton3D/wheel_R/@Node3D@3" unique_id=395825786]
+mesh = ExtResource("2_15s03")
+skeleton = NodePath("")
+
+[node name="forklift_body" type="BoneAttachment3D" parent="Skeleton3D" unique_id=1905845293]
+bone_name = "forklift_body"
+bone_idx = 0
+
+[node name="forklift_body_001" type="MeshInstance3D" parent="Skeleton3D/forklift_body" unique_id=666368521]
+mesh = ExtResource("3_k2ycs")
+skeleton = NodePath("")

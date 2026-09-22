@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://gmyf5rdsubsi"]
+
+[ext_resource type="ArrayMesh" uid="uid://dcs5iosj8wrw7" path="res://assets/meshes/environment/props/trees/tree_2_a.tres" id="1_mesh"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_trunk"]
+height = 2.4
+radius = 0.35
+
+[node name="Tree" type="StaticBody3D"]
+collision_layer = 4
+collision_mask = 0
+metadata/surface = "wood"
+
+[node name="Mesh" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_mesh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 0)
+shape = SubResource("CylinderShape3D_trunk")

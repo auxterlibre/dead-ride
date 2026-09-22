@@ -1,0 +1,35 @@
+[gd_resource type="ArrayMesh" format=4 uid="uid://dn7c3asyy3ar4"]
+
+[ext_resource type="Material" uid="uid://cwgcxfci6lfy3" path="res://assets/materials/environment/nature_material_a.tres" id="1_8l24v"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_3ymig"]
+_surfaces = [{
+"aabb": AABB(-0.19171722, 0, -0.19171722, 0.38343444, 0.8811742, 0.38343444),
+"format": 34359742465,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAACAAEAAwAEAAEABQAAAAIAAwAAAAUABAAGAAIABQACAAYAAwAHAAQAAwAFAAcABwAGAAQABwAFAAYA"),
+"name": "forest",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("hVFEPgAAAAAAAACAMzPTMeliHj9EbAk+RGwJPsb7Pz8AAACyAAAAAAAAAACFUUQ+RGwJvsb7Pz8AAAAyAAAAAAAAAACFUUS+ZmYWsqKUYT9EbAm+hVFEvgAAAAAAAACA")
+}]
+blend_shape_mode = 0
+
+[resource]
+resource_name = "rock_4_a"
+_surfaces = [{
+"aabb": AABB(-0.19171722, 0, -0.19171722, 0.38343444, 0.8811742, 0.38343444),
+"attribute_data": PackedByteArray("J9AKP/yMLz9MKws/OBgfP0wrCz84GB8/J9AKP/yMLz8n0Ao//IwvPy/VDD84GB8/TCsLPzgYHz9VMA0//IwvP1UwDT/8jC8/L9UMPzgYHz8v1Qw/OBgfP1UwDT/8jC8/VTANP/yMLz9MKws/OBgfPy/VDD84GB8/J9AKP/yMLz8v1Qw/2DocP0wrCz/YOhw/TCsLP9g6HD8v1Qw/2DocPyfQCj/8jC8/VTANP/yMLz9VMA0//IwvPyfQCj/8jC8/"),
+"format": 34359742487,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
+"material": ExtResource("1_8l24v"),
+"name": "forest",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("hVFEPgAAAAAAAACAMzPTMeliHj9EbAk+RGwJPsb7Pz8AAACyAAAAAAAAAACFUUQ+AAAAAAAAAACFUUQ+RGwJvsb7Pz8AAAAyMzPTMeliHj9EbAk+hVFEvgAAAAAAAACAhVFEvgAAAAAAAACAZmYWsqKUYT9EbAm+RGwJvsb7Pz8AAAAyAAAAAAAAAACFUUS+AAAAAAAAAACFUUS+RGwJPsb7Pz8AAACyZmYWsqKUYT9EbAm+hVFEPgAAAAAAAACARGwJvsb7Pz8AAAAyRGwJPsb7Pz8AAACyMzPTMeliHj9EbAk+ZmYWsqKUYT9EbAm+AAAAAAAAAACFUUQ+AAAAAAAAAACFUUS+hVFEvgAAAAAAAACAhVFEPgAAAAAAAACAYLwohf///z9gvCiF////P2C8KIX///8/YLwohf///z+eQyiFvAdpHp5DKIVhHXQYnkMohfYp/RSeQyiFFwCEIFwETMH///+/XARMwf///79cBEzB////v1wETMH///+/ovtMwTsIVeKi+0zBayTI6KL7TMH7KQ7qovtMwRAAd+D/f7bA////P/9/tsD///8//3+2wP///z//f7bA////P/9/AAD///+//38AAP///7//fwAA////v/9/AAD///+/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_3ymig")

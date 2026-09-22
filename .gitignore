@@ -1,0 +1,15 @@
+# Art sources live outside the repo
+Art/
+
+# Blender backup files
+*.blend1
+*.blend2
+
+# Godot editor autosave leftovers
+Project/scenes/*.tmp
+
+# Exported builds - the engine template alone is ~100MB
+Builds/
+
+# 392MB source blend, over GitHub's 100MB cap; only the asset extractor reads it
+project/_not_exported/Junkyard.blend

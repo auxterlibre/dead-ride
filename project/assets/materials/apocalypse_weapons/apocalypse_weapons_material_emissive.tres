@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bp8gxujwspaaw"]
+
+[ext_resource type="Texture2D" uid="uid://doy2oe8ilwkea" path="res://assets/textures/apocalypse_weapons/apocalypse_weapons_textures_4.png" id="1_ln672"]
+[ext_resource type="Texture2D" uid="uid://goi5eb8ve0qr" path="res://_not_exported/textures/Textures_4.png" id="2_lqnic"]
+
+[resource]
+resource_name = "apocalypse_weapons_material_emissive"
+cull_mode = 2
+albedo_texture = ExtResource("1_ln672")
+roughness = 0.5
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_energy_multiplier = 2.0
+emission_operator = 1
+emission_texture = ExtResource("2_lqnic")
+metadata/_gltf_primary_texture_coord = 0

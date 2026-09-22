@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ConsumableData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/items/consumable_data.gd" id="1_script"]
+
+[resource]
+script = ExtResource("1_script")
+name = "Field Bandage"
+health = 6
+max_stack = 5
+price = 25
+weight = 0.3
+size = Vector2i(1, 1)
+rarity = 0

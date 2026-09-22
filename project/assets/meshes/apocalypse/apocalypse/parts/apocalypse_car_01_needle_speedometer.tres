@@ -1,0 +1,38 @@
+[gd_resource type="ArrayMesh" format=4 uid="uid://di1yp6x4k6258"]
+
+[ext_resource type="Material" uid="uid://be6tmavnmbapx" path="res://assets/materials/apocalypse/apocalypse_material_color.tres" id="1_l305e"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_dpc7f"]
+_surfaces = [{
+"aabb": AABB(-0.0015438091, 1.7970528e-07, -0.0007763168, 0.0030876182, 0.040610634, 0.0015522961),
+"format": 34359742465,
+"index_count": 30,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAAAAIAAwAFAAEABQACAAEAAwAGAAUABAACAAcABgAEAAcABQAHAAIABgAHAAUA"),
+"name": "Color",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("o1nKugP1QDQYa0s6MSdSuoZXJj29gUu6MSdSuoZXJj0Ya0s6o1nKugP1QDS9gUu6o1nKOgP1QDQYa0s6MSdSOoZXJj29gUu6o1nKOgP1QDS9gUu6MSdSOoZXJj0Ya0s6")
+}]
+blend_shape_mode = 0
+
+[resource]
+resource_name = "apocalypse_car_01_needle_speedometer"
+_surfaces = [{
+"aabb": AABB(-0.0015438091, 1.7970528e-07, -0.0007763168, 0.0030876182, 0.040610634, 0.0015522961),
+"attribute_data": PackedByteArray("vQ5kP6OdFT+9DmQ/o50VP70OZD+jnRU/vQ5kP6OdFT+9DmQ/o50VP70OZD+jnRU/vQ5kP6OdFT+9DmQ/o50VP70OZD+jnRU/vQ5kP6OdFT+9DmQ/o50VP70OZD+jnRU/vQ5kP6OdFT+9DmQ/o50VP70OZD+jnRU/vQ5kP6OdFT+9DmQ/o50VP70OZD+jnRU/vQ5kP6OdFT+9DmQ/o50VPw=="),
+"format": 34359742487,
+"index_count": 30,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEA"),
+"material": ExtResource("1_l305e"),
+"name": "Color",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 20,
+"vertex_data": PackedByteArray("o1nKugP1QDQYa0s6MSdSuoZXJj29gUu6MSdSuoZXJj0Ya0s6o1nKugP1QDS9gUu6o1nKugP1QDS9gUu6MSdSOoZXJj29gUu6MSdSuoZXJj29gUu6o1nKOgP1QDS9gUu6o1nKOgP1QDS9gUu6MSdSOoZXJj0Ya0s6MSdSOoZXJj29gUu6o1nKOgP1QDQYa0s6o1nKOgP1QDQYa0s6MSdSuoZXJj0Ya0s6MSdSOoZXJj0Ya0s6o1nKugP1QDQYa0s6MSdSOoZXJj29gUu6MSdSuoZXJj0Ya0s6MSdSuoZXJj29gUu6MSdSOoZXJj0Ya0s6TAJMgv///z9MAkyC////P0wCTIL///8/TAJMgv///z//////////P/////////8//////////z//////////P7L9TIL///8/sv1Mgv///z+y/UyC////P7L9TIL///8//3//f////z//f/9/////P/9//3////8//3//f////z//f///////P/9///////8//3///////z//f///////Pw==")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_dpc7f")
+metadata/extras = {
+"hops": {}
+}

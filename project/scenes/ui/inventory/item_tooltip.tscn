@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://3ae3ojjetkf7"]
+
+[ext_resource type="Script" uid="uid://ck4i8bbedl574" path="res://scripts/ui/inventory/item_tooltip.gd" id="1_tooltip"]
+[ext_resource type="PackedScene" path="res://scenes/ui/inventory/tooltip_stat_row.tscn" id="2_row"]
+[ext_resource type="FontFile" uid="uid://bbctssp8rxgju" path="res://assets/fonts/JetBrainsMono-Bold.ttf" id="3_smo6j"]
+[ext_resource type="FontFile" uid="uid://16cr15homrlp" path="res://assets/fonts/JetBrainsMono-Regular.ttf" id="4_mono"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gjj12"]
+content_margin_left = 24.0
+content_margin_top = 24.0
+content_margin_right = 24.0
+content_margin_bottom = 24.0
+bg_color = Color(0, 0.1882353, 0.28627452, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0.1882353, 0.28627452, 0.54901963)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
+[node name="ItemTooltip" type="PanelContainer" unique_id=1522012974]
+custom_minimum_size = Vector2(580, 0)
+offset_right = 580.0
+offset_bottom = 408.0
+size_flags_vertical = 0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_gjj12")
+script = ExtResource("1_tooltip")
+stat_row_scene = ExtResource("2_row")
+
+[node name="Layout" type="VBoxContainer" parent="." unique_id=1795318063]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 32
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Layout" unique_id=984884799]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="NameLabel" type="Label" parent="Layout/VBoxContainer" unique_id=759383254]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.91764706, 0.8862745, 0.7176471, 1)
+theme_override_fonts/font = ExtResource("3_smo6j")
+theme_override_font_sizes/font_size = 40
+text = "METRANCA"
+
+[node name="Header" type="HBoxContainer" parent="Layout/VBoxContainer" unique_id=2090781678]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 16
+
+[node name="RarityLabel" type="Label" parent="Layout/VBoxContainer/Header" unique_id=860533881]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5529412, 0.78039217, 0.44705883, 1)
+theme_override_fonts/font = ExtResource("4_mono")
+theme_override_font_sizes/font_size = 32
+text = "Uncommon"
+
+[node name="CategoryLabel" type="Label" parent="Layout/VBoxContainer/Header" unique_id=108804706]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.68235296, 0.7411765, 0.7607843, 1)
+theme_override_fonts/font = ExtResource("4_mono")
+theme_override_font_sizes/font_size = 32
+text = "Assault rifle"
+
+[node name="StatList" type="VBoxContainer" parent="Layout" unique_id=1416657809]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 32

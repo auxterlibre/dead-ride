@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://e05q3ydqa7f1"]
+
+[ext_resource type="ArrayMesh" uid="uid://bwt1nlddgipai" path="res://assets/meshes/apocalypse/pistol/parts/pistol_1_base.tres" id="1_ryn5j"]
+[ext_resource type="ArrayMesh" uid="uid://bqgxidnphqcuf" path="res://assets/meshes/apocalypse/pistol/parts/pistol_1_bolt.tres" id="2_0xo6v"]
+[ext_resource type="ArrayMesh" uid="uid://cn2ksfn25fqij" path="res://assets/meshes/apocalypse/pistol/parts/pistol_1_magazine.tres" id="3_lxgdq"]
+[ext_resource type="ArrayMesh" uid="uid://cwgn864u374lg" path="res://assets/meshes/apocalypse/pistol/parts/pistol_1_trigger.tres" id="4_wq6em"]
+
+[node name="Pistol1Base" type="MeshInstance3D" unique_id=873779520]
+mesh = ExtResource("1_ryn5j")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Pistol1_Bolt" type="MeshInstance3D" parent="." unique_id=635955250]
+mesh = ExtResource("2_0xo6v")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Pistol1_Magazine" type="MeshInstance3D" parent="." unique_id=2012215577]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0003824234, 0.059645414, 0)
+mesh = ExtResource("3_lxgdq")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Pistol1_Trigger" type="MeshInstance3D" parent="." unique_id=264118898]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.051276207, 0.06925893, 0)
+mesh = ExtResource("4_wq6em")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Place_Pistol1_BarBottom" type="Node3D" parent="." unique_id=304494024]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.16746616, 0.057637453, 4.7922134e-05)
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Place_Pistol1_Charm" type="Node3D" parent="." unique_id=233759111]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1940527, 0.08620429, -0.02194047)
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Place_Pistol1_Magazine" type="Node3D" parent="." unique_id=1702137286]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0003824234, 0.059645414, 0)
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Place_Pistol1_Muzzle" type="Node3D" parent="." unique_id=1026892532]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.26338577, 0.123753786, 0)
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Place_Pistol1_Sight" type="Node3D" parent="." unique_id=1641046386]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14812374, 0.14770627, -0.000119924545)
+metadata/extras = {
+"MM": {},
+"hops": {}
+}

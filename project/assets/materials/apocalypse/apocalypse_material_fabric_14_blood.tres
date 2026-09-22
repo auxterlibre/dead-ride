@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bhmclr81wr5i8"]
+
+[ext_resource type="Texture2D" uid="uid://5xwe8qdwvcxx" path="res://assets/textures/apocalypse/apocalypse_fabric_14.png" id="1_bgqi6"]
+[ext_resource type="Texture2D" uid="uid://d3yl4qf0dgp4x" path="res://assets/textures/apocalypse/apocalypse_overlay_fabric_blood.png" id="2_v2xqy"]
+
+[resource]
+resource_name = "apocalypse_material_fabric_14_blood"
+cull_mode = 2
+albedo_texture = ExtResource("1_bgqi6")
+roughness = 0.7
+detail_enabled = true
+detail_uv_layer = 1
+detail_albedo = ExtResource("2_v2xqy")
+metadata/_gltf_primary_texture_coord = 0

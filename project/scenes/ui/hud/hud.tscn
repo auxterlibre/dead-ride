@@ -1,0 +1,374 @@
+[gd_scene format=3 uid="uid://b38kf8ekkr0sw"]
+
+[ext_resource type="Script" uid="uid://uxfapt7r12nn" path="res://scripts/utils/debug_label.gd" id="1_swth0"]
+[ext_resource type="PackedScene" uid="uid://drm24xovlahmc" path="res://scenes/ui/reticles/reticle.tscn" id="2_a660p"]
+[ext_resource type="FontFile" uid="uid://16cr15homrlp" path="res://assets/fonts/JetBrainsMono-Regular.ttf" id="5_o6s6k"]
+[ext_resource type="Script" uid="uid://vt1jaqgpnrl2" path="res://scripts/ui/hud/vehicle_info/vehicle_info_ui.gd" id="6_ct28o"]
+[ext_resource type="Texture2D" uid="uid://c0j374sfqk0w" path="res://assets/textures/icons/system/icon_car_health.svg" id="7_7kkr4"]
+[ext_resource type="Texture2D" uid="uid://7nmh6r1wha8r" path="res://assets/textures/icons/system/icon_fuel_tank.svg" id="7_a660p"]
+[ext_resource type="Script" uid="uid://ep82attg4sea" path="res://scripts/ui/hud/player_info/player_info_ui.gd" id="7_devq0"]
+[ext_resource type="Script" uid="uid://b8ahqisvm4lef" path="res://scripts/ui/hud/player_info/energy_info_ui.gd" id="7_energy"]
+[ext_resource type="Script" uid="uid://uu57ok5smuse" path="res://scripts/ui/hud/player_info/heat_info_ui.gd" id="7_heat"]
+[ext_resource type="Script" uid="uid://7nq50iw2m14b" path="res://scripts/ui/hud/input_info/input_info_ui.gd" id="8_a3iiw"]
+[ext_resource type="PackedScene" uid="uid://cep4t6h8de08h" path="res://scenes/ui/input/input_label.tscn" id="9_tsfp7"]
+[ext_resource type="Script" uid="uid://wpthuluwfkaw" path="res://scripts/ui/hud/calendar_info/calendar_info_ui.gd" id="10_cal"]
+[ext_resource type="PackedScene" uid="uid://ce3qa5onvuc7f" path="res://scenes/ui/hud/quick_slots/quick_slots.tscn" id="15_quickslots"]
+[ext_resource type="Script" uid="uid://cbpulvad2733o" path="res://scripts/ui/hud/money_info_ui.gd" id="17_money"]
+[ext_resource type="Script" uid="uid://6186cx0t8im2" path="res://scripts/ui/hud/input_info/character_prompts_ui.gd" id="18_prompts"]
+[ext_resource type="PackedScene" uid="uid://chn8gugupyv77" path="res://scenes/ui/input/input_key_button.tscn" id="19_keybutton"]
+[ext_resource type="Script" uid="uid://b3y8iho6c3p48" path="res://scenes/ui/hud/quick_notification.gd" id="19_qd53f"]
+[ext_resource type="Script" uid="uid://dm5mi8ktx3lao" path="res://scripts/ui/hud/input_info/interaction_hints_ui.gd" id="20_hints"]
+[ext_resource type="PackedScene" uid="uid://m8p56wri7m5r" path="res://scenes/ui/input/interaction_hint_dot.tscn" id="21_hintdot"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m7evv"]
+bg_color = Color(0, 0.1882353, 0.28627452, 0.54901963)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7kkr4"]
+bg_color = Color(0.91764706, 0.8862745, 0.7176471, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="LabelSettings" id="LabelSettings_hawva"]
+font = ExtResource("5_o6s6k")
+font_size = 64
+font_color = Color(0.91764706, 0.8862745, 0.7176471, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_vpxen"]
+font = ExtResource("5_o6s6k")
+font_size = 32
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_heat"]
+font = ExtResource("5_o6s6k")
+font_size = 40
+font_color = Color(1, 0.42, 0.2, 1)
+outline_size = 6
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_date"]
+font = ExtResource("5_o6s6k")
+font_size = 32
+font_color = Color(0.91764706, 0.8862745, 0.7176471, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y7bi2"]
+content_margin_left = 32.0
+content_margin_top = 8.0
+content_margin_right = 32.0
+content_margin_bottom = 8.0
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="LabelSettings" id="LabelSettings_y6bai"]
+font = ExtResource("5_o6s6k")
+font_size = 40
+
+[node name="HUD" type="CanvasLayer" unique_id=220247055]
+
+[node name="DebugLabel" type="RichTextLabel" parent="." unique_id=1468019518]
+offset_right = 1621.0
+offset_bottom = 97.0
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+script = ExtResource("1_swth0")
+metadata/_custom_type_script = "uid://uxfapt7r12nn"
+
+[node name="Reticle" parent="." unique_id=1056909390 instance=ExtResource("2_a660p")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -32.0
+offset_top = -32.0
+offset_right = -3808.0
+offset_bottom = -2128.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="QuickSlots" parent="." unique_id=1859304277 instance=ExtResource("15_quickslots")]
+
+[node name="InteractionHints" type="Control" parent="." unique_id=1883237516]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("20_hints")
+dot_scene = ExtResource("21_hintdot")
+
+[node name="CharacterPrompts" type="Control" parent="." unique_id=368923420]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("18_prompts")
+button_scene = ExtResource("19_keybutton")
+
+[node name="Column" type="VBoxContainer" parent="CharacterPrompts" unique_id=1208257568]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 272.0
+theme_override_constants/separation = 16
+
+[node name="StaticHUD" type="Control" parent="." unique_id=1071658387]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VehicleInfo" type="VBoxContainer" parent="StaticHUD" unique_id=1934808177]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 96.0
+offset_top = -179.0
+offset_right = 305.0
+offset_bottom = -84.0
+grow_vertical = 0
+theme_override_constants/separation = 32
+alignment = 2
+script = ExtResource("6_ct28o")
+
+[node name="CarhHealth" type="HBoxContainer" parent="StaticHUD/VehicleInfo" unique_id=1206160542]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Icon" type="TextureRect" parent="StaticHUD/VehicleInfo/CarhHealth" unique_id=2127605939]
+modulate = Color(0.91764706, 0.8862745, 0.7176471, 1)
+layout_mode = 2
+texture = ExtResource("7_7kkr4")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="StaticHUD/VehicleInfo/CarhHealth" unique_id=1623203599]
+layout_mode = 2
+alignment = 1
+
+[node name="CarHealthBar" type="ProgressBar" parent="StaticHUD/VehicleInfo/CarhHealth/VBoxContainer" unique_id=1682298549]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(160, 24)
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_m7evv")
+theme_override_styles/fill = SubResource("StyleBoxFlat_7kkr4")
+value = 50.0
+show_percentage = false
+
+[node name="FuelTank" type="HBoxContainer" parent="StaticHUD/VehicleInfo" unique_id=1178719317]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Icon" type="TextureRect" parent="StaticHUD/VehicleInfo/FuelTank" unique_id=2075466130]
+modulate = Color(0.91764706, 0.8862745, 0.7176471, 1)
+layout_mode = 2
+texture = ExtResource("7_a660p")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="StaticHUD/VehicleInfo/FuelTank" unique_id=723284619]
+layout_mode = 2
+alignment = 1
+
+[node name="FuelBar" type="ProgressBar" parent="StaticHUD/VehicleInfo/FuelTank/VBoxContainer" unique_id=558751281]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(160, 24)
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_m7evv")
+theme_override_styles/fill = SubResource("StyleBoxFlat_7kkr4")
+value = 50.0
+show_percentage = false
+
+[node name="SpeedLabel" type="Label" parent="StaticHUD/VehicleInfo" unique_id=60443840]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0km/h"
+label_settings = SubResource("LabelSettings_hawva")
+
+[node name="PlayerInfo" type="HBoxContainer" parent="StaticHUD" unique_id=2009276305]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 96.0
+offset_top = -489.0
+offset_right = 343.0
+offset_bottom = -441.0
+grow_vertical = 0
+theme_override_constants/separation = 8
+script = ExtResource("7_devq0")
+
+[node name="Label" type="Label" parent="StaticHUD/PlayerInfo" unique_id=2093637259]
+layout_mode = 2
+text = "HP"
+label_settings = SubResource("LabelSettings_vpxen")
+
+[node name="ProgressBar" type="ProgressBar" parent="StaticHUD/PlayerInfo" unique_id=525754418]
+custom_minimum_size = Vector2(200, 48)
+layout_mode = 2
+step = 0.1
+show_percentage = false
+
+[node name="HPLabel" type="Label" parent="StaticHUD/PlayerInfo/ProgressBar" unique_id=737200526]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "0/0"
+label_settings = SubResource("LabelSettings_vpxen")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EnergyInfo" type="HBoxContainer" parent="StaticHUD" unique_id=766589554]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 96.0
+offset_top = -549.0
+offset_right = 343.0
+offset_bottom = -501.0
+grow_vertical = 0
+theme_override_constants/separation = 8
+script = ExtResource("7_energy")
+
+[node name="Label" type="Label" parent="StaticHUD/EnergyInfo" unique_id=1019703724]
+layout_mode = 2
+text = "EN"
+label_settings = SubResource("LabelSettings_vpxen")
+
+[node name="ProgressBar" type="ProgressBar" parent="StaticHUD/EnergyInfo" unique_id=2000750042]
+custom_minimum_size = Vector2(200, 48)
+layout_mode = 2
+step = 0.1
+show_percentage = false
+
+[node name="ValueLabel" type="Label" parent="StaticHUD/EnergyInfo/ProgressBar" unique_id=505941926]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "0/0"
+label_settings = SubResource("LabelSettings_vpxen")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HeatInfo" type="Label" parent="StaticHUD" unique_id=819585680]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 96.0
+offset_top = -613.0
+offset_right = 500.0
+offset_bottom = -561.0
+grow_vertical = 0
+text = "SCORCHING SUN"
+label_settings = SubResource("LabelSettings_heat")
+script = ExtResource("7_heat")
+
+[node name="InputInfo" type="VBoxContainer" parent="StaticHUD" unique_id=819585679]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -345.0
+offset_top = -197.0
+offset_right = -174.0
+offset_bottom = -154.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/separation = 24
+alignment = 2
+script = ExtResource("8_a3iiw")
+
+[node name="InputLabel_0" parent="StaticHUD/InputInfo" unique_id=1186966905 instance=ExtResource("9_tsfp7")]
+layout_mode = 2
+
+[node name="InputLabel_1" parent="StaticHUD/InputInfo" unique_id=777394867 instance=ExtResource("9_tsfp7")]
+layout_mode = 2
+
+[node name="InputLabel_2" parent="StaticHUD/InputInfo" unique_id=64668086 instance=ExtResource("9_tsfp7")]
+layout_mode = 2
+
+[node name="InputLabel_3" parent="StaticHUD/InputInfo" unique_id=965457482 instance=ExtResource("9_tsfp7")]
+layout_mode = 2
+
+[node name="InputLabel_4" parent="StaticHUD/InputInfo" unique_id=1355520972 instance=ExtResource("9_tsfp7")]
+layout_mode = 2
+
+[node name="InputLabel_5" parent="StaticHUD/InputInfo" unique_id=323584572 instance=ExtResource("9_tsfp7")]
+layout_mode = 2
+
+[node name="CalendarInfo" type="VBoxContainer" parent="StaticHUD" unique_id=1534415134]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -600.0
+offset_top = 96.0
+offset_right = -96.0
+offset_bottom = 240.0
+grow_horizontal = 0
+script = ExtResource("10_cal")
+
+[node name="ClockLabel" type="Label" parent="StaticHUD/CalendarInfo" unique_id=1594724643]
+unique_name_in_owner = true
+layout_mode = 2
+text = "08:00"
+label_settings = SubResource("LabelSettings_hawva")
+horizontal_alignment = 2
+
+[node name="DateLabel" type="Label" parent="StaticHUD/CalendarInfo" unique_id=455359417]
+unique_name_in_owner = true
+layout_mode = 2
+text = "01 Jan 1989"
+label_settings = SubResource("LabelSettings_date")
+horizontal_alignment = 2
+
+[node name="MoneyLabel" type="Label" parent="StaticHUD/CalendarInfo" unique_id=1174370868]
+layout_mode = 2
+text = "$0"
+label_settings = SubResource("LabelSettings_date")
+horizontal_alignment = 2
+script = ExtResource("17_money")
+
+[node name="QuickNotification" type="PanelContainer" parent="." unique_id=1758480605]
+self_modulate = Color(0.91764706, 0.8862745, 0.7176471, 1)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -188.0
+offset_top = 347.0
+offset_right = 188.0
+offset_bottom = 416.0
+grow_horizontal = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_styles/panel = SubResource("StyleBoxFlat_y7bi2")
+script = ExtResource("19_qd53f")
+
+[node name="Label" type="Label" parent="QuickNotification" unique_id=23077700]
+modulate = Color(0, 0.1882353, 0.28627452, 1)
+layout_mode = 2
+text = "Quick message"
+label_settings = SubResource("LabelSettings_y6bai")
+horizontal_alignment = 1
+vertical_alignment = 1

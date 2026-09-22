@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ck1g0yhnu17d0"]
+
+[resource]
+resource_name = "muzzle_flash_material"
+transparency = 1
+blend_mode = 1
+shading_mode = 0
+disable_fog = true
+albedo_color = Color(2, 1.5, 0.9, 1)

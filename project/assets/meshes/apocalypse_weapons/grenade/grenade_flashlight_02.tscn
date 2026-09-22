@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://ri1hlw7xjmou"]
+
+[ext_resource type="ArrayMesh" uid="uid://y4e0bwneo1or" path="res://assets/meshes/apocalypse_weapons/grenade/parts/grenade_flashlight_02.tres" id="1_vydka"]
+[ext_resource type="ArrayMesh" uid="uid://3fc474jyglu3" path="res://assets/meshes/apocalypse_weapons/grenade/parts/grenade_flashlight_01_pin.tres" id="2_0j3h0"]
+
+[node name="GrenadeFlashlight02" type="MeshInstance3D" unique_id=1043175628]
+mesh = ExtResource("1_vydka")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Grenade_Flashlight_02_Pin" type="MeshInstance3D" parent="." unique_id=774162034]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.02011156, 0.04892826, 0.030444145)
+mesh = ExtResource("2_0j3h0")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}

@@ -1,0 +1,35 @@
+[gd_resource type="ArrayMesh" format=4 uid="uid://dthb1rqhn6od6"]
+
+[ext_resource type="Material" uid="uid://cwgcxfci6lfy3" path="res://assets/materials/environment/nature_material_a.tres" id="1_eo707"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_6gnaj"]
+_surfaces = [{
+"aabb": AABB(-0.10777748, 6.578415e-06, -0.10778076, 0.21556154, 0.21556152, 0.21556152),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAACAAEAAwAEAAEABQAAAAIAAwAAAAUABAAGAAIABQACAAYAAwAHAAQAAwAFAAcABwAGAAQABwAFAAYA"),
+"name": "forest",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("//8AAP7/AABmJv//mNkAAJjZ//+Y2QAAAAAAAP//AABmJv//ZiYAAP7/AAAAAAAAmNn//2YmAAAAAAAAAAAAAA==")
+}]
+blend_shape_mode = 0
+
+[resource]
+resource_name = "rock_2_a"
+_surfaces = [{
+"aabb": AABB(-0.10777748, 6.578415e-06, -0.10778076, 0.21556154, 0.21556152, 0.21556152),
+"attribute_data": PackedByteArray("bI51prmOPaO5jj2jbI51pmyOdaYikD2juY49o2+QdaZvkHWmIpA9oyKQPaNvkHWmb5B1prmOPaMikD2jbI51piKQPZ+5jj2fuY49nyKQPZ9sjnWmb5B1pm+QdaZsjnWm"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
+"material": ExtResource("1_eo707"),
+"name": "forest",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("//8AAP7/7nlmJv//mNnueZjZ//+Y2e55AAAAAP//7nkAAAAA//9JBGYm//9mJkkEZib//5jZSQQAAAAAAABJBAAAAAAAAO75mNn//2Ym7vlmJv//Zibu+f7/AAAAAO75/v8AAAAAOMCY2f//mNk4wJjZ//9mJjjA//8AAP7/OMBmJv//Zib/v5jZ//+Y2f+/Zib//5jZ/7+Y2f//Zib/vwAAAAD///+//v8AAAAA/78AAAAAAAD/v///AAD+//+//v//f/7//3/+//9//v//f2T7sj1k+7I9ZPuyPWT7sj3+//9//v//f/7//3/+//9/nJBOCJyQTgickE4InJBOCP///3////9/////f////38AAP9/AAD/fwAA/38AAP9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_6gnaj")

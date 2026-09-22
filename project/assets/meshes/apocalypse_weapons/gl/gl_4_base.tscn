@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://d3tx1an0a2mty"]
+
+[ext_resource type="ArrayMesh" uid="uid://dk3ywt47t2df1" path="res://assets/meshes/apocalypse_weapons/gl/parts/gl_4_base.tres" id="1_g63er"]
+[ext_resource type="ArrayMesh" uid="uid://faqlu2ujrl3o" path="res://assets/meshes/apocalypse_weapons/gl/parts/gl_4_front_cap.tres" id="2_2kf0k"]
+[ext_resource type="ArrayMesh" uid="uid://cuomkyy8dr3js" path="res://assets/meshes/apocalypse_weapons/gl/parts/gl_4_rear_cap.tres" id="3_pmfg8"]
+[ext_resource type="ArrayMesh" uid="uid://cbljvo16e0ufr" path="res://assets/meshes/apocalypse_weapons/gl/parts/gl_4_rocket_container.tres" id="4_kmgpy"]
+[ext_resource type="ArrayMesh" uid="uid://8i3l7jhhmvwm" path="res://assets/meshes/apocalypse_weapons/gl/parts/gl_4_trigger.tres" id="5_36jt0"]
+
+[node name="Gl4Base" type="MeshInstance3D" unique_id=1797411393]
+mesh = ExtResource("1_g63er")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="GL4_FrontCap" type="MeshInstance3D" parent="." unique_id=184782680]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.050684452, 0.20489883)
+mesh = ExtResource("2_2kf0k")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="GL4_RearCap" type="MeshInstance3D" parent="." unique_id=1613359509]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.050684452, -0.38256645)
+mesh = ExtResource("3_pmfg8")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="GL4_RocketContainer" type="MeshInstance3D" parent="." unique_id=1490753641]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00015756565, 0.16983199, -0.3061962)
+mesh = ExtResource("4_kmgpy")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="GL4_Trigger" type="MeshInstance3D" parent="." unique_id=546747771]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.07306194, 0.0070114136)
+mesh = ExtResource("5_36jt0")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Place_GL4_Charm" type="Node3D" parent="." unique_id=1041051169]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.11297172, 0.1746943, -0.10303879)
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Place_GL4_Sight" type="Node3D" parent="." unique_id=1301799843]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.12959634, 0.24222183, -0.22174263)
+metadata/extras = {
+"MM": {},
+"hops": {}
+}

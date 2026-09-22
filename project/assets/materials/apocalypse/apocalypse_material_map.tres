@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://wkky7idcrtgq"]
+
+[ext_resource type="Texture2D" uid="uid://7bik06ntfhld" path="res://assets/textures/apocalypse/apocalypse_map.png" id="1_8iopj"]
+
+[resource]
+resource_name = "apocalypse_material_map"
+cull_mode = 2
+albedo_texture = ExtResource("1_8iopj")
+roughness = 0.7312139
+metadata/_gltf_primary_texture_coord = 0

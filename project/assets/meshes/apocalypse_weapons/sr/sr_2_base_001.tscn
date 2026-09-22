@@ -1,0 +1,149 @@
+[gd_scene format=3 uid="uid://c0wsly367kjlj"]
+
+[ext_resource type="ArrayMesh" uid="uid://cx53eqfah18b6" path="res://assets/meshes/apocalypse_weapons/sr/parts/sr_2_base.tres" id="1_pvvav"]
+[ext_resource type="ArrayMesh" uid="uid://dbwlrbbjco2vi" path="res://assets/meshes/apocalypse_weapons/sr/parts/sight_11.tres" id="2_2w4x8"]
+[ext_resource type="ArrayMesh" uid="uid://darb3vipo3vt8" path="res://assets/meshes/apocalypse_weapons/sr/parts/sight_11_crosshair.tres" id="3_wwkuh"]
+[ext_resource type="ArrayMesh" uid="uid://bm0pirddbruur" path="res://assets/meshes/apocalypse_weapons/sr/parts/sight_11_glass.tres" id="4_r4fcw"]
+[ext_resource type="ArrayMesh" uid="uid://bldqjg4k8ktfw" path="res://assets/meshes/apocalypse_weapons/sr/parts/sight_11_projection.tres" id="5_t8xc4"]
+[ext_resource type="ArrayMesh" uid="uid://bhyeda3ieiel7" path="res://assets/meshes/apocalypse_weapons/sr/parts/sr_2_bipod.tres" id="6_of7ec"]
+[ext_resource type="ArrayMesh" uid="uid://brp1n3ib8jetj" path="res://assets/meshes/apocalypse_weapons/sr/parts/sr_2_bolt.tres" id="7_67v44"]
+[ext_resource type="ArrayMesh" uid="uid://d4crfk6oxrpna" path="res://assets/meshes/apocalypse_weapons/sr/parts/sr_2_buttstock_heavy.tres" id="8_8tm3m"]
+[ext_resource type="ArrayMesh" uid="uid://dtbqtus2bb3uw" path="res://assets/meshes/apocalypse_weapons/sr/parts/sr_2_magazine_extended.tres" id="9_acxpq"]
+[ext_resource type="ArrayMesh" uid="uid://bpae8fql5vkf0" path="res://assets/meshes/apocalypse_weapons/sr/parts/sr_2_trigger.tres" id="10_0s1uk"]
+
+[node name="Sr2Base001" type="MeshInstance3D" unique_id=1317425190]
+mesh = ExtResource("1_pvvav")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Place_SR2_BarLeft_001" type="Node3D" parent="." unique_id=1514252336]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.04321982, 0.12603664, 0.44056702)
+metadata/extras = {
+"MM": {}
+}
+
+[node name="Place_SR2_BarRight_001" type="Node3D" parent="." unique_id=459956412]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.04321975, 0.12603664, 0.44056702)
+metadata/extras = {
+"MM": {}
+}
+
+[node name="Place_SR2_Bipod_001" type="Node3D" parent="." unique_id=1588514301]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.07843685, 0.66929626)
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Place_SR2_Buttstock_001" type="Node3D" parent="." unique_id=1522156447]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.09009838, -0.04616356)
+metadata/extras = {
+"MM": {}
+}
+
+[node name="Place_SR2_Charm_001" type="Node3D" parent="." unique_id=1281385097]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.050793298, 0.081624985, 0.30602932)
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Place_SR2_Magazine_001" type="Node3D" parent="." unique_id=457850506]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.108867645, 0.20140457)
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Place_SR2_Muzzle_001" type="Node3D" parent="." unique_id=812189573]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4271803e-06, 0.12628174, 1.108181)
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Place_SR2_Sight_001" type="Node3D" parent="." unique_id=1437951616]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.419999e-05, 0.17154217, 0.16099167)
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Sight_11_001" type="MeshInstance3D" parent="." unique_id=1397598617]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.4200874e-05, 0.17154217, 0.16099119)
+mesh = ExtResource("2_2w4x8")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Sight_11_Crosshair_001" type="MeshInstance3D" parent="Sight_11_001" unique_id=1946868399]
+mesh = ExtResource("3_wwkuh")
+skeleton = NodePath("")
+metadata/extras = {
+"hops": {}
+}
+
+[node name="Sight_11_Glass_001" type="MeshInstance3D" parent="Sight_11_001" unique_id=214788026]
+mesh = ExtResource("4_r4fcw")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Sight_11_Projection_001" type="MeshInstance3D" parent="Sight_11_001" unique_id=1070491034]
+mesh = ExtResource("5_t8xc4")
+skeleton = NodePath("")
+metadata/extras = {
+"hops": {}
+}
+
+[node name="SR2_Bipod_001" type="MeshInstance3D" parent="." unique_id=1523044604]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.07843685, 0.66929626)
+mesh = ExtResource("6_of7ec")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="SR2_Bolt_001" type="MeshInstance3D" parent="." unique_id=2145739865]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12628174, 0.12272072)
+mesh = ExtResource("7_67v44")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="SR2_ButtstockHeavy_001" type="MeshInstance3D" parent="." unique_id=309358520]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.09009838, -0.04616356)
+mesh = ExtResource("8_8tm3m")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="SR2_MagazineExtended_001" type="MeshInstance3D" parent="." unique_id=395657900]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.108867645, 0.20140457)
+mesh = ExtResource("9_acxpq")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="SR2_Trigger_001" type="MeshInstance3D" parent="." unique_id=648679035]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.07449293, 0.08810043)
+mesh = ExtResource("10_0s1uk")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}

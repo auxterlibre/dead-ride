@@ -1,0 +1,37 @@
+[gd_resource type="ArrayMesh" format=4 uid="uid://bnh5bt54viox"]
+
+[ext_resource type="Material" uid="uid://cwgcxfci6lfy3" path="res://assets/materials/environment/nature_material_a.tres" id="1_u5m54"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_owd2n"]
+_surfaces = [{
+"aabb": AABB(-0.14333622, -0.02, -0.08254345, 0.28669894, 0.55934143, 0.12698421),
+"format": 34896613377,
+"index_count": 42,
+"index_data": PackedByteArray("CgAFAAEABwAFAAoABgAHAAoACwAKAAEABgAKAAsACwABAAIACAAGAAsADAALAAIACAALAAwACQAIAAwADAACAAMACQAMAAAAAAAMAAMAAAADAAQA"),
+"lods": [0.063415095, PackedByteArray("AAABAAIAAAACAAMAAAADAAQAAAAFAAEABgAFAAAABgAHAAUACAAGAAAACQAIAAAA")],
+"name": "forest",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 13,
+"vertex_data": PackedByteArray("/H8AAEKcAABuzbzXmHYAABf5XJR0zQAA//+nTf//AACq5AAAucIAAP9///8AAAAA5wZclHTNAACQMrzXmHYAAAAAp03//wAAThsAALnCAAD/f6HW6lAAAP9/t5NYowAA/3/xTTLVAAA=")
+}]
+blend_shape_mode = 0
+
+[resource]
+resource_name = "grass_1_a_singlesided"
+_surfaces = [{
+"aabb": AABB(-0.14333622, -0.02, -0.08254345, 0.28669894, 0.55934143, 0.12698421),
+"attribute_data": PackedByteArray("HZCBFPmRGwgFk+8LHZDSBTCT8w+IkoEUNY3vCx2Q0Q0dkIEUQo4bCAuN8w+zjYEUHZArCB2Q+AsdkO8PHZArEB2Q+BMdkO8X"),
+"format": 34896613399,
+"index_count": 42,
+"index_data": PackedByteArray("DAADAAEADQAMAAEADQABAAIADgANAAIADgACAAQAAAAOAAQAAAAEAAUACQAHAA8ABgAJAA8ABgAPABAACgAGABAACgAQABEACwAKABEACwARAAgA"),
+"lods": [0.063415095, PackedByteArray("AAABAAIAAAADAAEAAAACAAQAAAAEAAUABgAHAAgABgAJAAcACgAGAAgACwAKAAgA")],
+"material": ExtResource("1_u5m54"),
+"name": "forest",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 18,
+"vertex_data": PackedByteArray("/H8AAEKc+IhuzbzXmHZXjhf5XJR0zVSK/3///wAA9JL//6dN//8/hqrkAAC5wvmI5wZclHTNEa7/f///AADVtvx/AABCnAV3kDK815h2fq4AAKdN//8PsU4bAAC5wiC1/3+h1upQxY//f7eTWKOdiv9/8U0y1T+G/3+h1upQN7L/f7eTWKMsr/9/8U0y1YGw1D2/ws3Ik68gwxe4Us37qUiFWvqaPQ/DiOmsB0/iqg4OQ2VCKuVYDYEMvwe3AksTyslLrUTDIbd0gIb/euRUDWjpqAdVDDYI")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_owd2n")

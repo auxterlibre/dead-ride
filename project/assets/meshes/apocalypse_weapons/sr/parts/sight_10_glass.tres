@@ -1,0 +1,38 @@
+[gd_resource type="ArrayMesh" format=4 uid="uid://7v5q6sjvwe28"]
+
+[ext_resource type="Material" uid="uid://cuyc1fdmvrdy6" path="res://assets/materials/apocalypse_weapons/apocalypse_weapons_material_sight_glass.tres" id="1_oitw8"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_01he2"]
+_surfaces = [{
+"aabb": AABB(-0.042792615, 0.012202821, 0.25986096, 0.08557423, 0.08139505, 0.013856977),
+"format": 34359742465,
+"index_count": 30,
+"index_data": PackedByteArray("AAABAAIAAgABAAMABAABAAAAAwABAAUABgABAAQABQABAAcACAABAAYABwABAAkACgABAAgACQABAAoA"),
+"name": "Sight_Glass",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 11,
+"vertex_data": PackedByteArray("3NcNvWjSnz2ADIU++1+4tgmuWD3CJIw+T0cvvYyeWD2ADIU+psUNvWc84zyADIU+3PJYvHWrvz2ADIU+/3xYvFfuRzyADIU+3k5YPD6wvz2ADIU+u8RYPKIUSDyADIU+HroNPfDenz1/DIU+VMwNPYhu4zyADIU+xzsvPYi9WD2ADIU+")
+}]
+blend_shape_mode = 0
+
+[resource]
+resource_name = "sight_10_glass"
+_surfaces = [{
+"aabb": AABB(-0.042792615, 0.012202821, 0.25986096, 0.08557423, 0.08139505, 0.013856977),
+"attribute_data": PackedByteArray("MrffPhrwMT8yt98+GvAxPzG33z4a8DE/MrffPhrwMT8zt98+GfAxPzG33z4a8DE/MrffPhnwMT8yt98+GvAxPzK33z4Z8DE/MbffPhrwMT8wt98+GvAxPzK33z4a8DE/MbffPhrwMT8yt98+GfAxPw=="),
+"format": 34359742487,
+"index_count": 30,
+"index_data": PackedByteArray("AAABAAIAAgABAAMABAABAAAAAwABAAUABQABAAYABwABAAQACAABAAcACQABAAgACgALAAwADQALAAoA"),
+"material": ExtResource("1_oitw8"),
+"name": "Sight_Glass",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 14,
+"vertex_data": PackedByteArray("3NcNvWjSnz2ADIU++1+4tgmuWD3CJIw+T0cvvYyeWD2ADIU+psUNvWc84zyADIU+3PJYvHWrvz2ADIU+/3xYvFfuRzyADIU+u8RYPKIUSDyADIU+3k5YPD6wvz2ADIU+HroNPfDenz1/DIU+xzsvPYi9WD2ADIU+VMwNPYhu4zyADIU++1+4tgmuWD3CJIw+xzsvPYi9WD2ADIU+u8RYPKIUSDyADIU+52jDkBheVgb/f/9/f1y/EbBg/H8Pm+sR6mg2b////z/kdv2b3jz9Fel2/mPymI8ZGokBZDOZvBcViQCc////PxSXyJCQMrhMTp8CgDwyhkwXlztvUnML7/9//391bjr3Tp8CgNajdvIaiQFkBFRu3g==")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_01he2")
+metadata/extras = {
+"hops": {}
+}

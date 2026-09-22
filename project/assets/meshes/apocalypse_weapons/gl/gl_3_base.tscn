@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://i751y5a0nmx6"]
+
+[ext_resource type="ArrayMesh" uid="uid://2a333ysjdbmj" path="res://assets/meshes/apocalypse_weapons/gl/parts/gl_3_base.tres" id="1_5jdoi"]
+[ext_resource type="ArrayMesh" uid="uid://54pve67wcjlp" path="res://assets/meshes/apocalypse_weapons/gl/parts/gl_3_trigger.tres" id="2_gwatt"]
+
+[node name="Gl3Base" type="MeshInstance3D" unique_id=861593932]
+mesh = ExtResource("1_5jdoi")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="GL3_Trigger" type="MeshInstance3D" parent="." unique_id=1122237687]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9358478e-05, 0.12367964, 0.038915634)
+mesh = ExtResource("2_gwatt")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Place_GL3_Charm" type="Node3D" parent="." unique_id=898545952]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.015787657, 0.1259737, -0.0005302429)
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Place_GL3_Sight" type="Node3D" parent="." unique_id=1315760690]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.044484317, 0.16525483, 0.008831024)
+metadata/extras = {
+"MM": {},
+"hops": {}
+}

@@ -1,0 +1,21 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://de84emgopcdy6"]
+
+[ext_resource type="Shader" uid="uid://dhyqqmb6u3dk" path="res://shaders/road.gdshader" id="1_shader"]
+[ext_resource type="Texture2D" uid="uid://bki51n6hv6gsy" path="res://assets/textures/environment/asphalt.png" id="2_asphalt"]
+
+[resource]
+resource_name = "road_material"
+render_priority = 0
+shader = ExtResource("1_shader")
+shader_parameter/asphalt = ExtResource("2_asphalt")
+shader_parameter/road_color = Color(0.42, 0.37, 0.31, 1)
+shader_parameter/asphalt_size = 2.5
+shader_parameter/grain_mid = 0.015
+shader_parameter/grain_bite = 0.35
+shader_parameter/sand_creep = 0.22
+shader_parameter/sand_ragged = 0.6
+shader_parameter/sand_edge = 0.2
+shader_parameter/sand_patch = 0.74
+shader_parameter/drift_size = 3.0
+shader_parameter/dither = 1.0
+shader_parameter/speck_size = 0.06

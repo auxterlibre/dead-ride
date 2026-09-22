@@ -1,0 +1,85 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/inventory/planting_panel.gd" id="1_panel"]
+[ext_resource type="PackedScene" path="res://scenes/ui/inventory/inventory_grid.tscn" id="2_grid"]
+[ext_resource type="FontFile" uid="uid://b4eqtttrevslk" path="res://assets/fonts/AntonSC-Regular.ttf" id="3_anton"]
+[ext_resource type="PackedScene" uid="uid://chn8gugupyv77" path="res://scenes/ui/input/input_key_button.tscn" id="4_button"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
+bg_color = Color(0.91764706, 0.8862745, 0.7176471, 1)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_header"]
+bg_color = Color(0.79607844, 0.75686276, 0.5372549, 1)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+
+[node name="PlantingPanel" type="PanelContainer"]
+custom_minimum_size = Vector2(640, 0)
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+script = ExtResource("1_panel")
+
+[node name="Layout" type="VBoxContainer" parent="."]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 0
+
+[node name="TitleLabel" type="Label" parent="Layout"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 128)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.32156864, 0.40392157, 0.44705883, 1)
+theme_override_fonts/font = ExtResource("3_anton")
+theme_override_font_sizes/font_size = 56
+theme_override_styles/normal = SubResource("StyleBoxFlat_header")
+text = "PLANT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GridMargin" type="MarginContainer" parent="Layout"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_top = 64
+theme_override_constants/margin_right = 64
+theme_override_constants/margin_bottom = 32
+
+[node name="GridCentre" type="CenterContainer" parent="Layout/GridMargin"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Grid" parent="Layout/GridMargin/GridCentre" instance=ExtResource("2_grid")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="StatusLabel" type="Label" parent="Layout"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 96)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.32156864, 0.40392157, 0.44705883, 1)
+theme_override_fonts/font = ExtResource("3_anton")
+theme_override_font_sizes/font_size = 36
+text = "Place seed rounds in the slot"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="ButtonMargin" type="MarginContainer" parent="Layout"]
+layout_mode = 2
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 64
+theme_override_constants/margin_bottom = 64
+
+[node name="ButtonCentre" type="CenterContainer" parent="Layout/ButtonMargin"]
+layout_mode = 2
+
+[node name="PlantButton" parent="Layout/ButtonMargin/ButtonCentre" instance=ExtResource("4_button")]
+unique_name_in_owner = true
+layout_mode = 2
+key_text = ""
+action_text = "Plant"

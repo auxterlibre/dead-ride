@@ -1,0 +1,159 @@
+[gd_scene format=3 uid="uid://b0byslb8qjq8h"]
+
+[ext_resource type="ArrayMesh" uid="uid://bp152onbtxf1p" path="res://assets/meshes/apocalypse_weapons/ar/parts/ar_2_base.tres" id="1_c3ckq"]
+[ext_resource type="ArrayMesh" uid="uid://rwwmnssfobbc" path="res://assets/meshes/apocalypse_weapons/ar/parts/ar_2_barrel_mod.tres" id="2_03ldw"]
+[ext_resource type="ArrayMesh" uid="uid://bqg8l5hn78dna" path="res://assets/meshes/apocalypse_weapons/ar/parts/ar_2_barrel_stock.tres" id="3_y6dhn"]
+[ext_resource type="ArrayMesh" uid="uid://dw4jl68evkmlr" path="res://assets/meshes/apocalypse_weapons/ar/parts/ar_2_bolt.tres" id="4_e1ril"]
+[ext_resource type="ArrayMesh" uid="uid://xa1ncj6ei45r" path="res://assets/meshes/apocalypse_weapons/ar/parts/ar_2_buttstock_heavy.tres" id="5_7ulbl"]
+[ext_resource type="ArrayMesh" uid="uid://r8hmq6crqyr4" path="res://assets/meshes/apocalypse_weapons/ar/parts/ar_2_buttstock_light.tres" id="6_0nqf1"]
+[ext_resource type="ArrayMesh" uid="uid://dgmdvgv0adrqx" path="res://assets/meshes/apocalypse_weapons/ar/parts/ar_2_magazine.tres" id="7_m0inb"]
+[ext_resource type="ArrayMesh" uid="uid://bhjsxhyqkrcuq" path="res://assets/meshes/apocalypse_weapons/ar/parts/ar_2_magazine_extended.tres" id="8_bbhhx"]
+[ext_resource type="ArrayMesh" uid="uid://bd4ak1cdpvw62" path="res://assets/meshes/apocalypse_weapons/ar/parts/ar_2_sight.tres" id="9_n8psi"]
+[ext_resource type="ArrayMesh" uid="uid://denpn71trkasg" path="res://assets/meshes/apocalypse_weapons/ar/parts/ar_2_trigger.tres" id="10_6wiih"]
+
+[node name="Ar2Base" type="MeshInstance3D" unique_id=2066217414]
+mesh = ExtResource("1_c3ckq")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="AR2_Barrel_Mod" type="MeshInstance3D" parent="." unique_id=2083558378]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.20421362, 0.4201393)
+mesh = ExtResource("2_03ldw")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="AR2_Barrel_Stock" type="MeshInstance3D" parent="." unique_id=1195359917]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.11304617, 0.1857462)
+mesh = ExtResource("3_y6dhn")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="AR2_Bolt" type="MeshInstance3D" parent="." unique_id=788305224]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1361041, 0.015868187)
+mesh = ExtResource("4_e1ril")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="AR2_ButtstockHeavy" type="MeshInstance3D" parent="." unique_id=970589262]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.16852093, 0.4026165)
+mesh = ExtResource("5_7ulbl")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="AR2_ButtstockLight" type="MeshInstance3D" parent="." unique_id=1849319944]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.10719061, -0.040499687)
+mesh = ExtResource("6_0nqf1")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="AR2_Magazine" type="MeshInstance3D" parent="." unique_id=408206174]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00021688755, 0.051661015, 0.1385212)
+mesh = ExtResource("7_m0inb")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="AR2_MagazineExtended" type="MeshInstance3D" parent="." unique_id=40612420]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00021692252, -0.2650013, 0.6726599)
+mesh = ExtResource("8_bbhhx")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="AR2_Sight" type="MeshInstance3D" parent="." unique_id=161312418]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25925016, 0.23439312)
+mesh = ExtResource("9_n8psi")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="AR2_Trigger" type="MeshInstance3D" parent="." unique_id=441434367]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.052925587, 0.06331253)
+mesh = ExtResource("10_6wiih")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Place_AR2_BarBottom" type="Node3D" parent="." unique_id=1451016675]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.7942427e-05, 0.07027292, 0.29869175)
+metadata/extras = {
+"MM": {}
+}
+
+[node name="Place_AR2_BarLeft" type="Node3D" parent="." unique_id=1924625613]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.037008807, 0.11371088, 0.39862823)
+metadata/extras = {
+"MM": {}
+}
+
+[node name="Place_AR2_Barrel" type="Node3D" parent="." unique_id=816310918]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.11304617, 0.1857462)
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Place_AR2_BarRight" type="Node3D" parent="." unique_id=425275358]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.037008744, 0.11371088, 0.39862823)
+metadata/extras = {
+"MM": {}
+}
+
+[node name="Place_AR2_Buttstock" type="Node3D" parent="." unique_id=1396862083]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.10719061, -0.040499687)
+metadata/extras = {
+"MM": {}
+}
+
+[node name="Place_AR2_Charm" type="Node3D" parent="." unique_id=467813118]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.02025697, 0.06672478, 0.13693428)
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Place_AR2_Magazine" type="Node3D" parent="." unique_id=1067949776]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00021688941, 0.051661015, 0.13851833)
+metadata/extras = {
+"MM": {}
+}
+
+[node name="Place_AR2_Muzzle" type="Node3D" parent="." unique_id=1493049670]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.113046646, 0.6238899)
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Place_AR2_Sight" type="Node3D" parent="." unique_id=912501609]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.418526e-05, 0.15199184, 0.015282631)
+metadata/extras = {
+"MM": {},
+"hops": {}
+}

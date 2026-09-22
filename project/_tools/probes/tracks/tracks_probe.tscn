@@ -1,0 +1,141 @@
+[gd_scene format=3 uid="uid://br2wqeegwqugs"]
+
+[ext_resource type="Script" uid="uid://cmo8ff5emq1ek" path="res://_tools/probes/tracks/tracks_probe.gd" id="1_probe"]
+[ext_resource type="Shader" uid="uid://cogafrdjayui4" path="res://shaders/sand_field.gdshader" id="2_shader"]
+[ext_resource type="PackedScene" uid="uid://cybdinxiojqlp" path="res://scenes/vehicles/car.tscn" id="3_car"]
+[ext_resource type="Script" uid="uid://5y674hblljn1" path="res://_tools/probes/tracks/tracks_driver.gd" id="4_driver"]
+[ext_resource type="Script" uid="uid://varrl0xf4vlu" path="res://scripts/components/camera_follow.gd" id="5_camera"]
+[ext_resource type="Script" uid="uid://dt3bf5pdjb4be" path="res://scripts/components/wind.gd" id="6_wind"]
+[ext_resource type="Script" path="res://scripts/world/sand_field.gd" id="7_field"]
+
+[sub_resource type="Environment" id="Environment_tracks"]
+background_mode = 1
+background_color = Color(0.16, 0.14, 0.13, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.42, 0.33, 0.23, 1)
+ambient_light_energy = 0.9
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ground"]
+size = Vector2(60, 60)
+subdivide_width = 300
+subdivide_depth = 300
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ground"]
+render_priority = 0
+shader = ExtResource("2_shader")
+shader_parameter/sand_color = Color(0.902, 0.639, 0.212, 1)
+shader_parameter/rut_color = Color(0.7864583, 0.5243055, 0.17060736, 1)
+shader_parameter/ditch_depth = 0.1
+shader_parameter/world_size = 60.0
+shader_parameter/rim_lift = 0.35
+shader_parameter/rut_strength = 0.6
+shader_parameter/wind_direction = Vector2(0, -1)
+shader_parameter/wind_strength = 1.5
+shader_parameter/wind_gust = 1.0
+shader_parameter/ripple_height = 0.02
+shader_parameter/ripple_length = 2.8
+shader_parameter/ripple_spread = 6.0
+shader_parameter/ripple_drift = 0.03
+shader_parameter/ripple_color = Color(0.78, 0.53, 0.18, 1)
+shader_parameter/ripple_tint = 0.0
+shader_parameter/ripple_variation = 1.0
+shader_parameter/ripple_patch = 14.0
+shader_parameter/ripple_chaos = 0.10000000475
+shader_parameter/streamer_strength = 0.10000000475
+shader_parameter/streamer_length = 1.5
+shader_parameter/streamer_gap = 10.0
+shader_parameter/streamer_speed = 0.2000000095
+shader_parameter/streamer_march = 0.6000000285
+shader_parameter/streamer_color = Color(0.97, 0.75, 0.31, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ground"]
+size = Vector3(60, 2, 60)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rim"]
+size = Vector3(60, 3, 1)
+
+[node name="TracksProbe" type="Node3D" unique_id=1534563280]
+script = ExtResource("1_probe")
+
+[node name="Wind" type="Node" parent="." unique_id=245995777]
+script = ExtResource("6_wind")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1779975442]
+environment = SubResource("Environment_tracks")
+
+[node name="Sun" type="DirectionalLight3D" parent="." unique_id=192300312]
+transform = Transform3D(0.73849064, 0.5821502, -0.34019512, 0, 0.50454307, 0.8633866, 0.6742637, -0.63760287, 0.37260038, 0, 14, 0)
+light_energy = 1.2
+shadow_enabled = true
+
+[node name="Ground" type="StaticBody3D" parent="." unique_id=82339244]
+collision_layer = 20
+collision_mask = 0
+metadata/surface = "sand"
+
+[node name="Surface" type="MeshInstance3D" parent="Ground" unique_id=908868384]
+mesh = SubResource("PlaneMesh_ground")
+surface_material_override/0 = SubResource("ShaderMaterial_ground")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground" unique_id=516785173]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+shape = SubResource("BoxShape3D_ground")
+
+[node name="Rim" type="StaticBody3D" parent="." unique_id=1774237539]
+collision_layer = 4
+collision_mask = 0
+
+[node name="North" type="CollisionShape3D" parent="Rim" unique_id=2136341377]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -30)
+shape = SubResource("BoxShape3D_rim")
+
+[node name="South" type="CollisionShape3D" parent="Rim" unique_id=730676412]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 30)
+shape = SubResource("BoxShape3D_rim")
+
+[node name="East" type="CollisionShape3D" parent="Rim" unique_id=356054294]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 30, 1.5, 0)
+shape = SubResource("BoxShape3D_rim")
+
+[node name="West" type="CollisionShape3D" parent="Rim" unique_id=736150587]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -30, 1.5, 0)
+shape = SubResource("BoxShape3D_rim")
+
+[node name="TrailViewport" type="SubViewport" parent="." unique_id=1452266814]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(1024, 1024)
+render_target_update_mode = 4
+
+[node name="TrailCamera" type="Camera3D" parent="TrailViewport" unique_id=1601920627]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 20, 0)
+cull_mask = 2
+projection = 1
+current = true
+size = 60.0
+near = 0.5
+far = 40.0
+
+[node name="SandField" type="Node" parent="." node_paths=PackedStringArray("surface", "trail_viewport", "trail_camera")]
+script = ExtResource("7_field")
+surface = NodePath("../Ground/Surface")
+trail_viewport = NodePath("../TrailViewport")
+trail_camera = NodePath("../TrailViewport/TrailCamera")
+
+[node name="Car" parent="." unique_id=672762277 instance=ExtResource("3_car")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -12)
+dust_speed_size = Vector2(0.2, 1.3)
+
+[node name="TracksDriver" type="Node" parent="Car" unique_id=1809127558]
+script = ExtResource("4_driver")
+
+[node name="CameraFollow" type="Node3D" parent="." unique_id=1669478054]
+script = ExtResource("5_camera")
+
+[node name="Camera" type="Camera3D" parent="CameraFollow" unique_id=1521724479]
+transform = Transform3D(1, 0, 0, 0, 0.7071068, 0.7071068, 0, -0.7071068, 0.7071068, 0, 5, 5)
+cull_mask = 1
+projection = 1
+current = true
+size = 20.0
+far = 60.0

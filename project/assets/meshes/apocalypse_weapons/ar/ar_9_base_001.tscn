@@ -1,0 +1,142 @@
+[gd_scene format=3 uid="uid://dx06r6upkds8h"]
+
+[ext_resource type="ArrayMesh" uid="uid://cd5i4qe1qe2ug" path="res://assets/meshes/apocalypse_weapons/ar/parts/ar_9_base.tres" id="1_b4gu5"]
+[ext_resource type="ArrayMesh" uid="uid://sy7yr8pcsvg6" path="res://assets/meshes/apocalypse_weapons/ar/parts/ar_9_bolt.tres" id="2_yree8"]
+[ext_resource type="ArrayMesh" uid="uid://d5qa08sfy34x" path="res://assets/meshes/apocalypse_weapons/ar/parts/ar_9_magazine.tres" id="3_l4wsg"]
+[ext_resource type="ArrayMesh" uid="uid://ba0gb2vdlfsl7" path="res://assets/meshes/apocalypse_weapons/ar/parts/ar_9_sight.tres" id="4_l7fme"]
+[ext_resource type="ArrayMesh" uid="uid://2yv71q5nh5kv" path="res://assets/meshes/apocalypse_weapons/ar/parts/ar_9_sight_crosshair.tres" id="5_nkkhx"]
+[ext_resource type="ArrayMesh" uid="uid://0mvhxety6i28" path="res://assets/meshes/apocalypse_weapons/ar/parts/ar_9_sight_glass.tres" id="6_i4djj"]
+[ext_resource type="ArrayMesh" uid="uid://buqjl8dco5w4k" path="res://assets/meshes/apocalypse_weapons/ar/parts/ar_9_sight_projection.tres" id="7_5n3sv"]
+[ext_resource type="ArrayMesh" uid="uid://04br5ntfivqh" path="res://assets/meshes/apocalypse_weapons/ar/parts/ar_9_trigger.tres" id="8_e3kaf"]
+[ext_resource type="ArrayMesh" uid="uid://3i0btai6nqfw" path="res://assets/meshes/apocalypse_weapons/ar/parts/muzzle_compensator_01.tres" id="9_gnuu6"]
+[ext_resource type="ArrayMesh" uid="uid://cbhdf7waetccy" path="res://assets/meshes/apocalypse_weapons/ar/parts/under_barrel_gas_burner.tres" id="10_2emso"]
+
+[node name="Ar9Base001" type="MeshInstance3D" unique_id=1195476700]
+mesh = ExtResource("1_b4gu5")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="AR9_Bolt_001" type="MeshInstance3D" parent="." unique_id=367506337]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0069204937, 0.10212183, 0.087654114)
+mesh = ExtResource("2_yree8")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="AR9_Magazine_001" type="MeshInstance3D" parent="." unique_id=1307152128]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.039140224, -0.15311813)
+mesh = ExtResource("3_l4wsg")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="AR9_Sight_001" type="MeshInstance3D" parent="." unique_id=1733866032]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.13492489, 0.12449074)
+mesh = ExtResource("4_l7fme")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="AR9_Sight_Crosshair_001" type="MeshInstance3D" parent="AR9_Sight_001" unique_id=990284531]
+mesh = ExtResource("5_nkkhx")
+skeleton = NodePath("")
+metadata/extras = {
+"hops": {}
+}
+
+[node name="AR9_Sight_Glass_001" type="MeshInstance3D" parent="AR9_Sight_001" unique_id=1435689151]
+mesh = ExtResource("6_i4djj")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="AR9_Sight_Projection_001" type="MeshInstance3D" parent="AR9_Sight_001" unique_id=1215921450]
+mesh = ExtResource("7_5n3sv")
+skeleton = NodePath("")
+metadata/extras = {
+"hops": {}
+}
+
+[node name="AR9_Trigger_001" type="MeshInstance3D" parent="." unique_id=521916331]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.045672417, 0.04536438)
+mesh = ExtResource("8_e3kaf")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Muzzle_Compensator_01_001" type="MeshInstance3D" parent="." unique_id=1722536843]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.09230995, 0.51872444)
+mesh = ExtResource("9_gnuu6")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Place_AR9_BarBottom_001" type="Node3D" parent="." unique_id=307770076]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.7930236e-05, 0.053382874, 0.2134018)
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Place_AR9_BarLeft_001" type="Node3D" parent="." unique_id=322043671]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.030146794, 0.09834671, 0.18120003)
+metadata/extras = {
+"MM": {}
+}
+
+[node name="Place_AR9_BarRight_001" type="Node3D" parent="." unique_id=1483248962]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.030146757, 0.09834671, 0.18120003)
+metadata/extras = {
+"MM": {}
+}
+
+[node name="Place_AR9_Charm_001" type="Node3D" parent="." unique_id=462446975]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.011546011, 0.053707123, 0.110946655)
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Place_AR9_Magazine_001" type="Node3D" parent="." unique_id=1947215493]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.039140224, -0.15311813)
+metadata/extras = {
+"MM": {}
+}
+
+[node name="Place_AR9_Muzzle_001" type="Node3D" parent="." unique_id=851276934]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.09230995, 0.51872444)
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Place_AR9_Sight_001" type="Node3D" parent="." unique_id=770790160]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.13492489, 0.12449074)
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="UnderBarrel_GasBurner_001" type="MeshInstance3D" parent="." unique_id=551686846]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.793024e-05, 0.053382874, 0.2134018)
+mesh = ExtResource("10_2emso")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}

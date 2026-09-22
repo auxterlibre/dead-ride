@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bk6hl7fieo5dt"]
+
+[ext_resource type="ArrayMesh" uid="uid://pl7nf6yoi8lx" path="res://assets/meshes/items/consumables/water_bottle.tres" id="1_fmalp"]
+
+[node name="WaterBottle" type="Node3D" unique_id=885490040]
+
+[node name="Waterbottle" type="MeshInstance3D" parent="." unique_id=2107917342]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25362223, 0)
+mesh = ExtResource("1_fmalp")
+skeleton = NodePath("")

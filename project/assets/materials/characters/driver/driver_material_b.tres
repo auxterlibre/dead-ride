@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cjqo22twn2je6"]
+
+[ext_resource type="Texture2D" uid="uid://dxgimxnxmu1xo" path="res://assets/textures/characters/driver/driver_texture_b.png" id="1_0agst"]
+
+[resource]
+resource_name = "driver_texture"
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_0agst")
+roughness = 0.5

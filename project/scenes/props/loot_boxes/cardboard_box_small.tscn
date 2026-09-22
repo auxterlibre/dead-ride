@@ -1,0 +1,33 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" uid="uid://t7tx182wjjh7" path="res://scripts/world/loot_container.gd" id="1_loot"]
+[ext_resource type="Script" uid="uid://dw5x2lwhyyk5m" path="res://scripts/components/interactive_area.gd" id="2_area"]
+[ext_resource type="Resource" path="res://data/storage/box_small_layout.tres" id="3_layout"]
+[ext_resource type="Resource" path="res://data/world/cardboard_box.tres" id="4_table"]
+[ext_resource type="ArrayMesh" path="res://assets/meshes/props/containers/loot_box_cardboard_box_small.tres" id="5_mesh"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hull"]
+size = Vector3(0.46, 0.46, 0.45)
+
+[node name="CardboardBoxSmall" type="StaticBody3D" groups=["loot_container"]]
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("1_loot")
+title = "Cardboard Box"
+layout = ExtResource("3_layout")
+loot = ExtResource("4_table")
+
+[node name="Box" type="MeshInstance3D" parent="."]
+mesh = ExtResource("5_mesh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.23, 0)
+shape = SubResource("BoxShape3D_hull")
+
+[node name="SearchArea" type="Node3D" parent="." node_paths=PackedStringArray("target_object")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+script = ExtResource("2_area")
+target_object = NodePath("..")
+callback = "open"
+action_label = "Search"
+prompt_range = 1.8

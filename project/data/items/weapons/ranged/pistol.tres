@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="WeaponData" format=3 uid="uid://ct4fmrmkqcwox"]
+
+[ext_resource type="Texture2D" uid="uid://c3bjugw75d1pb" path="res://assets/textures/thumbnails/weapons/pistol.png" id="1_7vvju"]
+[ext_resource type="PackedScene" uid="uid://dfxp3b6evqswa" path="res://scenes/items/weapons/pistol.tscn" id="1_model"]
+[ext_resource type="Script" uid="uid://dmpo1qr4cr7tg" path="res://scripts/data/items/weapon_data.gd" id="2_script"]
+
+[resource]
+script = ExtResource("2_script")
+type = 2
+ammo_type = 0
+damage = 8
+effective_range = 25
+accuracy = 70
+recoil = 20
+knockback_distance = 5
+max_ammo = 15
+fire_rate = 25
+aim_yaw_offset = 33.599999999999994
+model = ExtResource("1_model")
+name = "Pistol"
+price = 120
+weight = 1.2
+size = Vector2i(2, 1)
+icon = ExtResource("1_7vvju")

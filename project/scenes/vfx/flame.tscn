@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://b7f1axf8ick55"]
+
+[ext_resource type="Shader" uid="uid://dvkdm1pq555fg" path="res://shaders/fire.gdshader" id="1_fyki0"]
+[ext_resource type="Script" uid="uid://dtftuyaps2krv" path="res://scripts/vfx/flame.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://hhqkerab3vnl" path="res://assets/textures/vfx/flames/flame_noise.jpeg" id="2_wphme"]
+[ext_resource type="AudioStream" uid="uid://bx1tedrrgxe2u" path="res://assets/audio/fire/fire_ignite.wav" id="4_uirip"]
+[ext_resource type="AudioStream" uid="uid://dvhqco0h7cfwt" path="res://assets/audio/fire/fire_loop.wav" id="5_h5wgx"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fire"]
+render_priority = 0
+shader = ExtResource("1_fyki0")
+shader_parameter/noise_texture = ExtResource("2_wphme")
+shader_parameter/scroll_speed = 1.4
+shader_parameter/noise_scale = 1.6
+shader_parameter/erosion = 0.4
+shader_parameter/wobble = 0.08
+shader_parameter/base_width = 0.85
+shader_parameter/softness = 0.12
+shader_parameter/color_core = Color(1, 0.93, 0.55, 1)
+shader_parameter/color_mid = Color(1, 0.4015283, 0.10203439, 1)
+shader_parameter/color_outer = Color(0.6588541, 0.13966495, 0.045542896, 1)
+shader_parameter/emission_strength = 8.0
+
+[sub_resource type="QuadMesh" id="QuadMesh_fire"]
+material = SubResource("ShaderMaterial_fire")
+size = Vector2(1.725, 1.9)
+
+[node name="Flame" type="MeshInstance3D" unique_id=2026140600]
+cast_shadow = 0
+mesh = SubResource("QuadMesh_fire")
+script = ExtResource("1_script")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1244065892]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3425479, 0)
+light_color = Color(1, 0.65727, 0.25300807, 1)
+light_energy = 3.0
+shadow_enabled = true
+
+[node name="AudioIgnite" type="AudioStreamPlayer3D" parent="." unique_id=1533695657]
+stream = ExtResource("4_uirip")
+
+[node name="AudioLoop" type="AudioStreamPlayer3D" parent="." unique_id=357733309]
+stream = ExtResource("5_h5wgx")

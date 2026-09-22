@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cxrotl2anp1u0"]
+
+[ext_resource type="Texture2D" uid="uid://baxwomunmx2q5" path="res://assets/textures/junkyard/junkyard_scrap_metal_2.png" id="1_3634s"]
+
+[resource]
+resource_name = "junkyard_material_scrap_metal_2"
+cull_mode = 2
+albedo_texture = ExtResource("1_3634s")
+roughness = 0.79090905
+metadata/_gltf_primary_texture_coord = 0

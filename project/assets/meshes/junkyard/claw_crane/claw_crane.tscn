@@ -1,0 +1,235 @@
+[gd_scene format=3 uid="uid://dg0fm0kmq4shm"]
+
+[ext_resource type="ArrayMesh" uid="uid://1g6e1j6bdfmg" path="res://assets/meshes/junkyard/claw_crane/parts/claw_crane_claw.tres" id="1_ncbpm"]
+[ext_resource type="ArrayMesh" uid="uid://ctcn4rmqpgdb0" path="res://assets/meshes/junkyard/claw_crane/parts/claw_crane_claw_003.tres" id="2_6dh1v"]
+[ext_resource type="ArrayMesh" uid="uid://bhkby68hi6leo" path="res://assets/meshes/junkyard/claw_crane/parts/claw_crane_claw_002.tres" id="3_vqhg8"]
+[ext_resource type="ArrayMesh" uid="uid://be14suctfks66" path="res://assets/meshes/junkyard/claw_crane/parts/claw_crane_claw_001.tres" id="4_1345p"]
+[ext_resource type="ArrayMesh" uid="uid://dk52j13pb6mxh" path="res://assets/meshes/junkyard/claw_crane/parts/claw_crane_knee_4.tres" id="5_kbw6a"]
+[ext_resource type="ArrayMesh" uid="uid://bmko2c0ile8c7" path="res://assets/meshes/junkyard/claw_crane/parts/claw_crane_knee_3.tres" id="6_4241x"]
+[ext_resource type="ArrayMesh" uid="uid://cvrgrpiv3p0if" path="res://assets/meshes/junkyard/claw_crane/parts/claw_crane_piston.tres" id="7_4i857"]
+[ext_resource type="ArrayMesh" uid="uid://cwiyto4dmbwms" path="res://assets/meshes/junkyard/claw_crane/parts/claw_crane_knee_2.tres" id="8_44e0g"]
+[ext_resource type="ArrayMesh" uid="uid://caayjc3v1lmoe" path="res://assets/meshes/junkyard/claw_crane/parts/claw_crane_piston_001.tres" id="9_66sh4"]
+[ext_resource type="ArrayMesh" uid="uid://rh1ek2pd8hm6" path="res://assets/meshes/junkyard/claw_crane/parts/claw_crane_knee_1.tres" id="10_fvv20"]
+[ext_resource type="ArrayMesh" uid="uid://cs7i3jvxneb6l" path="res://assets/meshes/junkyard/claw_crane/parts/claw_crane_body.tres" id="11_vcpse"]
+[ext_resource type="ArrayMesh" uid="uid://coep0pnsrk6js" path="res://assets/meshes/junkyard/claw_crane/parts/claw_crane_chassis.tres" id="12_s1y4j"]
+
+[node name="ClawCrane" type="Node3D" unique_id=395735794]
+
+[node name="Skeleton3D" type="Skeleton3D" parent="." unique_id=203112772]
+bones/0/name = "Root"
+bones/0/parent = -1
+bones/0/rest = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+bones/0/enabled = true
+bones/0/position = Vector3(0, 0, 0)
+bones/0/rotation = Quaternion(0, 0, 0, 1)
+bones/0/scale = Vector3(1, 1, 1)
+bones/1/name = "Body"
+bones/1/parent = 0
+bones/1/rest = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 1, 0, 1.3679359, 0)
+bones/1/enabled = true
+bones/1/position = Vector3(0, 1.3679359, 0)
+bones/1/rotation = Quaternion(0, 0, 0, 1)
+bones/1/scale = Vector3(1, 0.99999994, 1)
+bones/2/name = "knee_1"
+bones/2/parent = 1
+bones/2/rest = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.035827637, 1.2039261, 1.0021152)
+bones/2/enabled = true
+bones/2/position = Vector3(-0.035827637, 1.2039261, 1.0021152)
+bones/2/rotation = Quaternion(0, 0, 0, 1)
+bones/2/scale = Vector3(1, 1, 1)
+bones/3/name = "knee_2"
+bones/3/parent = 2
+bones/3/rest = Transform3D(1, -1.4210854e-14, 4.768368e-07, 3.5908266e-07, -0.65796155, -0.75305146, 3.1374032e-07, 0.75305146, -0.65796155, -0.010131836, 8.810895, 0.0018863678)
+bones/3/enabled = true
+bones/3/position = Vector3(-0.010131836, 8.810895, 0.0018863678)
+bones/3/rotation = Quaternion(0.91048384, 9.859665e-08, 2.170761e-07, 0.41354468)
+bones/3/scale = Vector3(1, 0.99999994, 0.99999994)
+bones/4/name = "knee_3"
+bones/4/parent = 3
+bones/4/rest = Transform3D(1, -3.590826e-07, 1.630967e-07, 3.5908278e-07, 0.65796155, -0.7530515, 1.6309636e-07, 0.75305146, 0.6579616, 5.6615056e-05, 8.640441, 0.8073605)
+bones/4/enabled = true
+bones/4/position = Vector3(5.6615056e-05, 8.640441, 0.8073605)
+bones/4/rotation = Quaternion(0.41354468, 9.364815e-14, 1.9719336e-07, 0.91048384)
+bones/4/scale = Vector3(1, 0.99999994, 1)
+bones/5/name = "claw_control"
+bones/5/parent = 4
+bones/5/rest = Transform3D(1, 4.7683696e-07, 3.894145e-07, -3.8941445e-07, -1.1920929e-07, 0.99999994, 4.7683702e-07, -0.99999994, -1.1920929e-07, -7.018341e-05, 0.51606876, -0.79043263)
+bones/5/enabled = true
+bones/5/position = Vector3(-7.018341e-05, 0.51606876, -0.79043263)
+bones/5/rotation = Quaternion(-0.7071068, -3.0908527e-08, -3.0626614e-07, 0.7071067)
+bones/5/scale = Vector3(1, 0.99999994, 0.99999994)
+bones/6/name = "knee_4"
+bones/6/parent = 4
+bones/6/rest = Transform3D(1, -5.0486857e-29, -2.842171e-14, -5.0486857e-29, 1, -3.5526967e-15, 2.842171e-14, 3.5526967e-15, 1, -7.056031e-05, 0.97468793, -6.526825e-07)
+bones/6/enabled = true
+bones/6/position = Vector3(-7.056031e-05, 0.97468793, -6.526825e-07)
+bones/6/rotation = Quaternion(1.7763484e-15, -1.4210855e-14, 0, 1)
+bones/6/scale = Vector3(1, 1, 1)
+bones/7/name = "claw_1"
+bones/7/parent = 6
+bones/7/rest = Transform3D(1, 4.76837e-07, 2.2967633e-06, -2.2967633e-06, 0, 1, 4.76837e-07, -1, 0, -7.038064e-05, 0.95859486, -0.37679547)
+bones/7/enabled = true
+bones/7/position = Vector3(-7.038064e-05, 0.95859486, -0.37679547)
+bones/7/rotation = Quaternion(-0.70710677, 6.434411e-07, -9.806157e-07, 0.70710677)
+bones/7/scale = Vector3(1, 1, 1)
+bones/8/name = "claw_2"
+bones/8/parent = 6
+bones/8/rest = Transform3D(-4.768371e-07, 0.9999998, -8.242296e-13, -1.966953e-06, -1.1723952e-13, 1, 0.9999999, 4.7683707e-07, 1.9669533e-06, 0.37669945, 0.9585949, -4.7302456e-07)
+bones/8/enabled = true
+bones/8/position = Vector3(0.37669945, 0.9585949, -4.7302456e-07)
+bones/8/rotation = Quaternion(-0.4999994, -0.49999964, -0.5000006, 0.50000036)
+bones/8/scale = Vector3(0.9999999, 0.9999998, 1)
+bones/9/name = "claw_3"
+bones/9/parent = 6
+bones/9/rest = Transform3D(-1, -5.640731e-07, -1.7465872e-07, -1.7465872e-07, 0, 1, -5.640731e-07, 1, 0, -7.073998e-05, 0.958595, 0.37679416)
+bones/9/enabled = true
+bones/9/position = Vector3(-7.073998e-05, 0.958595, 0.37679416)
+bones/9/rotation = Quaternion(-2.6118116e-07, 0.70710677, 0.70710677, 1.3767877e-07)
+bones/9/scale = Vector3(1, 1, 1)
+bones/10/name = "claw_4"
+bones/10/parent = 6
+bones/10/rest = Transform3D(5.3644175e-07, -0.9999998, 5.960483e-08, -3.2782552e-07, 5.960464e-08, 1, -0.9999999, -5.364417e-07, -3.2782552e-07, -0.37690163, 0.9585949, -8.3236955e-07)
+bones/10/enabled = true
+bones/10/position = Vector3(-0.37690163, 0.9585949, -8.3236955e-07)
+bones/10/rotation = Quaternion(-0.5000002, 0.5, 0.49999976, 0.50000006)
+bones/10/scale = Vector3(0.9999999, 0.9999998, 1)
+bones/11/name = "piston_2"
+bones/11/parent = 3
+bones/11/rest = Transform3D(1, 1.8457366e-07, 5.4890364e-07, 5.68593e-07, -0.13315773, -0.9910948, -1.0983925e-07, 0.9910948, -0.13315775, 5.6976758e-05, 2.8675613, 0.048815075)
+bones/11/enabled = true
+bones/11/position = Vector3(5.6976758e-05, 2.8675613, 0.048815075)
+bones/11/rotation = Quaternion(0.7527144, 2.5015026e-07, 1.4582704e-07, 0.65834725)
+bones/11/scale = Vector3(1, 0.99999994, 0.99999994)
+bones/12/name = "piston_target"
+bones/12/parent = 3
+bones/12/rest = Transform3D(1, 3.590826e-07, 3.1374006e-07, 5.684342e-14, -0.65796137, 0.75305164, 4.7683665e-07, -0.7530516, -0.6579614, 5.6976758e-05, 2.8675613, 0.048815075)
+bones/12/enabled = true
+bones/12/position = Vector3(5.6976758e-05, 2.8675613, 0.048815075)
+bones/12/rotation = Quaternion(0.9104838, 9.859668e-08, 2.17076e-07, -0.4135448)
+bones/12/scale = Vector3(1, 0.99999994, 1)
+bones/13/name = "piston_1"
+bones/13/parent = 2
+bones/13/rest = Transform3D(1, -6.54606e-07, 2.2200486e-06, 2.1015248e-06, 0.65873206, -0.75237757, -9.699063e-07, 0.75237757, 0.65873206, -0.010131836, 5.2187395, 0.22332764)
+bones/13/enabled = true
+bones/13/position = Vector3(-0.010131836, 5.2187395, 0.22332764)
+bones/13/rotation = Quaternion(0.41307867, 8.7569214e-07, 7.566007e-07, 0.9106954)
+bones/13/scale = Vector3(1, 0.99999994, 0.99999994)
+
+[node name="claw_1" type="BoneAttachment3D" parent="Skeleton3D" unique_id=790296054]
+transform = Transform3D(1, -5.684342e-14, 2.2967633e-06, 2.296763e-06, -3.5526758e-15, -0.9999998, 8.526513e-14, 0.99999994, 1.091629e-12, -0.046043593, 3.1564116, 7.3562818)
+bone_name = "claw_1"
+bone_idx = 7
+
+[node name="Claw_crane_claw_004" type="MeshInstance3D" parent="Skeleton3D/claw_1" unique_id=273405174]
+transform = Transform3D(1, 2.2967636e-06, -1.8331965e-13, -2.2737368e-13, 1.7881398e-07, 1.0000001, 2.2967633e-06, -1.0000001, 1.7881398e-07, -5.3661133e-05, 3.828039e-07, -6.481599e-07)
+mesh = ExtResource("1_ncbpm")
+skeleton = NodePath("")
+
+[node name="claw_2" type="BoneAttachment3D" parent="Skeleton3D" unique_id=918469463]
+transform = Transform3D(-1.7053026e-13, 0.9999998, 9.094944e-13, 1.9073481e-06, 4.2632557e-14, -0.9999998, -0.9999998, -1.4210855e-13, -1.9073485e-06, 0.33072641, 3.1564116, 6.979487)
+bone_name = "claw_2"
+bone_idx = 8
+
+[node name="Claw_crane_claw_003" type="MeshInstance3D" parent="Skeleton3D/claw_2" unique_id=1510030155]
+transform = Transform3D(0, 1.9073489e-06, -1.0000002, 1.0000002, 1.192093e-07, 2.2737373e-13, 1.1920932e-07, -1.0000001, -1.907349e-06, -8.892582e-06, -0.00018548674, 3.8665257e-07)
+mesh = ExtResource("2_6dh1v")
+skeleton = NodePath("")
+
+[node name="claw_3" type="BoneAttachment3D" parent="Skeleton3D" unique_id=1040913466]
+transform = Transform3D(-1, -8.7236174e-08, -1.7465875e-07, 1.7465868e-07, 3.552672e-15, -0.9999998, 8.723612e-08, -0.99999994, -8.683645e-14, -0.046043593, 3.1564116, 6.602692)
+bone_name = "claw_3"
+bone_idx = 9
+
+[node name="Claw_crane_claw_002" type="MeshInstance3D" parent="Skeleton3D/claw_3" unique_id=1730998753]
+transform = Transform3D(-1, 1.7465857e-07, 8.723613e-08, -8.7236124e-08, 0, -1.0000001, -1.7465857e-07, -1, 1.5236539e-14, 0.0001208556, -4.82197e-06, -5.516993e-07)
+mesh = ExtResource("3_vqhg8")
+skeleton = NodePath("")
+
+[node name="claw_4" type="BoneAttachment3D" parent="Skeleton3D" unique_id=1519533153]
+transform = Transform3D(1.7053026e-13, -0.9999998, 1.1920912e-07, 3.5762775e-07, -1.1920929e-07, -0.9999998, 0.9999998, 1.4210855e-13, 3.576279e-07, -0.42287466, 3.1564116, 6.979487)
+bone_name = "claw_4"
+bone_idx = 10
+
+[node name="Claw_crane_claw_001" type="MeshInstance3D" parent="Skeleton3D/claw_4" unique_id=1357852569]
+transform = Transform3D(0, 2.384186e-07, 1.0000001, -1.0000001, -1.192093e-07, 2.8421713e-14, 1.192093e-07, -1.0000001, 2.384186e-07, 7.0105393e-06, 0.00011968902, 9.214272e-07)
+mesh = ExtResource("4_1345p")
+skeleton = NodePath("")
+
+[node name="knee_4" type="BoneAttachment3D" parent="Skeleton3D" unique_id=993234377]
+transform = Transform3D(1, 1.6940573e-21, 4.76837e-07, 4.2632564e-14, -0.9999998, 3.552696e-15, 4.76837e-07, -3.5526965e-15, -0.99999994, -0.045973033, 4.1150064, 6.9794865)
+bone_name = "knee_4"
+bone_idx = 6
+
+[node name="Claw_crane_knee_4_001" type="MeshInstance3D" parent="Skeleton3D/knee_4" unique_id=1663044399]
+transform = Transform3D(0.9999999, 1.06581385e-14, 4.76837e-07, 3.1974413e-14, -1.0000001, -4.4703494e-08, 4.7683693e-07, 4.47035e-08, -1, -7.056031e-05, -0.0067521357, -6.3747284e-06)
+mesh = ExtResource("5_kbw6a")
+skeleton = NodePath("")
+
+[node name="knee_3" type="BoneAttachment3D" parent="Skeleton3D" unique_id=1711269072]
+transform = Transform3D(1, 0, 4.7683702e-07, 4.2632564e-14, -0.9999998, 0, 4.7683702e-07, 0, -0.99999994, -0.045902472, 5.089694, 6.979486)
+bone_name = "knee_3"
+bone_idx = 4
+
+[node name="Claw_crane_knee_3_001" type="MeshInstance3D" parent="Skeleton3D/knee_3" unique_id=679900350]
+transform = Transform3D(0.9999999, 1.0658141e-14, 4.7683702e-07, 3.197441e-14, -1.0000001, -4.470348e-08, 4.7683696e-07, 4.4703484e-08, -1, -7.056031e-05, -5.9828307e-07, -6.3747284e-06)
+mesh = ExtResource("6_4241x")
+skeleton = NodePath("")
+
+[node name="piston_2" type="BoneAttachment3D" parent="Skeleton3D" unique_id=889037153]
+transform = Transform3D(1, 6.571641e-07, 4.854091e-07, 6.768492e-08, -0.65873265, 0.7523768, 8.1419006e-07, -0.75237685, -0.65873265, -0.045902472, 9.45925, 3.1313043)
+bone_name = "piston_2"
+bone_idx = 11
+
+[node name="Claw_crane_piston_001" type="MeshInstance3D" parent="Skeleton3D/piston_2" unique_id=1913764650]
+transform = Transform3D(0.9999999, 6.760956e-08, 8.141046e-07, 6.570503e-07, -0.65873253, -0.7523774, 4.854091e-07, 0.7523774, -0.65873253, -0.001666692, -0.017462859, 0.0020619782)
+mesh = ExtResource("7_4i857")
+skeleton = NodePath("")
+
+[node name="knee_2" type="BoneAttachment3D" parent="Skeleton3D" unique_id=799872611]
+transform = Transform3D(1, -2.8421708e-14, 4.768368e-07, 3.5908263e-07, -0.6579615, -0.7530514, 3.1374032e-07, 0.75305146, -0.65796155, -0.045959473, 11.382755, 1.0040016)
+bone_name = "knee_2"
+bone_idx = 3
+
+[node name="Claw_crane_knee_2_001" type="MeshInstance3D" parent="Skeleton3D/knee_2" unique_id=548388035]
+transform = Transform3D(0.9999999, 3.5908266e-07, 3.1374057e-07, -5.6843412e-14, -0.6579618, 0.75305146, 4.7683685e-07, -0.7530514, -0.6579619, 0.00017907035, 1.9074132e-06, 3.0119554e-07)
+mesh = ExtResource("8_44e0g")
+skeleton = NodePath("")
+
+[node name="piston_1" type="BoneAttachment3D" parent="Skeleton3D" unique_id=447056124]
+transform = Transform3D(1, -6.546058e-07, 2.2200481e-06, 2.1015244e-06, 0.65873194, -0.75237745, -9.699063e-07, 0.7523775, 0.658732, -0.045959473, 7.790601, 1.2254429)
+bone_name = "piston_1"
+bone_idx = 13
+
+[node name="Claw_crane_piston_001_001" type="MeshInstance3D" parent="Skeleton3D/piston_1" unique_id=1922618613]
+transform = Transform3D(1, 2.1019728e-06, -9.693952e-07, -6.552864e-07, 0.6587323, 0.75237733, 2.2200488e-06, -0.7523774, 0.65873224, 4.1441504e-05, -4.1060266e-06, -8.684583e-07)
+mesh = ExtResource("9_66sh4")
+skeleton = NodePath("")
+
+[node name="knee_1" type="BoneAttachment3D" parent="Skeleton3D" unique_id=384435222]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 1, -0.035827637, 2.5718617, 1.0021152)
+bone_name = "knee_1"
+bone_idx = 2
+
+[node name="Claw_crane_knee_1_001" type="MeshInstance3D" parent="Skeleton3D/knee_1" unique_id=1285228702]
+transform = Transform3D(1, 0, 0, 0, 1.0000001, 0, 0, 0, 1, -0.19006348, 4.7683716e-07, 1.9073486e-06)
+mesh = ExtResource("10_fvv20")
+skeleton = NodePath("")
+
+[node name="Body" type="BoneAttachment3D" parent="Skeleton3D" unique_id=2078256493]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 1, 0, 1.3679359, 0)
+bone_name = "Body"
+bone_idx = 1
+
+[node name="Claw_crane_body_001" type="MeshInstance3D" parent="Skeleton3D/Body" unique_id=1345718099]
+transform = Transform3D(1, 0, 0, 0, 1.0000001, 0, 0, 0, 1, 0.00036621094, -0.1303134, 0.0045986176)
+mesh = ExtResource("11_vcpse")
+skeleton = NodePath("")
+
+[node name="Root" type="BoneAttachment3D" parent="Skeleton3D" unique_id=934761887]
+bone_name = "Root"
+bone_idx = 0
+
+[node name="Claw_crane_chassis_001" type="MeshInstance3D" parent="Skeleton3D/Root" unique_id=697918674]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1920929e-07, 0)
+mesh = ExtResource("12_s1y4j")
+skeleton = NodePath("")

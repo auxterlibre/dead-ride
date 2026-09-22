@@ -1,0 +1,165 @@
+# Nowhere
+
+Godot 4.7 (Forward+) top-down 3D action prototype: a player, enemies, and a drivable car in a small navmesh test world with toon-shaded KayKit-style characters. Early stage — the main scene is a test arena, no menus or game loop yet.
+
+The Godot project root is `Project/` (the repo root holds only this file and `Screenshots/`). All `res://` paths resolve from there. Main scene: `res://scenes/game.tscn`.
+
+## Running / verifying
+
+Use the `godot-verify` skill for headless parse/run checks after editing GDScript or scenes, and `godot-probe` when WRITING a probe. There is no test suite; everything routes through `Project/_tools/verify.sh` (`probes [subject]` runs the suite tallied and exits non-zero on any failure or missing tally, `shots` runs the windowed captures, plus `import`/`scene`/`script`/`shadow`). GDSCRIPT WARNINGS ARE EDITOR-ONLY — `--headless` and `--check-only` print errors alone, so a clean probe run says NOTHING about a local shadowing a base-class member (`var pressed` inside a Button); `verify.sh shadow` walks each script's extends chain through ClassDB and is the only headless way to catch it.
+
+WHAT TO RUN — the whole suite every time is ~8 minutes of mostly nothing:
+
+| Change | Run |
+|---|---|
+| Docs, comments, a tool script, a new probe | nothing, or that one probe |
+| One system's own scripts and scenes | `probes <subject>` |
+| A component other files load | the subjects its consumer grep names (below) |
+| Autoload/`Signals`/`game.tscn`, ADDING beside what is there | the consumer grep, like any component |
+| Autoload/`Signals`/`game.tscn`, CHANGING what is already called | full `probes` |
+| Something that RENDERS moved — shader, material, world visual | full `shots` |
+| Input map, data resource, save format, AI logic | `probes` only — no `shots`, nothing draws |
+| Any new or renamed local, const or parameter | `shadow` — it is seconds |
+| Before a commit | nothing extra — the rows above already ran |
+
+SHARED IS A GREP, NOT A GUESS (decided 2026-08-12): before escalating to full
+`probes` for a "shared" component, list its consumers —
+`grep -rln "<ClassName>" scenes/ scripts/ _tools/` — and run the probe subjects
+the hits actually land in. All in one subject → that subject alone; crossing
+subjects → full. Reuse inside one system is not sharing: `InventoryGridUI`
+feeds three panels yet greps to `ui/` alone, and the full run that skipped this
+test spent ten minutes repeating what `probes ui` had already said.
+
+ADDING IS NOT CHANGING (decided 2026-08-13). The autoload row used to say
+"everything reaches them, no grep needed" — but that is about changing what
+everything ALREADY CALLS, not about appending beside it. A new `Signals` line,
+a new function, a new const: nothing that existed behaves differently, so the
+only code at risk is whatever calls the NEW thing, which is the consumer grep
+again. Full `probes` is for an autoload whose EXISTING surface moved — a
+renamed signal, a changed signature, a rewritten body. And grep for what would
+BREAK, not for every file that says the name: the files naming `PlayerCarry`
+only to refuse an action while carrying are not testing a visual added to it.
+The gamepad pass proved this twice over — 47 probes and 600 checks re-run to
+measure a prompt badge and an input map.
+
+A COMMIT IS NOT A GATE (decided 2026-08-12). The rows above are run as the work
+lands, so re-running the whole suite at commit time re-measures what was already
+measured and costs ~8 minutes to say so; commit on what the change's own rows
+already proved. The exceptions are the two the rows cannot see coming: run full
+`probes` when the change REWROTE something shared (an autoload's existing
+surface, a `Signals` line others already listen to, a component whose consumer
+grep crosses subjects — the tests above), and full `shots` when something that
+DRAWS moved, for the frame-coupling reason below — those stay non-negotiable,
+and a sweep before a milestone or a long unattended run is still worth its
+minutes. Adding beside a shared file is not rewriting it, and neither exception
+fires for work that never reaches a frame.
+
+THE COUPLING THAT BITES IS THE FRAME, not the call graph. Shots diff pixels of the whole game window, so ANYTHING new that renders or moves lands inside a claim that was never about it: the grass sway diluted `heat_shot`'s noon-haze ratio to 1.37x against its 1.4x bar, from across the map, and that shot already carried the same scar from the sand's wind streamers. So the asymmetry is the point — reach for `shots` on visual work and `probes` on behaviour, rather than reflexively running the one that cannot see what you touched.
+
+SHOTS ARE FOR PIXELS, AND ONLY PIXELS (decided 2026-08-13). The frame-coupling
+rule above cuts BOTH ways: a change that cannot alter a rendered frame gets
+nothing from 16 windowed captures, however shared the file it lives in. An
+input map, a `.tres` value, a save row, an AI decision — none of them draw, so
+`shots` measures the same sand it measured yesterday and charges five minutes
+for it. Ask what the change puts ON SCREEN, not how central the file is: the
+gamepad bindings ran the full `shots` suite and could not, even in principle,
+have moved one pixel of it. A visual that only draws under a condition no shot
+creates (the carry ring needs a barrel in the arms) still earns its OWN shot —
+that is what `carry_shot` is for — but not the whole suite.
+
+PROBES live in `_tools/probes/<subject>/`, one `.tscn` + `.gd` pair each: `explosives/` (explosive, throw, preview, wallhit, scorch), `world/` (world, roads, delivery, loot), `characters/`, `inventory/`, `ui/`, `tracks/` (the sand-track prototype, which also carries a `tracks_shot` screenshot driver), `vfx/` (blood pools, the car wreck and its damage fire, with `blood_shot`/`wreck_shot` screenshot drivers). A probe is a scene run headless — it builds the situation it wants, prints `DBG PASS/FAIL <claim>: <measurement>` lines, and quits; grep the run's output for `DBG`. Probes extend `ProbeBase` (`_tools/probes/probe_base.gd`) for `check`/`finish`/`settle`/`find_first`/`capture`/`frame_diff`/`idle_floor`/`changed_mean`/`save_shot` rather than re-declaring the counters and the toggle-and-diff helper each time; its `_init` also MUTES the master bus, since a run is unattended and the windowed ones would otherwise play the whole game at whoever is sitting there (the roots that cannot extend it call `ProbeBase.silence()` in `_ready` instead) — every audio claim survives it, because probes assert on `AudioStreamPlayer.playing` and a muted bus does not stop a stream; EVERY shot now does, and four probes still carry their own copies (`wreck_probe` and `unarmed_probe` are Node3D, so they structurally cannot — ProbeBase is a Node; `world_probe` and `interaction_probe` simply have not been moved). Screenshots go to `user://` through `save_shot` — NEVER an absolute path. Probes and game code load meshes from the EXTRACTED copies under `assets/`, never from `_not_exported/`: that folder is staging and gets cleared out, which once left a shot asserting three models that no longer existed. Only `_tools/asset_extractor/` may read it. They are KEPT, not deleted, so a later change re-runs them. The `_tools/gym/` sandbox is a separate thing — a hand-driven scene to LOOK at, not a probe.
+
+## Architecture
+
+THE DEPTH LIVES IN `Docs/Architecture/` — one file per system, carrying the traps each
+one cost and the approaches that were tried and abandoned. This file is the MAP: what
+exists, where it lives, and the rules that bite before you would think to open a doc.
+Open the system's file before changing it; append what a change cost to the same file,
+not to this one. `Docs/Design/` is the GDD (what the game is) and `Docs/Technical/` is
+the designer-facing field reference (what the knobs mean) — neither is a substitute.
+
+### Autoloads (project.godot)
+- `Signals` (`scripts/utils/signals.gd`) — global event bus (`health_updated`, `player_died` — THE player only, `Character.died` stays per-body for brains — `ammo_updated`, `weapon_setup`, `weapon_fired`, `spread_updated`, `aim_distance_updated`, `input_info_added/removed`…). UI listens to these; gameplay code emits them. Also world events: `noise_emitted(position, range, source)` — every `CharacterWeapons.fire_shot` emits it (`WeaponData.noise` knob, 0 = silenced) and `EnemyAI.on_noise` listens: a hostile shot in earshot sends an idle enemy to INVESTIGATE the sound origin (sets `quarry` — the trail sniff happens there), re-points a blind searcher, and never outranks sight.
+- `Settings` (`scripts/managers/settings.gd`) — player settings over a `user://settings.cfg` ConfigFile: time format, unit system, resolution, fullscreen. ASSIGNING ONE IS THE WHOLE API — the setter applies to the window, saves to disk and emits `Signals.settings_changed`; there is no apply button and no save call. UI must never hardcode a clock style or a unit: `format_time(hour, minute)` and `format_speed(m/s)` are the display path. Edited from `SettingsScreen`, whose rows are BUILT from a `Row` enum + `row_data()` table, so a new setting is a table arm and never a scene edit.
+- `SaveManager` (`scripts/managers/save_manager.gd`) — one JSON save + rolling backup (`user://save.json`/`.bak`, versioned; `save_path`/`backup_path` are VARS so probes point them at scratch files and can never eat the real save). Scene-authored members of the `persistent` group contribute `save_state()`/`load_state()` Dictionaries keyed by scene-relative path — RUNTIME SPAWNS HAVE NO OWNER AND ARE INVISIBLE TO IT, so anything spawned at runtime must be serialised by its parent (`BuildGrid` nests each placed building's own row, `CropPlot` each crop). Loading reloads the scene and applies on top, gated by a FACT barrier, never a frame count.
+- `InputManager` (`scripts/managers/input_manager.gd`) — holds `player`/`camera` refs, the single active interaction prompt (`create_interaction`/`remove_interaction`), and debug keys. Gameplay input polling lives in the player's component nodes, not here.
+- `Globals` (`scripts/utils/globals.gd`) — holds the `CameraFollow` reference; switching camera target (e.g. player ↔ car) is done via `Globals.camera_follow.target`. Also `debug_mode` — key 9 (`debug_text_toggle`, flipped in InputManager) — the single flag every debug visual watches (vision cones, the enemy `%DebugLabel` state readout driven by EnemyAI).
+- `Calendar` (`scripts/managers/calendar.gd`) — game clock over a `TimeData` resource (28-day months, one game minute per real second, starts 08:00 1 Jan 1989), emitting `Signals.calendar_updated(time_data)` each minute; `set_time` compares MINUTES-of-day and never rewinds. `get_day_fraction()` drives `DayNightCycle`, which samples scene-authored Curve/Gradient resources for sun, ambient and vignette — all keyed on the day PHASE, which makes `SUNRISE_HOUR`/`SUNSET_HOUR` the one place daylight moves from.
+
+→ `Docs/Architecture/Autoloads.md` for the setting rows, the save's item identity and load race, and the day/night graphs.
+
+### The desert (`scripts/components/wind.gd`, `scripts/world/heat_wave.gd`, `shaders/sand_field.gdshader`)
+`Wind` (node in game.tscn) is the ONE source of weather, registered as `Globals.wind` the way `CameraFollow` and `RoadNetwork` register themselves — anything that should move with the weather reads it instead of inventing its own. HEAT is the GDD's scorch window: `HeatWave` (`Globals.heat`) owns the clock, `PlayerHeat` burns an EXPOSED player on foot between 10:00 and 16:00, and `CoolArea` is the shared heat-safe pocket component — a fuelled barrel or the stocked pump vents one, and a plain shade structure is just a scene carrying the component. `sand_field.gdshader` + the `SandField` wiring node ARE the whole desert surface: wheel ruts displaced off a SubViewport height field, a quasi-static ripple bed, wind streamers, damp `chill_spots` under each cool source, and under all of it the static GRAIN (a tooth with its own slope) and slow TONE that stop the flats reading as one poured colour. `GrassField` grows billboarded tufts in those same pockets, thickening and dying back with `chill_strength()` and swaying off the same `wind_path`. ALL sand motion keys off `wind_path`, the air's accumulated travel in metres — NEVER `TIME`, which jumps phase on every gust.
+BLOWING SAND HAS BEEN ATTEMPTED AND ABANDONED TWICE (particles cannot form a coherent bank; volumetric fog is soft by construction) — read the doc before a third go.
+
+→ `Docs/Architecture/Desert.md` for the heat feedback rules, the cool pockets and their ground tint, the sand shader's construction lessons, and both sandstorm post-mortems.
+
+### Characters (component-based, inherited scenes)
+`scenes/characters/character_base.tscn` is the shared base — a thin `Character` `CharacterBody3D` over the rig, `%HurtBox`, `AimTarget` and the shared components — and `player.tscn` / `enemy.tscn` INHERIT it and add their own. The naming convention IS the `scripts/components/` folder split: **`Character*` = shared** (movement, animator, weapons, footsteps, vision, cover, trail), **`Player*` = player-only** (input over the shared halves), **`Enemy*` = enemy-only** (`EnemyAI`'s state machine over the same halves). `character.gd` discovers its components BY TYPE (child `is CharacterMovement`), applies `CharacterData`, and handles death.
+THE BASE `%HurtBox` IS INERT (layer 0, non-monitorable) — each variant MUST override it or shots pass straight through. Hostility is faction-based and re-checked PER FRAME, not at area entry. `HurtBox.immune` is the dodge's i-frames and the ONE gate for evasion: everything that arrives through `hit()` (shots, swings, grenades, a car's ram) is dodgeable, while `PlayerHeat`'s burn goes to `take_damage` direct and is not. THE DODGE IS A BASE SKILL — `CharacterDodge` (+ `PlayerDodge` for SPACE) owns the committed hop, the i-frames, the energy and the cooldown, so an enemy brain only has to call `dodge()`; it is the only thing in the blend tree sitting on the OUTPUT, because a full-body clip cannot ride the arm/chest layer.
+
+→ `Docs/Architecture/Characters.md` for the full component roster, the enemy brain's states, vision/suspicion, and the animation blend tree.
+
+### Inventory (`scripts/inventory/`, `scenes/ui/inventory/`)
+`Inventory` is RefCounted, not a Node — characters and vehicles both own one and it is probe-testable headless — placing rectangles over a `StorageData` ASCII mask. `CharacterInventory` is the carried-items authority: the grid, the quick slots (2 weapon + 4 item, shown as the pack panel's trays), and THE AMMO ECONOMY — every round a magazine gains is taken OUT of the pack, so firing destroys a round and reloading only moves one. THE SLOTS ARE REAL STORAGE, not references into the grid: a slotted stack exists on its slot alone (`origin == InventoryEntry.NO_CELL`), equipping MOVES it out of the grid, stowing moves it back, and every slot mutation goes through `assign_quick_slot`/`stow_slot`/`clear_slot` — an overwrite would destroy the occupant, so occupied targets swap or refuse. Slotted ammo still counts as reserve. `PlayerInventory` adds input only. CONSUMING IS CLIP-GATED: the `use_item` animation owns the act — a consumable's quick-slot shortcut (or the grid's right-click Consume) starts it, the restore lands only when the clip FINISHES, any damage mid-drink cancels both the sip and the spend, and the act over (either way) the hand returns to what the drink DISPLACED — the last drawn weapon, or staying bare if it was bare. The pack grid's right-click raises a COMPUTED context menu (Consume/Equip/Transfer/Drop — rows only while actually possible, the offers' conditional-advertising rule). `PlayerEnergy` is the survival battery; empty is EXHAUSTED, never damage.
+EVERY SCREEN PAUSES THE TREE, which is why the UI panels run `process_mode = ALWAYS` and hide themselves in `_ready` rather than trusting a flag the editor saved.
+
+→ `Docs/Architecture/Inventory.md` for the grid semantics, quick-slot and holster rules, consumables, energy, and the backpack/container UI.
+
+### State machine and data-driven resources (`scripts/state_machine/`, `scripts/data/`, `data/`)
+A generic code-driven machine created by its owner at runtime; states are plain non-node objects registered via `add_state()`. Consumers: `EnemyAI`, `VehicleAI`, `DeliveryAI`.
+THE KNOB/SPAN PATTERN is the rule for every stat resource: player-facing 0-100 int knobs remapped to real units via `*_SPAN` consts, and GAMEPLAY CODE READS THE `*_value` GETTERS, NEVER THE KNOBS. 50 on every dial reproduces the original hand-tuned behaviour. Counts and calibration values stay literal.
+
+→ `Docs/Architecture/Data.md` for `CharacterData`, `WeaponData`, `VehicleData`, `ItemData`, `StorageData` and the ASCII mask.
+
+### Weapons (`scripts/weapons/`)
+`Weapon` → `WeaponMelee` / `WeaponRanged`; ranged weapons are HITSCAN. The shot line is `body centre → PlayerAim.aim_position` flat at the equipped weapon's live muzzle height, so with deviation zeroed a shot lands exactly under the reticle — `aim_yaw_offset` only swings the chest look-at that points the visible barrel and CAN NEVER MOVE A BULLET.
+`SurfaceData` (`data/surfaces/<tag>.tres`, matched to a body's `surface` metadata) is the ONE ground-material table — bullet holes, impact audio, footsteps, ricochet, vehicle dust and skid marks. `SurfaceData.of(tag)` / `.under(node, mask)` / `.at(world, position, mask)` are the shared lookups; do not grow a fourth copy.
+
+→ `Docs/Architecture/Weapons.md` for the aim plane's ground-hit rule, the throw preview, impact VFX and the blood pools.
+
+### Vehicles (`scripts/vehicles/vehicle.gd`, inherited scenes)
+`scenes/vehicles/vehicle_base.tscn` is the shared base and mirrors `character_base.tscn` exactly; variants INHERIT it and add meshes, collision, wheels (discovered by TYPE) and their `VehicleData`.
+DRIVING IS DECOUPLED FROM INPUT the same way `CharacterMovement` is: the physics reads only `control_throttle` / `control_steer` (+ is LEFT) / `control_brake`, filled from the keyboard for a seated player or PULLED from a `VehicleSteering` component, so there is no node process order to get right. `VehicleDamage` and `VehicleGroundFX` are components that REGISTER THEMSELVES on the vehicle; the root keeps thin delegates because the world enters through it. Every HUD write is gated on `is_player_driven()`, so NPC traffic can burn fuel and take damage silently.
+**The car models face +Z** (front wheels sit there), NOT Godot's usual -Z — measured, not assumed.
+
+→ `Docs/Architecture/Vehicles.md` for the enter/exit handshake, ramming and crash damage, fuel, dust/skid/trail effects and the explosion.
+
+### Station economy, scavenging, building (`scripts/world/`, `scenes/props/`)
+The gas stop's tills, instanced into `game.tscn`'s `World`. Money is `PlayerData.add_money`/`spend_money` — statics, not an autoload — emitting `Signals.money_changed`; nothing writes `current_money` directly. `GasPump` sells fuel over a `GasPumpData` tank; `StorageLocker` is the player's stash and `LootContainer` inherits it, stocking itself from a `LootTableData` THE FIRST TIME IT IS OPENED so nothing is decided before it matters. `BuildGrid` (`Globals.build_grid`) + `PlayerBuild` place structures at runtime on a 1.5m grid.
+CONDITIONAL ADVERTISING is the pattern for every offer here: an `InteractiveArea` is only `enabled` while its action is actually possible, recomputed on area entry as well as on the state change, because the area's own enter-refresh reads `enabled` before the owner can look.
+
+→ `Docs/Architecture/Station.md` for the pump's five areas, the loot tables and boxes, and the build grid's four refusals.
+
+### Crops (`scripts/world/crop.gd`, `crop_plot.gd`, `crop_spot.gd`)
+The GDD's farming: crops grow AMMO, drink FUEL, and their seeds are ORDINARY ITEMS — there is no seed item type. `Crop` judges each day at MIDNIGHT off `Signals.calendar_updated`, looping so a multi-day sleep jump gets one verdict PER day. The plot owns the SPENDING (seeds, fuel) and the crop owns the rules.
+
+→ `Docs/Architecture/Crops.md` for the growth rules, the plot/spot interaction layer and the fuel can.
+
+### Traffic and the delivery truck (`scripts/world/road_network.gd`, `scripts/components/vehicle/`)
+ROADS ARE SPLINES: every `Path3D` child of `World/Roads` is a road, and ONE pass over the curves produces BOTH the traffic graph and the tarmac ribbon, so the two can never disagree. The ribbon wears `road.gdshader`: world-tiled asphalt grain over an authored colour, and shoulders whose ALPHA the sand eats away so the real ground shows through. `RoadNetwork` registers as `Globals.road_network` and is `@tool`, so dragging a point in the editor re-lays the road under it.
+The AI split mirrors the enemy exactly: `VehicleAI` (brain + `StateMachine`) over `VehicleSteering` (wheels-level driving), the way `EnemyAI` sits over `EnemyMovement`; `DeliveryAI` is the truck's own. ARRIVAL IS DECIDED BY THE DESTINATION'S OWN SENSOR (the pump's `CarArea`, the bay's Area3D), never by reaching a cell centre — a turning circle is far wider than any goal ring, and insisting on the exact spot just orbits it.
+
+→ `Docs/Architecture/Traffic.md` for the steering's waypoint rules, car-to-car avoidance, the truck's day and the trade counter.
+
+### UI (`scripts/ui/`, `scenes/ui/`)
+The HUD lives inside `game.tscn` as a CanvasLayer. ALL OF IT IS DRIVEN BY `Signals` — UI never reaches into gameplay nodes. `InputKeyButton` is the Figma component behind every key prompt AND every screen button, so prompts are clickable. THE BADGE FOLLOWS THE HAND: with a pad live it wears the controller's own art instead of a letter (`InputManager.icon_for`/`icon_for_key`, keyed on the same label `key_for` resolves, so one table serves both and a control with no icon keeps its lettering); the lookup is gated on `pad_active` because the labels collide across devices — "A" is a face button AND the key under `move_left`. Offers reveal in TWO STAGES (a quiet hint dot anywhere in the area, the key prompt only up close and facing), which is what lets spatially disjoint offers SHARE the interact key instead of stacking F/G/H. THE DOT RIDES BOTH STAGES — it gains an outer stroke beside the key rather than handing over, and goes HOLLOW once `InteractiveArea.spent` says the offer has been taken (a searched crate). AN OFFER IS A POINT AND TWO NUMBERS — `InteractiveArea` is a Node3D with NO shape and no physics: `prompt_range`/`prompt_angle` are the reach, and noticing is one radius on the player (`PlayerInteractions`, `notice_range` 6m, sweeps the `InteractiveArea.offers` registry each frame and ticks what is near). Its `noticed` signal is where owners recompute conditional offers, and it lands before the stage is judged. ONE POINT IS ONE OFFER — never two areas on one spot; a point with several jobs picks between them BY CONTEXT (the crop spot reads `CharacterInventory.held_item`: can in hand = pour) or by a MENU (`interaction_menu_requested`, the truck's counter). The pump is the last holdout, pending its nozzle-in-hand design. All metrics are the Figma mockup's literal pixels — the viewport is 3840x2160, the same as the design frame.
+
+→ `Docs/Architecture/UI.md` for the HUD panels, the death screen, reticles, prompt channels and the interaction ladder.
+
+### Terrain (`game.tscn` `World/Terrain` + `World/TerrainFloors`, `World/Map/Ground`)
+The flat map floor is ONE MESH (`Ground`, a 120x120 subdivided `PlaneMesh` running the sand shader); the TWO GridMaps keep only what stands ABOVE it — terrace floors and each column's top on `TerrainFloors`, cliffs and the void-edge skirt on `Terrain`. Both carry `metadata/surface` for `SurfaceData` lookups, and both are `collision_layer = 20` (walls|ground) so bodies stand on them AND they block enemy vision.
+LEVEL EDITING GOES THROUGH THE `grid_map_painter` PLUGIN, and piece choice is DERIVED from the height field by `autotiler.gd` — never hand-pick a piece. The library's item ids are a CONTRACT with the painted maps: append only, never renumber.
+
+→ `Docs/Architecture/Terrain.md` for the kit, the grid maths, the autotiler's carved-ridge cases and the props.
+
+## Conventions
+- Physics layers (project.godot): 1 player_hurt_box, 2 enemy_hurt_box, 3 walls, 4 car, 5 ground, 6 player_body, 7 enemy_body. Hurt boxes (Areas) and CharacterBody3D roots live on SEPARATE layers — hit rays mask hurt layers, while body sensors (CharacterVision mask 96, the car body mask 116) mask the body layers. Interactions use NO layer at all: an offer is a point in a registry, not a shape.
+- Component scripts (`scripts/components/`): HurtBox/HitBox, DetectionArea, InteractiveArea (a Node3D point, NOT an area despite the name), CoolArea (a heat-safe pocket: registers itself into `PlayerHeat.pockets`, delegating `venting()` to a parent that has one — ownerless it vents whenever the heat is on, so a plain shade structure is just a scene with one), HandSlot, CameraFollow, FootstepPlayer (watches the posed foot bones — no animation markers; sound from the ground's `SurfaceData.step_audio`) — small reusable Area/Node pieces attached in scenes.
+- Naming: snake_case files, `class_name` PascalCase, exported params prefixed `p_` in function signatures. No underscore prefix on internal/private members or functions (engine callbacks like `_ready` keep theirs) — older code still has `_`-prefixed members; drop the prefix when touching them.
+- NO CODE COMMENTS BY DEFAULT — not a header block, not a line above a function, not doc prose restated in the file. The filename and the function name are the documentation; architectural notes go in `Docs/Architecture/<System>.md`. Write a comment only where its absence would let someone break the code, and then ONE line. Older scripts shed their comments when next touched.
+- `_not_exported/` holds raw imported assets (GLTF/GLB + source textures; export-excluded, so nothing shipped may reference into it); game-ready copies live under `assets/` (`audio/`, `animations/`, `fonts/`, `materials/`, `meshes/`, `textures/`). Extraction tools in `_tools/asset_extractor/` (`extract_lib.gd` core: `save_keeping_uid` — runtime ResourceSaver drops uids in 4.7, always save through it; `extract_nature.gd` for the KayKit environment kit) pull ArrayMesh `.tres` out of imported sources, all sharing ONE material `.tres` per kit (swap `assets/materials/environment/nature_material_a.tres`'s albedo to recolor the whole kit). `extract_blend.gd` pulls whole `.blend` files through its `KITS` table (`junkyard`, `apocalypse`, `apocalypse_weapons`; pass kit names after `--` to do one): every top-level object becomes one asset under `assets/meshes/<kit>/<family>/` — a single mesh as `.tres`, anything with parts or a skeleton as a `.tscn` assembly over `<family>/parts/` with its rig kept — and each material one `.tres` under `assets/materials/<kit>/` over `assets/textures/<kit>/`. It fingerprints geometry (vertex/index counts + bounds per surface) so a LAID-OUT LEVEL like `Junkyard.blend` (~3.4k copies of ~200 objects) saves each distinct one ONCE; `family` is `stem` (the name minus Blender's `_NNN`) for the junkyard and `prefix` (the first token, digits stripped: `AR1_Base` → `ar`) for the showcase kits. It runs TWICE around a `verify.sh import` — the first pass only dumps the textures, since a png without its `.import` cannot be referenced. A BLENDER MIX EXPORTS AS ONE IMAGE, and the exporter may pick the MASK (the apocalypse kit's `_Blood`/`_Dirt` materials came out as a blood mask over the wrong UV set): a kit's `albedo` table names the real base image per material, and the extractor swaps that surface's UV sets back, because the importer had moved the mask's coordinates into UV1. The mix itself survives through the `overlay` table: the Blender ramp and constant colour are BAKED into one RGBA png (tint + ramped mask as alpha, ramp read in linear light) and wired as the material's detail layer on UV2 in MIX mode, which is the same `mix(base, tint, factor)` Blender computed. `_tools/zoo/` lays those kit folders out kit by kit, family by family, to look at (a `.tres` is one stand, a `.tscn` one assembled stand; cells are sized from each exhibit's bounds; a kit authored along Z gets a `turn` so the 45° camera does not see it end-on).
+- PROBES MUST RELY ON NOTHING THE DESIGNER CAN CHANGE (the user's rule, 2026-08-13) — neither scene paths nor AUTHORED DATA. A probe whose subject is not the kit arms and provisions ITSELF: `fire_mode_probe` loads and `set_weapons` its own sniper+SMG duplicates, because the loadout in player.tres lost it its sniper once and the fire cycle was never about the kit (`loadout_probe`, whose subject IS the arming, stays the exception). Scene paths first: the level layout is the designer's to rearrange, and it has moved under them twice (the player into `World/Characters`, the terrain and its `SandField`/`Roads`/`TrafficSpawner` into `World/Map`), each time as a null-instance crash mid-probe. Reach for the player through `InputManager.player` or the `player` group, registered singletons through `Globals` (`camera_follow`/`build_grid`/`road_network`/`heat`/`wind`), other singletons by TYPE — `ProbeBase.find_first(root, "GasPump")`, the same lookup `DebugMenu.find_first` uses, and it returns null instead of erroring on an empty match — and authored nodes by NAME (`find_child("TerrainFloors", true, false)` — the painter plugin resolves the terrain pair the same way). Watch for the lookup that GUTS the claim: `build_probe` asks the scene for its `BuildGrid` by type precisely so `Globals.build_grid == grid` still tests the registration, and `garden_probe` finds the `Bedroll` by name so `bedroll is Bedroll` still tests something.
+- Inputs added with the inventory: `toggle_backpack` (TAB), `holster` (V), `weapon_slot_0..5` (keys 1-6), `item_equip` (F, shares the key with `interact` — safe because the world's interact polling is paused while the pack is open), `item_drop` (X). Building adds `toggle_build` (B) and `build_rotate` (T — R was already `reload`). The dodge took over the dead `jump` action (SPACE). THE PAD IS FULLY MAPPED (2026-08-17) and `gamepad_probe` is its contract: X = interact/equip, A = dodge (menus: confirm), B = reload (seated: brake, menus: back), Y tap/hold = weapon toggle/holster (`toggle_weapon`, pad-only), dpad = item slots 2-5 direct, RT/LT = attack+throttle / aim+reverse, SELECT = pack, R3 = build, START = pause; driving polls `car_accelerate`/`car_reverse`/`car_brake` (W/S/Shift + RT/LT/B — `walk` was renamed `car_brake`, it was only ever the brake). `ui_accept`/`ui_cancel` are PROJECT OVERRIDES carrying A and B — Godot's own defaults have no pad buttons on them.
+- Debug menu: F9 opens `DebugMenu` (`scripts/ui/menus/debug_menu.gd`, in game.tscn's `Overlay`) — pauses, and like `SettingsScreen` builds its cycler rows from a `Row` enum + `row_data()` table reusing `settings_row_list.tscn` (time of day, time scale, debug draw, state labels, perf stats, free camera), plus one-shot buttons from the `actions()` table (give ammo, heal/damage player, give money, truck delivery, buy out the machine, send a customer, restart). A new knob is an enum arm in `row_data()` + `apply_row()`; a new one-shot is a line in `actions()`. FREE CAMERA flies the view with the world held still: the mode makes `close()` LEAVE the tree paused (switch the row Off to hand the game back), which is also what makes it safe — `CameraFollow` is paused too, so nothing drags the view back to the player. WASD pans along the camera's own flattened facing (so the keys match the screen, not world axes), Q/E ZOOM via ortho `size` — the camera is orthographic, so raising it merely slides the picture exactly as panning does and a lift control duplicated W/S — sprint accelerates; it does nothing while the panel is open, since the keys belong to the menu then. "Restart game" also clears `PlayerData.current_money` — the purse is a static and outlives a scene reload, so a reload alone would not be a restart. `DayNightCycle` runs `process_mode = ALWAYS` so scrubbing the clock moves the sun while the tree is paused.
+- Debug: key 9 (`debug_text_toggle`) sweeps BOTH `Globals.debug_mode` (the vision-cone draw) and `Globals.debug_labels` (the enemy state `%DebugLabel`) together — they are separate flags so the F9 menu's "Debug draw" and "State labels" rows can part them, and the cones can be read without a caption over every head (`VisionConeVisual`, a MeshInstance3D under the enemy's CharacterVision — LOS-clipped cone fill + detection ring, cyan scanning / red locked), key 0 fullscreen, ui_left/ui_right adjust `Engine.time_scale`, ui_up advances the game clock +1 hour (23→0 rolls the date).

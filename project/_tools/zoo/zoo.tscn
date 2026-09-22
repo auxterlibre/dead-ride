@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://d3ms82yh5ep7c"]
+
+[ext_resource type="Script" uid="uid://cw84fcwty5lgk" path="res://_tools/zoo/zoo.gd" id="1_zoo"]
+[ext_resource type="Script" uid="uid://dvp76a33n24od" path="res://_tools/zoo/zoo_camera.gd" id="2_camera"]
+
+[sub_resource type="Environment" id="Environment_zoo"]
+background_mode = 1
+background_color = Color(0.14509805, 0.14901961, 0.16862746, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.5647059, 0.5764706, 0.61960787, 1)
+ambient_light_energy = 0.65
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ground"]
+albedo_color = Color(0.29803923, 0.3019608, 0.32156864, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ground"]
+material = SubResource("StandardMaterial3D_ground")
+size = Vector2(100, 1000)
+
+[node name="Zoo" type="Node3D" unique_id=939216671]
+script = ExtResource("1_zoo")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=683520417]
+environment = SubResource("Environment_zoo")
+
+[node name="Sun" type="DirectionalLight3D" parent="." unique_id=500041039]
+transform = Transform3D(0.73849064, 0.5821502, -0.34019512, 0, 0.50454307, 0.8633866, 0.6742637, -0.63760287, 0.37260038, 0, 14, 0)
+light_energy = 1.1
+shadow_enabled = true
+shadow_bias = 0.03
+directional_shadow_max_distance = 60.0
+
+[node name="Camera" type="Camera3D" parent="." unique_id=1336346699]
+projection = 1
+current = true
+size = 24.0
+near = 0.01
+far = 400.0
+script = ExtResource("2_camera")
+
+[node name="Ground" type="MeshInstance3D" parent="." unique_id=935983411]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38, 0, 485)
+mesh = SubResource("PlaneMesh_ground")

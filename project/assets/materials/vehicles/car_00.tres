@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dmw4bhhgulldb"]
+
+[ext_resource type="Texture2D" uid="uid://x16qhuyho0hy" path="res://assets/textures/vehicles/car_00.png" id="1_nad7m"]
+
+[resource]
+resource_name = "car_texture"
+albedo_texture = ExtResource("1_nad7m")
+roughness = 0.4

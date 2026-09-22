@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ConsumableData" format=3 uid="uid://bx4dci6ipar01"]
+
+[ext_resource type="PackedScene" uid="uid://bk6hl7fieo5dt" path="res://scenes/items/consumables/water_bottle.tscn" id="1_25rj2"]
+[ext_resource type="Script" uid="uid://c1apo1iwmb5d6" path="res://scripts/data/items/consumable_data.gd" id="1_hxb3a"]
+[ext_resource type="Texture2D" uid="uid://bb0sg2jkfgvql" path="res://assets/textures/thumbnails/consumables/water_bottle.png" id="1_qas0u"]
+[ext_resource type="AudioStream" uid="uid://bp21bg6irfjtm" path="res://assets/audio/interactions/drink.ogg" id="2_gulp"]
+
+[resource]
+script = ExtResource("1_hxb3a")
+energy = 40
+max_stack = 4
+use_audio = ExtResource("2_gulp")
+name = "Water Bottle"
+weight = 0.5
+icon = ExtResource("1_qas0u")
+model = ExtResource("1_25rj2")
+price = 8

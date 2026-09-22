@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://b1vfjevprt821"]
+
+[ext_resource type="ArrayMesh" uid="uid://dnsejtsvbot88" path="res://assets/meshes/apocalypse_weapons/pistol/parts/pistol_6_base.tres" id="1_4m2n8"]
+[ext_resource type="ArrayMesh" uid="uid://tpdiwreug1a3" path="res://assets/meshes/apocalypse_weapons/pistol/parts/pistol_6_magazine.tres" id="2_5jok7"]
+[ext_resource type="ArrayMesh" uid="uid://bf3yeg6rxx2hb" path="res://assets/meshes/apocalypse_weapons/pistol/parts/pistol_6_magazine_extended.tres" id="3_e6yht"]
+[ext_resource type="ArrayMesh" uid="uid://dknm6mbn0c7mv" path="res://assets/meshes/apocalypse_weapons/pistol/parts/pistol_6_trigger.tres" id="4_e37pl"]
+
+[node name="Pistol6Base" type="MeshInstance3D" unique_id=963359865]
+mesh = ExtResource("1_4m2n8")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Pistol6_Magazine" type="MeshInstance3D" parent="." unique_id=1779688767]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.03813255, 0.007437706)
+mesh = ExtResource("2_5jok7")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Pistol6_MagazineExtended" type="MeshInstance3D" parent="." unique_id=1356578985]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.026840568, 0.22075653)
+mesh = ExtResource("3_e6yht")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Pistol6_Trigger" type="MeshInstance3D" parent="." unique_id=332035482]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05454433, 0.047226906)
+mesh = ExtResource("4_e37pl")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Place_Pistol6_Charm" type="Node3D" parent="." unique_id=1705401007]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.016242716, 0.07136786, 0.10139179)
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Place_Pistol6_Magazine" type="Node3D" parent="." unique_id=302247449]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.03813255, 0.007437706)
+metadata/extras = {
+"MM": {},
+"hops": {}
+}

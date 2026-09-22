@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://bjml0kejt7nnu"]
+
+[ext_resource type="ArrayMesh" uid="uid://c2pyuvti0pjfj" path="res://assets/meshes/junkyard/car_press/parts/car_press_press.tres" id="1_cx075"]
+[ext_resource type="ArrayMesh" uid="uid://c7hff4ou01acf" path="res://assets/meshes/junkyard/car_press/parts/car_press_body.tres" id="2_48fsn"]
+
+[node name="CarPress" type="Node3D" unique_id=1687589582]
+
+[node name="Skeleton3D" type="Skeleton3D" parent="." unique_id=187903055]
+bones/0/name = "Car_press_body_1"
+bones/0/parent = -1
+bones/0/rest = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+bones/0/enabled = true
+bones/0/position = Vector3(0, 0, 0)
+bones/0/rotation = Quaternion(0, 0, 0, 1)
+bones/0/scale = Vector3(1, 1, 1)
+bones/1/name = "Car_press_body_2"
+bones/1/parent = 0
+bones/1/rest = Transform3D(1, 0, 2.3841858e-07, 0, 1, 0, -2.3841858e-07, 0, 1, 0.8734131, 3.8105044, 0.17674065)
+bones/1/enabled = true
+bones/1/position = Vector3(0.8734131, 3.8105044, 0.17674065)
+bones/1/rotation = Quaternion(0, 1.1920929e-07, 0, 1)
+bones/1/scale = Vector3(1, 1, 1)
+
+[node name="Car_press_body_2" type="BoneAttachment3D" parent="Skeleton3D" unique_id=957003887]
+transform = Transform3D(1, 0, 2.3841858e-07, 0, 1, 0, -2.3841858e-07, 0, 1, 0.8734131, 3.8105044, 0.17674065)
+bone_name = "Car_press_body_2"
+bone_idx = 1
+
+[node name="Car_press_press_001" type="MeshInstance3D" parent="Skeleton3D/Car_press_body_2" unique_id=1778743704]
+transform = Transform3D(1, 0, -2.3841858e-07, 0, 1, 0, 2.3841858e-07, 0, 1, 6.259997e-06, 0.71859694, -1.6737613e-07)
+mesh = ExtResource("1_cx075")
+skeleton = NodePath("")
+
+[node name="Car_press_body_1" type="BoneAttachment3D" parent="Skeleton3D" unique_id=1624275816]
+bone_name = "Car_press_body_1"
+bone_idx = 0
+
+[node name="Car_press_body_001" type="MeshInstance3D" parent="Skeleton3D/Car_press_body_1" unique_id=1589923919]
+mesh = ExtResource("2_48fsn")
+skeleton = NodePath("")

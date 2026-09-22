@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://s2dgjayf8q3t"]
+
+[resource]
+resource_name = "Stone"
+cull_mode = 2
+albedo_color = Color(0.475807, 0.515005, 0.533327, 1)
+roughness = 0.3

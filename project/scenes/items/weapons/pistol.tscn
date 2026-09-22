@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://dfxp3b6evqswa"]
+
+[ext_resource type="PackedScene" uid="uid://ba48m1ipo7as7" path="res://scenes/items/weapons/weapon_ranged_base.tscn" id="1_base"]
+[ext_resource type="ArrayMesh" uid="uid://o1noe4pwn41g" path="res://assets/meshes/items/weapons/ranged/pistol.tres" id="2_mesh"]
+[ext_resource type="AudioStream" uid="uid://od6iybmx0ch7" path="res://assets/audio/weapons/pistol/pistol_shoot.ogg" id="3_60a84"]
+[ext_resource type="AudioStream" uid="uid://yfr785hhwfop" path="res://assets/audio/weapons/pistol/pistol_reload.wav" id="4_ivc8v"]
+
+[node name="Pistol" unique_id=778473640 instance=ExtResource("1_base")]
+
+[node name="Mesh" parent="." index="0" unique_id=1960326227]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.13537836, 0, 0)
+mesh = ExtResource("2_mesh")
+
+[node name="ProjectileSpawn" parent="." index="1" unique_id=2001151894]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.41537836, 0.19, 0)
+
+[node name="AudioShoot" parent="." index="2" unique_id=738062007]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13537836, 0, 0)
+stream = ExtResource("3_60a84")
+
+[node name="AudioEmpty" parent="." index="3" unique_id=2019555685]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13537836, 0, 0)
+
+[node name="AudioReload" parent="." index="4" unique_id=906187122]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13537836, 0, 0)
+stream = ExtResource("4_ivc8v")
+
+[node name="MuzzleFlashLight" parent="." index="5" unique_id=649159004]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 0.43537837, 0.19, 0)
+
+[node name="MuzzleFlash" parent="." index="6" unique_id=948393663]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.06808, 0.19, 0)
+
+[node name="Smoke" parent="." index="7" unique_id=1367432190]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.43537837, 0.19, 0)

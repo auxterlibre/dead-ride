@@ -1,0 +1,20 @@
+filters:
+  and:
+    - file.inFolder("Tasks/Task Data")
+views:
+  - type: kanban
+    name: Tasks
+    groupBy:
+      property: status
+      direction: DESC
+    order:
+      - file.name
+      - status
+    boardColumns:
+      - To do
+      - In Progress
+      - Done
+    columnColors:
+      Done: "#69bf8a"
+      In Progress: "#d2ad46"
+      To do: "#bc5252"

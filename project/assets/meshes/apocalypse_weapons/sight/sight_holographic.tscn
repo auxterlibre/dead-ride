@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dju7425ie3gwi"]
+
+[ext_resource type="ArrayMesh" uid="uid://bunyeutbay5gi" path="res://assets/meshes/apocalypse_weapons/pistol/parts/sight_holographic.tres" id="1_se2fi"]
+[ext_resource type="ArrayMesh" uid="uid://dsaeyp4b6u4q4" path="res://assets/meshes/apocalypse_weapons/ar/parts/sight_collimator_crosshair.tres" id="2_mp7xl"]
+
+[node name="SightHolographic" type="MeshInstance3D" unique_id=1357914422]
+mesh = ExtResource("1_se2fi")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Sight_Holographic_Crosshair" type="MeshInstance3D" parent="." unique_id=1770812813]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.4187835e-05, 0.032325745, -0.0044732094)
+mesh = ExtResource("2_mp7xl")
+skeleton = NodePath("")
+metadata/extras = {
+"hops": {}
+}

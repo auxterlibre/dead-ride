@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="LivePaletteData" format=3 uid="uid://cr6ancslvv4fx"]
+
+[ext_resource type="Script" uid="uid://dsi5a626rvsik" path="res://addons/live_palette/palette.gd" id="1_su4gv"]
+
+[resource]
+script = ExtResource("1_su4gv")
+entries = Array[Dictionary]([{
+"color": Color(0.91764706, 0.8862745, 0.7176471, 1),
+"id": "hgn16",
+"name": "White"
+}, {
+"color": Color(0.9882353, 0.7490196, 0.28627452, 1),
+"id": "su4gv",
+"name": "Yellow"
+}, {
+"color": Color(0.06666667, 0.6156863, 0.6431373, 1),
+"id": "4fcxr",
+"name": "Light Blue"
+}, {
+"color": Color(0.8392157, 0.15686275, 0.15686275, 1),
+"id": "8u3fm",
+"name": "Red"
+}, {
+"color": Color(0.96862745, 0.49803922, 0, 1),
+"id": "nlkiu",
+"name": "Orange"
+}, {
+"color": Color(0, 0.1882353, 0.28627452, 1),
+"id": "j4isb",
+"name": "Dark Blue"
+}, {
+"color": Color(0.4117647, 0.8627451, 0.61960787, 1),
+"id": "0h1we",
+"name": "Light Green"
+}])

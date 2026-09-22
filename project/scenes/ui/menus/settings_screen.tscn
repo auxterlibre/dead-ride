@@ -1,0 +1,115 @@
+[gd_scene format=3 uid="uid://dlnedomshfb8l"]
+
+[ext_resource type="Script" uid="uid://clno1jbt3x3vq" path="res://scripts/ui/menus/settings_screen.gd" id="1_set"]
+[ext_resource type="PackedScene" path="res://scenes/ui/menus/menu_button.tscn" id="2_btn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_body"]
+bg_color = Color(0.91764706, 0.8862745, 0.7176471, 1)
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+metadata/_live_palette_bindings = {
+"bg_color": "p8lu4"
+}
+
+[node name="SettingsScreen" type="Control" unique_id=1222680119]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_set")
+
+[node name="Dim" type="ColorRect" parent="." unique_id=236935488]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.1882353, 0.28627452, 0.35)
+
+[node name="Panel" type="VBoxContainer" parent="." unique_id=2143897356]
+custom_minimum_size = Vector2(2378, 1646)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1189.0
+offset_top = -823.0
+offset_right = 1189.0
+offset_bottom = 823.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = -4
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel" unique_id=1931702406]
+layout_mode = 2
+theme_override_constants/margin_right = 96
+
+[node name="TabBar" type="HBoxContainer" parent="Panel/MarginContainer" unique_id=1994780972]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 144)
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Body" type="PanelContainer" parent="Panel" unique_id=2112779394]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_body")
+
+[node name="Margin" type="MarginContainer" parent="Panel/Body" unique_id=267513674]
+layout_mode = 2
+theme_override_constants/margin_left = 96
+theme_override_constants/margin_top = 64
+theme_override_constants/margin_right = 96
+theme_override_constants/margin_bottom = 64
+
+[node name="Content" type="VBoxContainer" parent="Panel/Body/Margin" unique_id=586788129]
+layout_mode = 2
+theme_override_constants/separation = 64
+
+[node name="Scroll" type="ScrollContainer" parent="Panel/Body/Margin/Content" unique_id=1011139937]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="RowContainer" type="VBoxContainer" parent="Panel/Body/Margin/Content/Scroll" unique_id=1737768063]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+
+[node name="Divider" type="ColorRect" parent="Panel/Body/Margin/Content" unique_id=337766360]
+custom_minimum_size = Vector2(0, 4)
+layout_mode = 2
+color = Color(0, 0.1882353, 0.28627452, 0.5)
+
+[node name="Footer" type="HBoxContainer" parent="Panel/Body/Margin/Content" unique_id=1360358284]
+custom_minimum_size = Vector2(0, 112)
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="ApplyButton" parent="Panel/Body/Margin/Content/Footer" unique_id=1314258520 instance=ExtResource("2_btn")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Apply and close"
+primary = true
+
+[node name="BindingsButton" parent="Panel/Body/Margin/Content/Footer" unique_id=2083549282 instance=ExtResource("2_btn")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+text = "Key bindings"
+
+[node name="ResetButton" parent="Panel/Body/Margin/Content/Footer" unique_id=1242183524 instance=ExtResource("2_btn")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+text = "Reset all"

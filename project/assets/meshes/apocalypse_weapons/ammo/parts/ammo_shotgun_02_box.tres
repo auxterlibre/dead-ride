@@ -1,0 +1,61 @@
+[gd_resource type="ArrayMesh" format=4 uid="uid://br8hhv2hunvs8"]
+
+[ext_resource type="Material" uid="uid://cng7f4jyglm8w" path="res://assets/materials/apocalypse_weapons/apocalypse_weapons_material_color.tres" id="1_f2oow"]
+[ext_resource type="Material" uid="uid://b5863ydorvcbi" path="res://assets/materials/apocalypse_weapons/apocalypse_weapons_material_bullets.tres" id="2_bhong"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_2d32d"]
+_surfaces = [{
+"aabb": AABB(-0.06196156, 0.0034182917, -0.040273096, 0.12392312, 0.07531596, 0.08054466),
+"format": 34359742465,
+"index_count": 84,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAADAAAAAgAEAAAABAAFAAMAAgAGAAQABgAFAAQABwADAAUABgAHAAUABwABAAMABgACAAgABwAGAAkABgAIAAkABwAJAAoAAQAHAAoAAgABAAsAAgALAAgAAQAKAAsACAAMAAkADAAKAAkACAANAAwADAAOAAoADwAIAAsADwANAAgACgAPAAsADAANAA8ACgAOAA8ADAAPAA4A"),
+"name": "Color",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("LbtwvWGYrTtxmxW9K7twvWc/oT3emRU9LbtwvWw/oT1rmxW9K7twvSiYrTvZmRU9JrtwPWGYrTt7mxW9K7twPSiYrTvPmRU9JrtwPWw/oT10mxW9K7twPWc/oT3UmRU9aMt9vWw/oT1b9SS9ZMt9PWw/oT1j9SS9aMt9PWc/oT3B8yQ9Zst9vWc/oT3L8yQ9ZMt9Pd4FYDtn9SS9aMt9vd4FYDte9SS9aMt9PWsFYDu+8yQ9Zst9vWsFYDvF8yQ9")
+}, {
+"aabb": AABB(-0.058772255, 0.072086945, -0.03652521, 0.1175445, 1e-05, 0.073048905),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"name": "Bullets",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("/v/DAAAAAAAAAAAA//8AAAAAkgAAAAAA//8AAP7/AAA=")
+}]
+blend_shape_mode = 0
+
+[resource]
+resource_name = "ammo_shotgun_02_box"
+_surfaces = [{
+"aabb": AABB(-0.06196156, 0.0034182917, -0.040273096, 0.12392312, 0.07531596, 0.08054466),
+"attribute_data": PackedByteArray("UJReP2OIZj+8xF8/ls9ZP7zEXz+Wz1k/UJReP2OIZj+8xF8/ls9ZP1CUXj9jiGY/UJReP2OIZj+8xF8/ls9ZP1CUXj9jiGY/UJReP2OIZj9QlF4/Y4hmP1CUXj9jiGY/vMRfP5bPWT9QlF4/Y4hmP1CUXj9jiGY/vMRfP5bPWT+8xF8/ls9ZP1CUXj9jiGY/UJReP2OIZj+8xF8/ls9ZP1g9NT/4zrU+WD01P/jOtT5YPTU/+M61Plg9NT/4zrU+WD01P/jOtT5YPTU/+M61Plg9NT/4zrU+WD01P/jOtT5YPTU/+M61Plg9NT/4zrU+WD01P/jOtT5YPTU/+M61PrTAYT91cm4/tMBhP3Vybj+0wGE/dXJuP7TAYT91cm4/tMBhP3Vybj+0wGE/dXJuP7TAYT91cm4/tMBhP3Vybj9YPTU/+M61Plg9NT/4zrU+WD01P/jOtT5YPTU/+M61Plg9NT/4zrU+WD01P/jOtT5YPTU/+M61Plg9NT/4zrU+"),
+"format": 34359742487,
+"index_count": 84,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAgACIAIwAlACEAJAAiACYAIwAnACUAJwAkACYAJwAmACUAKAApACoAKAArACkALAAtAC4ALAAvAC0A"),
+"material": ExtResource("1_f2oow"),
+"name": "Color",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 48,
+"vertex_data": PackedByteArray("LbtwvWGYrTtxmxW9K7twvWc/oT3emRU9LbtwvWw/oT1rmxW9K7twvSiYrTvZmRU9JrtwPWw/oT10mxW9K7twPSiYrTvPmRU9JrtwPWGYrTt7mxW9K7twPWc/oT3UmRU9JrtwPWGYrTt7mxW9K7twvSiYrTvZmRU9LbtwvWGYrTtxmxW9K7twPSiYrTvPmRU9LbtwvWw/oT1rmxW9JrtwPWGYrTt7mxW9LbtwvWGYrTtxmxW9JrtwPWw/oT10mxW9K7twPWc/oT3UmRU9K7twvSiYrTvZmRU9K7twPSiYrTvPmRU9K7twvWc/oT3emRU9ZMt9Pd4FYDtn9SS9Zst9vWsFYDvF8yQ9aMt9PWsFYDu+8yQ9aMt9vd4FYDte9SS9aMt9vWw/oT1b9SS9ZMt9Pd4FYDtn9SS9ZMt9PWw/oT1j9SS9aMt9vd4FYDte9SS9aMt9PWc/oT3B8yQ9Zst9vWsFYDvF8yQ9Zst9vWc/oT3L8yQ9aMt9PWsFYDu+8yQ9K7twvWc/oT3emRU9aMt9PWc/oT3B8yQ9Zst9vWc/oT3L8yQ9K7twPWc/oT3UmRU9LbtwvWw/oT1rmxW9ZMt9PWw/oT1j9SS9aMt9vWw/oT1b9SS9JrtwPWw/oT10mxW9Zst9vWsFYDvF8yQ9aMt9vWw/oT1b9SS9Zst9vWc/oT3L8yQ9aMt9vd4FYDte9SS9ZMt9Pd4FYDtn9SS9aMt9PWc/oT3B8yQ9ZMt9PWw/oT1j9SS9aMt9PWsFYDu+8yQ9////f////7////9/////v////3////+/////f////78AAP9/////vwAA/3////+/AAD/f////78AAP9/////v/9///////8//3///////z//f///////P/9///////8//3//f////z//f/9/////P/9//3////8//3//f////z//////////P/////////8//////////z//////////P/9/AAD///8//38AAP///z//fwAA////P/9/AAD///8//////////z//////////P/////////8//////////z//f/9/////P/9//3////8//3//f////z//f/9/////P/9///////8//3///////z//f///////P/9///////8//3///////z//f///////P/9///////8//3///////z8AAP9/////vwAA/3////+/AAD/f////78AAP9/////v////3////+/////f////7////9/////v////3////+/")
+}, {
+"aabb": AABB(-0.058772255, 0.072086945, -0.03652521, 0.1175445, 1e-05, 0.073048905),
+"attribute_data": PackedByteArray("Fgw7iVdUf/0WDH/9V1Q7iQ=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"material": ExtResource("2_bhong"),
+"name": "Bullets",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("/v/DAAAAVNUAAAAA//9U1QAAkgAAAFTV//8AAP7/VNWqqqqqqqqqqqqqqqqqqqqq")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_2d32d")
+metadata/extras = {
+"hops": {}
+}

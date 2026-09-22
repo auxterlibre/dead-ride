@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="CharacterData" format=3 uid="uid://lsi4ovhrbg8f"]
+
+[ext_resource type="Script" uid="uid://cat6ypyshc0y5" path="res://scripts/data/character_data.gd" id="1_7j4xe"]
+[ext_resource type="Script" uid="uid://dmpo1qr4cr7tg" path="res://scripts/data/items/weapon_data.gd" id="2_m6mmk"]
+[ext_resource type="Resource" uid="uid://ca7dwplly8kbn" path="res://data/items/ammo/ammo_heavy.tres" id="5_efbhm"]
+[ext_resource type="Resource" uid="uid://dvvyr8xfksomp" path="res://data/items/ammo/ammo_light.tres" id="6_efbhm"]
+[ext_resource type="Resource" uid="uid://ds8it3xcv648i" path="res://data/items/backpacks/hiker_backpack.tres" id="6_pack"]
+[ext_resource type="Script" uid="uid://cnm87okcsna4q" path="res://scripts/data/items/item_data.gd" id="7_item"]
+[ext_resource type="Resource" uid="uid://dethn64qlnwh2" path="res://data/items/explosives/grenade.tres" id="7_p4bsc"]
+[ext_resource type="Resource" uid="uid://b6metbl57w0u4" path="res://data/items/tools/screwdriver.tres" id="8_tool"]
+[ext_resource type="Resource" path="res://data/items/consumables/field_bandage.tres" id="11_bandage"]
+[ext_resource type="Resource" uid="uid://crea3bgntuyjk" path="res://data/items/weapons/ranged/smg.tres" id="11_efbhm"]
+[ext_resource type="Resource" uid="uid://d2oxan1t1ho3s" path="res://data/items/weapons/ranged/revolver.tres" id="12_efbhm"]
+[ext_resource type="Resource" uid="uid://bx4dci6ipar01" path="res://data/items/consumables/water_bottle.tres" id="12_water"]
+
+[resource]
+script = ExtResource("1_7j4xe")
+max_health = 15
+speed = 7.0
+current_weapon_idx = -1
+backpack = ExtResource("6_pack")
+body_path = "res://assets/meshes/characters/lumberjack/"
+weapon_inventory = Array[ExtResource("2_m6mmk")]([ExtResource("11_efbhm"), ExtResource("12_efbhm")])
+starting_items = Array[ExtResource("7_item")]([ExtResource("8_tool"), ExtResource("5_efbhm"), ExtResource("6_efbhm"), ExtResource("7_p4bsc"), ExtResource("11_bandage"), ExtResource("12_water")])

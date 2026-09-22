@@ -1,0 +1,40 @@
+[gd_resource type="ArrayMesh" format=4 uid="uid://drjrmgrh31mr3"]
+
+[ext_resource type="Material" uid="uid://cng7f4jyglm8w" path="res://assets/materials/apocalypse_weapons/apocalypse_weapons_material_color.tres" id="1_ifaac"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_604t0"]
+_surfaces = [{
+"aabb": AABB(-0.064911515, -0.008306593, -0.026654035, 0.0650638, 0.016614038, 0.053307995),
+"format": 34359742465,
+"index_count": 78,
+"index_data": PackedByteArray("AAABAAIAAQADAAIAAAALAAEAAAAEAAsAAAAFAAQABAAFAAcACwAEAAwACwAMAAEABAAHAA0ADAAEAA0ABgANAAcABgAHAAgACgAGAAgADgANAAYACgAOAAYADAANAA8ADgAPAA0ACgAQAA4ADgAQAA8ACgAJABAAAwAQAAkADwAQABEAAwARABAADwARAAwAAQARAAMAAQAMABEA"),
+"lods": [0.046989147, PackedByteArray("AAABAAIAAQADAAIAAAAEAAEAAAAFAAQAAwABAAYABgABAAQABAAFAAcABAAHAAYABgAHAAgAAwAGAAkACgAGAAgACgAJAAYA")],
+"name": "Color",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 18,
+"vertex_data": PackedByteArray("uakfOWAYCLyLvM28DAeCvWAYCLxKtM48960fOWAYCLw/tM48Fq4fOSec4btcWdo8VPCEvSec4bt/96o8K68fuSec4buQWdq8DAeCvfQbCDyE3bA8K68fuXGj4TuQWdq8uakfOfQbCDyLvM28Fq4fOXGj4TtcWdo8960fOfQbCDw/tM48DAeCvWAYCLyE3bA8VPCEvSec4btKtM48VPCEvXGj4Tt/96o8DAeCvfQbCDxKtM48VPCEvXGj4TtKtM48DAeCvXGj4TtnWdo8DAeCvSec4btnWdo8")
+}]
+blend_shape_mode = 0
+
+[resource]
+resource_name = "mg_2_bolt"
+_surfaces = [{
+"aabb": AABB(-0.064911515, -0.008306593, -0.026654035, 0.0650638, 0.016614038, 0.053307995),
+"attribute_data": PackedByteArray("VdJiP4BH8j5V0mI/gEfyPlXSYj+AR/I+RtJiP4wT8j5G0mI/jBPyPkbSYj+ME/I+oNFiPyzo7z6v0WI/JBzwPqDRYj8s6O8+r9FiPyQc8D6g0WI/LOjvPlXSYj+AR/I+RtJiP4wT8j6v0WI/JBzwPqDRYj8s6O8+r9FiPyQc8D6v0WI/JBzwPkbSYj+ME/I+"),
+"format": 34359742487,
+"index_count": 78,
+"index_data": PackedByteArray("AAABAAIAAQADAAIAAAALAAEAAAAEAAsAAAAFAAQABAAFAAcACwAEAAwACwAMAAEABAAHAA0ADAAEAA0ABgANAAcABgAHAAgACgAGAAgADgANAAYACgAOAAYADAANAA8ADgAPAA0ACgAQAA4ADgAQAA8ACgAJABAAAwAQAAkADwAQABEAAwARABAADwARAAwAAQARAAMAAQAMABEA"),
+"lods": [0.046989147, PackedByteArray("AAABAAIAAQADAAIAAAAEAAEAAAAFAAQAAwABAAYABgABAAQABAAFAAcABAAHAAYABgAHAAgAAwAGAAkACgAGAAgACgAJAAYA")],
+"material": ExtResource("1_ifaac"),
+"name": "Color",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 18,
+"vertex_data": PackedByteArray("uakfOWAYCLyLvM28DAeCvWAYCLxKtM48960fOWAYCLw/tM48Fq4fOSec4btcWdo8VPCEvSec4bt/96o8K68fuSec4buQWdq8DAeCvfQbCDyE3bA8K68fuXGj4TuQWdq8uakfOfQbCDyLvM28Fq4fOXGj4TtcWdo8960fOfQbCDw/tM48DAeCvWAYCLyE3bA8VPCEvSec4btKtM48VPCEvXGj4Tt/96o8DAeCvfQbCDxKtM48VPCEvXGj4TtKtM48DAeCvXGj4TtnWdo8DAeCvSec4btnWdo80nVPBP///z+Mf5MG////P/9/Fwb///8//38Kdf///z8MCFc1////P/cHzTL///8/gXVY+////z/3BzHN////P9J1r/v///8//3/0iv///z//f+f5////P4R1owT///8/uR50eP///z8MCKfK////P4x/a/n///8/ux6Jh////z+YfaSK////P5h9WnX///8/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_604t0")
+metadata/extras = {
+"hops": {}
+}

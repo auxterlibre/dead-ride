@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dyofgtdo5p7uc"]
+
+[ext_resource type="Texture2D" uid="uid://dyktbilyc3d07" path="res://assets/textures/apocalypse/apocalypse_dashboard.png" id="1_363m7"]
+[ext_resource type="Texture2D" uid="uid://ih36xye17w64" path="res://_not_exported/textures/Dashboard.png" id="2_xoy1p"]
+
+[resource]
+resource_name = "apocalypse_material_dashboard"
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_363m7")
+roughness = 0.5
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_operator = 1
+emission_texture = ExtResource("2_xoy1p")
+metadata/_gltf_primary_texture_coord = 0

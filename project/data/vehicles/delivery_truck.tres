@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="VehicleData" format=3 uid="uid://cdtapirwsfyei"]
+
+[ext_resource type="Script" uid="uid://c7k25vwaq80tm" path="res://scripts/data/vehicle_data.gd" id="1_script"]
+
+[resource]
+script = ExtResource("1_script")
+name = "Delivery Truck"
+health_max = 100
+mass = 60
+engine_power = 35
+speed_max = 30
+brake_force = 35
+handling = 80
+drift = 5
+engine_tone = 10

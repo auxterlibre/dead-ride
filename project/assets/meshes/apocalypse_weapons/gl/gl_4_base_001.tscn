@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://bb3h7l0m4w4l2"]
+
+[ext_resource type="ArrayMesh" uid="uid://dk3ywt47t2df1" path="res://assets/meshes/apocalypse_weapons/gl/parts/gl_4_base.tres" id="1_34ibm"]
+[ext_resource type="ArrayMesh" uid="uid://faqlu2ujrl3o" path="res://assets/meshes/apocalypse_weapons/gl/parts/gl_4_front_cap.tres" id="2_spna1"]
+[ext_resource type="ArrayMesh" uid="uid://cuomkyy8dr3js" path="res://assets/meshes/apocalypse_weapons/gl/parts/gl_4_rear_cap.tres" id="3_sdp01"]
+[ext_resource type="ArrayMesh" uid="uid://cbljvo16e0ufr" path="res://assets/meshes/apocalypse_weapons/gl/parts/gl_4_rocket_container.tres" id="4_tp1np"]
+[ext_resource type="ArrayMesh" uid="uid://8i3l7jhhmvwm" path="res://assets/meshes/apocalypse_weapons/gl/parts/gl_4_trigger.tres" id="5_f7tmx"]
+[ext_resource type="ArrayMesh" uid="uid://bxup3yjw4ntwj" path="res://assets/meshes/apocalypse_weapons/gl/parts/sight_02.tres" id="6_h6sqs"]
+
+[node name="Gl4Base001" type="MeshInstance3D" unique_id=1824226439]
+mesh = ExtResource("1_34ibm")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="GL4_FrontCap_001" type="MeshInstance3D" parent="." unique_id=1820226407]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.050684452, 0.20489979)
+mesh = ExtResource("2_spna1")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="GL4_RearCap_001" type="MeshInstance3D" parent="." unique_id=86546671]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.050684452, -0.3825655)
+mesh = ExtResource("3_sdp01")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="GL4_RocketContainer_001" type="MeshInstance3D" parent="." unique_id=698245700]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00015756565, 0.16983199, -0.30619526)
+mesh = ExtResource("4_tp1np")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="GL4_Trigger_001" type="MeshInstance3D" parent="." unique_id=1196679088]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.07306194, 0.0070123672)
+mesh = ExtResource("5_f7tmx")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Place_GL4_Charm_001" type="Node3D" parent="." unique_id=1193391748]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.11297172, 0.1746943, -0.103037834)
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Place_GL4_Sight_001" type="Node3D" parent="." unique_id=1053510282]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.12959634, 0.24222183, -0.22174168)
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Sight_02_001" type="MeshInstance3D" parent="." unique_id=1242934446]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.12959632, 0.24222183, -0.22174263)
+mesh = ExtResource("6_h6sqs")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}

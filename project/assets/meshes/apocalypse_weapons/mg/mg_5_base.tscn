@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://b75q2ucg8xpud"]
+
+[ext_resource type="ArrayMesh" uid="uid://qwpv8bduuqau" path="res://assets/meshes/apocalypse_weapons/mg/parts/mg_5_base.tres" id="1_h6jdc"]
+[ext_resource type="ArrayMesh" uid="uid://c2l6vrfnfsddl" path="res://assets/meshes/apocalypse_weapons/mg/parts/mg_5_drum.tres" id="2_5e4mn"]
+[ext_resource type="ArrayMesh" uid="uid://i1g2lksxbwx7" path="res://assets/meshes/apocalypse_weapons/mg/parts/mg_5_magazine.tres" id="3_4615q"]
+[ext_resource type="ArrayMesh" uid="uid://dkllr10lqs5d0" path="res://assets/meshes/apocalypse_weapons/mg/parts/mg_5_trigger.tres" id="4_2nm1p"]
+
+[node name="Mg5Base" type="MeshInstance3D" unique_id=1843074770]
+mesh = ExtResource("1_h6jdc")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="MG5_Drum" type="MeshInstance3D" parent="." unique_id=2044699306]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.13605547, 0.79854965)
+mesh = ExtResource("2_5e4mn")
+skeleton = NodePath("")
+metadata/extras = {
+"M3": {},
+"MM": {},
+"hops": {}
+}
+
+[node name="MG5_Magazine" type="MeshInstance3D" parent="." unique_id=1743286586]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15401337, -0.21819925, 0.3293352)
+mesh = ExtResource("3_4615q")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="MG5_Trigger" type="MeshInstance3D" parent="." unique_id=810597563]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05745268, 0.031562805)
+mesh = ExtResource("4_2nm1p")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Place_MG5_Charm" type="Node3D" parent="." unique_id=1364773805]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.01665936, -0.076868534, 0.20460606)
+metadata/extras = {
+"MM": {},
+"hops": {}
+}

@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://cep4t6h8de08h"]
+
+[ext_resource type="FontFile" uid="uid://16cr15homrlp" path="res://assets/fonts/JetBrainsMono-Regular.ttf" id="1_2ikap"]
+[ext_resource type="Script" uid="uid://blml4prfi8q2o" path="res://scripts/ui/hud/input_info/input_label.gd" id="1_jwd7y"]
+[ext_resource type="FontFile" uid="uid://bbctssp8rxgju" path="res://assets/fonts/JetBrainsMono-Bold.ttf" id="3_ybx81"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_bospt"]
+font = ExtResource("1_2ikap")
+font_size = 40
+font_color = Color(0.917647, 0.886275, 0.717647, 1)
+shadow_size = 2
+shadow_color = Color(0.0666667, 0.615686, 0.643137, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3noso"]
+content_margin_left = 16.0
+content_margin_top = 4.0
+content_margin_right = 16.0
+content_margin_bottom = 4.0
+bg_color = Color(0.917647, 0.886275, 0.717647, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_color = Color(0.0666667, 0.615686, 0.643137, 1)
+shadow_size = 2
+shadow_offset = Vector2(1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_jdpu7"]
+font = ExtResource("3_ybx81")
+font_size = 40
+font_color = Color(0, 0.188235, 0.286275, 1)
+
+[node name="InputLabel" type="HBoxContainer" unique_id=1186966905]
+theme_override_constants/separation = 32
+alignment = 2
+script = ExtResource("1_jwd7y")
+
+[node name="Action" type="Label" parent="." unique_id=36844353]
+layout_mode = 2
+text = "ACTION"
+label_settings = SubResource("LabelSettings_bospt")
+horizontal_alignment = 2
+
+[node name="Keys" type="HBoxContainer" parent="." unique_id=433876959]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Key_0" type="Label" parent="Keys" unique_id=478471389]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_3noso")
+text = "F
+"
+label_settings = SubResource("LabelSettings_jdpu7")
+horizontal_alignment = 2
+
+[node name="Key_1" type="Label" parent="Keys" unique_id=649996564]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_3noso")
+text = "F
+"
+label_settings = SubResource("LabelSettings_jdpu7")
+horizontal_alignment = 2
+
+[node name="Key_2" type="Label" parent="Keys" unique_id=1309606965]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_3noso")
+text = "F
+"
+label_settings = SubResource("LabelSettings_jdpu7")
+horizontal_alignment = 2
+
+[node name="Key_3" type="Label" parent="Keys" unique_id=164574906]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_3noso")
+text = "F
+"
+label_settings = SubResource("LabelSettings_jdpu7")
+horizontal_alignment = 2

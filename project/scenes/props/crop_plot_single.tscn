@@ -1,0 +1,16 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" uid="uid://bq47rgairvxbm" path="res://scripts/world/crop_plot.gd" id="1_plot"]
+[ext_resource type="Script" uid="uid://c2aiovtol1l2f" path="res://scripts/data/crop_data.gd" id="2_cropdata"]
+[ext_resource type="PackedScene" uid="uid://bqajjns5bkndr" path="res://scenes/props/crop.tscn" id="3_crop"]
+[ext_resource type="PackedScene" path="res://scenes/props/crop_spot.tscn" id="4_spot"]
+[ext_resource type="Resource" uid="uid://ctfsm2ho2iibh" path="res://data/crops/light_ammo_bush.tres" id="5_light"]
+[ext_resource type="Resource" uid="uid://bnxph4wyul8d5" path="res://data/crops/medium_ammo_plant.tres" id="5_medium"]
+[ext_resource type="Resource" uid="uid://b4tu6b8g7rlmn" path="res://data/crops/heavy_ammo_vines.tres" id="5_heavy"]
+
+[node name="CropPlotSingle" type="Node3D"]
+script = ExtResource("1_plot")
+crop_scene = ExtResource("3_crop")
+species = Array[ExtResource("2_cropdata")]([ExtResource("5_light"), ExtResource("5_medium"), ExtResource("5_heavy")])
+
+[node name="Spot" parent="." instance=ExtResource("4_spot")]

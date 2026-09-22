@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://desrwj8jbrymx"]
+
+[ext_resource type="ArrayMesh" uid="uid://un5uiphp8vyp" path="res://assets/meshes/props/dummy/base.tres" id="1_20q1o"]
+[ext_resource type="ArrayMesh" uid="uid://bdcavmg6jo5px" path="res://assets/meshes/props/dummy/body.tres" id="2_d1kws"]
+[ext_resource type="ArrayMesh" uid="uid://0cqadvw618fr" path="res://assets/meshes/props/dummy/arm_left.tres" id="3_8x0s7"]
+[ext_resource type="ArrayMesh" uid="uid://ckn6jh6fjwvju" path="res://assets/meshes/props/dummy/arm_right.tres" id="4_i5nvr"]
+[ext_resource type="ArrayMesh" uid="uid://hmtxvbcrdvcx" path="res://assets/meshes/props/dummy/head.tres" id="5_cdle0"]
+[ext_resource type="ArrayMesh" uid="uid://ctojtytnn7jst" path="res://assets/meshes/props/dummy/target.tres" id="6_vlffs"]
+[ext_resource type="Script" uid="uid://dn7tcdhx3bosm" path="res://scripts/components/character/hurt_box.gd" id="7_d1kws"]
+[ext_resource type="Script" uid="uid://nmetopmods5u" path="res://scripts/props/dummy.gd" id="8_dummy"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0ipkf"]
+
+[node name="Dummy" type="Node3D" unique_id=1027721564]
+script = ExtResource("8_dummy")
+
+[node name="Base" type="MeshInstance3D" parent="." unique_id=2107500917]
+mesh = ExtResource("1_20q1o")
+
+[node name="Body" type="MeshInstance3D" parent="Base" unique_id=1694714010]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4000001, 0)
+mesh = ExtResource("2_d1kws")
+
+[node name="ArmLeft" type="MeshInstance3D" parent="Base/Body" unique_id=1303255913]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2000122, 0.6999998, 0)
+mesh = ExtResource("3_8x0s7")
+
+[node name="ArmRight" type="MeshInstance3D" parent="Base/Body" unique_id=1036780264]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2000122, 0.6999998, 0)
+mesh = ExtResource("4_i5nvr")
+
+[node name="Head" type="MeshInstance3D" parent="Base/Body" unique_id=1375559717]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8158736, 0)
+mesh = ExtResource("5_cdle0")
+
+[node name="Target" type="MeshInstance3D" parent="Base/Body" unique_id=2028583293]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.49023485, -0.27507424)
+mesh = ExtResource("6_vlffs")
+
+[node name="HurtBox" type="Area3D" parent="." unique_id=1283790198]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("7_d1kws")
+metadata/_custom_type_script = "uid://dn7tcdhx3bosm"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HurtBox" unique_id=2005058063]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1704005, 0)
+shape = SubResource("CapsuleShape3D_0ipkf")

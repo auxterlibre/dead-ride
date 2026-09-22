@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://s824dn3tx62d"]
+
+[ext_resource type="ArrayMesh" uid="uid://dwy57hqxqa7xi" path="res://assets/meshes/apocalypse_weapons/ar/parts/tactical_laser_aiming_system.tres" id="1_qyh55"]
+[ext_resource type="ArrayMesh" uid="uid://clr87srglkcio" path="res://assets/meshes/apocalypse_weapons/ar/parts/tactical_laser_aiming_system_ray.tres" id="2_ln34b"]
+
+[node name="TacticalLaserAimingSystem" type="MeshInstance3D" unique_id=1766541307]
+mesh = ExtResource("1_qyh55")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Tactical_LaserAimingSystem_Ray" type="MeshInstance3D" parent="." unique_id=947329852]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.022541534, 0.016682625, 0.23755741)
+mesh = ExtResource("2_ln34b")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}

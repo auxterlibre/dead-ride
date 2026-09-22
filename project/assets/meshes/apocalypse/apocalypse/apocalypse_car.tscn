@@ -1,0 +1,180 @@
+[gd_scene format=3 uid="uid://beuphtq16x4i0"]
+
+[ext_resource type="ArrayMesh" uid="uid://chut6dkg041ep" path="res://assets/meshes/apocalypse/apocalypse/parts/apocalypse_car.tres" id="1_hc0ys"]
+[ext_resource type="ArrayMesh" uid="uid://c5ka8s1p2jc5m" path="res://assets/meshes/apocalypse/apocalypse/parts/apocalypse_car_01_armor_01.tres" id="2_6m34c"]
+[ext_resource type="ArrayMesh" uid="uid://bc8r8rxjl87pt" path="res://assets/meshes/apocalypse/apocalypse/parts/apocalypse_car_01_armor_02.tres" id="3_ohlnk"]
+[ext_resource type="ArrayMesh" uid="uid://cs30p4qxcamsd" path="res://assets/meshes/apocalypse/apocalypse/parts/apocalypse_car_01_armor_03.tres" id="4_ymugh"]
+[ext_resource type="ArrayMesh" uid="uid://ddxr3jwxlo2c7" path="res://assets/meshes/apocalypse/apocalypse/parts/apocalypse_car_01_armor_04.tres" id="5_xha5y"]
+[ext_resource type="ArrayMesh" uid="uid://0m0l5e6fjtrs" path="res://assets/meshes/apocalypse/apocalypse/parts/apocalypse_car_01_armor_05.tres" id="6_8sjyb"]
+[ext_resource type="ArrayMesh" uid="uid://di2uq6a48lvhw" path="res://assets/meshes/apocalypse/apocalypse/parts/apocalypse_car_01_door_l.tres" id="7_hjk0d"]
+[ext_resource type="ArrayMesh" uid="uid://cyl3kyj4wxknk" path="res://assets/meshes/apocalypse/apocalypse/parts/apocalypse_car_01_door_r.tres" id="8_x4ftt"]
+[ext_resource type="ArrayMesh" uid="uid://chmy23jqwowt0" path="res://assets/meshes/apocalypse/apocalypse/parts/apocalypse_car_01_needle_fuel.tres" id="9_2yrft"]
+[ext_resource type="ArrayMesh" uid="uid://di1yp6x4k6258" path="res://assets/meshes/apocalypse/apocalypse/parts/apocalypse_car_01_needle_speedometer.tres" id="10_xwpge"]
+[ext_resource type="ArrayMesh" uid="uid://1btt1vpj068a" path="res://assets/meshes/apocalypse/apocalypse/parts/apocalypse_car_01_steering_wheel.tres" id="11_cd8ls"]
+[ext_resource type="ArrayMesh" uid="uid://p7t71gs1na5y" path="res://assets/meshes/apocalypse/apocalypse/parts/apocalypse_car_01_supplies_01.tres" id="12_0satt"]
+[ext_resource type="ArrayMesh" uid="uid://0ixftvdlh501" path="res://assets/meshes/apocalypse/apocalypse/parts/apocalypse_car_01_wheel_bl.tres" id="13_utjay"]
+
+[node name="ApocalypseCar" type="MeshInstance3D" unique_id=1468152613]
+mesh = ExtResource("1_hc0ys")
+skeleton = NodePath("")
+metadata/extras = {
+"M3": {},
+"MM": {},
+"bc": {},
+"hops": {}
+}
+
+[node name="Apocalypse_Car_01_Armor_01" type="MeshInstance3D" parent="." unique_id=1718655240]
+mesh = ExtResource("2_6m34c")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"bc": {},
+"hops": {}
+}
+
+[node name="Apocalypse_Car_01_Armor_02" type="MeshInstance3D" parent="." unique_id=1054297195]
+mesh = ExtResource("3_ohlnk")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"bc": {},
+"hops": {}
+}
+
+[node name="Apocalypse_Car_01_Armor_03" type="MeshInstance3D" parent="." unique_id=1793960158]
+mesh = ExtResource("4_ymugh")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"bc": {},
+"hops": {}
+}
+
+[node name="Apocalypse_Car_01_Armor_04" type="MeshInstance3D" parent="." unique_id=1771194248]
+mesh = ExtResource("5_xha5y")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"bc": {},
+"hops": {}
+}
+
+[node name="Apocalypse_Car_01_Armor_05" type="MeshInstance3D" parent="." unique_id=2080546852]
+mesh = ExtResource("6_8sjyb")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"bc": {},
+"hops": {}
+}
+
+[node name="Apocalypse_Car_01_Door_L" type="MeshInstance3D" parent="." unique_id=494655440]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0255728, 0.7427424, 0.79499745)
+mesh = ExtResource("7_hjk0d")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"bc": {},
+"hops": {}
+}
+
+[node name="Apocalypse_Car_01_Door_R" type="MeshInstance3D" parent="." unique_id=1316336115]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0255747, 0.7427424, 0.79499745)
+mesh = ExtResource("8_x4ftt")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"bc": {},
+"hops": {}
+}
+
+[node name="Apocalypse_Car_01_Needle_Fuel" type="MeshInstance3D" parent="." unique_id=1660489937]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6429701, 1.2157977, 0.55809355)
+mesh = ExtResource("9_2yrft")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Apocalypse_Car_01_Needle_Oil" type="MeshInstance3D" parent="." unique_id=882053684]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.36867046, 1.2157977, 0.55809355)
+mesh = ExtResource("9_2yrft")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Apocalypse_Car_01_Needle_Speedometer" type="MeshInstance3D" parent="." unique_id=280895703]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5595007, 1.2478653, 0.5695187)
+mesh = ExtResource("10_xwpge")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Apocalypse_Car_01_Needle_Tachometer" type="MeshInstance3D" parent="." unique_id=1381834423]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.45214367, 1.2478653, 0.5695187)
+mesh = ExtResource("10_xwpge")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Apocalypse_Car_01_SteeringWheel" type="MeshInstance3D" parent="." unique_id=855768401]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.50370693, 1.1490982, 0.43944454)
+mesh = ExtResource("11_cd8ls")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Apocalypse_Car_01_Supplies_01" type="MeshInstance3D" parent="." unique_id=1248511223]
+mesh = ExtResource("12_0satt")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"bc": {},
+"hops": {}
+}
+
+[node name="Apocalypse_Car_01_Wheel_BL" type="MeshInstance3D" parent="." unique_id=648539142]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.92537594, 0.37981778, -1.287252)
+mesh = ExtResource("13_utjay")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Apocalypse_Car_01_Wheel_BR" type="MeshInstance3D" parent="." unique_id=1128396558]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.92537785, 0.37981778, -1.287252)
+mesh = ExtResource("13_utjay")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Apocalypse_Car_01_Wheel_FL" type="MeshInstance3D" parent="." unique_id=593942654]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.92537594, 0.37981778, 1.3789351)
+mesh = ExtResource("13_utjay")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Apocalypse_Car_01_Wheel_FR" type="MeshInstance3D" parent="." unique_id=1977615845]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.92537785, 0.37981778, 1.378935)
+mesh = ExtResource("13_utjay")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}

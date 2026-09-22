@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://5yfdhci4lie7"]
+
+[ext_resource type="Script" uid="uid://dmg7qngufckw" path="res://scripts/ui/menu_button.gd" id="1_btn"]
+[ext_resource type="FontFile" uid="uid://16cr15homrlp" path="res://assets/fonts/JetBrainsMono-Regular.ttf" id="2_mono"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fill"]
+bg_color = Color(0.6313726, 0.6, 0.41960785, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+metadata/_live_palette_bindings = {
+"bg_color": "gl3bt"
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mu6ot"]
+bg_color = Color(0.45490196, 0.43137255, 0.30980393, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+metadata/_live_palette_bindings = {
+"bg_color": "qd66x"
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t65d1"]
+bg_color = Color(0.7764706, 0.7411765, 0.5254902, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+metadata/_live_palette_bindings = {
+"bg_color": "3brd7"
+}
+
+[node name="MenuButton" type="Button" unique_id=569560509]
+custom_minimum_size = Vector2(0, 112)
+offset_right = 982.0
+offset_bottom = 112.0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.91764706, 0.8862745, 0.7176471, 1)
+theme_override_colors/font_pressed_color = Color(0.91764706, 0.8862745, 0.7176471, 1)
+theme_override_colors/font_hover_color = Color(0.91764706, 0.8862745, 0.7176471, 1)
+theme_override_colors/font_disabled_color = Color(0.91764706, 0.8862745, 0.7176471, 0.45)
+theme_override_fonts/font = ExtResource("2_mono")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_fill")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mu6ot")
+theme_override_styles/hover = SubResource("StyleBoxFlat_t65d1")
+text = "Button"
+script = ExtResource("1_btn")
+metadata/_live_palette_bindings = {
+"theme_override_colors/font_color": "p8lu4",
+"theme_override_colors/font_hover_color": "p8lu4",
+"theme_override_colors/font_pressed_color": "p8lu4"
+}

@@ -1,0 +1,18 @@
+[gd_resource type="ArrayMesh" format=4 uid="uid://cdu80xri16tfq"]
+
+[ext_resource type="Material" uid="uid://cv2cwqp28is3v" path="res://assets/materials/environment/grass_material.tres" id="1_6bsha"]
+
+[resource]
+resource_name = "grass_2_a_singlesided_color_5"
+_surfaces = [{
+"aabb": AABB(-0.07750628, -0.031266816, -0.1608921, 0.15502483, 0.91875654, 0.22734141),
+"attribute_data": PackedByteArray("kB0QP7pAujySVhI/k+ASPZSHEz/NUE09kB0QP6QIpD2UwBM/hZiEPZPIEj+kCKQ9jbMMP81QTT2O5A0/k+ASPZAdED/dEF09jHsMP4WYhD2QHRA/pAikPY1zDT+kCKQ9kB0QP5XQFD2QHRA/z6BOPZAdED+F6IQ9kB0QP4poij2QHRA/p1CnPZAdED/F6MQ9"),
+"format": 34359742487,
+"index_count": 42,
+"index_data": PackedByteArray("DAAAAAEADQAMAAEADQABAAIADgANAAIADgACAAQAAwAOAAQAAwAEAAUABwAIAA8ABgAHAA8ABgAPABAACQAGABAACQAQABEACwAJABEACwARAAoA"),
+"material": ExtResource("1_6bsha"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 18,
+"vertex_data": PackedByteArray("AACmNocyYz/mwCS+JixCPf4fLD9gLEu9xRyVPb1G4T6wT3A8AAAQtqIRAL1IRS89C8KePc6UUj5QJ1o97uhoPQ+l/ryUFog9lReVvb1G4T6wT3A8xCFCvf4fLD9gLEu9AACmNocyYz/mwCS+nbuevc6UUj5QJ1o9AAAQtqIRAL1IRS899OpovQ+l/ryUFog9AACmNgXjKj+mpZS9AACmNjDn4D4wOA+8AACmNqhSUj4Qr/Q8AACmNgXjKj+mpZS9AACmNjDn4D4wOA+8AACmNqhSUj4Qr/Q8FV2pmnzPmL1cX+OW7dIPvR5j0ZB72pu9cGBXhlXetb+zYkaK992zvnBgV4a73va/4JzQkNalzvihoOKW06yY+emiqZoVrSD8Sp1GihubOPqQn1eG7P9dL46fV4bMkuH7AV96lxnS+rzqYiORydlnvb1iVYp+3We+/KB7l3qsKPoTnSSRvaUO+UGdVoqUmwv6")
+}]

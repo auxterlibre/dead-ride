@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://byl3evv2jionk"]
+
+[ext_resource type="Texture2D" path="res://assets/textures/characters/young_ones/young_ones_texture_a.png" id="1_xyr6i"]
+
+[resource]
+resource_name = "young_ones_material_a"
+albedo_texture = ExtResource("1_xyr6i")
+roughness = 0.5
+metadata/_gltf_primary_texture_coord = 0

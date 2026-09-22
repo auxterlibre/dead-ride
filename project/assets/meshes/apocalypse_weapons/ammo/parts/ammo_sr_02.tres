@@ -1,0 +1,38 @@
+[gd_resource type="ArrayMesh" format=4 uid="uid://bhl0nnilfdq3w"]
+
+[ext_resource type="Material" uid="uid://dcrdxcpe05hu3" path="res://assets/materials/apocalypse_weapons/apocalypse_weapons_material_ammo_box.tres" id="1_7ufp0"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_6nogm"]
+_surfaces = [{
+"aabb": AABB(-0.103660576, -1.117587e-08, -0.06349601, 0.20732114, 0.067618586, 0.1272547),
+"format": 34359742465,
+"index_count": 84,
+"index_data": PackedByteArray("AAABAAIAAQADAAIAAAAEAAEABAAFAAEAAQAFAAMABAAGAAUABgADAAUAAAAGAAQABgAHAAMAAAAHAAYACAACAAMACQAAAAIACQACAAgACgAAAAkACgAHAAAACwADAAcACwAHAAoACAADAAsACQAMAAoACwANAAgACAAOAAkACQAOAAwACAANAA4ACgAMAA8ACgAPAAsADgAPAAwACwAPAA0ADgANAA8A"),
+"name": "AmmoBox",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("/0vUvWZmhjLmCYK9/EvUPZx7ij3pjoG9/0vUvZx7ij0yCoK9cDfUvZh7ij3rk4I9/EvUPWZmhjLqjoG980vUPZd7ij3wCYI9/kvUPf//P7LmCYI9cDfUvf//P7Lqk4I9IkvUvbITfz3q2G29IkvUvUQcrzto2G29TTjUvQocrztl7G49TTjUva0Tfz1l7G49S0zKPQocrztf7G49djnKPbITfz3w2G29djnKPUQcrztu2G29S0zKPa0Tfz1f7G49")
+}]
+blend_shape_mode = 0
+
+[resource]
+resource_name = "ammo_sr_02"
+_surfaces = [{
+"aabb": AABB(-0.103660576, -1.117587e-08, -0.06349601, 0.20732114, 0.067618586, 0.1272547),
+"attribute_data": PackedByteArray("xUI3P5wKoj662HU/BozIPsVCNz8GjMg+uth1P5wKoj4wrDQ/nBzrPiShID9Dlhs/JKEgP5wc6z4wrDQ/Q5YbP4oNdT8aOQA/2502P5As2D6KDXU/kCzYPtudNj8aOQA//bweP9qO6j4jisA+JFIbPyOKwD7ajuo+/bwePyRSGz+cwx4/bhGZPtVXwD6WjuU+1VfAPm4RmT6cwx4/lo7lPlIUMz+6qZw+wKk0P3ZF5T5QFDM/rBbiPsCpND/wepk+GTUiP7qpnD7AqTQ/8HqZPlIUMz+6qZw+qp8gP/B6mT4ZNSI/rBbiPqqfID/wepk+GTUiP7qpnD6qnyA/dkXlPlAUMz+sFuI+qp8gP3ZF5T4ZNSI/rBbiPsCpND92ReU+tgQ0PzRguD62BDQ/NGC4PrYEND80YLg+tgQ0PzRguD62BDQ/NGC4PrYEND80YLg+tgQ0PzRguD62BDQ/NGC4PrYEND80YLg+tgQ0PzRguD62BDQ/NGC4PrYEND80YLg+tgQ0PzRguD62BDQ/NGC4PrYEND80YLg+tgQ0PzRguD62BDQ/NGC4PrYEND80YLg+tgQ0PzRguD62BDQ/NGC4Pg=="),
+"format": 34359742487,
+"index_count": 84,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUAKAApACoAKAArACkALAAtAC4ALAAvAC0AMAAxADIAMAAzADEANAA1ADYANAA3ADUA"),
+"material": ExtResource("1_7ufp0"),
+"name": "AmmoBox",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 56,
+"vertex_data": PackedByteArray("/0vUvWZmhjLmCYK9/EvUPZx7ij3pjoG9/0vUvZx7ij0yCoK9/EvUPWZmhjLqjoG9/EvUPWZmhjLqjoG980vUPZd7ij3wCYI9/EvUPZx7ij3pjoG9/kvUPf//P7LmCYI9/kvUPf//P7LmCYI9cDfUvZh7ij3rk4I980vUPZd7ij3wCYI9cDfUvf//P7Lqk4I9/0vUvWZmhjLmCYK9/kvUPf//P7LmCYI9/EvUPWZmhjLqjoG9cDfUvf//P7Lqk4I9/EvUPZx7ij3pjoG9cDfUvZh7ij3rk4I9/0vUvZx7ij0yCoK980vUPZd7ij3wCYI9TTjUvQocrztl7G49/0vUvWZmhjLmCYK9IkvUvUQcrzto2G29cDfUvf//P7Lqk4I9TTjUva0Tfz1l7G49cDfUvf//P7Lqk4I9TTjUvQocrztl7G49cDfUvZh7ij3rk4I9IkvUvbITfz3q2G29cDfUvZh7ij3rk4I9TTjUva0Tfz1l7G49/0vUvZx7ij0yCoK9IkvUvUQcrzto2G29/0vUvZx7ij0yCoK9IkvUvbITfz3q2G29/0vUvWZmhjLmCYK9TTjUva0Tfz1l7G49djnKPbITfz3w2G29IkvUvbITfz3q2G29S0zKPa0Tfz1f7G49IkvUvUQcrzto2G29S0zKPQocrztf7G49TTjUvQocrztl7G49djnKPUQcrztu2G29IkvUvbITfz3q2G29djnKPUQcrztu2G29IkvUvUQcrzto2G29djnKPbITfz3w2G29TTjUvQocrztl7G49S0zKPa0Tfz1f7G49TTjUva0Tfz1l7G49S0zKPQocrztf7G49djnKPUQcrztu2G29S0zKPa0Tfz1f7G49S0zKPQocrztf7G49djnKPbITfz3w2G29///a/9r//7///9r/2v//v///2v/a//+////a/9r//7////9//38AgP///3//fwCA////f/9/AID///9//38AgCqA/3///xTAKoD/f///FMAqgP9///8UwCqA/3///xTA/38AAAAAEcD/fwAAKgD/v/9/AAANAP+//38AAAAABMD/f/////8FwP9////1//+//3///9r//7//f/////8UwAkA/3//f/OACQD/f+2BAIAJAP9/JoIAgAkA/3//f/yACQD/f/9/AIAJAP9//38AgAkA/3//fwCACQD/f/9/AIAJAP9//3/zgAkA/3/tgQCACQD/fyaCAIAJAP9//3/8gAkA/3//fwCACQD/f/9/AIAJAP9//38AgAkA/3//fwCA/38AAP///z//fwAA////P/9/AAD///8//38AAP///z//f///////P/9///////8//3///////z//f///////P/9//3////8//3//f////z//f/9/////P/9//3////8//////////z//////////P/////////8//////////z8JAP9/////PwkA/3////8/CQD/f////z8JAP9/////Pw==")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_6nogm")
+metadata/extras = {
+"hops": {}
+}

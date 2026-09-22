@@ -1,0 +1,35 @@
+[gd_resource type="ArrayMesh" format=3 uid="uid://jb07j1cpdx3s"]
+
+[ext_resource type="Material" uid="uid://c71fnm6d6nan7" path="res://assets/materials/junkyard/junkyard_material_color.tres" id="1_62vpy"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_u81ke"]
+_surfaces = [{
+"aabb": AABB(-6.0000005, 0, -6.0000005, 12.000001, 1e-05, 12.000001),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"name": "Color",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[resource]
+resource_name = "ground"
+_surfaces = [{
+"aabb": AABB(-6.0000005, 0, -6.0000005, 12.000001, 1e-05, 12.000001),
+"attribute_data": PackedByteArray(197, 197, 50, 167, 197, 197, 50, 167, 197, 197, 50, 167, 197, 197, 50, 167),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"material": ExtResource("1_62vpy"),
+"name": "Color",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 255, 63, 255, 255, 0, 0, 255, 255, 255, 63, 0, 0, 0, 0, 255, 255, 255, 63, 255, 255, 0, 0, 0, 0, 255, 63, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_u81ke")

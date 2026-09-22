@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bbdtvy2ynwxpt"]
+
+[ext_resource type="ArrayMesh" uid="uid://dydxueryw5fxb" path="res://_tools/gym/environment/wall.tres" id="1_atddx"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0ipkf"]
+size = Vector3(4, 4.0082397, 0.5263672)
+
+[node name="Wall" type="StaticBody3D" unique_id=569423006]
+collision_layer = 4
+collision_mask = 0
+
+[node name="Mesh" type="MeshInstance3D" parent="." unique_id=1162533295]
+mesh = ExtResource("1_atddx")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=776031006]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9986877, 0)
+shape = SubResource("BoxShape3D_0ipkf")

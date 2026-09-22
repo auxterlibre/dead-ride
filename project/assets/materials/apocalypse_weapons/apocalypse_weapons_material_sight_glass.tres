@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cuyc1fdmvrdy6"]
+
+[resource]
+resource_name = "apocalypse_weapons_material_sight_glass"
+albedo_color = Color(0.38098854, 0.28610268, 0.9063318, 1)
+metallic = 0.96363634
+roughness = 0.33

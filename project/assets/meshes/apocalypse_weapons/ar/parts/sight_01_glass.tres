@@ -1,0 +1,38 @@
+[gd_resource type="ArrayMesh" format=4 uid="uid://c60vorneoiqjy"]
+
+[ext_resource type="Material" uid="uid://cuyc1fdmvrdy6" path="res://assets/materials/apocalypse_weapons/apocalypse_weapons_material_sight_glass.tres" id="1_r0u7r"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_w202k"]
+_surfaces = [{
+"aabb": AABB(-0.020106496, 0.01325195, 0.052998174, 0.040212892, 0.0402129, 0.004528787),
+"format": 34359742465,
+"index_count": 24,
+"index_data": PackedByteArray("AAABAAIAAgABAAMABAABAAAAAwABAAUABgABAAQABQABAAcACAABAAYABwABAAgA"),
+"name": "Sight_Glass",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 9,
+"vertex_data": PackedByteArray("5+9oPH7NnDydFFk9C90Ts8+iCD1koWs9K7akPNKiCD2dFFk91u9oPNTeQj2dFFk9WmK7srUeWTydFFk9x4nBsvX9Wj2dFFk9J/BovJ7NnDydFFk9KvBovNTeQj2dFFk9YbakvNKiCD2dFFk9")
+}]
+blend_shape_mode = 0
+
+[resource]
+resource_name = "sight_01_glass"
+_surfaces = [{
+"aabb": AABB(-0.020106496, 0.01325195, 0.052998174, 0.040212892, 0.0402129, 0.004528787),
+"attribute_data": PackedByteArray("MbffPhrwMT8yt98+GvAxPzK33z4a8DE/MrffPhrwMT8yt98+GvAxPzO33z4Z8DE/M7ffPhnwMT8yt98+GvAxPzG33z4a8DE/M7ffPhnwMT8yt98+GvAxPzK33z4a8DE/M7ffPhnwMT8zt98+GfAxPzK33z4a8DE/MrffPhrwMT8="),
+"format": 34359742487,
+"index_count": 24,
+"index_data": PackedByteArray("AAABAAIAAgABAAMAAwABAAQABAABAAUABgAHAAgACQAHAAYACgALAAwADQAOAA8A"),
+"material": ExtResource("1_r0u7r"),
+"name": "Sight_Glass",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("5+9oPH7NnDydFFk9C90Ts8+iCD1koWs9K7akPNKiCD2dFFk91u9oPNTeQj2dFFk9x4nBsvX9Wj2dFFk9KvBovNTeQj2dFFk9WmK7srUeWTydFFk9C90Ts8+iCD1koWs95+9oPH7NnDydFFk9J/BovJ7NnDydFFk9YbakvNKiCD2dFFk9C90Ts8+iCD1koWs9J/BovJ7NnDydFFk9KvBovNTeQj2dFFk9C90Ts8+iCD1koWs9YbakvNKiCD2dFFk9dY+JcMpIZST/f/9/DhAHSIaX/3/3RY0jdY91j////z//f4aXMVj9Y4lwdY8dVgRo/394aBpHA93/f/9//z//33WPiXDKSJnbiXCJcP///z94aP9/+sfmU/9//3++0p9WiXCJcAnQ8FSJcHWPCdDw1P9//3++0p/WeGj/f/rH5tM=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_w202k")
+metadata/extras = {
+"hops": {}
+}

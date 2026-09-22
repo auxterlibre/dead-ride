@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="CharacterData" format=3 uid="uid://cf4e7e5wrdhja"]
+
+[ext_resource type="Script" uid="uid://cat6ypyshc0y5" path="res://scripts/data/character_data.gd" id="1_mnqn"]
+[ext_resource type="Script" uid="uid://dmpo1qr4cr7tg" path="res://scripts/data/items/weapon_data.gd" id="2_j8ka2"]
+[ext_resource type="Script" uid="uid://cnm87okcsna4q" path="res://scripts/data/items/item_data.gd" id="2_ty1rm"]
+[ext_resource type="Resource" uid="uid://dethn64qlnwh2" path="res://data/items/explosives/grenade.tres" id="3_swxya"]
+[ext_resource type="Resource" uid="uid://bgaiw355fdx7y" path="res://data/items/weapons/ranged/assault_rifle.tres" id="3_x0g8j"]
+[ext_resource type="Resource" uid="uid://d2oxan1t1ho3s" path="res://data/items/weapons/ranged/revolver.tres" id="4_ty1rm"]
+[ext_resource type="Resource" uid="uid://ci77gufv1t8sf" path="res://data/items/weapons/ranged/shotgun.tres" id="5_swxya"]
+
+[resource]
+script = ExtResource("1_mnqn")
+first_name = "Mannequin"
+speed = 10.0
+body_path = "res://assets/meshes/characters/mannequin/"
+weapon_inventory = Array[ExtResource("2_j8ka2")]([ExtResource("3_x0g8j"), ExtResource("4_ty1rm"), ExtResource("5_swxya")])
+starting_items = Array[ExtResource("2_ty1rm")]([ExtResource("3_swxya")])

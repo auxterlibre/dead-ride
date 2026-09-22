@@ -1,0 +1,112 @@
+[gd_scene format=3 uid="uid://bvwql0t7bqtdy"]
+
+[ext_resource type="ArrayMesh" uid="uid://tj6yvfr74al2" path="res://assets/meshes/apocalypse_weapons/ar/parts/ar_8_base.tres" id="1_f4ivb"]
+[ext_resource type="ArrayMesh" uid="uid://b5cy6f8t64bs0" path="res://assets/meshes/apocalypse_weapons/ar/parts/ar_10_bolt.tres" id="2_s1s03"]
+[ext_resource type="ArrayMesh" uid="uid://bge3h4gj8l6if" path="res://assets/meshes/apocalypse_weapons/ar/parts/ar_8_magazine.tres" id="3_mx3qr"]
+[ext_resource type="ArrayMesh" uid="uid://disc36eu18koo" path="res://assets/meshes/apocalypse_weapons/ar/parts/ar_8_magazine_extended.tres" id="4_a2iqo"]
+[ext_resource type="ArrayMesh" uid="uid://d21wq3mpnlm0s" path="res://assets/meshes/apocalypse_weapons/ar/parts/ar_8_sight.tres" id="5_ckj71"]
+[ext_resource type="ArrayMesh" uid="uid://ca6gjqvvnk5kf" path="res://assets/meshes/apocalypse_weapons/ar/parts/ar_3_trigger.tres" id="6_a7xyr"]
+
+[node name="Ar8Base" type="MeshInstance3D" unique_id=580016465]
+mesh = ExtResource("1_f4ivb")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="AR8_Bolt" type="MeshInstance3D" parent="." unique_id=521349913]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.005427298, 0.11404276, 0.21248865)
+mesh = ExtResource("2_s1s03")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="AR8_Magazine" type="MeshInstance3D" parent="." unique_id=476746578]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00042169608, 0.032274485, 0.13231611)
+mesh = ExtResource("3_mx3qr")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="AR8_MagazineExtended" type="MeshInstance3D" parent="." unique_id=493213198]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00042175365, -0.1582129, 0.349195)
+mesh = ExtResource("4_a2iqo")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="AR8_Sight" type="MeshInstance3D" parent="." unique_id=1591717815]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.420139e-05, -0.3124671, 0.17952156)
+mesh = ExtResource("5_ckj71")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="AR8_Trigger" type="MeshInstance3D" parent="." unique_id=1784488534]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.040792942, 0.03755331)
+mesh = ExtResource("6_a7xyr")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Place_AR8_BarBottom" type="Node3D" parent="." unique_id=1425460506]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.79391e-05, 0.052324772, 0.2687354)
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Place_AR8_BarLeft" type="Node3D" parent="." unique_id=937999706]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.030853799, 0.07998514, 0.2687354)
+metadata/extras = {
+"MM": {}
+}
+
+[node name="Place_AR8_BarRight" type="Node3D" parent="." unique_id=648091380]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.030853754, 0.07998514, 0.2687354)
+metadata/extras = {
+"MM": {}
+}
+
+[node name="Place_AR8_BarTop" type="Node3D" parent="." unique_id=1491619545]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.420451e-05, 0.15014482, 0.27019262)
+metadata/extras = {
+"MM": {}
+}
+
+[node name="Place_AR8_Charm" type="Node3D" parent="." unique_id=1131822915]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.021334022, 0.08140898, 0.16701555)
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Place_AR8_Magazine" type="Node3D" parent="." unique_id=2037784448]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00042169608, 0.032274485, 0.13231611)
+metadata/extras = {
+"MM": {}
+}
+
+[node name="Place_AR8_Muzzle" type="Node3D" parent="." unique_id=1754282355]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.08559275, 0.55406713)
+metadata/extras = {
+"MM": {}
+}
+
+[node name="Place_AR8_Sight" type="Node3D" parent="." unique_id=1048479331]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.419663e-05, 0.15014482, 0.1164794)
+metadata/extras = {
+"MM": {},
+"hops": {}
+}

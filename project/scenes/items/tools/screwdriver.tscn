@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://ta8ki0ut4jlp"]
+
+[ext_resource type="ArrayMesh" uid="uid://dubxht0yvv12e" path="res://assets/meshes/items/screwdriver.tres" id="1_d2xk8"]
+
+[node name="Screwdriver" type="MeshInstance3D" unique_id=1193687631]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 0)
+mesh = ExtResource("1_d2xk8")

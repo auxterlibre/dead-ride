@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dcrdxcpe05hu3"]
+
+[ext_resource type="Texture2D" uid="uid://wgxunbrdqlu" path="res://assets/textures/apocalypse_weapons/apocalypse_weapons_ammo_box.png" id="1_83ewt"]
+
+[resource]
+resource_name = "apocalypse_weapons_material_ammo_box"
+cull_mode = 2
+albedo_texture = ExtResource("1_83ewt")
+roughness = 0.5
+metadata/_gltf_primary_texture_coord = 0

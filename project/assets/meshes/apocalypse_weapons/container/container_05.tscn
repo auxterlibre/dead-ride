@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cyrx1h0oceyrr"]
+
+[ext_resource type="ArrayMesh" uid="uid://dwe7br7db4423" path="res://assets/meshes/apocalypse_weapons/container/parts/container_05.tres" id="1_l88fx"]
+[ext_resource type="ArrayMesh" uid="uid://b0rjujpaj42p4" path="res://assets/meshes/apocalypse_weapons/container/parts/container_05_cap.tres" id="2_2r65t"]
+
+[node name="Container05" type="MeshInstance3D" unique_id=393333847]
+mesh = ExtResource("1_l88fx")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Container_05_Cap" type="MeshInstance3D" parent="." unique_id=1539922257]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.13661814, -0.24742126)
+mesh = ExtResource("2_2r65t")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}

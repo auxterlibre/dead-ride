@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://qroemx08nc3u"]
+
+[ext_resource type="FontFile" uid="uid://16cr15homrlp" path="res://assets/fonts/JetBrainsMono-Regular.ttf" id="1_5xsh5"]
+[ext_resource type="Script" uid="uid://cbvvijq0vbfvs" path="res://scripts/ui/settings/settings_row_list.gd" id="1_rrb5e"]
+[ext_resource type="FontFile" uid="uid://bbctssp8rxgju" path="res://assets/fonts/JetBrainsMono-Bold.ttf" id="2_rrb5e"]
+[ext_resource type="Texture2D" uid="uid://djd3dd1kmln3u" path="res://assets/textures/icons/system/icon_arrow_left.svg" id="3_oxe1d"]
+[ext_resource type="Texture2D" uid="uid://d3sfrk7j87n44" path="res://assets/textures/icons/system/icon_arrow_right.svg" id="4_hotae"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ca42v"]
+font = ExtResource("1_5xsh5")
+font_size = 40
+font_color = Color(0, 0.1882353, 0.28627452, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0ipkf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3taad"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e7bfs"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7j863"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_v2drn"]
+font = ExtResource("2_rrb5e")
+font_size = 40
+font_color = Color(0, 0.1882353, 0.28627452, 1)
+
+[node name="SettingsRowList" type="HBoxContainer" unique_id=1958714128]
+script = ExtResource("1_rrb5e")
+
+[node name="Label" type="Label" parent="." unique_id=1481681437]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Display mode"
+label_settings = SubResource("LabelSettings_ca42v")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=822498863]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PrevButton" type="Button" parent="HBoxContainer" unique_id=993882735]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/icon_normal_color = Color(0, 0.1882353, 0.28627452, 1)
+theme_override_colors/icon_hover_color = Color(0.96862745, 0.49803922, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_0ipkf")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_3taad")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_e7bfs")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_7j863")
+icon = ExtResource("3_oxe1d")
+
+[node name="ValueLabel" type="Label" parent="HBoxContainer" unique_id=1144864265]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Display mode"
+label_settings = SubResource("LabelSettings_v2drn")
+horizontal_alignment = 1
+
+[node name="NextButton" type="Button" parent="HBoxContainer" unique_id=581454373]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/icon_normal_color = Color(0, 0.1882353, 0.28627452, 1)
+theme_override_colors/icon_focus_color = Color(0.96862745, 0.49803922, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_0ipkf")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_3taad")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_e7bfs")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_7j863")
+icon = ExtResource("4_hotae")

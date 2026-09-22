@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://chn8gugupyv77"]
+
+[ext_resource type="Script" uid="uid://c3shjqh4eura3" path="res://scripts/ui/input_key_button.gd" id="1_button"]
+[ext_resource type="FontFile" uid="uid://bbctssp8rxgju" path="res://assets/fonts/JetBrainsMono-Bold.ttf" id="2_font"]
+[ext_resource type="FontFile" uid="uid://16cr15homrlp" path="res://assets/fonts/JetBrainsMono-Regular.ttf" id="3_6vjrs"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_normal"]
+bg_color = Color(0, 0.1882353, 0.28627452, 0.54901963)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hover"]
+bg_color = Color(0.06666667, 0.6156863, 0.6431373, 0.54901963)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_disabled"]
+bg_color = Color(0.91764706, 0.8862745, 0.7176471, 0.15)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_badge"]
+content_margin_left = 16.0
+content_margin_top = 5.0
+content_margin_right = 16.0
+content_margin_bottom = 5.0
+bg_color = Color(0.91764706, 0.8862745, 0.7176471, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[node name="InputKeyButton" type="Button" unique_id=1715586947]
+custom_minimum_size = Vector2(0, 96)
+offset_right = 272.0
+offset_bottom = 96.0
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hover")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hover")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_disabled")
+theme_override_styles/focus = SubResource("StyleBoxFlat_hover")
+script = ExtResource("1_button")
+
+[node name="Content" type="MarginContainer" parent="." unique_id=1542899175]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="Row" type="HBoxContainer" parent="Content" unique_id=1992294225]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 16
+
+[node name="KeyIcon" type="TextureRect" parent="Content/Row"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+visible = false
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="KeyLabel" type="Label" parent="Content/Row" unique_id=1061640050]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.1882353, 0.28627452, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_badge")
+text = "F"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ActionLabel" type="Label" parent="Content/Row" unique_id=327787546]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.91764706, 0.8862745, 0.7176471, 1)
+theme_override_fonts/font = ExtResource("3_6vjrs")
+theme_override_font_sizes/font_size = 40
+text = "Close"
+vertical_alignment = 1

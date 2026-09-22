@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cglvdj3ld8jsw"]
+
+[ext_resource type="Texture2D" uid="uid://gbgdpprjjdbf" path="res://assets/textures/apocalypse_weapons/apocalypse_weapons_sight_01.png" id="1_ixwh0"]
+
+[resource]
+resource_name = "apocalypse_weapons_material_sight_crosshair_big"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_ixwh0")
+roughness = 0.5
+metadata/_gltf_primary_texture_coord = 0

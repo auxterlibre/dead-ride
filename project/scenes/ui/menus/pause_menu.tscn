@@ -1,0 +1,99 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/menus/pause_menu.gd" id="1_pause"]
+[ext_resource type="PackedScene" path="res://scenes/ui/menus/menu_button.tscn" id="2_btn"]
+[ext_resource type="FontFile" uid="uid://b4eqtttrevslk" path="res://assets/fonts/AntonSC-Regular.ttf" id="3_anton"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
+bg_color = Color(0.91764706, 0.8862745, 0.7176471, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0.1882353, 0.28627452, 0.25)
+shadow_size = 24
+shadow_offset = Vector2(0, 8)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dim"]
+
+[node name="PauseMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pause")
+
+[node name="Dim" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.1882353, 0.28627452, 0.35)
+
+[node name="Panel" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(1174, 816)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -587.0
+offset_top = -408.0
+offset_right = 587.0
+offset_bottom = 408.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="Body" type="VBoxContainer" parent="Panel"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Header" type="Label" parent="Panel/Body"]
+custom_minimum_size = Vector2(0, 144)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.32156864, 0.40392157, 0.44705883, 1)
+theme_override_fonts/font = ExtResource("3_anton")
+theme_override_font_sizes/font_size = 72
+text = "PAUSED"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Buttons" type="MarginContainer" parent="Panel/Body"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 96
+theme_override_constants/margin_top = 64
+theme_override_constants/margin_right = 96
+theme_override_constants/margin_bottom = 64
+
+[node name="List" type="VBoxContainer" parent="Panel/Body/Buttons"]
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="ResumeButton" parent="Panel/Body/Buttons/List" instance=ExtResource("2_btn")]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Resume"
+primary = true
+
+[node name="SettingsButton" parent="Panel/Body/Buttons/List" instance=ExtResource("2_btn")]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Settings"
+
+[node name="MainMenuButton" parent="Panel/Body/Buttons/List" instance=ExtResource("2_btn")]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Main menu"
+
+[node name="QuitButton" parent="Panel/Body/Buttons/List" instance=ExtResource("2_btn")]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_dim")
+text = "Quit"

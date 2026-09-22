@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://dywoq3hjn4vv6"]
+
+[ext_resource type="Script" uid="uid://cg8iu642i7g" path="res://scripts/ui/inventory/backpack_screen.gd" id="1_screen"]
+[ext_resource type="Shader" uid="uid://cgoahph4o8epu" path="res://shaders/blur.gdshader" id="2_blur"]
+[ext_resource type="PackedScene" uid="uid://bpk2panel6xw4" path="res://scenes/ui/inventory/backpack_panel.tscn" id="3_pack"]
+[ext_resource type="PackedScene" path="res://scenes/ui/inventory/container_panel.tscn" id="3_panel"]
+[ext_resource type="PackedScene" uid="uid://chn8gugupyv77" path="res://scenes/ui/input/input_key_button.tscn" id="4_2hn1d"]
+[ext_resource type="PackedScene" uid="uid://3ae3ojjetkf7" path="res://scenes/ui/inventory/item_tooltip.tscn" id="4_tooltip"]
+[ext_resource type="PackedScene" path="res://scenes/ui/inventory/context_menu.tscn" id="5_menu"]
+[ext_resource type="PackedScene" path="res://scenes/ui/inventory/planting_panel.tscn" id="6_plant"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_blur"]
+shader = ExtResource("2_blur")
+shader_parameter/blur_amount = 2.0
+
+[node name="Backpack" type="Control" unique_id=1903864334]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_screen")
+
+[node name="BlurEffect" type="ColorRect" parent="." unique_id=1270488747]
+material = SubResource("ShaderMaterial_blur")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.06666667, 0.6156863, 0.6431373, 0.2)
+
+[node name="Column" type="VBoxContainer" parent="." unique_id=93823336]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 128.0
+offset_top = -700.0
+offset_right = 1024.0
+offset_bottom = 700.0
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/separation = 32
+
+[node name="PanelRow" type="HBoxContainer" parent="Column" unique_id=276716079]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 128
+alignment = 1
+
+[node name="BackpackPanel" parent="Column/PanelRow" unique_id=1339514660 instance=ExtResource("3_pack")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(896, 0)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="ContainerPanel" parent="Column/PanelRow" unique_id=458857945 instance=ExtResource("3_panel")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="PlantingPanel" parent="Column/PanelRow" unique_id=1865575235 instance=ExtResource("6_plant")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="CloseButton" parent="Column" unique_id=1715586947 instance=ExtResource("4_2hn1d")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+input_action = "toggle_backpack"
+key_text = ""
+
+[node name="ItemTooltip" parent="." unique_id=1798250715 instance=ExtResource("4_tooltip")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+
+[node name="ContextMenu" parent="." unique_id=256633435 instance=ExtResource("5_menu")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1

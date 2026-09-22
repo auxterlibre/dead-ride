@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://b76le65def505"]
+
+[ext_resource type="ArrayMesh" uid="uid://dixlenx8awtxd" path="res://assets/meshes/apocalypse_weapons/chain/parts/chain_05.tres" id="1_xkgwc"]
+
+[node name="Chain05" type="MeshInstance3D" unique_id=108711161]
+mesh = ExtResource("1_xkgwc")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Chain_06" type="MeshInstance3D" parent="." unique_id=1859869214]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0048923492, 0)
+mesh = ExtResource("1_xkgwc")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Chain_07" type="MeshInstance3D" parent="Chain_06" unique_id=2038306889]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0048909187, 0)
+mesh = ExtResource("1_xkgwc")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Chain_08" type="MeshInstance3D" parent="Chain_06/Chain_07" unique_id=244314223]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.004892826, 0)
+mesh = ExtResource("1_xkgwc")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Chain_09" type="MeshInstance3D" parent="Chain_06/Chain_07/Chain_08" unique_id=1618201236]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0048918724, 0)
+mesh = ExtResource("1_xkgwc")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}

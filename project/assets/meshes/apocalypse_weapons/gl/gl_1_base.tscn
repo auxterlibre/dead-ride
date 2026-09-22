@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://coy1p7ps300rt"]
+
+[ext_resource type="ArrayMesh" uid="uid://pj24fmkdnvbg" path="res://assets/meshes/apocalypse_weapons/gl/parts/gl_1_base.tres" id="1_ch25n"]
+[ext_resource type="ArrayMesh" uid="uid://wor2w7vb0l6c" path="res://assets/meshes/apocalypse_weapons/gl/parts/gl_1_barrel.tres" id="2_a86n0"]
+[ext_resource type="ArrayMesh" uid="uid://b0hfw8qbf4sk4" path="res://assets/meshes/apocalypse_weapons/gl/parts/gl_1_sight_01.tres" id="3_gat0y"]
+[ext_resource type="ArrayMesh" uid="uid://ba6m85wxrmomw" path="res://assets/meshes/apocalypse_weapons/gl/parts/gl_1_sight_02.tres" id="4_v3l4j"]
+[ext_resource type="ArrayMesh" uid="uid://bk33vnk3erpmf" path="res://assets/meshes/apocalypse_weapons/gl/parts/gl_1_trigger.tres" id="5_5767g"]
+
+[node name="Gl1Base" type="MeshInstance3D" unique_id=585213513]
+mesh = ExtResource("1_ch25n")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="GL1_Barrel" type="MeshInstance3D" parent="." unique_id=294823565]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.03104949, 0.24817848)
+mesh = ExtResource("2_a86n0")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="GL1_Sight_01" type="MeshInstance3D" parent="GL1_Barrel" unique_id=1136376935]
+mesh = ExtResource("3_gat0y")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="GL1_Sight_02" type="MeshInstance3D" parent="GL1_Barrel/GL1_Sight_01" unique_id=2033151507]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.04180207, 0.091632366, 0.07656479)
+mesh = ExtResource("4_v3l4j")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="GL1_Trigger" type="MeshInstance3D" parent="." unique_id=676032861]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.025066614, 0.08321571)
+mesh = ExtResource("5_5767g")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Place_GL1_Charm" type="Node3D" parent="." unique_id=1756111717]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.022021482, 0.030567408, 0.18519974)
+metadata/extras = {
+"MM": {},
+"hops": {}
+}

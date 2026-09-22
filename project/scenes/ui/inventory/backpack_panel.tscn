@@ -1,0 +1,117 @@
+[gd_scene format=3 uid="uid://bpk2panel6xw4"]
+
+[ext_resource type="PackedScene" path="res://scenes/ui/inventory/container_panel.tscn" id="1_base"]
+[ext_resource type="Script" uid="uid://q7ujirm42p2u" path="res://scripts/ui/inventory/backpack_panel.gd" id="2_script"]
+[ext_resource type="FontFile" uid="uid://bbctssp8rxgju" path="res://assets/fonts/JetBrainsMono-Bold.ttf" id="3_font"]
+[ext_resource type="PackedScene" uid="uid://dm3q7ry0kslot" path="res://scenes/ui/inventory/backpack_slot.tscn" id="4_slot"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tray"]
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.41568628, 0.5019608, 0.48235294, 1)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+
+[node name="BackpackPanel" unique_id=1809590517 instance=ExtResource("1_base")]
+script = ExtResource("2_script")
+
+[node name="SlotsBlock" type="MarginContainer" parent="Layout" index="1" unique_id=1804602628]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_top = 32
+
+[node name="Sections" type="VBoxContainer" parent="Layout/SlotsBlock" index="0" unique_id=1400807000]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 32
+
+[node name="WeaponSection" type="VBoxContainer" parent="Layout/SlotsBlock/Sections" index="0" unique_id=1814455936]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 8
+
+[node name="WeaponLabel" type="Label" parent="Layout/SlotsBlock/Sections/WeaponSection" index="0" unique_id=1281560201]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.41568628, 0.5019608, 0.48235294, 1)
+theme_override_fonts/font = ExtResource("3_font")
+theme_override_font_sizes/font_size = 30
+text = "WEAPON SLOTS"
+horizontal_alignment = 1
+
+[node name="WeaponTray" type="PanelContainer" parent="Layout/SlotsBlock/Sections/WeaponSection" index="1" unique_id=660499811]
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_tray")
+
+[node name="WeaponMargin" type="MarginContainer" parent="Layout/SlotsBlock/Sections/WeaponSection/WeaponTray" index="0" unique_id=283863740]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 14
+theme_override_constants/margin_bottom = 16
+
+[node name="WeaponRow" type="HBoxContainer" parent="Layout/SlotsBlock/Sections/WeaponSection/WeaponTray/WeaponMargin" index="0" unique_id=261335194]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 32
+
+[node name="WeaponSlot0" parent="Layout/SlotsBlock/Sections/WeaponSection/WeaponTray/WeaponMargin/WeaponRow" index="0" unique_id=1024059211 instance=ExtResource("4_slot")]
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 2
+
+[node name="WeaponSlot1" parent="Layout/SlotsBlock/Sections/WeaponSection/WeaponTray/WeaponMargin/WeaponRow" index="1" unique_id=1380904227 instance=ExtResource("4_slot")]
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 2
+
+[node name="ItemSection" type="VBoxContainer" parent="Layout/SlotsBlock/Sections" index="1" unique_id=139951350]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 8
+
+[node name="ItemLabel" type="Label" parent="Layout/SlotsBlock/Sections/ItemSection" index="0" unique_id=348334984]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.41568628, 0.5019608, 0.48235294, 1)
+theme_override_fonts/font = ExtResource("3_font")
+theme_override_font_sizes/font_size = 30
+text = "ITEM SLOTS"
+horizontal_alignment = 1
+
+[node name="ItemTray" type="PanelContainer" parent="Layout/SlotsBlock/Sections/ItemSection" index="1" unique_id=1507714075]
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_tray")
+
+[node name="ItemMargin" type="MarginContainer" parent="Layout/SlotsBlock/Sections/ItemSection/ItemTray" index="0" unique_id=1528397656]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 14
+theme_override_constants/margin_bottom = 16
+
+[node name="ItemRow" type="HBoxContainer" parent="Layout/SlotsBlock/Sections/ItemSection/ItemTray/ItemMargin" index="0" unique_id=1711245050]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 32
+
+[node name="ItemSlot0" parent="Layout/SlotsBlock/Sections/ItemSection/ItemTray/ItemMargin/ItemRow" index="0" unique_id=2078424235 instance=ExtResource("4_slot")]
+layout_mode = 2
+
+[node name="ItemSlot1" parent="Layout/SlotsBlock/Sections/ItemSection/ItemTray/ItemMargin/ItemRow" index="1" unique_id=2112226737 instance=ExtResource("4_slot")]
+layout_mode = 2
+
+[node name="ItemSlot2" parent="Layout/SlotsBlock/Sections/ItemSection/ItemTray/ItemMargin/ItemRow" index="2" unique_id=567688867 instance=ExtResource("4_slot")]
+layout_mode = 2
+
+[node name="ItemSlot3" parent="Layout/SlotsBlock/Sections/ItemSection/ItemTray/ItemMargin/ItemRow" index="3" unique_id=1147854837 instance=ExtResource("4_slot")]
+layout_mode = 2

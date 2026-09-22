@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bgh85hbomrx0r"]
+
+[ext_resource type="Texture2D" uid="uid://gvptm4117ri" path="res://assets/textures/characters/mannequin/mannequin_texture_a.png" id="1_nc0ld"]
+
+[resource]
+resource_name = "mannequin_material_a"
+albedo_texture = ExtResource("1_nc0ld")
+roughness = 0.3

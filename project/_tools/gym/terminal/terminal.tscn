@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://d3vxfds8r0u4p"]
+
+[ext_resource type="Script" uid="uid://uwvda5yavwyh" path="res://_tools/gym/terminal/terminal.gd" id="1_qqyk4"]
+[ext_resource type="AudioStream" uid="uid://wnewabxiwh5y" path="res://assets/audio/interactions/button_press_01.ogg" id="2_pemuf"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0ipkf"]
+size = Vector3(1.3494873, 2.0385742, 1.5430908)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_klpe2"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_0ipkf"]
+material = SubResource("StandardMaterial3D_klpe2")
+size = Vector3(0.5600586, 1, 1.0898438)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3yr0f"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_m6gvc"]
+material = SubResource("StandardMaterial3D_3yr0f")
+size = Vector3(0.35351563, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y7bi2"]
+albedo_color = Color(0.7260458, 1, 0.43219608, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_hawva"]
+material = SubResource("StandardMaterial3D_y7bi2")
+size = Vector3(0.35351563, 0.47265625, 0.52093506)
+
+[node name="Terminal" type="Area3D" unique_id=1409487580 node_paths=PackedStringArray("audio")]
+collision_layer = 0
+collision_mask = 32
+monitorable = false
+script = ExtResource("1_qqyk4")
+audio = NodePath("AudioPress")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1750551926]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.46148682, 1.4807129, -0.090270996)
+shape = SubResource("BoxShape3D_0ipkf")
+
+[node name="Base" type="MeshInstance3D" parent="." unique_id=368536295]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+mesh = SubResource("BoxMesh_0ipkf")
+
+[node name="Totem" type="MeshInstance3D" parent="." unique_id=926241601]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.002149582, 1.4818027, 0)
+mesh = SubResource("BoxMesh_m6gvc")
+
+[node name="Button" type="MeshInstance3D" parent="." unique_id=385571068]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1978504, 1.4818027, 0.0284729)
+mesh = SubResource("BoxMesh_hawva")
+
+[node name="AudioPress" type="AudioStreamPlayer3D" parent="." unique_id=257091171]
+stream = ExtResource("2_pemuf")

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AmmoData" format=3 uid="uid://c02dayi07pp67"]
+
+[ext_resource type="Texture2D" uid="uid://bknb8cesqqg38" path="res://assets/textures/thumbnails/ammo/ammo_medium.png" id="1_i7kt8"]
+[ext_resource type="Script" uid="uid://bvf203sgg02kc" path="res://scripts/data/items/ammo_data.gd" id="1_script"]
+
+[resource]
+script = ExtResource("1_script")
+ammo_type = 1
+name = "Medium Rounds"
+price = 2
+weight = 0.02
+icon = ExtResource("1_i7kt8")
+rarity = 1

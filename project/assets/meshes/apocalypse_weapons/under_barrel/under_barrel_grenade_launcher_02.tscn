@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://d17eml7lvwvjp"]
+
+[ext_resource type="ArrayMesh" uid="uid://cajv2i8c0hfvs" path="res://assets/meshes/apocalypse_weapons/under_barrel/parts/under_barrel_grenade_launcher_02.tres" id="1_m0x3c"]
+[ext_resource type="ArrayMesh" uid="uid://clnc8ux3pdwf5" path="res://assets/meshes/apocalypse_weapons/under_barrel/parts/under_barrel_grenade_launcher_02_trigger.tres" id="2_c78be"]
+
+[node name="UnderBarrelGrenadeLauncher02" type="MeshInstance3D" unique_id=1363543089]
+mesh = ExtResource("1_m0x3c")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="UnderBarrel_GrenadeLauncher_02_Trigger" type="MeshInstance3D" parent="." unique_id=1793637928]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.795865e-05, -0.0407176, -0.04677248)
+mesh = ExtResource("2_c78be")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}

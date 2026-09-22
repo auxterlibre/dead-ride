@@ -1,0 +1,38 @@
+[gd_resource type="ArrayMesh" format=4 uid="uid://dpwguixu8cgds"]
+
+[ext_resource type="Material" uid="uid://cuyc1fdmvrdy6" path="res://assets/materials/apocalypse_weapons/apocalypse_weapons_material_sight_glass.tres" id="1_gimlw"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_w2uri"]
+_surfaces = [{
+"aabb": AABB(-0.021814628, 0.031897187, 0.20620975, 0.042998444, 0.042998433, 0.0056274086),
+"format": 34359742465,
+"index_count": 24,
+"index_data": PackedByteArray("AAABAAIAAgABAAMABAABAAAAAwABAAUABgABAAQABQABAAcACAABAAYABwABAAgA"),
+"name": "Sight_Glass",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 9,
+"vertex_data": PackedByteArray("hbwMPKCmAj2rKFM+i1uluTC2Wj3X61g+rImtPE48Nj2mKFM+r4mtPAQwfz2mKFM+URIXvKCmAj2rKFM+frwMPOBimT2mKFM+lLSyvE48Nj2rKFM+VxIXvOBimT2rKFM+l7SyvAQwfz2rKFM+")
+}]
+blend_shape_mode = 0
+
+[resource]
+resource_name = "sight_21_glass"
+_surfaces = [{
+"aabb": AABB(-0.021814628, 0.031897187, 0.20620975, 0.042998444, 0.042998433, 0.0056274086),
+"attribute_data": PackedByteArray("Qdd2Pwixkz5B13Y/BrGTPkPXdj8EsZM+Q9d2PwSxkz5D13Y/BLGTPkHXdj8GsZM+Qdd2Pwixkz5C13Y/BrGTPkHXdj8GsZM+Q9d2PwSxkz5D13Y/BrGTPkHXdj8IsZM+Qtd2Pwaxkz5B13Y/BrGTPkHXdj8IsZM+Q9d2PwSxkz4="),
+"format": 34359742487,
+"index_count": 24,
+"index_data": PackedByteArray("AAABAAIAAgABAAMABAAFAAYABwAIAAkACgAIAAcACwAIAAoADAANAA4ADwANAAwA"),
+"material": ExtResource("1_gimlw"),
+"name": "Sight_Glass",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("hbwMPKCmAj2rKFM+i1uluTC2Wj3X61g+rImtPE48Nj2mKFM+r4mtPAQwfz2mKFM+URIXvKCmAj2rKFM+i1uluTC2Wj3X61g+hbwMPKCmAj2rKFM+lLSyvE48Nj2rKFM+i1uluTC2Wj3X61g+URIXvKCmAj2rKFM+l7SyvAQwfz2rKFM+VxIXvOBimT2rKFM+frwMPOBimT2mKFM+i1uluTC2Wj3X61g+VxIXvOBimT2rKFM+r4mtPAQwfz2mKFM+AIlDao7IiZv/f/9//7//n7uVAHfqyLebu5X+iP///z8Ad0NqUmjTf/9//3//f/5/AIlDaqyX039DagB3ox8vpv9//38AAP+/AHdDauAhnKdDav6Iox/P2QB3u5XgIWLYAIm7lZ+z0Q//f/9/faW+EgB3u5VcrysQu5X+iMWw8BA=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_w2uri")
+metadata/extras = {
+"hops": {}
+}

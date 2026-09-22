@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://bu2odnwhs4uve"]
+
+[ext_resource type="Script" uid="uid://cfubbjeljso71" path="res://scripts/world/crop_spot.gd" id="1_spot"]
+[ext_resource type="Script" uid="uid://dw5x2lwhyyk5m" path="res://scripts/components/interactive_area.gd" id="2_area"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dry"]
+albedo_color = Color(0.5686275, 0.4509804, 0.3137255, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_dry"]
+material = SubResource("StandardMaterial3D_dry")
+top_radius = 0.55
+bottom_radius = 0.6
+height = 0.06
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wet"]
+albedo_color = Color(0.36862746, 0.27058825, 0.17254902, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_wet"]
+material = SubResource("StandardMaterial3D_wet")
+top_radius = 0.55
+bottom_radius = 0.6
+height = 0.06
+
+[node name="CropSpot" type="Marker3D" unique_id=1274183696]
+script = ExtResource("1_spot")
+
+[node name="Soil" type="MeshInstance3D" parent="." unique_id=1730511478]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.03, 0)
+mesh = SubResource("CylinderMesh_dry")
+
+[node name="SoilWet" type="MeshInstance3D" parent="." unique_id=1914466701]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.03, 0)
+visible = false
+mesh = SubResource("CylinderMesh_wet")
+
+[node name="TendArea" type="Node3D" parent="." unique_id=915258930 node_paths=PackedStringArray("target_object")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.04528579, 0)
+script = ExtResource("2_area")
+target_object = NodePath("..")
+callback = "tend"
+action_label = "Plant"
+prompt_range = 1.0

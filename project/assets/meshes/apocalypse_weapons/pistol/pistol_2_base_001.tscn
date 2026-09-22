@@ -1,0 +1,103 @@
+[gd_scene format=3 uid="uid://dfp5kphm72uc1"]
+
+[ext_resource type="ArrayMesh" uid="uid://ccuh0t5jhr7md" path="res://assets/meshes/apocalypse_weapons/pistol/parts/pistol_2_base.tres" id="1_3yihs"]
+[ext_resource type="ArrayMesh" uid="uid://bqxlgcvgax8a" path="res://assets/meshes/apocalypse_weapons/ar/parts/muzzle_suppressor_01.tres" id="2_ophdv"]
+[ext_resource type="ArrayMesh" uid="uid://bgavwv5y8gp5d" path="res://assets/meshes/apocalypse_weapons/pistol/parts/pistol_2_bar.tres" id="3_o5f42"]
+[ext_resource type="ArrayMesh" uid="uid://cfpjuo4bgh1ef" path="res://assets/meshes/apocalypse_weapons/pistol/parts/pistol_2_bolt.tres" id="4_1amme"]
+[ext_resource type="ArrayMesh" uid="uid://w4a863mj7i0x" path="res://assets/meshes/apocalypse_weapons/pistol/parts/pistol_2_magazine_extended.tres" id="5_igwxl"]
+[ext_resource type="ArrayMesh" uid="uid://db8nlbujfmw0q" path="res://assets/meshes/apocalypse_weapons/pistol/parts/pistol_2_trigger.tres" id="6_t065n"]
+[ext_resource type="ArrayMesh" uid="uid://6s5322wdrbv3" path="res://assets/meshes/apocalypse_weapons/pistol/parts/sight_13.tres" id="7_2a4bh"]
+
+[node name="Pistol2Base001" type="MeshInstance3D" unique_id=865426397]
+mesh = ExtResource("1_3yihs")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Muzzle_Suppressor_01_002" type="MeshInstance3D" parent="." unique_id=446702002]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.10236645, 0.18704414)
+mesh = ExtResource("2_ophdv")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Pistol2_Bar_001" type="MeshInstance3D" parent="." unique_id=604479740]
+mesh = ExtResource("3_o5f42")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Pistol2_Bolt_001" type="MeshInstance3D" parent="." unique_id=1249237465]
+mesh = ExtResource("4_1amme")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Pistol2_MagazineExtended_001" type="MeshInstance3D" parent="." unique_id=1746725771]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06337607, 0.011960983)
+mesh = ExtResource("5_igwxl")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Pistol2_Trigger_001" type="MeshInstance3D" parent="." unique_id=360978631]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.07428849, 0.060577393)
+mesh = ExtResource("6_t065n")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Place_Pistol2_BarBottom_001" type="Node3D" parent="." unique_id=2127060390]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.054457307, 0.13533401)
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Place_Pistol2_Charm_001" type="Node3D" parent="." unique_id=2086489861]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.017233714, 0.10218954, 0.13858223)
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Place_Pistol2_Magazine_001" type="Node3D" parent="." unique_id=652588158]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06337607, 0.011960983)
+metadata/extras = {
+"MM": {}
+}
+
+[node name="Place_Pistol2_Muzzle_001" type="Node3D" parent="." unique_id=1006650578]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.10236657, 0.18704414)
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Place_Pistol2_Sight_001" type="Node3D" parent="." unique_id=191525541]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.13921797, 0.07950592)
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Sight_13_001" type="MeshInstance3D" parent="." unique_id=485571092]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.13921785, 0.07950592)
+mesh = ExtResource("7_2a4bh")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}

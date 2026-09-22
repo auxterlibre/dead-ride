@@ -1,0 +1,38 @@
+[gd_resource type="ArrayMesh" format=4 uid="uid://dkllr10lqs5d0"]
+
+[ext_resource type="Material" uid="uid://cng7f4jyglm8w" path="res://assets/materials/apocalypse_weapons/apocalypse_weapons_material_color.tres" id="1_g6wb3"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_fc1xl"]
+_surfaces = [{
+"aabb": AABB(-0.007891814, -0.04692407, -0.026275491, 0.015783625, 0.046923984, 0.02772132),
+"format": 34359742465,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAACAAMAAQAAAAQABQABAAQABQAEAAAABQAGAAEABwAAAAMABQAAAAcABQAHAAYABwADAAgABgAHAAkACQAHAAgA"),
+"name": "Color",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 10,
+"vertex_data": PackedByteArray("okwBvC8QL730gb06q0wBvJAsBr2xP9e8p0wBvCsyN7yQTXe8pEwBvOxRuLPAdQq0pEwBvHQzQL1ahs+7pUwBPHIzQL1khs+7nEwBPJAsBr2zP9e8p0wBPC8QL73Kgb06pUwBPOxRuLOyxw+0oEwBPCsyN7yWTXe8")
+}]
+blend_shape_mode = 0
+
+[resource]
+resource_name = "mg_5_trigger"
+_surfaces = [{
+"aabb": AABB(-0.007891814, -0.04692407, -0.026275491, 0.015783625, 0.046923984, 0.02772132),
+"attribute_data": PackedByteArray("2Ap8P+TIPj7YCnw/5Mg+PtgKfD/kyD4+2Ap8P+TIPj7YCnw/5Mg+PtgKfD/kyD4+2Ap8P+TIPj7YCnw/5Mg+PtgKfD/kyD4+2Ap8P+TIPj7YCnw/5Mg+PtgKfD/kyD4+2Ap8P+TIPj7YCnw/5Mg+PtgKfD/kyD4+2Ap8P+TIPj7YCnw/5Mg+PtgKfD/kyD4+2Ap8P+TIPj7YCnw/5Mg+PtgKfD/kyD4+2Ap8P+TIPj4="),
+"format": 34359742487,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAQAAAAMAAAACAAQABQAGAAcACAAGAAUACQAGAAgACgALAAwACgAMAA0ADgAPABAADgAQABEAEgATABQAEgAUABUA"),
+"material": ExtResource("1_g6wb3"),
+"name": "Color",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 22,
+"vertex_data": PackedByteArray("okwBvC8QL730gb06q0wBvJAsBr2xP9e8p0wBvCsyN7yQTXe8pEwBvHQzQL1ahs+7pEwBvOxRuLPAdQq0oEwBPCsyN7yWTXe8p0wBPC8QL73Kgb06pUwBPOxRuLOyxw+0nEwBPJAsBr2zP9e8pUwBPHIzQL1khs+7p0wBPC8QL73Kgb06okwBvC8QL730gb06pEwBvOxRuLPAdQq0pUwBPOxRuLOyxw+0pUwBPHIzQL1khs+7pEwBvHQzQL1ahs+7okwBvC8QL730gb06p0wBPC8QL73Kgb06pUwBPHIzQL1khs+7nEwBPJAsBr2zP9e8q0wBvJAsBr2xP9e8pEwBvHQzQL1ahs+7AAD/f////78AAP9/////vwAA/3////+/AAD/f////78AAP9/////v////3////+/////f////7////9/////v////3////+/////f////7//fy+E////P/9/L4T///8//38vhP///z//fy+E////P/9/xCz///8//3/ELP///z//f8Qs////P/9/xCz///8/KLUAAP///z8otQAA////Pyi1AAD///8/KLUAAP///z8=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_fc1xl")
+metadata/extras = {
+"hops": {}
+}

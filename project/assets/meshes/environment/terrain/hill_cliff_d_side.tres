@@ -1,0 +1,37 @@
+[gd_resource type="ArrayMesh" format=4 uid="uid://istfbwlw008i"]
+
+[ext_resource type="Material" uid="uid://cwgcxfci6lfy3" path="res://assets/materials/environment/nature_material_a.tres" id="1_5t8gu"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ed852"]
+_surfaces = [{
+"aabb": AABB(-0.99999815, -0.29999995, -1.5, 0.74999225, 1.9999998, 3),
+"format": 34896613377,
+"index_count": 120,
+"index_data": PackedByteArray("FAABAAIAFAADAAEABAAUAAIAFAAFAAMABAAVABQAFAAWAAUAFQAWABQABQAWABcABQAXAAcACAAHABcACAAXAAkABAAYABUABAAGABgADgAYAAYAGQAJABcAGQAKAAkAGQAMAAoAAAAZABcAAAAXABYAFQAAABYAGgAZAAAAGQAaAAwACwAAABUAGgAAAAsACwAVABgAGwAMABoAGwASAAwAEQASABsAEQATABIAGwAQABEAGgAcABsAGwAcABAAGgALABwAHAANABAACwAdABwAHAAdAA0ACwAYAB0ADwANAB0ADgAdABgADwAdAA4A"),
+"lods": [0.40861872, PackedByteArray("AAABAAIAAAADAAEABAAAAAIAAAAFAAMABAAGAAAABQAAAAcACAAHAAkACgAJAAcAAAAKAAcACwAKAAAACwAAAAYACgALAAwACwAGAA0ADgANAAYADwANAA4ACwANABAACwAQABEAEQAMAAsAEQASAAwAEQATABIA")],
+"name": "forest",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 30,
+"vertex_data": PackedByteArray("AAAyM/9/AACqqgAAAAAAAKqqZiYAAAAAqqoAANs2AACqqplZAAAAAAAAAAD/fwAA//8ycwAAAAAAAAAAI8kAAKqqAAD//wAAqqpmJv//AACqqplZ//8AAFVVzEz/fwAA/v8yc///AACqqv//2zYAAKqq/78AAAAAqqr//wAAAAAAAP///38AAAAA//8jyQAAqqr/v///AACqqv////8AAKqqZibbNgAAqqoyM9s2AAAAAGYm/38AAAAAZiYjyQAAVvzMTCc8AAAAAP8/I8kAAKtRmVnXwwAAAAD/vyPJAAAAAP+//38AAKqq/7/bNgAA")
+}]
+blend_shape_mode = 0
+
+[resource]
+resource_name = "hill_cliff_d_side"
+_surfaces = [{
+"aabb": AABB(-0.99999815, -0.29999995, -1.5, 0.74999225, 1.9999998, 3),
+"attribute_data": PackedByteArray("/48MnKmLS6Cpi7CfqYsHmoWNS6D/j0ugeZJLoFWUB5pVlLCfVZRLoHmSS6BVlAWe/48KoFWUmJtVlEug/49LoIWNS6CpiwWeqYuYm6mLS6CpizqVqYtrlP+PQJf/j3GWVZQ6lVWUa5SFjbCfhY0+m/+PsJ95krCfeZLWmv+PmJuFjZibs407n0uS1J55kpibs42ilYWNcZZLkjqVeZIJlg=="),
+"format": 34896613399,
+"index_count": 120,
+"index_data": PackedByteArray("GgABAAIAGgAEAAEAAwAaAAIAGgAFAAQAAwAbABoAGwAcABoAGgAcAAUAGwAAABwABQAcAB0AAAAdABwABQAdAAYACQAGAB0AAAAeAB0ACQAdAAgAHgAIAB0AHgAHAAgAHwAQAA8AHwAgABAAEwAQACAAEwAgABIAEgAgACEAEgAhABEADAAhACAADAAgAB8AIgAMAB8AIwAfAA8AIgAfACMAIwALACIAIwAPAAoAIwANAAsACgANACMACgAOAA0AFAAkACUAFAAVACQAFwAlACQAFwAWACUAJgAWABcAJgAnABYAJwAmABkAJwAZABgA"),
+"lods": [0.40861872, PackedByteArray("AAABAAIAAwAAAAIAAAAEAAEAAAAFAAQABQAAAAYAAAAHAAYABwAIAAYACQAGAAgACgALAAwACgANAAsACgAOAA0ADAAPAAoADAAQAA8ADAARABAAEgAQABEAEwAQABIAFAAVABYAFwAWABUAFwAYABYAGAAXABkA")],
+"material": ExtResource("1_5t8gu"),
+"name": "forest",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 40,
+"vertex_data": PackedByteArray("AAAyM/9/XcqqqgAAAAD/v6qqZiYAAP+/qqqZWQAAA8CqqgAA2zbBygAAAAD/f8HKAAAAACPJh7KqqplZ//+vpaqqZib//y2lqqoAAP//EKUAAP//I8l3Tf7/MnP//xmmVVXMTP9/Ksyqqv+////NWqqq/////+5aAAD///9/PTWqqv//2zY9Nf//MnMAAHjEqqr/vwAAKT6qqv//AAD/P6qqmVkAAHa2//8ycwAAabYAADIz/39N01VVzEz/f7LTqqqZWf//jbv+/zJz//+mu6qqZibbNsnKqqoyM9s21skAAGYm/3/BygAAZiYjyYiyAAD/PyPJDLEAAP+//3+Pyqqq/7/bNhrMVvzMTCc8gc+rUZlZ18M+tAAA/78jyaqyVvzMTCc8PsSqqjIz2zZex6tRmVnXw/PFAAD/PyPJLsi/gQL//3////9///9wfeD6/3////9/////f///z5ow9+GMw/v/f////3///wpYA+X6ZsvzK2dj7/9/////f////3///wxiPPO0bi73/3///7ip17zjqdW8B5a2x4iXr8e8qLS7dai8uxR8E/m2c/vpm4Cm/ySCGv8piKz803FH9/txoPy1aDr8xF476c9syPQ6pTTAJqQyweGcc8DJmqPB")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_ed852")

@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://do0dlb4bg0x6b"]
+
+[ext_resource type="Script" uid="uid://cohp2467w6ttr" path="res://scripts/ui/inventory/inventory_cell.gd" id="1_cell"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cell"]
+bg_color = Color(0.91764706, 0.8862745, 0.7176471, 1)
+border_width_left = 2
+border_width_top = 2
+border_color = Color(0.73333335, 0.7490196, 0.6313726, 1)
+
+[node name="InventoryCell" type="Panel" unique_id=503151661]
+custom_minimum_size = Vector2(128, 128)
+offset_right = 128.0
+offset_bottom = 128.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_cell")
+script = ExtResource("1_cell")
+
+[node name="Highlight" type="ColorRect" parent="." unique_id=1751219174]
+visible = false
+z_index = 1
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0.1882353, 0.28627452, 0.22)

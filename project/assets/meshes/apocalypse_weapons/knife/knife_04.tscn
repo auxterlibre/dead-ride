@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bvgk2htv3wemi"]
+
+[ext_resource type="ArrayMesh" uid="uid://ckcafcjg37q5f" path="res://assets/meshes/apocalypse_weapons/knife/parts/knife_04.tres" id="1_fa8hs"]
+[ext_resource type="ArrayMesh" uid="uid://biksinyi5xmdl" path="res://assets/meshes/apocalypse_weapons/knife/parts/knife_04_blade.tres" id="2_8li4q"]
+
+[node name="Knife04" type="MeshInstance3D" unique_id=282364418]
+mesh = ExtResource("1_fa8hs")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {}
+}
+
+[node name="Knife_04_Blade" type="MeshInstance3D" parent="." unique_id=1381048867]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0018219948, 0.043521404, 0)
+mesh = ExtResource("2_8li4q")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {}
+}

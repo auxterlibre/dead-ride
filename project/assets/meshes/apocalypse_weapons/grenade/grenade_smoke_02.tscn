@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://3jvpi6rv1x0b"]
+
+[ext_resource type="ArrayMesh" uid="uid://7i4iwv8u3b0e" path="res://assets/meshes/apocalypse_weapons/grenade/parts/grenade_smoke_02.tres" id="1_h6lw2"]
+[ext_resource type="ArrayMesh" uid="uid://cuk2o71a0ql84" path="res://assets/meshes/apocalypse_weapons/grenade/parts/grenade_smoke_01_pin.tres" id="2_s6nky"]
+
+[node name="GrenadeSmoke02" type="MeshInstance3D" unique_id=1105886130]
+mesh = ExtResource("1_h6lw2")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Grenade_Smoke_02_Pin" type="MeshInstance3D" parent="." unique_id=71761730]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.023609638, 0.044409275, 0.027087212)
+mesh = ExtResource("2_s6nky")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}

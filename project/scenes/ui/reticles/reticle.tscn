@@ -1,0 +1,430 @@
+[gd_scene format=3 uid="uid://drm24xovlahmc"]
+
+[ext_resource type="Script" uid="uid://b0fscxyrijqdh" path="res://scripts/ui/reticle.gd" id="1_rtcl"]
+[ext_resource type="FontFile" uid="uid://16cr15homrlp" path="res://assets/fonts/JetBrainsMono-Regular.ttf" id="3_00oci"]
+[ext_resource type="Texture2D" uid="uid://b8h0vcepd41g2" path="res://assets/textures/reticles/reticle_shotgun.svg" id="3_rp6ux"]
+[ext_resource type="Texture2D" uid="uid://bgr626dlojwxg" path="res://assets/textures/reticles/reticle_pistol.svg" id="4_7kjvh"]
+[ext_resource type="Texture2D" uid="uid://drko5oltap78w" path="res://assets/textures/reticles/sniper_rifle_1.svg" id="5_uxuef"]
+[ext_resource type="Texture2D" uid="uid://ubefmypup6qy" path="res://assets/textures/reticles/sniper_rifle_0.svg" id="6_gxlke"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_81a6u"]
+font = ExtResource("3_00oci")
+font_size = 32
+font_color = Color(0.917647, 0.886275, 0.717647, 1)
+
+[node name="Reticle" type="Control" unique_id=1056909390]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 64.0
+offset_bottom = 64.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+script = ExtResource("1_rtcl")
+
+[node name="DistanceLabel" type="Label" parent="." unique_id=1300476320]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = -2.0
+offset_right = 2.0
+offset_bottom = -2.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "0m"
+label_settings = SubResource("LabelSettings_81a6u")
+
+[node name="AssaultRifle" type="Control" parent="." unique_id=25974519]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Top" type="ColorRect" parent="AssaultRifle" unique_id=1601249366]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -2.0
+offset_right = 2.0
+offset_bottom = 24.0
+grow_horizontal = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+color = Color(0.917647, 0.886275, 0.717647, 1)
+
+[node name="Bottom" type="ColorRect" parent="AssaultRifle" unique_id=399502110]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_top = -24.0
+offset_right = 2.0
+grow_horizontal = 2
+grow_vertical = 0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+color = Color(0.917647, 0.886275, 0.717647, 1)
+
+[node name="Left" type="ColorRect" parent="AssaultRifle" unique_id=491091401]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -2.0
+offset_right = 24.0
+offset_bottom = 2.0
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+color = Color(0.917647, 0.886275, 0.717647, 1)
+
+[node name="Right" type="ColorRect" parent="AssaultRifle" unique_id=1981041786]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -2.0
+offset_bottom = 2.0
+grow_horizontal = 0
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+color = Color(0.917647, 0.886275, 0.717647, 1)
+
+[node name="Shotgun" type="Control" parent="." unique_id=567930527]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TopLeft" type="TextureRect" parent="Shotgun" unique_id=1564356000]
+layout_mode = 1
+offset_right = 24.0
+offset_bottom = 24.0
+texture = ExtResource("3_rp6ux")
+
+[node name="TopRight" type="TextureRect" parent="Shotgun" unique_id=220080314]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -24.0
+offset_bottom = 24.0
+grow_horizontal = 0
+texture = ExtResource("3_rp6ux")
+flip_h = true
+
+[node name="BottomRight" type="TextureRect" parent="Shotgun" unique_id=553388853]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -24.0
+offset_top = -24.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("3_rp6ux")
+flip_h = true
+flip_v = true
+
+[node name="BottomLeft" type="TextureRect" parent="Shotgun" unique_id=660112554]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -24.0
+offset_right = 24.0
+grow_vertical = 0
+texture = ExtResource("3_rp6ux")
+flip_v = true
+
+[node name="SMG" type="Control" parent="." unique_id=1062225580]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TopRight" type="ColorRect" parent="SMG" unique_id=1262801433]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -12.0
+offset_top = -1.9999962
+offset_right = -8.0
+offset_bottom = 22.000004
+grow_horizontal = 0
+rotation = 0.7853982
+pivot_offset_ratio = Vector2(0.5, 0.5)
+color = Color(0.917647, 0.886275, 0.717647, 1)
+
+[node name="BottomLeft" type="ColorRect" parent="SMG" unique_id=1748779141]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = -21.999996
+offset_right = 12.0
+offset_bottom = 2.0
+grow_vertical = 0
+rotation = 0.7853982
+pivot_offset_ratio = Vector2(0.5, 0.5)
+color = Color(0.917647, 0.886275, 0.717647, 1)
+
+[node name="TopLeft" type="ColorRect" parent="SMG" unique_id=980687903]
+layout_mode = 1
+offset_left = -1.9999998
+offset_top = 8.0
+offset_right = 22.0
+offset_bottom = 12.0
+rotation = 0.7853982
+pivot_offset_ratio = Vector2(0.5, 0.5)
+color = Color(0.917647, 0.886275, 0.717647, 1)
+
+[node name="BottomRight" type="ColorRect" parent="SMG" unique_id=961869068]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -21.999996
+offset_top = -12.0
+offset_right = 2.0
+offset_bottom = -8.0
+grow_horizontal = 0
+grow_vertical = 0
+rotation = 0.7853982
+pivot_offset_ratio = Vector2(0.5, 0.5)
+color = Color(0.917647, 0.886275, 0.717647, 1)
+
+[node name="Pistol" type="Control" parent="." unique_id=146312270]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TopLeft" type="TextureRect" parent="Pistol" unique_id=784753033]
+layout_mode = 1
+offset_right = 24.0
+offset_bottom = 24.0
+texture = ExtResource("4_7kjvh")
+
+[node name="TopRight" type="TextureRect" parent="Pistol" unique_id=1155878060]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -24.0
+offset_bottom = 24.0
+grow_horizontal = 0
+texture = ExtResource("4_7kjvh")
+flip_h = true
+
+[node name="BottomRight" type="TextureRect" parent="Pistol" unique_id=914276858]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -24.0
+offset_top = -24.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("4_7kjvh")
+flip_h = true
+flip_v = true
+
+[node name="BottomLeft" type="TextureRect" parent="Pistol" unique_id=663752014]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -32.0
+offset_right = 32.0
+grow_vertical = 0
+texture = ExtResource("4_7kjvh")
+flip_v = true
+
+[node name="Revolver" type="Control" parent="." unique_id=345134220]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TopLeft" type="TextureRect" parent="Revolver" unique_id=1741795009]
+layout_mode = 1
+offset_right = 24.0
+offset_bottom = 24.0
+texture = ExtResource("4_7kjvh")
+
+[node name="TopRight" type="TextureRect" parent="Revolver" unique_id=1177372849]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -24.0
+offset_bottom = 24.0
+grow_horizontal = 0
+texture = ExtResource("4_7kjvh")
+flip_h = true
+
+[node name="BottomRight" type="TextureRect" parent="Revolver" unique_id=522725687]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -24.0
+offset_top = -24.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("4_7kjvh")
+flip_h = true
+flip_v = true
+
+[node name="BottomLeft" type="TextureRect" parent="Revolver" unique_id=118925737]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -32.0
+offset_right = 32.0
+grow_vertical = 0
+texture = ExtResource("4_7kjvh")
+flip_v = true
+
+[node name="SniperRifle" type="Control" parent="." unique_id=1464228198]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Top" type="TextureRect" parent="SniperRifle" unique_id=1444419755]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -2.0
+offset_right = 2.0
+offset_bottom = 4.0
+grow_horizontal = 2
+texture = ExtResource("5_uxuef")
+
+[node name="Center" type="TextureRect" parent="SniperRifle" unique_id=327106218]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_gxlke")
+
+[node name="Right" type="TextureRect" parent="SniperRifle" unique_id=1733375188]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -2.0
+offset_bottom = 2.0
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("5_uxuef")
+flip_h = true
+
+[node name="Bottom" type="TextureRect" parent="SniperRifle" unique_id=677632522]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_top = -4.0
+offset_right = 2.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("5_uxuef")
+flip_h = true
+flip_v = true
+
+[node name="Left" type="TextureRect" parent="SniperRifle" unique_id=250124552]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -2.0
+offset_right = 4.0
+offset_bottom = 2.0
+grow_vertical = 2
+texture = ExtResource("5_uxuef")
+flip_v = true
+
+[node name="Unarmed" type="Control" parent="." unique_id=388401535]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Center" type="TextureRect" parent="Unarmed" unique_id=787624855]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_gxlke")

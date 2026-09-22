@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://djf0buyf7p6fi"]
+
+[ext_resource type="ArrayMesh" uid="uid://boaixjr0playv" path="res://assets/meshes/apocalypse_weapons/ar/parts/foregrip_vertical_02.tres" id="1_loih4"]
+[ext_resource type="ArrayMesh" uid="uid://ckyjyfty6e746" path="res://assets/meshes/apocalypse_weapons/ar/parts/foregrip_vertical_02_handle.tres" id="2_3s5sw"]
+
+[node name="ForegripVertical02" type="MeshInstance3D" unique_id=1737509738]
+mesh = ExtResource("1_loih4")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Foregrip_Vertical_02_Handle" type="MeshInstance3D" parent="." unique_id=1737705124]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.1311904e-05, -0.019345284, 2.861023e-06)
+mesh = ExtResource("2_3s5sw")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}

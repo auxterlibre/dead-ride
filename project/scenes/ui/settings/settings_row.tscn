@@ -1,0 +1,204 @@
+[gd_scene format=3 uid="uid://btcdxdcal6041"]
+
+[ext_resource type="Script" uid="uid://ftwc3y6fjp5o" path="res://scripts/ui/settings/settings_row.gd" id="1_row"]
+[ext_resource type="FontFile" uid="uid://16cr15homrlp" path="res://assets/fonts/JetBrainsMono-Regular.ttf" id="2_mono"]
+[ext_resource type="FontFile" uid="uid://bbctssp8rxgju" path="res://assets/fonts/JetBrainsMono-Bold.ttf" id="3_bold"]
+[ext_resource type="FontFile" uid="uid://b4eqtttrevslk" path="res://assets/fonts/AntonSC-Regular.ttf" id="4_anton"]
+[ext_resource type="Texture2D" uid="uid://djd3dd1kmln3u" path="res://assets/textures/icons/system/icon_arrow_left.svg" id="5_left"]
+[ext_resource type="Texture2D" uid="uid://d3sfrk7j87n44" path="res://assets/textures/icons/system/icon_arrow_right.svg" id="6_right"]
+
+[sub_resource type="Gradient" id="Gradient_wash"]
+offsets = PackedFloat32Array(0, 0.3, 0.62, 1)
+colors = PackedColorArray(0.929, 0.859, 0.627, 0, 0.929, 0.859, 0.627, 1, 0.929, 0.859, 0.627, 1, 0.929, 0.859, 0.627, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_wash"]
+gradient = SubResource("Gradient_wash")
+width = 256
+height = 8
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_flat"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_nograb"]
+size = Vector2(0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_slider_bg"]
+content_margin_top = 32.0
+content_margin_bottom = 32.0
+bg_color = Color(0, 0, 0, 0)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0.1882353, 0.28627452, 1)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_slider_fill"]
+bg_color = Color(0.06666667, 0.6156863, 0.6431373, 0.5)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+
+[node name="SettingsRow" type="Control" unique_id=543248745]
+custom_minimum_size = Vector2(0, 160)
+layout_mode = 3
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+script = ExtResource("1_row")
+
+[node name="Wash" type="TextureRect" parent="." unique_id=1101]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("GradientTexture2D_wash")
+expand_mode = 1
+
+[node name="Row" type="HBoxContainer" parent="." unique_id=1102]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/separation = 0
+
+[node name="Label" type="Label" parent="Row" unique_id=1103]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0.1882353, 0.28627452, 1)
+theme_override_fonts/font = ExtResource("2_mono")
+theme_override_font_sizes/font_size = 40
+text = "Setting"
+vertical_alignment = 1
+
+[node name="HeaderLabel" type="Label" parent="Row" unique_id=1104]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.32156864, 0.40392157, 0.44705883, 1)
+theme_override_fonts/font = ExtResource("4_anton")
+theme_override_font_sizes/font_size = 56
+text = "HEADER"
+vertical_alignment = 1
+
+[node name="ListControl" type="HBoxContainer" parent="Row" unique_id=1105]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(849, 0)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 2
+theme_override_constants/separation = 0
+
+[node name="PrevButton" type="Button" parent="Row/ListControl" unique_id=1106]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(112, 112)
+layout_mode = 2
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/icon_normal_color = Color(0, 0.1882353, 0.28627452, 1)
+theme_override_colors/icon_hover_color = Color(0.96862745, 0.49803922, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_flat")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_flat")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_flat")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_flat")
+icon = ExtResource("5_left")
+icon_alignment = 1
+
+[node name="ValueLabel" type="Label" parent="Row/ListControl" unique_id=1107]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0.1882353, 0.28627452, 1)
+theme_override_fonts/font = ExtResource("3_bold")
+theme_override_font_sizes/font_size = 40
+text = "Value"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NextButton" type="Button" parent="Row/ListControl" unique_id=1108]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(112, 112)
+layout_mode = 2
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/icon_normal_color = Color(0, 0.1882353, 0.28627452, 1)
+theme_override_colors/icon_hover_color = Color(0.96862745, 0.49803922, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_flat")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_flat")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_flat")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_flat")
+icon = ExtResource("6_right")
+icon_alignment = 1
+
+[node name="SliderControl" type="Control" parent="Row" unique_id=1109]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(849, 0)
+layout_mode = 2
+mouse_filter = 1
+
+[node name="Slider" type="HSlider" parent="Row/SliderControl" unique_id=1110]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -32.0
+offset_right = 849.0
+offset_bottom = 32.0
+grow_vertical = 2
+focus_mode = 0
+theme_override_icons/grabber = SubResource("PlaceholderTexture2D_nograb")
+theme_override_icons/grabber_highlight = SubResource("PlaceholderTexture2D_nograb")
+theme_override_styles/slider = SubResource("StyleBoxFlat_slider_bg")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_slider_fill")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_slider_fill")
+step = 5.0
+value = 50.0
+
+[node name="SliderValue" type="Label" parent="Row/SliderControl" unique_id=1111]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0.1882353, 0.28627452, 1)
+theme_override_fonts/font = ExtResource("3_bold")
+theme_override_font_sizes/font_size = 40
+text = "50%"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Divider" type="ColorRect" parent="." unique_id=1112]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -4.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+color = Color(0, 0.1882353, 0.28627452, 0.5)

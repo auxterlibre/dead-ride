@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CropData" format=3 uid="uid://bnxph4wyul8d5"]
+
+[ext_resource type="Script" uid="uid://c2aiovtol1l2f" path="res://scripts/data/crop_data.gd" id="1_script"]
+[ext_resource type="Resource" uid="uid://c02dayi07pp67" path="res://data/items/ammo/ammo_medium.tres" id="2_ammo"]
+
+[resource]
+script = ExtResource("1_script")
+name = "Medium Ammo Plant"
+grow_days = 6
+regrow_days = 1
+produce = ExtResource("2_ammo")
+produce_count = Vector2i(8, 15)
+seed_item = ExtResource("2_ammo")
+seed_count = 15

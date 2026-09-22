@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://dip4oaqwe1fnr"]
+
+[ext_resource type="ArrayMesh" uid="uid://dwknuf8w7v60o" path="res://assets/meshes/apocalypse_weapons/pistol/parts/pistol_5_base.tres" id="1_ceads"]
+[ext_resource type="ArrayMesh" uid="uid://cbr6t7r3epj2f" path="res://assets/meshes/apocalypse_weapons/pistol/parts/pistol_5_bolt.tres" id="2_ri3lk"]
+[ext_resource type="ArrayMesh" uid="uid://cofkj0ycsylos" path="res://assets/meshes/apocalypse_weapons/pistol/parts/pistol_5_crane.tres" id="3_pa2rq"]
+[ext_resource type="ArrayMesh" uid="uid://csqrhntkpkp2y" path="res://assets/meshes/apocalypse_weapons/pistol/parts/pistol_5_drum.tres" id="4_aoiqm"]
+[ext_resource type="ArrayMesh" uid="uid://bq2sug6q33dnq" path="res://assets/meshes/apocalypse_weapons/pistol/parts/pistol_5_trigger.tres" id="5_cx5bb"]
+
+[node name="Pistol5Base" type="MeshInstance3D" unique_id=58972224]
+mesh = ExtResource("1_ceads")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Pistol5_Bolt" type="MeshInstance3D" parent="." unique_id=1869658252]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.07589531, 0.056082726)
+mesh = ExtResource("2_ri3lk")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Pistol5_Crane" type="MeshInstance3D" parent="." unique_id=1566362917]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6635648e-05, 0.02800417, 0.12817669)
+mesh = ExtResource("3_pa2rq")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Pistol5_Drum" type="MeshInstance3D" parent="Pistol5_Crane" unique_id=630320350]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.03189802, -0.036420822)
+mesh = ExtResource("4_aoiqm")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Pistol5_Trigger" type="MeshInstance3D" parent="." unique_id=2106008391]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.022371292, 0.06534672)
+mesh = ExtResource("5_cx5bb")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Place_Pistol5_Charm" type="Node3D" parent="." unique_id=1694563097]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.008512779, 0.042611837, 0.04700184)
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Place_Pistol5_Magazine" type="Node3D" parent="." unique_id=38928222]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.66329e-05, 0.05990219, 0.09175587)
+metadata/extras = {
+"MM": {},
+"hops": {}
+}

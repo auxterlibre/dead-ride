@@ -1,0 +1,18 @@
+/* Image Captions — remove the gray box behind the image and the caption */
+
+.image-captions-figure,
+.image-captions-caption {
+    background: none;
+}
+
+.image-captions-figure {
+    padding: 0;
+    border-radius: 0;
+}
+
+.image-captions-caption {
+    margin: 0;
+    padding: 4px 0 0 0;
+    color: var(--text-muted);
+    font-size: var(--font-smaller);
+}

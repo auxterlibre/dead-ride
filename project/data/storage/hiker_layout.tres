@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="StorageData" format=3 uid="uid://cpiq8kd7tun2a"]
+
+[ext_resource type="Script" uid="uid://cbpp8y4iam8s4" path="res://scripts/data/items/storage_data.gd" id="1_script"]
+
+[resource]
+script = ExtResource("1_script")
+layout = "x....x
+......
+......
+x....x"

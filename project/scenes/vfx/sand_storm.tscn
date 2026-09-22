@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://bfbp3gdn7ynnj"]
+
+[ext_resource type="Shader" uid="uid://ctwx5wf2yiw0u" path="res://shaders/sand_storm.gdshader" id="2_shader"]
+
+[sub_resource type="Gradient" id="Gradient_storm"]
+offsets = PackedFloat32Array(0, 0.45, 1)
+colors = PackedColorArray(0.98039216, 0.85490197, 0.61960787, 1, 1, 0.84313726, 0.5176471, 1, 1, 0.7607843, 0.39215687, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_storm"]
+gradient = SubResource("Gradient_storm")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_storm"]
+noise_type = 0
+frequency = 0.012
+fractal_octaves = 3
+fractal_lacunarity = 2.1
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_storm"]
+width = 256
+height = 256
+noise = SubResource("FastNoiseLite_storm")
+seamless = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_storm"]
+shader = ExtResource("2_shader")
+shader_parameter/noise_tex = SubResource("NoiseTexture2D_storm")
+shader_parameter/grad_tex = SubResource("GradientTexture1D_storm")
+shader_parameter/emission_color = Color(0.72, 0.41, 0.11, 1)
+shader_parameter/wind_dir = Vector2(0, -1)
+shader_parameter/drift = 0.0
+shader_parameter/stretch = 0.02
+shader_parameter/across = 0.14
+shader_parameter/warp = 0.5
+shader_parameter/coverage = 0.85
+shader_parameter/softness = 0.3
+shader_parameter/flatness = 2.0
+shader_parameter/density = 3.0
+
+[node name="SandStorm" type="FogVolume" unique_id=1256572489]
+size = Vector3(70, 1.4, 70)
+material = SubResource("ShaderMaterial_storm")

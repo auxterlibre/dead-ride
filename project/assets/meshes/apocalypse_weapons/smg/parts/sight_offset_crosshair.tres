@@ -1,0 +1,38 @@
+[gd_resource type="ArrayMesh" format=4 uid="uid://q5c6qy1pxowg"]
+
+[ext_resource type="Material" uid="uid://d4lbni5m4lio8" path="res://assets/materials/apocalypse_weapons/apocalypse_weapons_material_sight_crosshair_small.tres" id="1_nbjw0"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ge4o6"]
+_surfaces = [{
+"aabb": AABB(-0.01517887, -0.01517887, -2.459976e-09, 0.03035774, 0.03035774, 1e-05),
+"format": 34359742465,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"name": "Sight_Crosshair_Small",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("zLB4vP7//6+WNOcvzLB4PP7//y+WNOev/v//L8yweDxbDCkx/v//r8yweLxbDCmx")
+}]
+blend_shape_mode = 0
+
+[resource]
+resource_name = "sight_offset_crosshair"
+_surfaces = [{
+"aabb": AABB(-0.01517887, -0.01517887, -2.459976e-09, 0.03035774, 0.03035774, 1e-05),
+"attribute_data": PackedByteArray("AAAAAAAAgD8AAIA/AAAAAAAAgD8AAIA/AAAAAAAAAAA="),
+"format": 34359742487,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"material": ExtResource("1_nbjw0"),
+"name": "Sight_Crosshair_Small",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("zLB4vP7//6+WNOcvzLB4PP7//y+WNOev/v//L8yweDxbDCkx/v//r8yweLxbDCmx//////+//9///////7//3///////v//f//////+//98=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_ge4o6")
+metadata/extras = {
+"hops": {}
+}

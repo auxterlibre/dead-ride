@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dl8wjfuu8jhas"]
+
+[ext_resource type="ArrayMesh" uid="uid://dbrtlnhjg08oi" path="res://assets/meshes/props/resource_bits/cog.tres" id="1_7h1wk"]
+
+[node name="Cog" type="MeshInstance3D" unique_id=531294639]
+mesh = ExtResource("1_7h1wk")

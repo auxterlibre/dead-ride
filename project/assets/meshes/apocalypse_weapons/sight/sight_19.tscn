@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bu1aqla86w6mv"]
+
+[ext_resource type="ArrayMesh" uid="uid://de2btj53x5kud" path="res://assets/meshes/apocalypse_weapons/smg/parts/sight_19.tres" id="1_ehef0"]
+[ext_resource type="ArrayMesh" uid="uid://dsaeyp4b6u4q4" path="res://assets/meshes/apocalypse_weapons/ar/parts/sight_collimator_crosshair.tres" id="2_oc3d3"]
+
+[node name="Sight19" type="MeshInstance3D" unique_id=655209269]
+mesh = ExtResource("1_ehef0")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Sight_19_Crosshair" type="MeshInstance3D" parent="." unique_id=812146901]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8662853e-05, 0.04284954, -0.011171579)
+mesh = ExtResource("2_oc3d3")
+skeleton = NodePath("")
+metadata/extras = {
+"hops": {}
+}

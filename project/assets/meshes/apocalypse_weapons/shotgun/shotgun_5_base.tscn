@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://diaut5pj6g58r"]
+
+[ext_resource type="ArrayMesh" uid="uid://banjvfce04jl4" path="res://assets/meshes/apocalypse_weapons/shotgun/parts/shotgun_5_base.tres" id="1_7utt5"]
+[ext_resource type="ArrayMesh" uid="uid://blxkqr8xrqhvf" path="res://assets/meshes/apocalypse_weapons/shotgun/parts/shotgun_5_magazine.tres" id="2_sorq1"]
+[ext_resource type="ArrayMesh" uid="uid://544m601sr71g" path="res://assets/meshes/apocalypse_weapons/shotgun/parts/shotgun_5_trigger.tres" id="3_rmibp"]
+
+[node name="Shotgun5Base" type="MeshInstance3D" unique_id=773128188]
+mesh = ExtResource("1_7utt5")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Place_Shotgun5_Charm" type="Node3D" parent="." unique_id=1096549401]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.021755116, 0.07094526, 0.18469906)
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Shotgun5_Magazine" type="MeshInstance3D" parent="." unique_id=674872590]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.05736e-06, 0.06602955, 0.25040054)
+mesh = ExtResource("2_sorq1")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Shotgun5_Trigger" type="MeshInstance3D" parent="." unique_id=1566994244]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.042317867, 0.09270382)
+mesh = ExtResource("3_rmibp")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}

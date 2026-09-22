@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cpk5slotprb2m"]
+
+[ext_resource type="Script" path="res://_tools/probes/ui/pack_slots_probe.gd" id="1_probe"]
+
+[node name="PackSlotsProbe" type="Node"]
+script = ExtResource("1_probe")

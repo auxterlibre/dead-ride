@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://l4cbk64jqgin"]
+
+[ext_resource type="ArrayMesh" uid="uid://dg222pt04o7cb" path="res://assets/meshes/apocalypse_weapons/chain/parts/chain_02.tres" id="1_fhjrc"]
+[ext_resource type="ArrayMesh" uid="uid://fb0x0jl176hx" path="res://assets/meshes/apocalypse_weapons/chain/parts/chain_03.tres" id="2_namkp"]
+
+[node name="Chain02" type="MeshInstance3D" unique_id=1887297306]
+mesh = ExtResource("1_fhjrc")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Chain_03" type="MeshInstance3D" parent="." unique_id=1936546501]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.007806778, 0)
+mesh = ExtResource("2_namkp")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Chain_04" type="MeshInstance3D" parent="Chain_03" unique_id=353281793]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.007858753, 0)
+mesh = ExtResource("1_fhjrc")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}

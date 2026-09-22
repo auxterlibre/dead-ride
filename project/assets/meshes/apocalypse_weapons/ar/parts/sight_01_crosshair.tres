@@ -1,0 +1,38 @@
+[gd_resource type="ArrayMesh" format=4 uid="uid://b20usamlwo14a"]
+
+[ext_resource type="Material" uid="uid://cglvdj3ld8jsw" path="res://assets/materials/apocalypse_weapons/apocalypse_weapons_material_sight_crosshair_big.tres" id="1_ehyeq"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_n26s1"]
+_surfaces = [{
+"aabb": AABB(-0.017693074, 0.015787475, -0.05088781, 0.035395995, 0.035396, 1e-05),
+"format": 34896613377,
+"index_count": 48,
+"index_data": PackedByteArray("AAABAAIAAgABAAMABAABAAAAAwABAAUABgABAAQABQABAAcACAABAAYABwABAAkACgABAAgACQABAAsADAABAAoACwABAA0ADgABAAwADQABAA8AEAABAA4ADwABABAA"),
+"name": "Sight_Crosshair_Big",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 17,
+"vertex_data": PackedByteArray("AAD/fwAAAAD/f/9/AAAAAL4J+7AAAAAAfSWB2gAAAAC+CQNPAAAAAANPQPYAAAAAfSV9JQAAAAD/f///AAAAAANPvgkAAAAA+7BA9gAAAAD/fwAAAAAAAIHagdoAAAAA+7C+CQAAAABA9vuwAAAAAIHafSUAAAAA////fwAAAABA9gNPAAAAAA==")
+}]
+blend_shape_mode = 0
+
+[resource]
+resource_name = "sight_01_crosshair"
+_surfaces = [{
+"aabb": AABB(-0.017693074, 0.015787475, -0.05088781, 0.035395995, 0.035396, 1e-05),
+"attribute_data": PackedByteArray("////v/+//78f+4GnQO2+kh/7fdh92N6EQO1A7f+//3992B/7gafehP+///++kr6Sgacf+96Egae+kkDt/3//v96Efdg="),
+"format": 34896613399,
+"index_count": 48,
+"index_data": PackedByteArray("AAABAAIAAgABAAMABAABAAAAAwABAAUABgABAAQABQABAAcACAABAAYABwABAAkACgABAAgACQABAAsADAABAAoACwABAA0ADgABAAwADQABAA8AEAABAA4ADwABABAA"),
+"material": ExtResource("1_ehyeq"),
+"name": "Sight_Crosshair_Big",
+"primitive": 3,
+"uv_scale": Vector4(1.9999988, 2.000002, 0, 0),
+"vertex_count": 17,
+"vertex_data": PackedByteArray("AAD/fwAA////f/9/AAD//74J+7AAAP//fSWB2gAA//++CQNPAAD//wNPQPYAAP//fSV9JQAA////f///AAD//wNPvgkAAP//+7BA9gAA////fwAAAAD//4HagdoAAP//+7C+CQAA//9A9vuwAAD//4HafSUAAP//////fwAA//9A9gNPAAD///9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_n26s1")
+metadata/extras = {
+"hops": {}
+}

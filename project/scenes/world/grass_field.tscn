@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://cm4sed3m1vncc"]
+
+[ext_resource type="Script" uid="uid://oghtghqurgjt" path="res://scripts/world/grass_field.gd" id="1_field"]
+[ext_resource type="Material" uid="uid://cv2cwqp28is3v" path="res://assets/materials/environment/grass_material.tres" id="2_sway"]
+[ext_resource type="ArrayMesh" uid="uid://cdu80xri16tfq" path="res://assets/meshes/environment/props/grass/grass_2_a_singlesided_color_5.tres" id="5_g2a"]
+[ext_resource type="ArrayMesh" uid="uid://5dmqihslxxl0" path="res://assets/meshes/environment/props/grass/grass_2_b_singlesided_color_5.tres" id="6_g2b"]
+[ext_resource type="ArrayMesh" uid="uid://csa1c4b3tjfe0" path="res://assets/meshes/environment/props/grass/grass_2_c_singlesided_color_5.tres" id="7_g2c"]
+[ext_resource type="ArrayMesh" uid="uid://dmtcdxon2bist" path="res://assets/meshes/environment/props/grass/grass_2_d_singlesided_color_5.tres" id="8_g2d"]
+
+[sub_resource type="MultiMesh" id="MultiMesh_g2a"]
+transform_format = 1
+mesh = ExtResource("5_g2a")
+
+[sub_resource type="MultiMesh" id="MultiMesh_g2b"]
+transform_format = 1
+mesh = ExtResource("6_g2b")
+
+[sub_resource type="MultiMesh" id="MultiMesh_g2c"]
+transform_format = 1
+mesh = ExtResource("7_g2c")
+
+[sub_resource type="MultiMesh" id="MultiMesh_g2d"]
+transform_format = 1
+mesh = ExtResource("8_g2d")
+
+[node name="GrassField" type="Node3D" unique_id=1229148928]
+script = ExtResource("1_field")
+sway = ExtResource("2_sway")
+
+[node name="Grass2A" type="MultiMeshInstance3D" parent="." unique_id=859925492]
+cast_shadow = 0
+multimesh = SubResource("MultiMesh_g2a")
+
+[node name="Grass2B" type="MultiMeshInstance3D" parent="." unique_id=1634707540]
+cast_shadow = 0
+multimesh = SubResource("MultiMesh_g2b")
+
+[node name="Grass2C" type="MultiMeshInstance3D" parent="." unique_id=1443142420]
+cast_shadow = 0
+multimesh = SubResource("MultiMesh_g2c")
+
+[node name="Grass2D" type="MultiMeshInstance3D" parent="." unique_id=258319068]
+cast_shadow = 0
+multimesh = SubResource("MultiMesh_g2d")

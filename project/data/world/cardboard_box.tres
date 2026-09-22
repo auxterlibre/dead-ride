@@ -1,0 +1,72 @@
+[gd_resource type="Resource" script_class="LootTableData" format=3 uid="uid://dwjt5hpbkmatr"]
+
+[ext_resource type="Script" uid="uid://dw5y35g1pt77" path="res://scripts/data/loot_table_data.gd" id="1_table"]
+[ext_resource type="Script" uid="uid://dub55b5neqcfx" path="res://scripts/data/loot_entry_data.gd" id="2_entry"]
+[ext_resource type="Resource" path="res://data/items/trinkets/rusty_gear.tres" id="3_gear"]
+[ext_resource type="Resource" path="res://data/items/trinkets/copper_wire.tres" id="4_wire"]
+[ext_resource type="Resource" path="res://data/items/trinkets/cracked_radio.tres" id="5_radio"]
+[ext_resource type="Resource" path="res://data/items/trinkets/old_wristwatch.tres" id="6_watch"]
+[ext_resource type="Resource" path="res://data/items/trinkets/brass_compass.tres" id="7_compass"]
+[ext_resource type="Resource" path="res://data/items/trinkets/silver_locket.tres" id="8_locket"]
+[ext_resource type="Resource" path="res://data/items/trinkets/machined_bearing.tres" id="9_bearing"]
+[ext_resource type="Resource" path="res://data/items/consumables/field_bandage.tres" id="10_bandage"]
+[ext_resource type="Resource" uid="uid://bx4dci6ipar01" path="res://data/items/consumables/water_bottle.tres" id="11_water"]
+[ext_resource type="Resource" uid="uid://b7gt685gal6tp" path="res://data/items/trinkets/cog.tres" id="12_cog"]
+
+[sub_resource type="Resource" id="Resource_gear"]
+script = ExtResource("2_entry")
+item = ExtResource("3_gear")
+weight = 5.0
+count = Vector2i(1, 3)
+
+[sub_resource type="Resource" id="Resource_wire"]
+script = ExtResource("2_entry")
+item = ExtResource("4_wire")
+weight = 5.0
+count = Vector2i(1, 2)
+
+[sub_resource type="Resource" id="Resource_radio"]
+script = ExtResource("2_entry")
+item = ExtResource("5_radio")
+weight = 3.5
+
+[sub_resource type="Resource" id="Resource_watch"]
+script = ExtResource("2_entry")
+item = ExtResource("6_watch")
+weight = 2.5
+
+[sub_resource type="Resource" id="Resource_compass"]
+script = ExtResource("2_entry")
+item = ExtResource("7_compass")
+
+[sub_resource type="Resource" id="Resource_locket"]
+script = ExtResource("2_entry")
+item = ExtResource("8_locket")
+weight = 0.25
+
+[sub_resource type="Resource" id="Resource_bearing"]
+script = ExtResource("2_entry")
+item = ExtResource("9_bearing")
+weight = 0.75
+
+[sub_resource type="Resource" id="Resource_bandage"]
+script = ExtResource("2_entry")
+item = ExtResource("10_bandage")
+weight = 2.0
+count = Vector2i(1, 2)
+
+[sub_resource type="Resource" id="Resource_water"]
+script = ExtResource("2_entry")
+item = ExtResource("11_water")
+weight = 2.5
+count = Vector2i(1, 2)
+
+[sub_resource type="Resource" id="Resource_cog"]
+script = ExtResource("2_entry")
+item = ExtResource("12_cog")
+weight = 3.0
+count = Vector2i(1, 2)
+
+[resource]
+script = ExtResource("1_table")
+entries = Array[ExtResource("2_entry")]([SubResource("Resource_gear"), SubResource("Resource_wire"), SubResource("Resource_radio"), SubResource("Resource_watch"), SubResource("Resource_compass"), SubResource("Resource_locket"), SubResource("Resource_bearing"), SubResource("Resource_bandage"), SubResource("Resource_water"), SubResource("Resource_cog")])

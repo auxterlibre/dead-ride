@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="SurfaceData" format=3 uid="uid://grqegyaa8d1"]
+
+[ext_resource type="Script" uid="uid://mhno4yreyb4o" path="res://scripts/data/surface_data.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://cuyatm8vifmj1" path="res://assets/textures/vfx/bullet_holes/bullet_hole_cement.jpeg" id="2_atlas"]
+[ext_resource type="PackedScene" uid="uid://ddtl2ltk3xx2w" path="res://scenes/vfx/dust_puff.tscn" id="3_burst"]
+[ext_resource type="AudioStream" uid="uid://dmkoavh8fsloc" path="res://assets/audio/impact/projectile_hit_concrete.ogg" id="4_audio"]
+[ext_resource type="AudioStream" uid="uid://b4p5m04wm1jek" path="res://assets/audio/steps/step_stone.ogg" id="5_step"]
+
+[resource]
+script = ExtResource("1_script")
+atlas = ExtResource("2_atlas")
+burst = ExtResource("3_burst")
+audio = ExtResource("4_audio")
+step_audio = ExtResource("5_step")
+dust_color = Color(0.5130209, 0.50744456, 0.48792744, 1)
+dust_amount = 0.05
+skid_color = Color(0.08, 0.07, 0.06, 0.64)

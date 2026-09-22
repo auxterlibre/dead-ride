@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cycna7kdmt53c"]
+
+[ext_resource type="ArrayMesh" uid="uid://b7ckjjrgib0i7" path="res://assets/meshes/environment/props/rocks/rock_1_a.tres" id="1_mesh"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rock"]
+size = Vector3(0.58, 0.54, 0.6)
+
+[node name="Rock" type="StaticBody3D"]
+collision_layer = 4
+collision_mask = 0
+metadata/surface = "cement"
+
+[node name="Mesh" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_mesh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03, 0.27, 0)
+shape = SubResource("BoxShape3D_rock")

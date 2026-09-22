@@ -1,0 +1,243 @@
+[gd_scene format=3 uid="uid://butpqsa32xa6b"]
+
+[ext_resource type="Script" uid="uid://ygxcnql11s5h" path="res://_tools/asset_extractor/icon_studio.gd" id="1_studio"]
+[ext_resource type="FontFile" uid="uid://bbctssp8rxgju" path="res://assets/fonts/JetBrainsMono-Bold.ttf" id="2_font"]
+
+[node name="IconStudio" type="Control" unique_id=1052480597]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_studio")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1339984082]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.09, 0.1, 0.12, 1)
+
+[node name="Margin" type="MarginContainer" parent="." unique_id=537545294]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 56
+theme_override_constants/margin_top = 56
+theme_override_constants/margin_right = 56
+theme_override_constants/margin_bottom = 56
+
+[node name="Columns" type="HBoxContainer" parent="Margin" unique_id=490049964]
+layout_mode = 2
+theme_override_constants/separation = 56
+
+[node name="Items" type="ItemList" parent="Margin/Columns" unique_id=2129290007]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(760, 0)
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 0
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 32
+
+[node name="PreviewCenter" type="CenterContainer" parent="Margin/Columns" unique_id=309398479]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PreviewBox" type="Control" parent="Margin/Columns/PreviewCenter" unique_id=180060182]
+custom_minimum_size = Vector2(950, 1150)
+layout_mode = 2
+
+[node name="Preview" type="TextureRect" parent="Margin/Columns/PreviewCenter/PreviewBox" unique_id=1548710073]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Frame" type="Control" parent="Margin/Columns/PreviewCenter/PreviewBox" unique_id=1897061276]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Side" type="VBoxContainer" parent="Margin/Columns" unique_id=1761215299]
+custom_minimum_size = Vector2(1050, 0)
+layout_mode = 2
+theme_override_constants/separation = 26
+
+[node name="Title" type="Label" parent="Margin/Columns/Side" unique_id=1510489114]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.918, 0.886, 0.718, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 56
+text = "Icon Studio"
+
+[node name="Values" type="Label" parent="Margin/Columns/Side" unique_id=685584117]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 34
+text = "1x1   yaw 0   pitch 0   roll 0   zoom 1.00"
+
+[node name="Status" type="Label" parent="Margin/Columns/Side" unique_id=1798773308]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.55, 0.75, 0.55, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 28
+autowrap_mode = 3
+
+[node name="Knobs" type="GridContainer" parent="Margin/Columns/Side" unique_id=938050237]
+layout_mode = 2
+theme_override_constants/h_separation = 28
+theme_override_constants/v_separation = 22
+columns = 2
+
+[node name="YawLabel" type="Label" parent="Margin/Columns/Side/Knobs" unique_id=1779409578]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 30
+text = "yaw"
+
+[node name="YawSlider" type="HSlider" parent="Margin/Columns/Side/Knobs" unique_id=1448325862]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+focus_mode = 0
+min_value = -180.0
+max_value = 180.0
+step = 15.0
+tick_count = 25
+ticks_on_borders = true
+
+[node name="PitchLabel" type="Label" parent="Margin/Columns/Side/Knobs" unique_id=1669003545]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 30
+text = "pitch"
+
+[node name="PitchSlider" type="HSlider" parent="Margin/Columns/Side/Knobs" unique_id=228722522]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+focus_mode = 0
+min_value = -90.0
+max_value = 90.0
+step = 15.0
+tick_count = 13
+ticks_on_borders = true
+
+[node name="RollLabel" type="Label" parent="Margin/Columns/Side/Knobs" unique_id=1627955871]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 30
+text = "roll"
+
+[node name="RollSlider" type="HSlider" parent="Margin/Columns/Side/Knobs" unique_id=506376102]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+focus_mode = 0
+min_value = -180.0
+max_value = 180.0
+step = 15.0
+tick_count = 25
+ticks_on_borders = true
+
+[node name="ZoomLabel" type="Label" parent="Margin/Columns/Side/Knobs" unique_id=53128323]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 30
+text = "zoom"
+
+[node name="ZoomSlider" type="HSlider" parent="Margin/Columns/Side/Knobs" unique_id=1885777906]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+focus_mode = 0
+min_value = 0.2
+max_value = 5.0
+step = 0.05
+value = 1.0
+
+[node name="Buttons" type="HBoxContainer" parent="Margin/Columns/Side" unique_id=1421472065]
+layout_mode = 2
+theme_override_constants/separation = 28
+
+[node name="ResetButton" type="Button" parent="Margin/Columns/Side/Buttons" unique_id=64066851]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 76)
+layout_mode = 2
+focus_mode = 0
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 32
+text = "Reset"
+
+[node name="SaveButton" type="Button" parent="Margin/Columns/Side/Buttons" unique_id=1374564073]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 76)
+layout_mode = 2
+focus_mode = 0
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 32
+text = "Save"
+
+[node name="ExportOneButton" type="Button" parent="Margin/Columns/Side/Buttons" unique_id=1094223785]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(260, 76)
+layout_mode = 2
+focus_mode = 0
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 32
+text = "Export"
+
+[node name="ExportButton" type="Button" parent="Margin/Columns/Side/Buttons" unique_id=340692096]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 76)
+layout_mode = 2
+focus_mode = 0
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 32
+text = "Export All"
+
+[node name="Spacer" type="Control" parent="Margin/Columns/Side" unique_id=258594100]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Help" type="Label" parent="Margin/Columns/Side" unique_id=362820174]
+modulate = Color(1, 1, 1, 0.55)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 27
+text = "drag  rotate in place (shift snaps 15°)
+wheel/Q/E  zoom     arrows  nudge
+ctrl+arrows  icon size
+R  zero     U  revert to disk
+tab/N · P  cycle items     ENTER  save .tres + png
+X  export THIS icon from disk
+B  export ALL icons from disk     ESC  quit"

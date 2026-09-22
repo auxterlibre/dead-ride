@@ -1,0 +1,11 @@
+{
+  "columnConfigs": {
+    "Tasks/Tasks::Tasks::status": {
+      "columns": [
+        "To do",
+        "In Progress",
+        "Done"
+      ]
+    }
+  }
+}

@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://cghxijiiyy7u1"]
+
+[ext_resource type="Script" uid="uid://big7wedtsgkoq" path="res://scripts/world/fuel_barrel.gd" id="1_barrel"]
+[ext_resource type="Script" uid="uid://dw5x2lwhyyk5m" path="res://scripts/components/interactive_area.gd" id="2_area"]
+[ext_resource type="Script" uid="uid://50faynyyblif" path="res://scripts/components/cool_area.gd" id="2_cool"]
+[ext_resource type="ArrayMesh" uid="uid://cs6jvwkkars5e" path="res://assets/meshes/props/resource_bits/fuel_barrel.tres" id="3_mesh"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_hull"]
+height = 1.0
+radius = 0.375
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_cool"]
+radius = 7.0
+
+[node name="FuelBarrel" type="StaticBody3D" unique_id=1976386883]
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("1_barrel")
+metadata/surface = "metal"
+
+[node name="Mesh" type="MeshInstance3D" parent="." unique_id=1668518257]
+mesh = ExtResource("3_mesh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=20104373]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("CylinderShape3D_hull")
+
+[node name="CoolArea" type="Area3D" parent="." unique_id=1453992651]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+collision_layer = 0
+collision_mask = 32
+monitorable = false
+script = ExtResource("2_cool")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CoolArea" unique_id=982124467]
+shape = SubResource("SphereShape3D_cool")
+
+[node name="RefillArea" type="Node3D" parent="." unique_id=2036066897 node_paths=PackedStringArray("target_object")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+script = ExtResource("2_area")
+target_object = NodePath("..")
+callback = "use_point"
+action_label = "Refill Barrel"
+hold = true

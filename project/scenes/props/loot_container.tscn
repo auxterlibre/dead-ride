@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://cq3n7kv0lootc"]
+
+[ext_resource type="Script" uid="uid://t7tx182wjjh7" path="res://scripts/world/loot_container.gd" id="1_loot"]
+[ext_resource type="Script" uid="uid://dw5x2lwhyyk5m" path="res://scripts/components/interactive_area.gd" id="2_area"]
+[ext_resource type="Resource" path="res://data/storage/crate_layout.tres" id="3_layout"]
+[ext_resource type="Resource" uid="uid://b35310bhfwal5" path="res://data/world/desert_scavenge.tres" id="4_table"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_crate"]
+albedo_color = Color(0.42745098, 0.29803923, 0.16862746, 1)
+roughness = 1.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_crate"]
+material = SubResource("StandardMaterial3D_crate")
+size = Vector3(1.1, 0.8, 0.8)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_crate"]
+size = Vector3(1.1, 0.8, 0.8)
+
+[node name="LootContainer" type="StaticBody3D" groups=["loot_container"]]
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("1_loot")
+title = "Crate"
+layout = ExtResource("3_layout")
+loot = ExtResource("4_table")
+
+[node name="Crate" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
+mesh = SubResource("BoxMesh_crate")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
+shape = SubResource("BoxShape3D_crate")
+
+[node name="SearchArea" type="Node3D" parent="." node_paths=PackedStringArray("target_object")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+script = ExtResource("2_area")
+target_object = NodePath("..")
+callback = "open"
+action_label = "Search"
+prompt_range = 1.8

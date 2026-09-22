@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://sc1cg7uji2x0"]
+
+[ext_resource type="ArrayMesh" uid="uid://ct05yq8rfogfd" path="res://assets/meshes/apocalypse_weapons/knife/parts/knife_01.tres" id="1_aiey7"]
+[ext_resource type="ArrayMesh" uid="uid://dm1j24817hi7p" path="res://assets/meshes/apocalypse_weapons/knife/parts/knife_01_handle_l.tres" id="2_g2xgc"]
+[ext_resource type="ArrayMesh" uid="uid://cdcy1terl5ssv" path="res://assets/meshes/apocalypse_weapons/knife/parts/knife_01_handle_r.tres" id="3_3nvlw"]
+
+[node name="Knife01" type="MeshInstance3D" unique_id=988570813]
+mesh = ExtResource("1_aiey7")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Knife_01_HandleL" type="MeshInstance3D" parent="." unique_id=551961605]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.008508682, -0.00689888, 0.0054340363)
+mesh = ExtResource("2_g2xgc")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {}
+}
+
+[node name="Knife_01_HandleR" type="MeshInstance3D" parent="." unique_id=67463547]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00554657, 0.0018763542, 0.005349636)
+mesh = ExtResource("3_3nvlw")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {}
+}

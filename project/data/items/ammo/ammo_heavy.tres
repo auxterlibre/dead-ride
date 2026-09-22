@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AmmoData" format=3 uid="uid://ca7dwplly8kbn"]
+
+[ext_resource type="Script" uid="uid://bvf203sgg02kc" path="res://scripts/data/items/ammo_data.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://desagq0jafqoy" path="res://assets/textures/thumbnails/ammo/ammo_heavy.png" id="1_xs87d"]
+
+[resource]
+script = ExtResource("1_script")
+ammo_type = 2
+name = "Heavy Rounds"
+price = 4
+weight = 0.05
+icon = ExtResource("1_xs87d")
+rarity = 3

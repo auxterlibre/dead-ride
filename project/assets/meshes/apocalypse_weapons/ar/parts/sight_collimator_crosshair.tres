@@ -1,0 +1,38 @@
+[gd_resource type="ArrayMesh" format=3 uid="uid://dsaeyp4b6u4q4"]
+
+[ext_resource type="Material" uid="uid://d4lbni5m4lio8" path="res://assets/materials/apocalypse_weapons/apocalypse_weapons_material_sight_crosshair_small.tres" id="1_lyvt6"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_d21ye"]
+_surfaces = [{
+"aabb": AABB(-0.010733083, -0.010570023, -0.0018637785, 0.021466166, 0.021140046, 0.003727557),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"name": "Sight_Crosshair_Small",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0, 254, 255, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0)
+}]
+blend_shape_mode = 0
+
+[resource]
+resource_name = "sight_collimator_crosshair"
+_surfaces = [{
+"aabb": AABB(-0.010733083, -0.010570023, -0.0018637785, 0.021466166, 0.021140046, 0.003727557),
+"attribute_data": PackedByteArray(0, 0, 255, 255, 255, 255, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"material": ExtResource("1_lyvt6"),
+"name": "Sight_Crosshair_Small",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 255, 255, 0, 0, 227, 248, 255, 255, 0, 0, 254, 255, 227, 248, 255, 255, 255, 255, 0, 0, 227, 248, 0, 0, 0, 0, 255, 255, 227, 248, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_d21ye")
+metadata/extras = {
+"hops": {}
+}

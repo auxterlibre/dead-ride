@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bpkshot4xw7qk"]
+
+[ext_resource type="Script" path="res://_tools/probes/ui/backpack_shot.gd" id="1_shot"]
+
+[node name="BackpackShot" type="Node"]
+script = ExtResource("1_shot")

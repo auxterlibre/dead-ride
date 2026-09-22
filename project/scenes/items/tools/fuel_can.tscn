@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bn6v1conblw8d"]
+
+[ext_resource type="ArrayMesh" uid="uid://bxtqkv4iye8e" path="res://assets/meshes/props/resource_bits/fuel_a_jerrycan.tres" id="1_wucge"]
+
+[node name="FuelCan" type="MeshInstance3D" unique_id=1075986330]
+mesh = ExtResource("1_wucge")

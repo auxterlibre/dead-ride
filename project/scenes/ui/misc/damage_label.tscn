@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://ddh2lrfovvkss"]
+
+[ext_resource type="FontFile" uid="uid://bbctssp8rxgju" path="res://assets/fonts/JetBrainsMono-Bold.ttf" id="1_xw38a"]
+[ext_resource type="Script" uid="uid://cl5p0ncpqd17l" path="res://scripts/ui/misc/damage_label.gd" id="2_8oadq"]
+
+[node name="DamageLabel" type="Label3D" unique_id=1933431287]
+billboard = 1
+modulate = Color(0.8392157, 0.15686275, 0.15686275, 1)
+outline_modulate = Color(0, 0.1882353, 0.28627452, 1)
+text = "100"
+font = ExtResource("1_xw38a")
+font_size = 128
+outline_size = 16
+script = ExtResource("2_8oadq")

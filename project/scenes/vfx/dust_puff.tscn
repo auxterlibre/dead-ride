@@ -1,0 +1,110 @@
+[gd_scene format=3 uid="uid://ddtl2ltk3xx2w"]
+
+[ext_resource type="Texture2D" uid="uid://dex0qbi3puwf3" path="res://assets/textures/vfx/smoke/smoke_sheet.png" id="1_smoke"]
+
+[sub_resource type="Gradient" id="Gradient_aftcj"]
+colors = PackedColorArray(0.72, 0.68, 0.62, 1, 0.72, 0.68, 0.62, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_lsxqk"]
+gradient = SubResource("Gradient_aftcj")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_40hx0"]
+angle_max = 360.0
+direction = Vector3(0, 0.3, 1)
+spread = 50.0
+initial_velocity_min = 1.5
+initial_velocity_max = 4.0
+gravity = Vector3(0, -9, 0)
+scale_min = 0.5
+scale_max = 2.0
+color = Color(0.6848959, 0.6848959, 0.6848959, 1)
+color_ramp = SubResource("GradientTexture1D_lsxqk")
+collision_mode = 1
+collision_friction = 0.8
+collision_bounce = 0.3
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b3g3d"]
+transparency = 1
+shading_mode = 0
+vertex_color_use_as_albedo = true
+billboard_mode = 3
+billboard_keep_scale = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="QuadMesh" id="QuadMesh_eqlcp"]
+material = SubResource("StandardMaterial3D_b3g3d")
+size = Vector2(0.05, 0.05)
+
+[sub_resource type="Gradient" id="Gradient_3tds8"]
+colors = PackedColorArray(0.62, 0.58, 0.54, 0.4, 0.62, 0.58, 0.54, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_40hx0"]
+gradient = SubResource("Gradient_3tds8")
+
+[sub_resource type="Curve" id="Curve_4n1mq"]
+_limits = [0.0, 3.0, 0.0, 1.0]
+_data = [Vector2(0, 0.5), 0.0, 0.0, 0, 0, Vector2(1, 2.2), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_b3g3d"]
+curve = SubResource("Curve_4n1mq")
+
+[sub_resource type="Curve" id="Curve_lsxqk"]
+_limits = [0.0, 3.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 2.093525), 0.83197224, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_eqlcp"]
+curve = SubResource("Curve_lsxqk")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_m44x6"]
+direction = Vector3(0, 0.2, 1)
+spread = 30.0
+initial_velocity_min = 0.3
+initial_velocity_max = 0.7
+gravity = Vector3(0, 0.9, 0)
+damping_min = 0.5
+damping_max = 1.0
+scale_min = 0.7
+scale_curve = SubResource("CurveTexture_b3g3d")
+scale_over_velocity_min = 1.0
+scale_over_velocity_max = 5.0
+scale_over_velocity_curve = SubResource("CurveTexture_eqlcp")
+color_ramp = SubResource("GradientTexture1D_40hx0")
+anim_offset_max = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3tds8"]
+transparency = 1
+shading_mode = 0
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_smoke")
+billboard_mode = 3
+billboard_keep_scale = true
+particles_anim_h_frames = 10
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="QuadMesh" id="QuadMesh_t6lea"]
+material = SubResource("StandardMaterial3D_3tds8")
+size = Vector2(0.22, 0.22)
+
+[node name="ImpactBurst" type="Node3D" unique_id=1702759879]
+
+[node name="Debris" type="GPUParticles3D" parent="." unique_id=1701970410]
+emitting = false
+lifetime = 1.5
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_40hx0")
+draw_pass_1 = SubResource("QuadMesh_eqlcp")
+
+[node name="Smoke" type="GPUParticles3D" parent="." unique_id=733181573]
+emitting = false
+amount = 5
+lifetime = 1.4
+one_shot = true
+explosiveness = 0.9
+process_material = SubResource("ParticleProcessMaterial_m44x6")
+draw_pass_1 = SubResource("QuadMesh_t6lea")

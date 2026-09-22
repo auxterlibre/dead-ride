@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://bq3j7w2r8v5xk"]
+
+[ext_resource type="Script" uid="uid://bkas84t8t4l50" path="res://scripts/vfx/blood_pool.gd" id="1_pool"]
+[ext_resource type="Shader" uid="uid://bkfnwa7xfhfcf" path="res://shaders/blood_pool.gdshader" id="2_pool"]
+
+[sub_resource type="Gradient" id="Gradient_drop"]
+offsets = PackedFloat32Array(0, 0.25, 0.8, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_drop"]
+gradient = SubResource("Gradient_drop")
+width = 256
+height = 256
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pool"]
+resource_local_to_scene = true
+render_priority = 0
+shader = ExtResource("2_pool")
+shader_parameter/drop_texture = SubResource("GradientTexture2D_drop")
+shader_parameter/blood_color = Color(0.54901963, 0.03137255, 0.03529412, 1)
+shader_parameter/blood_alpha = 0.94
+shader_parameter/merge_factor = 0.5
+shader_parameter/edge_softness = 0.04
+shader_parameter/depth_shade = 0.45
+shader_parameter/positions = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+shader_parameter/scales = PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+metadata/_live_palette_bindings = {
+"shader_parameter/blood_color": "1budy"
+}
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_pool"]
+size = Vector2(6, 6)
+
+[node name="BloodPool" type="MeshInstance3D" unique_id=1248460948]
+material_override = SubResource("ShaderMaterial_pool")
+cast_shadow = 0
+mesh = SubResource("PlaneMesh_pool")
+script = ExtResource("1_pool")

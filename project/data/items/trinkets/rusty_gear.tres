@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="TrinketData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/items/trinket_data.gd" id="1_script"]
+
+[resource]
+script = ExtResource("1_script")
+name = "Rusty Gear"
+price = 12
+weight = 0.4
+size = Vector2i(1, 1)
+rarity = 0

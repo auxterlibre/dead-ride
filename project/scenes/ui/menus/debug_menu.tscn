@@ -1,0 +1,105 @@
+[gd_scene format=3 uid="uid://8dlcsow2hhn6"]
+
+[ext_resource type="Theme" uid="uid://dtstj8mxkqca3" path="res://default_theme.tres" id="1_itjg7"]
+[ext_resource type="Script" uid="uid://dismy2c5gufd1" path="res://scripts/ui/menus/debug_menu.gd" id="1_menu"]
+[ext_resource type="PackedScene" uid="uid://qroemx08nc3u" path="res://scenes/ui/settings/settings_row_list.tscn" id="2_row"]
+[ext_resource type="FontFile" uid="uid://b4eqtttrevslk" path="res://assets/fonts/AntonSC-Regular.ttf" id="3_anton"]
+[ext_resource type="PackedScene" uid="uid://chn8gugupyv77" path="res://scenes/ui/input/input_key_button.tscn" id="5_7b4e8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
+bg_color = Color(0.91764706, 0.8862745, 0.7176471, 1)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_header"]
+bg_color = Color(0.79607844, 0.75686276, 0.5372549, 1)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+
+[node name="DebugMenu" type="Control" unique_id=1153675113]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_itjg7")
+script = ExtResource("1_menu")
+row_scene = ExtResource("2_row")
+
+[node name="Dim" type="ColorRect" parent="." unique_id=558790213]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0.1882353, 0.28627452, 0.4)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1152473131]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -550.0
+offset_top = -130.0
+offset_right = 550.0
+offset_bottom = 130.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 16
+
+[node name="Panel" type="PanelContainer" parent="VBoxContainer" unique_id=764627251]
+custom_minimum_size = Vector2(1100, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="Layout" type="VBoxContainer" parent="VBoxContainer/Panel" unique_id=591705852]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Title" type="Label" parent="VBoxContainer/Panel/Layout" unique_id=927774684]
+custom_minimum_size = Vector2(0, 112)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.32156864, 0.40392157, 0.44705883, 1)
+theme_override_fonts/font = ExtResource("3_anton")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_header")
+text = "DEBUG  "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Margin" type="MarginContainer" parent="VBoxContainer/Panel/Layout" unique_id=307506035]
+layout_mode = 2
+theme_override_constants/margin_left = 48
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 48
+theme_override_constants/margin_bottom = 40
+
+[node name="Body" type="VBoxContainer" parent="VBoxContainer/Panel/Layout/Margin" unique_id=1502229184]
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="RowContainer" type="VBoxContainer" parent="VBoxContainer/Panel/Layout/Margin/Body" unique_id=1953338823]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer/Panel/Layout/Margin/Body" unique_id=1915513845]
+layout_mode = 2
+
+[node name="ButtonContainer" type="VBoxContainer" parent="VBoxContainer/Panel/Layout/Margin/Body" unique_id=644319760]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="InputKeyButton" parent="VBoxContainer" unique_id=1715586947 instance=ExtResource("5_7b4e8")]
+layout_mode = 2
+size_flags_horizontal = 4
+key_text = "F9"

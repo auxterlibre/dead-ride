@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="FontFile" path="res://assets/fonts/JetBrainsMono-Regular.ttf" id="1_font"]
+
+[node name="StatRow" type="HBoxContainer"]
+offset_right = 484.0
+offset_bottom = 37.0
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.68235296, 0.7411765, 0.7607843, 1)
+theme_override_fonts/font = ExtResource("1_font")
+theme_override_font_sizes/font_size = 32
+text = "Damage"
+
+[node name="Value" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.91764706, 0.8862745, 0.7176471, 1)
+theme_override_fonts/font = ExtResource("1_font")
+theme_override_font_sizes/font_size = 32
+text = "0"
+horizontal_alignment = 2

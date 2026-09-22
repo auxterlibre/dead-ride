@@ -1,0 +1,38 @@
+[gd_resource type="ArrayMesh" format=4 uid="uid://dj105qmv6i440"]
+
+[ext_resource type="Material" uid="uid://dcrdxcpe05hu3" path="res://assets/materials/apocalypse_weapons/apocalypse_weapons_material_ammo_box.tres" id="1_rumjc"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_o86fk"]
+_surfaces = [{
+"aabb": AABB(-0.07646081, 5.8114527e-08, -0.04447393, 0.15292144, 0.04231325, 0.08894788),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAACAAEAAwAEAAEABQAAAAIAAwAAAAUABAAGAAIABQACAAYAAwAHAAQAAwAFAAcABwAGAAQABwAFAAYA"),
+"name": "AmmoBox",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAP7/AAAAAP//AAAAAAAA/v///wAAAAAAAAAAAAD/////AAAAAP//AAD+/wAA///+//7/AAD//wAAAAAAAA==")
+}]
+blend_shape_mode = 0
+
+[resource]
+resource_name = "ammo_pistol_01"
+_surfaces = [{
+"aabb": AABB(-0.07646081, 5.8114527e-08, -0.04447393, 0.15292144, 0.04231325, 0.08894788),
+"attribute_data": PackedByteArray("WT3cDtMwVynTMNwOWT1XKSkviBAUAdsDKS/bAxQBiBBBPYYtqTATSKkwhi1BPRNIyT6PQHZLeRJ2S49AyT55EiYvYxIRAR4tEQFjEiYvHi0wL3EwGgEsSxoBcTAwLyxL"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
+"material": ExtResource("1_rumjc"),
+"name": "AmmoBox",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAAAAP7/VNUAAP//AABU1QAA/v///1TVAAAAAAAAVNUAAAAAAAD///////8AAP//AAD//wAA/////wAAAAD/////AAAAAFTV///+//7/VNX/////AABU1f//AAD+/1TV//8AAP7//78AAP7/////v////v/+//+/AAAAAP7//78AAAAAAAD/////AAD+//////8AAAAA//8AAAAA/v////////8AAP+/AAD+/////78AAP//AAD/v////v/+//+/VFWqqlRVqqpUVaqqVFWqqv9/////f////3////9///+qqlRVqqpUVaqqVFWqqlRV//////////////////////9//z//f/8//3//P/9//z////9/////f////3////9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_o86fk")
+metadata/extras = {
+"hops": {}
+}

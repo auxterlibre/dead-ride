@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://bl8gfmccbiawh"]
+
+[ext_resource type="ArrayMesh" uid="uid://b3p32kb3kegmb" path="res://assets/meshes/apocalypse_weapons/taser/parts/taser_gun.tres" id="1_7oumf"]
+[ext_resource type="ArrayMesh" uid="uid://24cw2xaftyey" path="res://assets/meshes/apocalypse_weapons/taser/parts/taser_gun_magazine.tres" id="2_rqtuq"]
+[ext_resource type="ArrayMesh" uid="uid://clisrw36qjjkd" path="res://assets/meshes/apocalypse_weapons/taser/parts/taser_gun_trigger.tres" id="3_0m7hm"]
+
+[node name="TaserGun" type="MeshInstance3D" unique_id=83396141]
+mesh = ExtResource("1_7oumf")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Taser_Gun_Magazine" type="MeshInstance3D" parent="." unique_id=1674499469]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0025048654, 0.06890535, 0.17847347)
+mesh = ExtResource("2_rqtuq")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Taser_Gun_Trigger" type="MeshInstance3D" parent="." unique_id=87553980]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.051424503, 0.054763794)
+mesh = ExtResource("3_0m7hm")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}

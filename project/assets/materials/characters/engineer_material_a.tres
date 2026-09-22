@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bbtuw1q5ffn7d"]
+
+[ext_resource type="Texture2D" path="res://assets/textures/characters/engineer/engineer_texture_a.png" id="1_4hey6"]
+
+[resource]
+resource_name = "engineer_material_a"
+cull_mode = 2
+albedo_texture = ExtResource("1_4hey6")
+roughness = 0.5
+metadata/_gltf_primary_texture_coord = 0

@@ -1,0 +1,10 @@
+[gd_resource type="NavigationMesh" format=3 uid="uid://bkjbx2rabawb5"]
+
+[resource]
+vertices = PackedVector3Array(-11, 0.9945679, -17.5, -8.75, 0.9945679, -17.5, -8.75, 0.9945679, -39, -11.75, 0.9945679, -16.75, -47, 0.9945679, -39, -47, 0.9945679, -16, -11.75, 0.9945679, -16, -5.5, 0.9945679, -16.75, -5.5, 0.9945679, -16, -3, 0.9945679, -16, -3, 0.9945679, -16.75, -2.25, 0.9945679, -17.5, 0.25, 0.9945679, -17.5, 0.25, 0.9945679, -39, -6.25, 0.9945679, -17.5, 2.5, 0.9945679, -17.5, 3.25, 0.9945679, -16.5, 47, 0.9945679, -16.5, 47, 0.9945679, -39, 3.25, 0.9945679, -15.25, 2.5, 0.9945679, -14.5, 0.25, 0.9945679, 39, 47, 0.9945679, 39, 0.25, 0.9945679, -14.5, -11.75, 0.9945679, -15.25, -11, 0.9945679, -14.5, -47, 0.9945679, 39, -8.75, 0.9945679, 39, -8.75, 0.9945679, -14.5, -3, 0.9945679, -15.25, -5.5, 0.9945679, -15.25, -2.25, 0.9945679, -14.5, -6.25, 0.9945679, -14.5)
+polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(0, 3, 2), PackedInt32Array(2, 3, 5), PackedInt32Array(2, 5, 4), PackedInt32Array(3, 6, 5), PackedInt32Array(10, 9, 7), PackedInt32Array(7, 9, 8), PackedInt32Array(13, 12, 11), PackedInt32Array(7, 14, 10), PackedInt32Array(10, 14, 11), PackedInt32Array(11, 14, 2), PackedInt32Array(11, 2, 13), PackedInt32Array(14, 1, 2), PackedInt32Array(15, 12, 13), PackedInt32Array(15, 13, 16), PackedInt32Array(16, 13, 17), PackedInt32Array(17, 13, 18), PackedInt32Array(19, 16, 17), PackedInt32Array(19, 17, 20), PackedInt32Array(20, 17, 22), PackedInt32Array(20, 22, 21), PackedInt32Array(21, 23, 20), PackedInt32Array(5, 6, 24), PackedInt32Array(24, 25, 5), PackedInt32Array(5, 25, 26), PackedInt32Array(26, 25, 27), PackedInt32Array(25, 28, 27), PackedInt32Array(30, 8, 29), PackedInt32Array(29, 8, 9), PackedInt32Array(31, 23, 21), PackedInt32Array(29, 31, 30), PackedInt32Array(30, 31, 32), PackedInt32Array(32, 31, 21), PackedInt32Array(32, 21, 27), PackedInt32Array(27, 28, 32)]
+geometry_parsed_geometry_type = 1
+geometry_collision_mask = 20
+geometry_source_geometry_mode = 1
+geometry_source_group_name = &"nav_source"
+agent_radius = 0.9

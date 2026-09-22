@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://b7ak2v41xmejv"]
+
+[ext_resource type="Script" uid="uid://c83auvf3qviud" path="res://scripts/weapons/weapon_melee.gd" id="1_2kjxm"]
+[ext_resource type="ArrayMesh" uid="uid://bgdu7ytg10uqw" path="res://assets/meshes/items/weapons/melee/club.tres" id="2_cisrb"]
+[ext_resource type="Script" uid="uid://cgl4k3cfb8jor" path="res://scripts/components/character/hit_box.gd" id="2_qc5yt"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_crd4f"]
+size = Vector3(0.570038, 1.21057, 0.463028)
+
+[node name="Club" type="Node3D" unique_id=1369465989]
+script = ExtResource("1_2kjxm")
+
+[node name="Mesh" type="MeshInstance3D" parent="." unique_id=1571621787]
+mesh = ExtResource("2_cisrb")
+skeleton = NodePath("")
+
+[node name="HitBox" type="Area3D" parent="." unique_id=247721316]
+collision_layer = 0
+collision_mask = 0
+monitoring = false
+monitorable = false
+script = ExtResource("2_qc5yt")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HitBox" unique_id=95953344]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00837708, 0.670959, -0.0221939)
+shape = SubResource("BoxShape3D_crd4f")

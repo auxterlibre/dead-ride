@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://deb00ki3vwdkn"]
+
+[ext_resource type="Script" uid="uid://bw00fq0cbeynw" path="res://scripts/items/grenade.gd" id="1_grenade"]
+[ext_resource type="ArrayMesh" uid="uid://3c20mm06vgyj" path="res://assets/meshes/items/weapons/throwables/grenade.tres" id="2_mesh"]
+[ext_resource type="AudioStream" uid="uid://paqw2hwwrrp" path="res://assets/audio/impact/grenade_hit_floor.ogg" id="3_land"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_grenade"]
+bounce = 0.7
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_grenade"]
+radius = 0.22
+
+[node name="Grenade" type="RigidBody3D" unique_id=1824444436]
+collision_layer = 0
+collision_mask = 28
+mass = 0.4
+physics_material_override = SubResource("PhysicsMaterial_grenade")
+continuous_cd = true
+contact_monitor = true
+max_contacts_reported = 4
+angular_damp = 2.0
+script = ExtResource("1_grenade")
+
+[node name="Mesh" type="MeshInstance3D" parent="." unique_id=1145286973]
+mesh = ExtResource("2_mesh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=3336750]
+shape = SubResource("SphereShape3D_grenade")
+
+[node name="AudioLand" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_land")
+bus = &"SFX"

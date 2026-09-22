@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://i5ydjn3qdwg8"]
+
+[ext_resource type="Texture2D" uid="uid://c044qo35756xx" path="res://_tools/gym/environment/prototypebits_texture.png" id="1_hu7ra"]
+
+[resource]
+resource_name = "prototype_texture"
+albedo_texture = ExtResource("1_hu7ra")
+roughness = 0.8
+metadata/_gltf_primary_texture_coord = 0

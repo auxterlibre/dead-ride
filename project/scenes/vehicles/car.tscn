@@ -1,0 +1,191 @@
+[gd_scene format=3 uid="uid://cybdinxiojqlp"]
+
+[ext_resource type="PackedScene" uid="uid://cpa8050ct0736" path="res://scenes/vehicles/vehicle_base.tscn" id="1_base"]
+[ext_resource type="Resource" uid="uid://dft6nprephdfh" path="res://data/vehicles/car.tres" id="2_data"]
+[ext_resource type="ArrayMesh" uid="uid://dtxod50i3s35n" path="res://assets/meshes/vehicles/car_0/body.tres" id="3_body"]
+[ext_resource type="ArrayMesh" uid="uid://bprgcuy7606pq" path="res://assets/meshes/vehicles/car_0/bumper_front.tres" id="4_bfront"]
+[ext_resource type="ArrayMesh" uid="uid://b77ajnvpiswca" path="res://assets/meshes/vehicles/car_0/bumper_flip.tres" id="5_bflip"]
+[ext_resource type="ArrayMesh" uid="uid://b4garug28jmk2" path="res://assets/meshes/vehicles/car_0/bumper_rear.tres" id="6_brear"]
+[ext_resource type="ArrayMesh" uid="uid://3p7q62ey55ls" path="res://assets/meshes/vehicles/car_0/plate.tres" id="7_plate"]
+[ext_resource type="ArrayMesh" uid="uid://yw2oajewblub" path="res://assets/meshes/vehicles/car_0/roof_track.tres" id="8_roof"]
+[ext_resource type="ArrayMesh" uid="uid://bligiky7dvuj6" path="res://assets/meshes/vehicles/car_0/wheel_rear_left.tres" id="9_wrl"]
+[ext_resource type="ArrayMesh" uid="uid://du0nivdh54q6o" path="res://assets/meshes/vehicles/car_0/wheel_rear_right.tres" id="10_wrr"]
+[ext_resource type="ArrayMesh" uid="uid://qagltqu71hrb" path="res://assets/meshes/vehicles/car_0/wheel_front_left.tres" id="11_wfl"]
+[ext_resource type="ArrayMesh" uid="uid://bch8pt2h4lsmw" path="res://assets/meshes/vehicles/car_0/wheel_front_right.tres" id="12_wfr"]
+[ext_resource type="Script" uid="uid://dw5x2lwhyyk5m" path="res://scripts/components/interactive_area.gd" id="13_door"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_26vok"]
+points = PackedVector3Array(1.47937, 1.51442, 1.05515, 1.17365, 1.20915, 1.51373, -0.81747, 2.19434, 0.521178, -1.27153, 0.4448, 1.36075, 1.17365, 0.291843, -1.84896, 0.809517, 2.21019, -1.31926, 1.25008, 0.291843, 1.36075, -1.04223, 1.35377, -1.95715, -1.50082, 1.51442, 1.05515, 0.562208, 0.138885, -2.15492, -0.818837, 2.19594, -1.30448, -1.04107, 0.216512, 1.24298, 1.04134, 1.21107, -2.0624, 0.733594, 2.27537, 0.3881, -1.1951, 0.368213, -1.84896, -1.11867, 1.20915, 1.51373, -0.686579, 2.2791, -1.17431, -1.03329, 0.224291, -0.814096, -1.27153, 0.52117, -1.77211, -0.975995, 1.28265, -2.03711, -0.556458, 0.3372, 1.42664, 0.562208, 1.28509, 1.51373, 1.47937, 1.20915, 0.825323, 1.08611, 1.28228, -1.9485, 1.05382, 0.251009, 1.19065, -1.50082, 1.20915, 0.825323, 0.808627, 2.20915, 0.534336, -1.50082, 1.51442, 0.825323, -0.686579, 2.2791, 0.390672, 1.47937, 1.51442, 0.825323, -0.981811, 0.707697, -2.04745, -0.759151, 1.99564, -1.53271)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_l2a5d"]
+points = PackedVector3Array(-1.27182, 0.673896, 1.51385, -1.19504, 0.215345, 2.20148, -1.04222, 1.05588, 2.66001, 1.0973, 0.138885, 2.50717, 1.17384, 1.20891, 1.51385, 0.494218, 0.3372, 1.58649, 1.0973, 1.05588, 2.66001, -1.11851, 1.20891, 1.74318, -0.965685, 0.597541, 2.73662, 1.25037, 0.673896, 1.51385, -1.11851, 0.138885, 2.50717, 1.17384, 0.826607, 2.73662, 1.17384, 0.138885, 2.20148, -0.515455, 0.3372, 1.58649, -1.11851, 0.138885, 2.20148, -1.11842, 1.10278, 1.5534, -1.11851, 0.750251, 2.73662, 0.944478, 0.597541, 2.73662, 1.0973, 1.20891, 1.74318, -1.27182, 0.44462, 2.20148, -1.11851, 1.05588, 2.58353, 1.25037, 0.291805, 2.20148, 1.17384, 1.05588, 2.58353, -1.01015, 1.15657, 1.57366, 1.17384, 0.368265, 2.58353, 1.17384, 1.20891, 1.66682, -1.11851, 0.291805, 2.58353)
+
+[sub_resource type="Gradient" id="Gradient_dust"]
+offsets = PackedFloat32Array(0, 0.17313433, 0.7044776, 1)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 0.68, 1, 1, 1, 0.55, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_dust"]
+gradient = SubResource("Gradient_dust")
+
+[sub_resource type="Curve" id="Curve_4d2n8"]
+_limits = [0.0, 3.0, 0.0, 1.0]
+_data = [Vector2(0, 0.1353383), 0.0, 0.0, 0, 0, Vector2(1, 2.2), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_6iuvm"]
+curve = SubResource("Curve_4d2n8")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_shggb"]
+resource_local_to_scene = true
+lifetime_randomness = 0.4
+angle_min = -180.0
+angle_max = 180.0
+direction = Vector3(0, 0.35, -1)
+spread = 60.0
+initial_velocity_min = 1.4
+initial_velocity_max = 3.0
+gravity = Vector3(0, 0.25, 0)
+damping_min = 1.4
+damping_max = 2.4
+scale_min = 4.0
+scale_max = 16.0
+scale_curve = SubResource("CurveTexture_6iuvm")
+color = Color(0.8784314, 0.70980394, 0.45882353, 1)
+color_ramp = SubResource("GradientTexture1D_dust")
+turbulence_enabled = true
+turbulence_noise_strength = 0.55
+turbulence_noise_scale = 2.0
+
+[node name="Car" unique_id=1145590547 instance=ExtResource("1_base")]
+data = ExtResource("2_data")
+
+[node name="HurtBox" parent="." index="1" unique_id=1331868739]
+collision_layer = 3
+monitorable = true
+
+[node name="CollisionShapeBack" type="CollisionShape3D" parent="HurtBox" index="0" unique_id=760389145]
+shape = SubResource("ConvexPolygonShape3D_26vok")
+
+[node name="CollisionShapeFront" type="CollisionShape3D" parent="HurtBox" index="1" unique_id=1112143095]
+shape = SubResource("ConvexPolygonShape3D_l2a5d")
+
+[node name="DustBackLeft" parent="." index="11" unique_id=2111712101]
+process_material = SubResource("ParticleProcessMaterial_shggb")
+
+[node name="DustBackRight" parent="." index="12" unique_id=2082442299]
+process_material = SubResource("ParticleProcessMaterial_shggb")
+
+[node name="DustBackLeftAlt" parent="." index="13" unique_id=799610745]
+process_material = SubResource("ParticleProcessMaterial_shggb")
+
+[node name="Meshes" type="Node3D" parent="." index="14" unique_id=225956184]
+
+[node name="Body" type="MeshInstance3D" parent="Meshes" index="0" unique_id=276121108]
+mesh = ExtResource("3_body")
+skeleton = NodePath("")
+
+[node name="Bumper_Front" type="MeshInstance3D" parent="Meshes" index="1" unique_id=1720850301]
+mesh = ExtResource("4_bfront")
+skeleton = NodePath("")
+
+[node name="Bumper_Front_Flip" type="MeshInstance3D" parent="Meshes" index="2" unique_id=268699852]
+mesh = ExtResource("5_bflip")
+skeleton = NodePath("")
+
+[node name="Bumper_Rear" type="MeshInstance3D" parent="Meshes" index="3" unique_id=290497131]
+mesh = ExtResource("6_brear")
+skeleton = NodePath("")
+
+[node name="Plate_Front" type="MeshInstance3D" parent="Meshes" index="4" unique_id=1587112594]
+mesh = ExtResource("7_plate")
+skeleton = NodePath("")
+
+[node name="RoofRack" type="MeshInstance3D" parent="Meshes" index="5" unique_id=671810138]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.52588e-05, 2.27405, -0.427897)
+visible = false
+mesh = ExtResource("8_roof")
+skeleton = NodePath("")
+
+[node name="CollisionShapeBack" type="CollisionShape3D" parent="." index="15" unique_id=123376399]
+shape = SubResource("ConvexPolygonShape3D_26vok")
+
+[node name="CollisionShapeFront" type="CollisionShape3D" parent="." index="16" unique_id=483079112]
+shape = SubResource("ConvexPolygonShape3D_l2a5d")
+
+[node name="WheelBackLeft" type="VehicleWheel3D" parent="." index="17" unique_id=1826960066]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.55, -1.3)
+use_as_traction = true
+wheel_roll_influence = 0.0
+wheel_radius = 0.4
+wheel_friction_slip = 1.5
+suspension_travel = 0.15
+suspension_stiffness = 80.0
+
+[node name="Wheel_Rear_Left" type="MeshInstance3D" parent="WheelBackLeft" index="0" unique_id=2031410740]
+mesh = ExtResource("9_wrl")
+skeleton = NodePath("")
+
+[node name="WheelBackRight" type="VehicleWheel3D" parent="." index="18" unique_id=1112578949]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.55, -1.3)
+use_as_traction = true
+wheel_roll_influence = 0.0
+wheel_radius = 0.4
+wheel_friction_slip = 1.5
+suspension_travel = 0.15
+suspension_stiffness = 80.0
+
+[node name="Wheel_Rear_Right" type="MeshInstance3D" parent="WheelBackRight" index="0" unique_id=804812528]
+mesh = ExtResource("10_wrr")
+skeleton = NodePath("")
+
+[node name="WheelFrontLeft" type="VehicleWheel3D" parent="." index="19" unique_id=1598273196]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.55, 1.8)
+use_as_steering = true
+wheel_roll_influence = 0.0
+wheel_radius = 0.4
+wheel_friction_slip = 1.4
+suspension_stiffness = 80.0
+
+[node name="Wheel_Front_Left" type="MeshInstance3D" parent="WheelFrontLeft" index="0" unique_id=556318664]
+mesh = ExtResource("11_wfl")
+skeleton = NodePath("")
+
+[node name="WheelFrontRight" type="VehicleWheel3D" parent="." index="20" unique_id=1358163655]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.55, 1.8)
+use_as_steering = true
+wheel_roll_influence = 0.0
+wheel_radius = 0.4
+wheel_friction_slip = 1.4
+suspension_stiffness = 80.0
+
+[node name="Wheel_Front_Right" type="MeshInstance3D" parent="WheelFrontRight" index="0" unique_id=1943437395]
+mesh = ExtResource("12_wfr")
+skeleton = NodePath("")
+
+[node name="DoorInteractionArea" type="Node3D" parent="." index="21" unique_id=1459855380 node_paths=PackedStringArray("target_object")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5556256, 1.2994533, -0.23270124)
+script = ExtResource("13_door")
+target_object = NodePath("..")
+callback = "add_driver"
+action_label = "Enter car"
+prompt_range = 1.3
+
+[node name="TrunkInteractionArea" type="Node3D" parent="." index="22" unique_id=669804324 node_paths=PackedStringArray("target_object")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, -2.2389245)
+script = ExtResource("13_door")
+target_object = NodePath("..")
+callback = "open_trunk"
+action_label = "Open trunk"
+prompt_range = 1.6
+
+[node name="RepairInteractionArea" type="Node3D" parent="." index="23" unique_id=1190622199 node_paths=PackedStringArray("target_object")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.99064577, 2.634532)
+script = ExtResource("13_door")
+target_object = NodePath("..")
+callback = "repair"
+action_label = "Repair car"
+prompt_range = 1.6
+enabled = false
+
+[node name="DustBackRightAlt" parent="." index="24" unique_id=1255886666]
+process_material = SubResource("ParticleProcessMaterial_shggb")

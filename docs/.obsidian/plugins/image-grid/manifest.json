@@ -1,0 +1,10 @@
+{
+  "id": "image-grid",
+  "name": "Image Grid",
+  "version": "1.0.1",
+  "minAppVersion": "1.7.2",
+  "description": "Render images in a CSS grid layout using image-grid code blocks.",
+  "author": "Martín M.",
+  "authorUrl": "https://github.com/skydiver",
+  "isDesktopOnly": false
+}

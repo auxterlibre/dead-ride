@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://da4xnhx7gm7ns"]
+
+[ext_resource type="ArrayMesh" uid="uid://cwyaa22kbuaa2" path="res://_tools/gym/environment/floor_mesh.tres" id="1_5358i"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0ipkf"]
+size = Vector3(4, 0.5, 4)
+
+[node name="Floor" type="StaticBody3D" unique_id=2059836618]
+collision_layer = 16
+collision_mask = 0
+metadata/surface = "cement"
+
+[node name="Mesh" type="MeshInstance3D" parent="." unique_id=1279125991]
+mesh = ExtResource("1_5358i")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1820474177]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25097656, 0)
+shape = SubResource("BoxShape3D_0ipkf")
+
+[node name="ParticleGroundCollider" type="GPUParticlesCollisionBox3D" parent="." unique_id=143034932]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
+size = Vector3(4, 0.5, 4)

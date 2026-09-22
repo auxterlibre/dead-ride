@@ -1,0 +1,35 @@
+[gd_resource type="ArrayMesh" format=4 uid="uid://ckuug2i88j8ps"]
+
+[ext_resource type="Material" uid="uid://c71fnm6d6nan7" path="res://assets/materials/junkyard/junkyard_material_color.tres" id="1_82kl0"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ay8v0"]
+_surfaces = [{
+"aabb": AABB(-0.07330004, -1.1786256, -0.07329885, 0.1466001, 3.143003, 0.14660007),
+"format": 34896613377,
+"index_count": 24,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAAAAIAAwAFAAEABAACAAYAAwAHAAUABwAEAAYABwAGAAUA"),
+"name": "Color",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("/38AAP//AAAAAP///38AAP9//////wAAAAAAAP9/AAD//wAA/38AAP9///8AAAAA//////9/AAD/fwAAAAAAAA==")
+}]
+blend_shape_mode = 0
+
+[resource]
+resource_name = "magnet_crane_rope_001"
+_surfaces = [{
+"aabb": AABB(-0.07330004, -1.1786256, -0.07329885, 0.1466001, 3.143003, 0.14660007),
+"attribute_data": PackedByteArray("L+PbbSrj1W0q489tL+PVbSrj2m0v49ptKuPgbS/j4G0q4+ZtL+PbbQ=="),
+"format": 34896613399,
+"index_count": 24,
+"index_data": PackedByteArray("AAABAAIAAAADAAEAAwAEAAEAAwAFAAQABQAGAAQABQAHAAYABwAIAAYABwAJAAgA"),
+"material": ExtResource("1_82kl0"),
+"name": "Color",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 10,
+"vertex_data": PackedByteArray("/38AAP//978AAP///3/L1P9//////xm+AAAAAP9/VNX/f///AAD///9/AAAAAP////////9/VNX//wAA/3/K1P9///////e//38AAP//Gb7/f/9/qFVRq/9//39UVaqq/z//v/8//7+qqlRVVaqsVP9//3//f/9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_ay8v0")

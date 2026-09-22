@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c71fnm6d6nan7"]
+
+[ext_resource type="Texture2D" uid="uid://dvo83o60o4jdr" path="res://assets/textures/junkyard/junkyard_color.png" id="1_uwf00"]
+
+[resource]
+resource_name = "junkyard_material_color"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_uwf00")
+roughness = 0.5
+metadata/_gltf_primary_texture_coord = 0

@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dbvi8qak0up0c"]
+
+[ext_resource type="Texture2D" uid="uid://dimqbhg7drgli" path="res://assets/textures/props/dummy/prototypebits_texture.png" id="1_yb45u"]
+
+[resource]
+resource_name = "dummy_material"
+albedo_texture = ExtResource("1_yb45u")
+roughness = 0.4
+metadata/_gltf_primary_texture_coord = 0

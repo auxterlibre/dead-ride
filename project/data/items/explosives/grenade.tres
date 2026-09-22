@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ExplosiveData" format=3 uid="uid://dethn64qlnwh2"]
+
+[ext_resource type="Texture2D" uid="uid://delgk1ssxsuhd" path="res://assets/textures/thumbnails/explosives/grenade.png" id="1_hd4qa"]
+[ext_resource type="Script" uid="uid://oidmo4yjll8j" path="res://scripts/data/items/explosive_data.gd" id="1_script"]
+[ext_resource type="PackedScene" uid="uid://deb00ki3vwdkn" path="res://scenes/items/explosives/grenade.tscn" id="3_g21ni"]
+[ext_resource type="PackedScene" uid="uid://byixgo18wqa0j" path="res://scenes/items/explosives/grenade_held.tscn" id="4_held"]
+
+[resource]
+script = ExtResource("1_script")
+thrown_scene = ExtResource("3_g21ni")
+held_scene = ExtResource("4_held")
+name = "Frag Grenade"
+weight = 0.4
+icon = ExtResource("1_hd4qa")
+model = ExtResource("3_g21ni")
+price = 90

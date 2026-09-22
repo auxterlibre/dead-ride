@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Project/_tools/verify.sh *)",
+      "Bash(./Project/_tools/verify.sh *)",
+      "Bash(bash Project/_tools/verify.sh *)",
+      "Bash(tools/playtest.sh *)",
+      "Bash(git fetch *)",
+      "Bash(\"C:/Program Files/Godot_v4.7/Godot_v4.7-stable_win64_console.exe\" *)",
+      "Bash(\"/c/Program Files/Godot_v4.7/Godot_v4.7-stable_win64_console.exe\" *)",
+      "Bash(\"C:/Program Files/Godot_v4.7.1/Godot_v4.7.1-stable_win64_console.exe\" *)",
+      "PowerShell(& \"C:\\Program Files\\Godot_v4.7\\Godot_v4.7-stable_win64_console.exe\" *)",
+      "PowerShell(& \"C:\\Program Files\\Godot_v4.7.1\\Godot_v4.7.1-stable_win64_console.exe\" *)",
+      "PowerShell(Get-ChildItem *)",
+      "PowerShell(Get-Content *)",
+      "PowerShell(Get-Item *)",
+      "PowerShell(Get-Command *)",
+      "PowerShell(Get-Process *)",
+      "PowerShell(Get-FileHash *)",
+      "PowerShell(Select-String *)",
+      "PowerShell(Select-Object *)",
+      "PowerShell(Measure-Object *)",
+      "PowerShell(Test-Path *)",
+      "mcp__4594cf5d-6168-4359-a1de-22722df63e9c__get_screenshot",
+      "mcp__4594cf5d-6168-4359-a1de-22722df63e9c__get_metadata"
+    ]
+  }
+}

@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://b7m6awvicpb4v"]
+
+[ext_resource type="ArrayMesh" uid="uid://dgodlqy8pninc" path="res://assets/meshes/apocalypse_weapons/pistol/parts/pistol_4_base.tres" id="1_08hmh"]
+[ext_resource type="ArrayMesh" uid="uid://mcj07cacjc0t" path="res://assets/meshes/apocalypse_weapons/pistol/parts/pistol_4_barrel.tres" id="2_gsrqu"]
+[ext_resource type="ArrayMesh" uid="uid://qucb106pgpm2" path="res://assets/meshes/apocalypse_weapons/pistol/parts/pistol_4_drum.tres" id="3_klryp"]
+[ext_resource type="ArrayMesh" uid="uid://bkdfkwmo0ncd1" path="res://assets/meshes/apocalypse_weapons/pistol/parts/pistol_4_bolt.tres" id="4_ixcqh"]
+[ext_resource type="ArrayMesh" uid="uid://c0da44ull6w15" path="res://assets/meshes/apocalypse_weapons/pistol/parts/pistol_4_trigger.tres" id="5_3hbl1"]
+
+[node name="Pistol4Base" type="MeshInstance3D" unique_id=739204960]
+mesh = ExtResource("1_08hmh")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Pistol4_Barrel" type="MeshInstance3D" parent="." unique_id=1885516769]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00016325139, 0.03179884, 0.12521362)
+mesh = ExtResource("2_gsrqu")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Pistol4_Drum" type="MeshInstance3D" parent="Pistol4_Barrel" unique_id=480031803]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5520365e-06, 0.027171612, -0.03770733)
+mesh = ExtResource("3_klryp")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Pistol4_Bolt" type="MeshInstance3D" parent="." unique_id=1973370825]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06272912, 0.029055595)
+mesh = ExtResource("4_ixcqh")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Pistol4_Trigger" type="MeshInstance3D" parent="." unique_id=464083598]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.030115366, 0.046884537)
+mesh = ExtResource("5_3hbl1")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Place_Pistol4_Charm" type="Node3D" parent="." unique_id=2003365288]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0121767465, 0.03093052, 0.101202965)
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Place_Pistol4_Magazine" type="Node3D" parent="." unique_id=1929336102]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00015572915, 0.05897045, 0.08750725)
+metadata/extras = {
+"MM": {},
+"hops": {}
+}

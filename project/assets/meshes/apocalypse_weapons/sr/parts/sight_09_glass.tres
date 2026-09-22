@@ -1,0 +1,38 @@
+[gd_resource type="ArrayMesh" format=4 uid="uid://ctdyepw167dt8"]
+
+[ext_resource type="Material" uid="uid://cuyc1fdmvrdy6" path="res://assets/materials/apocalypse_weapons/apocalypse_weapons_material_sight_glass.tres" id="1_p10ek"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_1oifw"]
+_surfaces = [{
+"aabb": AABB(-0.024919186, 0.01045773, 0.283577, 0.04967045, 0.049670428, 0.00810957),
+"format": 34359742465,
+"index_count": 24,
+"index_data": PackedByteArray("AAABAAIAAgABAAMABAABAAAAAwABAAUABgABAAQABQABAAcACAABAAYABwABAAgA"),
+"name": "Sight_Glass",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 9,
+"vertex_data": PackedByteArray("KsPKPBmyOj0BMZE+wBCwuFaPED3xV5U+AysnPPFIdj0BMZE+VespvPFIdj0CMZE+KMPKPBfZzDwBMZE+UiPMvBmyOj0CMZE+CCsnPOZWKzwCMZE+TCPMvAvZzDwCMZE+UespvOZWKzwCMZE+")
+}]
+blend_shape_mode = 0
+
+[resource]
+resource_name = "sight_09_glass"
+_surfaces = [{
+"aabb": AABB(-0.024919186, 0.01045773, 0.283577, 0.04967045, 0.049670428, 0.00810957),
+"attribute_data": PackedByteArray("yr9ePnFOOz/Mv14+cE47P8y/Xj5wTjs/zL9ePnBOOz/Mv14+cE47P8y/Xj5wTjs/zL9ePnBOOz/Mv14+cE47P8y/Xj5wTjs/"),
+"format": 34359742487,
+"index_count": 24,
+"index_data": PackedByteArray("AAABAAIAAgABAAMABAABAAAAAwABAAUABgABAAQABQABAAcACAABAAYABwABAAgA"),
+"material": ExtResource("1_p10ek"),
+"name": "Sight_Glass",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 9,
+"vertex_data": PackedByteArray("KsPKPBmyOj0BMZE+wBCwuFaPED3xV5U+AysnPPFIdj0BMZE+VespvPFIdj0CMZE+KMPKPBfZzDwBMZE+UiPMvBmyOj0CMZE+CCsnPOZWKzwCMZE+TCPMvAvZzDwCMZE+UespvOZWKzwCMZE+lZmYiv///z//f/9/////P5iKlZn///8/ZnWVmf///z+VmWZ1////P2lmmIr///8/mIppZv///z9pZmZ1////P2Z1aWb///8/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_1oifw")
+metadata/extras = {
+"hops": {}
+}

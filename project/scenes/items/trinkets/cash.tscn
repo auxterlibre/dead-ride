@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://b5p1vcm8r2646"]
+
+[ext_resource type="ArrayMesh" uid="uid://d0sli2v7t1buq" path="res://assets/meshes/items/trinkets/cash.tres" id="1_8fn75"]
+
+[node name="Cash" type="MeshInstance3D" unique_id=531294639]
+mesh = ExtResource("1_8fn75")

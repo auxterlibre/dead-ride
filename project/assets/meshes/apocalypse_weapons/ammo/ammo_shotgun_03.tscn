@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://ce51thbnr4xw0"]
+
+[ext_resource type="ArrayMesh" uid="uid://cadtma5gdfb1g" path="res://assets/meshes/apocalypse_weapons/ammo/parts/ammo_shotgun_02.tres" id="1_bwakp"]
+[ext_resource type="ArrayMesh" uid="uid://b3u3qt0y07og0" path="res://assets/meshes/apocalypse_weapons/ammo/parts/ammo_shotgun_03_box.tres" id="2_petad"]
+
+[node name="AmmoShotgun03" type="MeshInstance3D" unique_id=325887235]
+mesh = ExtResource("1_bwakp")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Ammo_Shotgun_03_Box" type="MeshInstance3D" parent="." unique_id=185907632]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.101552725, 0, 0)
+mesh = ExtResource("2_petad")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}

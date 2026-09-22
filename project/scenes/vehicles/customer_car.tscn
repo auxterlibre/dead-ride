@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="PackedScene" uid="uid://cybdinxiojqlp" path="res://scenes/vehicles/car.tscn" id="1_car"]
+[ext_resource type="Script" path="res://scripts/components/vehicle/vehicle_steering.gd" id="2_steering"]
+[ext_resource type="Script" path="res://scripts/components/vehicle/vehicle_ai.gd" id="3_ai"]
+
+[node name="CustomerCar" instance=ExtResource("1_car")]
+
+[node name="DoorInteractionArea" parent="."]
+enabled = false
+
+[node name="TrunkInteractionArea" parent="."]
+enabled = false
+
+[node name="VehicleSteering" type="Node" parent="."]
+script = ExtResource("2_steering")
+
+[node name="VehicleAI" type="Node" parent="."]
+script = ExtResource("3_ai")

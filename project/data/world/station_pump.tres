@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="GasPumpData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/gas_pump_data.gd" id="1_script"]
+
+[resource]
+script = ExtResource("1_script")
+name = "Pump"
+tank_size = 2000.0
+wholesale_price = 2
+pump_price = 5
+flow_rate = 12.0

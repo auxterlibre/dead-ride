@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="FuelCanData" format=3 uid="uid://ti8xtcartr6l"]
+
+[ext_resource type="Script" uid="uid://cexrgngrgkm8b" path="res://scripts/data/items/fuel_can_data.gd" id="1_script"]
+[ext_resource type="PackedScene" uid="uid://bn6v1conblw8d" path="res://scenes/items/tools/fuel_can.tscn" id="2_model"]
+[ext_resource type="Texture2D" uid="uid://b4r3b4n0a3iu4" path="res://assets/textures/thumbnails/tools/fuel_can.png" id="3_icon"]
+
+[resource]
+script = ExtResource("1_script")
+name = "Fuel Can"
+weight = 1.2
+size = Vector2i(1, 2)
+icon = ExtResource("3_icon")
+model = ExtResource("2_model")
+price = 15

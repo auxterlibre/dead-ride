@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://b235mhwrlrwmd"]
+
+[ext_resource type="Script" uid="uid://bl700a3k3mslk" path="res://scripts/world/gas_pump.gd" id="1_pump"]
+[ext_resource type="Script" uid="uid://dw5x2lwhyyk5m" path="res://scripts/components/interactive_area.gd" id="2_area"]
+[ext_resource type="Resource" path="res://data/world/station_pump.tres" id="3_data"]
+[ext_resource type="FontFile" uid="uid://bbctssp8rxgju" path="res://assets/fonts/JetBrainsMono-Bold.ttf" id="4_font"]
+[ext_resource type="Script" uid="uid://50faynyyblif" path="res://scripts/components/cool_area.gd" id="5_8gfdi"]
+[ext_resource type="ArrayMesh" uid="uid://cgnplf5wet4e2" path="res://assets/meshes/props/gas_pump/gas_pump.tres" id="6_114vc"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_body"]
+size = Vector3(1.5373535, 4.2475586, 1.923584)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_car"]
+size = Vector3(8, 3, 8)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_prox"]
+size = Vector3(5.5, 4, 5.5)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_114vc"]
+radius = 15.0
+
+[node name="GasPump" type="StaticBody3D" unique_id=1590886478 groups=["gas_pump", "steer_around"]]
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("1_pump")
+data = ExtResource("3_data")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1499474185]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6237793, 0)
+shape = SubResource("BoxShape3D_body")
+
+[node name="RefuelArea" type="Node3D" parent="." unique_id=1224240022 node_paths=PackedStringArray("target_object")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+script = ExtResource("2_area")
+target_object = NodePath("..")
+callback = "refuel_car"
+action_label = "Refuel car"
+hold = true
+enabled = false
+
+[node name="CanArea" type="Node3D" parent="." unique_id=894800969 node_paths=PackedStringArray("target_object")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+script = ExtResource("2_area")
+target_object = NodePath("..")
+callback = "fill_can"
+action_label = "Fill fuel can"
+input_action = "interact_tertiary"
+hold = true
+enabled = false
+
+[node name="ServiceArea" type="Node3D" parent="." unique_id=1760786773 node_paths=PackedStringArray("target_object")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.1269226, 0)
+script = ExtResource("2_area")
+target_object = NodePath("..")
+callback = "toggle_selling"
+action_label = "Stop selling"
+
+[node name="CarArea" type="Area3D" parent="." unique_id=1163270284]
+collision_layer = 0
+collision_mask = 8
+monitorable = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CarArea" unique_id=1461524090]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+shape = SubResource("BoxShape3D_car")
+
+[node name="ProximityArea" type="Area3D" parent="." unique_id=1892899977]
+collision_layer = 0
+collision_mask = 32
+monitorable = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ProximityArea" unique_id=858935937]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+shape = SubResource("BoxShape3D_prox")
+
+[node name="CoolArea" type="Area3D" parent="." unique_id=1651949678]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+collision_layer = 0
+collision_mask = 32
+monitorable = false
+script = ExtResource("5_8gfdi")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CoolArea" unique_id=1783169018]
+shape = SubResource("SphereShape3D_114vc")
+
+[node name="Mesh" type="MeshInstance3D" parent="." unique_id=1416816586]
+mesh = ExtResource("6_114vc")
+skeleton = NodePath("")
+
+[node name="AmountLabel" type="Label3D" parent="." unique_id=1160546738]
+unique_name_in_owner = true
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.28989536, 1.7487009, 0)
+shaded = true
+modulate = Color(0.91764706, 0.8862745, 0.7176471, 1)
+outline_modulate = Color(0, 0, 0, 0)
+text = "9999.99"
+font = ExtResource("4_font")
+font_size = 40

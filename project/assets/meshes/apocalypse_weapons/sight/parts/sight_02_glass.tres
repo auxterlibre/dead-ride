@@ -1,0 +1,38 @@
+[gd_resource type="ArrayMesh" format=4 uid="uid://dy8qc8dvsbrv0"]
+
+[ext_resource type="Material" uid="uid://cuyc1fdmvrdy6" path="res://assets/materials/apocalypse_weapons/apocalypse_weapons_material_sight_glass.tres" id="1_drggx"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_dn0ff"]
+_surfaces = [{
+"aabb": AABB(0.024085494, -0.022583526, 0.025852177, 0.045349374, 0.04534937, 0.0075642057),
+"format": 34359742465,
+"index_count": 24,
+"index_data": PackedByteArray("AAABAAIAAgABAAMABAABAAAAAwABAAUABgABAAQABQABAAcACAABAAYABwABAAgA"),
+"name": "Sight_Glass",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 9,
+"vertex_data": PackedByteArray("BO5lPRYBubzzx9M8nIc/PWwtvzie3wg9gy2OPR6WGLzyx9M83jOOPf8XGzzyx9M8fQIZPaznuLzzx9M8ugxmPQZmujzzx9M88U7FPEobGLz0x9M8MiEZPXB/ujzzx9M8XmjFPNOSGzz0x9M8")
+}]
+blend_shape_mode = 0
+
+[resource]
+resource_name = "sight_02_glass"
+_surfaces = [{
+"aabb": AABB(0.024085494, -0.022583526, 0.025852177, 0.045349374, 0.04534937, 0.0075642057),
+"attribute_data": PackedByteArray("PaOOPowVNz89o44+jRU3Pz6jjj6MFTc/PqOOPowVNz89o44+jRU3Pz2jjj6MFTc/PqOOPowVNz89o44+jBU3Pz2jjj6NFTc/PqOOPowVNz8+o44+jBU3Pz2jjj6NFTc/PaOOPowVNz8+o44+jBU3Pz2jjj6MFTc/PaOOPo0VNz8+o44+jBU3Pz6jjj6MFTc/PaOOPo0VNz89o44+jBU3Pw=="),
+"format": 34359742487,
+"index_count": 24,
+"index_data": PackedByteArray("AAABAAIAAwAEAAUABgAEAAMABwAIAAkACgALAAwADQALAAoADgAPABAAEQASABMA"),
+"material": ExtResource("1_drggx"),
+"name": "Sight_Glass",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 20,
+"vertex_data": PackedByteArray("BO5lPRYBubzzx9M8nIc/PWwtvzie3wg9gy2OPR6WGLzyx9M8fQIZPaznuLzzx9M8nIc/PWwtvzie3wg9BO5lPRYBubzzx9M88U7FPEobGLz0x9M8XmjFPNOSGzz0x9M8nIc/PWwtvzie3wg98U7FPEobGLz0x9M8MiEZPXB/ujzzx9M8nIc/PWwtvzie3wg9XmjFPNOSGzz0x9M8ugxmPQZmujzzx9M83jOOPf8XGzzyx9M8nIc/PWwtvzie3wg9ugxmPQZmujzzx9M8gy2OPR6WGLzyx9M8nIc/PWwtvzie3wg93jOOPf8XGzzyx9M8v4r/ZdKK6BH/f/9/j4xIBvqZN3VFiGkJN3UEZqA/t9v/f/9/HDmN3L+K/2UORLvX/2U/df///z8EZseKZ68AXv9//38HuXtj/2U/dVy3OGA/df+ZTO0QxP9//3+S8zXGBGbHikbcWcXHivqZ////P/+Zv4rQI5Y6/3//f5AMtznHivqZ0hLcO/qZN3WOSM+f/3//f+JGjZz/mb+Kh1AGog==")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_dn0ff")
+metadata/extras = {
+"hops": {}
+}

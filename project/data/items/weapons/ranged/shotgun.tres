@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="WeaponData" format=3 uid="uid://ci77gufv1t8sf"]
+
+[ext_resource type="PackedScene" uid="uid://bu3xa8x6rmgtq" path="res://scenes/items/weapons/shotgun.tscn" id="1_gxmej"]
+[ext_resource type="Texture2D" uid="uid://cw8pn6862tewa" path="res://assets/textures/thumbnails/weapons/shotgun.png" id="1_owo44"]
+[ext_resource type="Script" uid="uid://dmpo1qr4cr7tg" path="res://scripts/data/items/weapon_data.gd" id="2_owo44"]
+
+[resource]
+script = ExtResource("2_owo44")
+type = 3
+weapon_class = 2
+ammo_type = 3
+damage = 5
+knockback_distance = 50
+max_ammo = 8
+fire_rate = 3
+reload_time = 30
+camera_kick = 50
+projectiles_per_shot = 8
+projectiles_spread = 30
+aim_yaw_offset = -27.0
+model = ExtResource("1_gxmej")
+name = "Shotgun"
+weight = 3.6
+size = Vector2i(3, 2)
+icon = ExtResource("1_owo44")
+rarity = 3
+price = 340
+icon_pitch = 15.0
+icon_zoom = 1.3

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ToolData" format=3 uid="uid://b6metbl57w0u4"]
+
+[ext_resource type="Script" uid="uid://dnuw12s42f8pa" path="res://scripts/data/items/tool_data.gd" id="1_script"]
+[ext_resource type="PackedScene" uid="uid://ta8ki0ut4jlp" path="res://scenes/items/tools/screwdriver.tscn" id="2_model"]
+[ext_resource type="Texture2D" uid="uid://dee7xfnablqvk" path="res://assets/textures/thumbnails/tools/screwdriver.png" id="3_icon"]
+
+[resource]
+script = ExtResource("1_script")
+repair_amount = 35
+name = "Screwdriver"
+weight = 0.3
+size = Vector2i(2, 1)
+icon = ExtResource("3_icon")
+model = ExtResource("2_model")
+price = 25

@@ -1,0 +1,16 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://cv2cwqp28is3v"]
+
+[ext_resource type="Shader" path="res://shaders/grass.gdshader" id="1_shader"]
+[ext_resource type="Texture2D" uid="uid://bdpfbkrh7c0w0" path="res://assets/textures/environment/nature_texture.png" id="2_atlas"]
+
+[resource]
+resource_name = "grass_material"
+shader = ExtResource("1_shader")
+shader_parameter/albedo_texture = ExtResource("2_atlas")
+shader_parameter/wind_direction = Vector2(0, -1)
+shader_parameter/wind_strength = 1.5
+shader_parameter/wind_path = Vector2(0, 0)
+shader_parameter/sway_length = 3.5
+shader_parameter/sway_lean = 0.035
+shader_parameter/sway_flutter = 0.55
+shader_parameter/tuft_height = 0.8

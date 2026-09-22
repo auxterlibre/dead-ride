@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://dl3xglnd5dq28"]
+
+[ext_resource type="ArrayMesh" uid="uid://de6n8qgorwuoh" path="res://assets/meshes/apocalypse_weapons/sr/parts/sight_09.tres" id="1_eg60b"]
+[ext_resource type="ArrayMesh" uid="uid://dequfgexwuq8p" path="res://assets/meshes/apocalypse_weapons/sr/parts/sight_09_crosshair.tres" id="2_fnaan"]
+[ext_resource type="ArrayMesh" uid="uid://ctdyepw167dt8" path="res://assets/meshes/apocalypse_weapons/sr/parts/sight_09_glass.tres" id="3_opmvb"]
+[ext_resource type="ArrayMesh" uid="uid://4jriwsj30fp3" path="res://assets/meshes/apocalypse_weapons/sr/parts/sight_09_projection.tres" id="4_hfswb"]
+
+[node name="Sight09" type="MeshInstance3D" unique_id=1018342574]
+mesh = ExtResource("1_eg60b")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Sight_09_Crosshair" type="MeshInstance3D" parent="." unique_id=2139158359]
+mesh = ExtResource("2_fnaan")
+skeleton = NodePath("")
+metadata/extras = {
+"hops": {}
+}
+
+[node name="Sight_09_Glass" type="MeshInstance3D" parent="." unique_id=1224093950]
+mesh = ExtResource("3_opmvb")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Sight_09_Projection" type="MeshInstance3D" parent="." unique_id=2118158567]
+mesh = ExtResource("4_hfswb")
+skeleton = NodePath("")
+metadata/extras = {
+"hops": {}
+}

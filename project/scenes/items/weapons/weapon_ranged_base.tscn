@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://ba48m1ipo7as7"]
+
+[ext_resource type="Script" uid="uid://bb84leyvqya52" path="res://scripts/weapons/weapon_ranged.gd" id="1_script"]
+[ext_resource type="AudioStream" uid="uid://dy6lrrxt3n451" path="res://assets/audio/weapons/revolver/revolver_empty.ogg" id="2_empty"]
+[ext_resource type="AudioStream" uid="uid://b5hgjn0up6hd2" path="res://assets/audio/weapons/revolver/revolver_reload.ogg" id="3_reload"]
+[ext_resource type="Material" uid="uid://ck1g0yhnu17d0" path="res://assets/materials/vfx/muzzle_flash_material.tres" id="4_flash"]
+[ext_resource type="Material" uid="uid://bnk4228833aia" path="res://assets/materials/vfx/muzzle_smoke_process.tres" id="5_smokep"]
+[ext_resource type="Material" uid="uid://dfxwur61miahe" path="res://assets/materials/vfx/muzzle_smoke_material.tres" id="6_smokem"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_flash"]
+material = ExtResource("4_flash")
+size = Vector2(1.5, 1.5)
+orientation = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_smoke"]
+material = ExtResource("6_smokem")
+size = Vector2(0.22, 0.22)
+
+[node name="WeaponRangedBase" type="Node3D" unique_id=51067714]
+script = ExtResource("1_script")
+
+[node name="Mesh" type="MeshInstance3D" parent="." unique_id=1960326227]
+
+[node name="ProjectileSpawn" type="Marker3D" parent="." unique_id=2001151894]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6, 0.2, 0)
+
+[node name="AudioShoot" type="AudioStreamPlayer3D" parent="." unique_id=738062007]
+bus = &"SFX"
+
+[node name="AudioEmpty" type="AudioStreamPlayer3D" parent="." unique_id=2019555685]
+stream = ExtResource("2_empty")
+bus = &"SFX"
+
+[node name="AudioReload" type="AudioStreamPlayer3D" parent="." unique_id=906187122]
+stream = ExtResource("3_reload")
+bus = &"SFX"
+
+[node name="MuzzleFlashLight" type="SpotLight3D" parent="." unique_id=649159004]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 0.8, 0.3, 0)
+light_color = Color(1, 0.77186924, 0.39790225, 1)
+light_energy = 0.0
+shadow_enabled = true
+spot_range = 2.5
+spot_attenuation = 2.5
+spot_angle = 75.0
+spot_angle_attenuation = 2.0
+
+[node name="Core" type="OmniLight3D" parent="MuzzleFlashLight" unique_id=943718397]
+light_color = Color(1, 0.77186924, 0.39790225, 1)
+light_energy = 0.0
+omni_range = 1.5
+omni_attenuation = 1.5
+
+[node name="MuzzleFlash" type="MeshInstance3D" parent="." unique_id=948393663]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1, 0.2, 0)
+visible = false
+cast_shadow = 0
+mesh = SubResource("QuadMesh_flash")
+
+[node name="Smoke" type="GPUParticles3D" parent="." unique_id=1367432190]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6, 0.18, 0)
+emitting = false
+amount = 1
+lifetime = 1.4
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("5_smokep")
+draw_pass_1 = SubResource("QuadMesh_smoke")

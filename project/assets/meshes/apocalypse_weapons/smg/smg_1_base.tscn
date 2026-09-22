@@ -1,0 +1,111 @@
+[gd_scene format=3 uid="uid://dpi8ikk4gq6t4"]
+
+[ext_resource type="ArrayMesh" uid="uid://bx6uernjytb6n" path="res://assets/meshes/apocalypse_weapons/smg/parts/smg_1_base.tres" id="1_qohvy"]
+[ext_resource type="ArrayMesh" uid="uid://cuicu1syasso4" path="res://assets/meshes/apocalypse_weapons/smg/parts/smg_1_bolt.tres" id="2_hmwi3"]
+[ext_resource type="ArrayMesh" uid="uid://cgy1xyhauqkgv" path="res://assets/meshes/apocalypse_weapons/smg/parts/smg_1_buttstock_heavy.tres" id="3_l5kj8"]
+[ext_resource type="ArrayMesh" uid="uid://clysw7oxel76m" path="res://assets/meshes/apocalypse_weapons/smg/parts/smg_1_buttstock_light.tres" id="4_gug7m"]
+[ext_resource type="ArrayMesh" uid="uid://dxx0u4kgbfv1l" path="res://assets/meshes/apocalypse_weapons/smg/parts/smg_1_magazine.tres" id="5_pvqs3"]
+[ext_resource type="ArrayMesh" uid="uid://3o88bonbcn0j" path="res://assets/meshes/apocalypse_weapons/smg/parts/smg_1_magazine_extended.tres" id="6_n1k3p"]
+[ext_resource type="ArrayMesh" uid="uid://iq04gqq0kauf" path="res://assets/meshes/apocalypse_weapons/smg/parts/smg_1_trigger.tres" id="7_7tuv0"]
+
+[node name="Smg1Base" type="MeshInstance3D" unique_id=746364188]
+mesh = ExtResource("1_qohvy")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Place_SMG1_BarBottom" type="Node3D" parent="." unique_id=141177375]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.044542074, 0.21944094)
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Place_SMG1_Buttstock" type="Node3D" parent="." unique_id=1914097282]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.09435296, -0.05079031)
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Place_SMG1_Charm" type="Node3D" parent="." unique_id=4914205]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.02052404, 0.0536263, 0.13457632)
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Place_SMG1_Magazine" type="Node3D" parent="." unique_id=715328707]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.036875963, 0.13447332)
+metadata/extras = {
+"MM": {}
+}
+
+[node name="Place_SMG1_Muzzle" type="Node3D" parent="." unique_id=1138844408]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.09608674, 0.4556365)
+metadata/extras = {
+"MM": {}
+}
+
+[node name="Place_SMG1_Sight" type="Node3D" parent="." unique_id=969999644]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.418982e-05, 0.13539481, 0.08800936)
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="SMG1_Bolt" type="MeshInstance3D" parent="." unique_id=291176318]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.017787809, 0.10736966, 0.11300135)
+mesh = ExtResource("2_hmwi3")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="SMG1_ButtstockHeavy" type="MeshInstance3D" parent="." unique_id=681045539]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.22565222, 0.45344782)
+mesh = ExtResource("3_l5kj8")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="SMG1_ButtstockLight" type="MeshInstance3D" parent="." unique_id=870876123]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.09435296, -0.05079031)
+mesh = ExtResource("4_gug7m")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="SMG1_Magazine" type="MeshInstance3D" parent="." unique_id=1647959781]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.036875963, 0.13447332)
+mesh = ExtResource("5_pvqs3")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="SMG1_MagazineExtended" type="MeshInstance3D" parent="." unique_id=1571436086]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.11285353, 0.5486822)
+mesh = ExtResource("6_n1k3p")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="SMG1_Trigger" type="MeshInstance3D" parent="." unique_id=43604023]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05996871, 0.06732035)
+mesh = ExtResource("7_7tuv0")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}

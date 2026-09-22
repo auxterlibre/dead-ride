@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CropData" format=3 uid="uid://b4tu6b8g7rlmn"]
+
+[ext_resource type="Script" uid="uid://c2aiovtol1l2f" path="res://scripts/data/crop_data.gd" id="1_script"]
+[ext_resource type="Resource" uid="uid://ca7dwplly8kbn" path="res://data/items/ammo/ammo_heavy.tres" id="2_ammo"]
+
+[resource]
+script = ExtResource("1_script")
+name = "Heavy Ammo Vines"
+grow_days = 5
+regrow_days = 5
+produce = ExtResource("2_ammo")
+produce_count = Vector2i(5, 10)
+seed_item = ExtResource("2_ammo")
+seed_count = 5

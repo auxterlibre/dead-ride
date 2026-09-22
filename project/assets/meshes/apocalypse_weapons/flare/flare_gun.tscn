@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://cuk55sp3dhhkr"]
+
+[ext_resource type="ArrayMesh" uid="uid://dkx135msqsas8" path="res://assets/meshes/apocalypse_weapons/flare/parts/flare_gun.tres" id="1_6l4te"]
+[ext_resource type="ArrayMesh" uid="uid://dn1cylvgg4s8n" path="res://assets/meshes/apocalypse_weapons/flare/parts/flare_gun_barrel.tres" id="2_2wgvq"]
+[ext_resource type="ArrayMesh" uid="uid://ceg348c3vhte" path="res://assets/meshes/apocalypse_weapons/flare/parts/flare_gun_trigger_01.tres" id="3_yfphm"]
+[ext_resource type="ArrayMesh" uid="uid://bb43s0wveybbs" path="res://assets/meshes/apocalypse_weapons/flare/parts/flare_gun_trigger_02.tres" id="4_7y78g"]
+
+[node name="FlareGun" type="MeshInstance3D" unique_id=613366205]
+mesh = ExtResource("1_6l4te")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Flare_Gun_Barrel" type="MeshInstance3D" parent="." unique_id=1586811177]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00043541982, 0.05554676, 0.1399746)
+mesh = ExtResource("2_2wgvq")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Flare_Gun_Trigger_01" type="MeshInstance3D" parent="." unique_id=1649807012]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.033860207, 0.076628685)
+mesh = ExtResource("3_yfphm")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Flare_Gun_Trigger_02" type="MeshInstance3D" parent="." unique_id=570162573]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.082930565, 0.056879044)
+mesh = ExtResource("4_7y78g")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}

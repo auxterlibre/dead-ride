@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="BackpackData" format=3 uid="uid://ds8it3xcv648i"]
+
+[ext_resource type="Script" uid="uid://bytufxnabjg1o" path="res://scripts/data/items/backpack_data.gd" id="1_script"]
+[ext_resource type="ArrayMesh" uid="uid://cc27lhy7ub6iy" path="res://assets/meshes/backpacks/hiker_backpack.tres" id="2_mesh"]
+[ext_resource type="Skin" uid="uid://brghtw7h7dsjo" path="res://assets/meshes/backpacks/hiker_backpack_skin.tres" id="3_skin"]
+[ext_resource type="Resource" uid="uid://cpiq8kd7tun2a" path="res://data/storage/hiker_layout.tres" id="4_storage"]
+
+[resource]
+script = ExtResource("1_script")
+storage = ExtResource("4_storage")
+mesh = ExtResource("2_mesh")
+skin = ExtResource("3_skin")
+name = "Hiker's Backpack"
+weight = 2.0
+size = Vector2i(2, 2)
+price = 250

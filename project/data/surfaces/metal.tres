@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="SurfaceData" format=3]
+
+[ext_resource type="Script" uid="uid://mhno4yreyb4o" path="res://scripts/data/surface_data.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://r8w4itnq2xlt" path="res://assets/textures/vfx/bullet_holes/bullet_holes_metal.png" id="2_atlas"]
+[ext_resource type="PackedScene" uid="uid://csuh5x4fiwap8" path="res://scenes/vfx/impact_burst_metal.tscn" id="3_burst"]
+[ext_resource type="AudioStream" uid="uid://brl1lf6dhp0qb" path="res://assets/audio/impact/projectile_hit_metal.ogg" id="4_audio"]
+
+[resource]
+script = ExtResource("1_script")
+atlas = ExtResource("2_atlas")
+burst = ExtResource("3_burst")
+audio = ExtResource("4_audio")
+dust_amount = 0.0

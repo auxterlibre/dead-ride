@@ -1,0 +1,37 @@
+[gd_resource type="ArrayMesh" format=4 uid="uid://d0krcpyalcfup"]
+
+[ext_resource type="Material" uid="uid://cwgcxfci6lfy3" path="res://assets/materials/environment/nature_material_a.tres" id="1_1wf3u"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_l5p6o"]
+_surfaces = [{
+"aabb": AABB(-0.07750628, -0.031266816, -0.1608921, 0.15502483, 0.91875654, 0.22734141),
+"format": 34896613377,
+"index_count": 42,
+"index_data": PackedByteArray("CgAAAAEABAAAAAoAAwAEAAoACwAKAAEAAwAKAAsACwABAAIABQADAAsADAALAAIABQALAAwABwAFAAwADAACAAgABwAMAAYABgAMAAgABgAIAAkA"),
+"lods": [0.04592727, PackedByteArray("AAABAAIAAwAEAAAABQADAAAABgAAAAIABQAAAAYABwAFAAYABgACAAgABgAIAAkA")],
+"name": "forest",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 13,
+"vertex_data": PackedByteArray("/3///wAAAABFzg7EUX0AADj4T4OwxQAAxgdPg7DFAAC5MQ7EUX0AAAAAA0Il8QAA/H8AAFvlAAAWIg0A//8AAP//A0Il8QAA490NAP//AAD/f7XCcWMAAP9/G4NUqwAA/3/xQc7WAAA=")
+}]
+blend_shape_mode = 0
+
+[resource]
+resource_name = "grass_2_a_singlesided"
+_surfaces = [{
+"aabb": AABB(-0.07750628, -0.031266816, -0.1608921, 0.15502483, 0.91875654, 0.22734141),
+"attribute_data": PackedByteArray("HZDSBVaSLgmHk9UMHZCBFMCTkxDIkoEUs4zVDOSNLgkdkNENe4yTEB2QgRRzjYEUHZBNCR2Q6gwdkJ0QHZBNER2Q6hQdkJ0Y"),
+"format": 34896613399,
+"index_count": 42,
+"index_data": PackedByteArray("DAAAAAEADQAMAAEADQABAAIADgANAAIADgACAAQAAwAOAAQAAwAEAAUABwAIAA8ABgAHAA8ABgAPABAACQAGABAACQAQABEACwAJABEACwARAAoA"),
+"lods": [0.04592727, PackedByteArray("AAABAAIAAwAAAAIAAwACAAQAAwAEAAUABgAHAAgACQAGAAgACQAIAAoACwAJAAoA")],
+"material": ExtResource("1_1wf3u"),
+"name": "forest",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 18,
+"vertex_data": PackedByteArray("/3///wAAeZhFzg7EUX0elTj4T4OwxRKQ/H8AAFvl/43//wNCJfHfjePdDQD///2NxgdPg7DF1rm5MQ7EUX01uv9///8AAI28AAADQiXxubv8fwAAW+UBchYiDQD//5S9/3+1wnFjqZX/fxuDVKtakP9/8UHO1ueN/3+1wnFjv7r/fxuDVKsPuv9/8UHO1o+7bKsLwh+pXMM2pl/IzJMG54+ciNdFlA3ovRylBIMkWwJlKKwBEhcyCe+XRBTYFIkMOqnwwhOmtscenHXWBCVSAgsdmQQpFx4J")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_l5p6o")

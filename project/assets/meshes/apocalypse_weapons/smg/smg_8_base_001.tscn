@@ -1,0 +1,111 @@
+[gd_scene format=3 uid="uid://lfisvrssyh6t"]
+
+[ext_resource type="ArrayMesh" uid="uid://b53avf43xp13a" path="res://assets/meshes/apocalypse_weapons/smg/parts/smg_8_base.tres" id="1_olwtm"]
+[ext_resource type="ArrayMesh" uid="uid://cj5sntnhni4vu" path="res://assets/meshes/apocalypse_weapons/smg/parts/smg_7_bolt.tres" id="2_uckwd"]
+[ext_resource type="ArrayMesh" uid="uid://debbcx2is8gl3" path="res://assets/meshes/apocalypse_weapons/smg/parts/smg_8_magazine.tres" id="3_f5ujw"]
+[ext_resource type="ArrayMesh" uid="uid://d35l1tkbh23c0" path="res://assets/meshes/apocalypse_weapons/smg/parts/smg_8_sight.tres" id="4_myllp"]
+[ext_resource type="ArrayMesh" uid="uid://bbxp1f4t1fy1h" path="res://assets/meshes/apocalypse_weapons/smg/parts/smg_8_trigger.tres" id="5_4eupc"]
+[ext_resource type="ArrayMesh" uid="uid://baeltjqjbf6wt" path="res://assets/meshes/apocalypse_weapons/smg/parts/tactical_laser_aiming.tres" id="6_u5lho"]
+[ext_resource type="ArrayMesh" uid="uid://clr87srglkcio" path="res://assets/meshes/apocalypse_weapons/ar/parts/tactical_laser_aiming_system_ray.tres" id="7_svssq"]
+
+[node name="Smg8Base001" type="MeshInstance3D" unique_id=1244746136]
+mesh = ExtResource("1_olwtm")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Place_SMG8_BarLeft_001" type="Node3D" parent="." unique_id=1915926352]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.029643783, 0.040592194, 0.12504292)
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Place_SMG8_BarRight_001" type="Node3D" parent="." unique_id=1633318303]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.029643765, 0.040592194, 0.12504292)
+metadata/extras = {
+"MM": {}
+}
+
+[node name="Place_SMG8_Charm_001" type="Node3D" parent="." unique_id=1177515049]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.015776105, -0.013808727, 0.022042274)
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Place_SMG8_Magazine_001" type="Node3D" parent="." unique_id=915157698]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00072143786, 0.06350708, -0.12997341)
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Place_SMG8_Muzzle_001" type="Node3D" parent="." unique_id=1633438174]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.040546894, 0.3156109)
+metadata/extras = {
+"MM": {}
+}
+
+[node name="Place_SMG8_Sight_001" type="Node3D" parent="." unique_id=513885066]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.3921994e-05, 0.16682768, 0.13636017)
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="SMG8_Bolt_001" type="MeshInstance3D" parent="." unique_id=464553142]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.013689137, 0.033733845, -0.07180977)
+mesh = ExtResource("2_uckwd")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="SMG8_Magazine_001" type="MeshInstance3D" parent="." unique_id=110458731]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00072143786, 0.0635066, -0.12997341)
+mesh = ExtResource("3_f5ujw")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="SMG8_Sight_001" type="MeshInstance3D" parent="." unique_id=329663559]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.3921994e-05, 0.16682768, 0.13636112)
+mesh = ExtResource("4_myllp")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="SMG8_Trigger_001" type="MeshInstance3D" parent="." unique_id=759839961]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0066890717, 0.04852581)
+mesh = ExtResource("5_4eupc")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Tactical_LaserAiming_001" type="MeshInstance3D" parent="." unique_id=1643925713]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.029643783, 0.040592194, 0.12504196)
+mesh = ExtResource("6_u5lho")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Tactical_LaserAiming_Ray_001" type="MeshInstance3D" parent="Tactical_LaserAiming_001" unique_id=325950983]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.014065234, 2.0980835e-05, 0.23906612)
+mesh = ExtResource("7_svssq")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}

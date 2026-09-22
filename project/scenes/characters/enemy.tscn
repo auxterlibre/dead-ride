@@ -1,0 +1,132 @@
+[gd_scene format=3 uid="uid://cgqtho0svu7jw"]
+
+[ext_resource type="PackedScene" uid="uid://bht486pchaoui" path="res://scenes/characters/character_base.tscn" id="1_base"]
+[ext_resource type="Resource" uid="uid://d4bxxtlhn2c3l" path="res://data/enemies/survivalist.tres" id="2_data"]
+[ext_resource type="Script" uid="uid://b5bcblc6chsvk" path="res://scripts/components/enemy/enemy_movement.gd" id="3_emove"]
+[ext_resource type="Script" uid="uid://uqwf2jx361m2" path="res://scripts/components/enemy/enemy_weapons.gd" id="4_eweap"]
+[ext_resource type="Script" uid="uid://ca5u0kh8laopc" path="res://scripts/components/character/character_vision.gd" id="5_evis"]
+[ext_resource type="Script" uid="uid://bmgoppdcls82v" path="res://scripts/components/enemy/enemy_ai.gd" id="6_eai"]
+[ext_resource type="Script" uid="uid://dgc08418ia6ww" path="res://scripts/components/character/vision_cone_visual.gd" id="7_vcone"]
+[ext_resource type="Script" uid="uid://c7rlyutxqbf12" path="res://scripts/components/enemy/enemy_aim.gd" id="8_eaim"]
+[ext_resource type="Script" uid="uid://bod0rgtuss22i" path="res://scripts/components/character/character_cover.gd" id="9_ecover"]
+[ext_resource type="Script" path="res://scripts/components/enemy/enemy_loot.gd" id="10_eloot"]
+[ext_resource type="Script" uid="uid://dw5x2lwhyyk5m" path="res://scripts/components/interactive_area.gd" id="11_earea"]
+[ext_resource type="Resource" path="res://data/storage/body_pockets.tres" id="12_epockets"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_vision"]
+resource_local_to_scene = true
+radius = 15.0
+
+[node name="Enemy" unique_id=583126958 instance=ExtResource("1_base")]
+collision_layer = 64
+data = ExtResource("2_data")
+
+[node name="Skeleton3D" parent="BodyContainer/Rig_Medium" parent_id_path=PackedInt32Array(197859434) index="0" unique_id=1078746776]
+bones/1/position = Vector3(0, 0.39174682, 0)
+bones/1/rotation = Quaternion(0.00020185931, 0.04315775, 8.7225435e-06, 0.99906826)
+bones/2/rotation = Quaternion(0.9922656, 0.05812296, 0.07046721, 0.084055185)
+bones/3/rotation = Quaternion(0.26527333, 6.43675e-08, -1.8025267e-07, 0.96417326)
+bones/4/rotation = Quaternion(-0.5314462, -0.11430703, 0.042022813, 0.83829165)
+bones/5/rotation = Quaternion(1.2340427e-05, 0.92025554, -0.39131808, -2.7333017e-06)
+bones/6/rotation = Quaternion(0.00044563593, 2.9096658e-09, 3.857325e-05, 1)
+bones/7/rotation = Quaternion(0.004615221, 3.0726017e-09, 0.00039948328, 0.9999893)
+bones/8/rotation = Quaternion(-0.5608233, 0.046326797, 0.73660207, 0.3751647)
+bones/9/rotation = Quaternion(-1.0113355e-09, 4.0394532e-08, 0.37692812, 0.92624253)
+bones/11/rotation = Quaternion(-0.21233542, 0.383886, -0.13982868, 0.8876899)
+bones/12/rotation = Quaternion(-0.0038119403, -0.03134153, -0.0002098538, 0.9995015)
+bones/13/rotation = Quaternion(-0.5338319, -0.116262674, -0.7714353, 0.3261809)
+bones/14/rotation = Quaternion(2.6062548e-11, -6.661834e-08, -0.3593355, 0.9332085)
+bones/16/rotation = Quaternion(-0.22203998, -0.3457023, 0.18433245, 0.892866)
+bones/17/rotation = Quaternion(0.9972616, -0.02951055, 0.031510573, 0.060046326)
+bones/18/rotation = Quaternion(0.27632955, -6.663524e-08, 1.948143e-07, 0.96106297)
+bones/19/rotation = Quaternion(-0.56030875, 0.114498146, -0.00882367, 0.8202843)
+bones/21/rotation = Quaternion(8.806255e-05, 8.807534e-05, -0.70678353, 0.7074299)
+bones/22/rotation = Quaternion(8.805843e-05, -8.807947e-05, 0.70678353, 0.7074299)
+
+[node name="HandSlotRight" parent="BodyContainer/Rig_Medium/Skeleton3D" index="7" unique_id=373278852]
+transform = Transform3D(-5.4802513e-05, -0.2626494, -0.9648915, -0.99999857, -0.0007457724, 0.00026080862, -0.00078855234, 0.9648904, -0.26264915, -0.42413405, 0.5353471, 0.08158806)
+
+[node name="HandSlotLeft" parent="BodyContainer/Rig_Medium/Skeleton3D" index="8" unique_id=1266539436]
+transform = Transform3D(-7.432206e-05, 0.26274136, 0.9648663, 0.999999, -0.00081008615, 0.00029832983, 0.0008603166, 0.9648654, -0.26274154, 0.42548594, 0.5380996, 0.086674005)
+
+[node name="FaceWear" parent="BodyContainer/Rig_Medium/Skeleton3D" index="9" unique_id=39931717]
+transform = Transform3D(0.9997204, -1.3387762e-09, 0.023646582, 6.924424e-05, 0.9999956, -0.0029274249, -0.023646496, 0.0029282412, 0.9997161, -4.3468322e-09, 1.2274935, 0.0034040043)
+
+[node name="HurtBox" parent="." index="2" unique_id=120537074]
+collision_layer = 2
+monitorable = true
+
+[node name="CharacterAnimator" parent="." index="5" unique_id=838391787 node_paths=PackedStringArray("movement")]
+movement = NodePath("../EnemyMovement")
+
+[node name="EnemyMovement" type="Node" parent="." index="7" unique_id=1045574385 node_paths=PackedStringArray("agent", "visual")]
+script = ExtResource("3_emove")
+agent = NodePath("../NavigationAgent")
+visual = NodePath("../BodyContainer")
+
+[node name="NavigationAgent" type="NavigationAgent3D" parent="." index="8" unique_id=1478292141]
+path_desired_distance = 0.5
+target_desired_distance = 0.4
+avoidance_enabled = true
+radius = 0.6
+max_speed = 8.0
+
+[node name="EnemyWeapons" type="Node" parent="." index="9" unique_id=1662013728 node_paths=PackedStringArray("animator", "hand_slot")]
+script = ExtResource("4_eweap")
+weapon_layer = 1
+animator = NodePath("../CharacterAnimator")
+hand_slot = NodePath("../BodyContainer/Rig_Medium/Skeleton3D/HandSlotRight")
+
+[node name="CharacterVision" type="Area3D" parent="." index="10" unique_id=232061206 node_paths=PackedStringArray("visual")]
+collision_layer = 0
+collision_mask = 104
+monitorable = false
+script = ExtResource("5_evis")
+vision_angle = 90.0
+visual = NodePath("../BodyContainer")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterVision" index="0" unique_id=1687881672]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("SphereShape3D_vision")
+
+[node name="VisionConeVisual" type="MeshInstance3D" parent="CharacterVision" index="1" unique_id=1687881673]
+script = ExtResource("7_vcone")
+
+[node name="EnemyAim" type="Node" parent="." index="11" unique_id=1985017920 node_paths=PackedStringArray("visual")]
+script = ExtResource("8_eaim")
+visual = NodePath("../BodyContainer")
+
+[node name="CharacterCover" type="Node" parent="." index="12" unique_id=1985017921]
+script = ExtResource("9_ecover")
+
+[node name="EnemyAI" type="Node" parent="." index="13" unique_id=1985017919 node_paths=PackedStringArray("movement", "vision", "weapons", "aim", "cover")]
+script = ExtResource("6_eai")
+movement = NodePath("../EnemyMovement")
+vision = NodePath("../CharacterVision")
+weapons = NodePath("../EnemyWeapons")
+aim = NodePath("../EnemyAim")
+cover = NodePath("../CharacterCover")
+
+[node name="DebugLabel" type="Label3D" parent="." index="14" unique_id=1281832071]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.656139, 0)
+visible = false
+pixel_size = 0.01
+billboard = 1
+no_depth_test = true
+text = "DEBUG"
+font_size = 64
+
+[node name="EnemyLoot" type="Node" parent="." index="15" node_paths=PackedStringArray("offer")]
+script = ExtResource("10_eloot")
+offer = NodePath("../SearchArea")
+pockets = ExtResource("12_epockets")
+
+[node name="SearchArea" type="Node3D" parent="." index="16" node_paths=PackedStringArray("target_object")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
+script = ExtResource("11_earea")
+target_object = NodePath("../EnemyLoot")
+callback = "open"
+action_label = "Search"
+prompt_range = 1.8
+enabled = false

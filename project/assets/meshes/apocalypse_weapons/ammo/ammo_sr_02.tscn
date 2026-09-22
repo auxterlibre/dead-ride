@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://y8ik64yrv7gc"]
+
+[ext_resource type="ArrayMesh" uid="uid://bhl0nnilfdq3w" path="res://assets/meshes/apocalypse_weapons/ammo/parts/ammo_sr_02.tres" id="1_57pg1"]
+[ext_resource type="ArrayMesh" uid="uid://dax41213tw50y" path="res://assets/meshes/apocalypse_weapons/ammo/parts/ammo_sr_02_box.tres" id="2_mpo60"]
+
+[node name="AmmoSr02" type="MeshInstance3D" unique_id=170864276]
+mesh = ExtResource("1_57pg1")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Ammo_SR_02_Box" type="MeshInstance3D" parent="." unique_id=2131681650]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.13263059, 0, 0)
+mesh = ExtResource("2_mpo60")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}

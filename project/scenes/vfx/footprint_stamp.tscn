@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://cp4ergx7j31dc"]
+
+[sub_resource type="Gradient" id="Gradient_fade"]
+offsets = PackedFloat32Array(0, 0.3, 0.6, 0.8, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0.35, 1, 1, 1, 0.2, 1, 1, 1, 0.1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_fade"]
+gradient = SubResource("Gradient_fade")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_print"]
+gravity = Vector3(0, 0, 0)
+scale_min = 0.85
+color_ramp = SubResource("GradientTexture1D_fade")
+
+[sub_resource type="Gradient" id="Gradient_dot"]
+offsets = PackedFloat32Array(0, 0.45, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0.55, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_dot"]
+gradient = SubResource("Gradient_dot")
+width = 128
+height = 128
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dot"]
+transparency = 1
+blend_mode = 1
+shading_mode = 0
+vertex_color_use_as_albedo = true
+albedo_texture = SubResource("GradientTexture2D_dot")
+disable_receive_shadows = true
+billboard_keep_scale = true
+
+[sub_resource type="QuadMesh" id="QuadMesh_dot"]
+material = SubResource("StandardMaterial3D_dot")
+size = Vector2(0.32, 0.32)
+orientation = 1
+
+[node name="FootprintStamp" type="GPUParticles3D" unique_id=1001546668]
+layers = 2
+cast_shadow = 0
+emitting = false
+amount = 6
+lifetime = 25.0
+one_shot = true
+explosiveness = 1.0
+fixed_fps = 0
+process_material = SubResource("ParticleProcessMaterial_print")
+draw_pass_1 = SubResource("QuadMesh_dot")

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="VehicleData" format=3 uid="uid://dft6nprephdfh"]
+
+[ext_resource type="Script" uid="uid://c7k25vwaq80tm" path="res://scripts/data/vehicle_data.gd" id="1_script"]
+[ext_resource type="AudioStream" uid="uid://byn3pmu8nkxub" path="res://assets/audio/vehicles/engine_malfunction.ogg" id="2_malf"]
+[ext_resource type="Resource" path="res://data/storage/station_wagon_trunk.tres" id="3_trunk"]
+
+[resource]
+script = ExtResource("1_script")
+name = "Station Wagon"
+storage = ExtResource("3_trunk")
+health_max = 0
+engine_power = 40
+handling = 100
+engine_malfunction_audio = ExtResource("2_malf")

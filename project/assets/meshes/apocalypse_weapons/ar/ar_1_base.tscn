@@ -1,0 +1,164 @@
+[gd_scene format=3 uid="uid://dmwtvn4c3tc3"]
+
+[ext_resource type="ArrayMesh" uid="uid://dv0fv6247xioa" path="res://assets/meshes/apocalypse_weapons/ar/parts/ar_1_base.tres" id="1_g137y"]
+[ext_resource type="ArrayMesh" uid="uid://dwkcjtwkkxjnh" path="res://assets/meshes/apocalypse_weapons/ar/parts/ar_1_bolt.tres" id="2_giofc"]
+[ext_resource type="ArrayMesh" uid="uid://b63mhx7jbkyoo" path="res://assets/meshes/apocalypse_weapons/ar/parts/ar_1_buttstock_heavy.tres" id="3_ihqkn"]
+[ext_resource type="ArrayMesh" uid="uid://fgp75venbw6k" path="res://assets/meshes/apocalypse_weapons/ar/parts/ar_1_buttstock_light.tres" id="4_ird0n"]
+[ext_resource type="ArrayMesh" uid="uid://bk1kno7oeanyg" path="res://assets/meshes/apocalypse_weapons/ar/parts/ar_1_handle_bottom.tres" id="5_jqxom"]
+[ext_resource type="ArrayMesh" uid="uid://cetqff8ubvkgm" path="res://assets/meshes/apocalypse_weapons/ar/parts/ar_1_handle_left.tres" id="6_i81rx"]
+[ext_resource type="ArrayMesh" uid="uid://cr816plhy0h3c" path="res://assets/meshes/apocalypse_weapons/ar/parts/ar_1_handle_right.tres" id="7_pqnj6"]
+[ext_resource type="ArrayMesh" uid="uid://kvniun4awqgu" path="res://assets/meshes/apocalypse_weapons/ar/parts/ar_1_magazine.tres" id="8_lm47k"]
+[ext_resource type="ArrayMesh" uid="uid://lpmesnehpxnn" path="res://assets/meshes/apocalypse_weapons/ar/parts/ar_1_magazine_extended.tres" id="9_bvbqp"]
+[ext_resource type="ArrayMesh" uid="uid://cenuv5qrnxmsb" path="res://assets/meshes/apocalypse_weapons/ar/parts/ar_1_trigger.tres" id="10_xl4m6"]
+
+[node name="Ar1Base" type="MeshInstance3D" unique_id=1390866918]
+mesh = ExtResource("1_g137y")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="AR1_Bolt" type="MeshInstance3D" parent="." unique_id=932083557]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.009614698, 0.12298918, 0.20708275)
+mesh = ExtResource("2_giofc")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="AR1_ButtstockHeavy" type="MeshInstance3D" parent="." unique_id=1912484312]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.16877604, 0.008281708)
+mesh = ExtResource("3_ihqkn")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="AR1_ButtstockLight" type="MeshInstance3D" parent="." unique_id=332772903]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12542629, -0.09514141)
+mesh = ExtResource("4_ird0n")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="AR1_HandleBottom" type="MeshInstance3D" parent="." unique_id=1471431568]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.526214e-05, -0.19722033, 0.37177372)
+mesh = ExtResource("5_jqxom")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="AR1_HandleLeft" type="MeshInstance3D" parent="." unique_id=944961667]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.02885214, -0.16009855, 0.36249638)
+mesh = ExtResource("6_i81rx")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="AR1_HandleRight" type="MeshInstance3D" parent="." unique_id=1591252824]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.028849954, -0.16009855, 0.37417698)
+mesh = ExtResource("7_pqnj6")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="AR1_Magazine" type="MeshInstance3D" parent="." unique_id=1677931295]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0004263303, 0.09967327, 0.17607403)
+mesh = ExtResource("8_lm47k")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="AR1_MagazineExtended" type="MeshInstance3D" parent="." unique_id=1464133252]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0004263303, -0.08655357, 0.0988853)
+mesh = ExtResource("9_bvbqp")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="AR1_Trigger" type="MeshInstance3D" parent="." unique_id=1949919720]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.061692238, 0.06085682)
+mesh = ExtResource("10_xl4m6")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Place_AR1_BarBottom" type="Node3D" parent="." unique_id=702660934]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.793942e-05, 0.086066246, 0.3158369)
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Place_AR1_BarLeft" type="Node3D" parent="." unique_id=1696222130]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0288508, 0.12318754, 0.3158369)
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Place_AR1_BarRight" type="Node3D" parent="." unique_id=102413639]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.028850751, 0.12318754, 0.3158369)
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Place_AR1_BarTop" type="Node3D" parent="." unique_id=158090840]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.420431e-05, 0.18017435, 0.3158369)
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Place_AR1_Buttstock" type="Node3D" parent="." unique_id=96687329]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12542677, -0.09514141)
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Place_AR1_Charm" type="Node3D" parent="." unique_id=1370413801]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.018771278, 0.089655876, 0.1529684)
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Place_AR1_Magazine" type="Node3D" parent="." unique_id=216388851]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0004263303, 0.09967327, 0.17607403)
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Place_AR1_Muzzle" type="Node3D" parent="." unique_id=1869228485]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0158746e-05, 0.12391567, 0.54269695)
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Place_AR1_Sight" type="Node3D" parent="." unique_id=1687373366]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.418414e-05, 0.18017435, 0.048630714)
+metadata/extras = {
+"MM": {},
+"hops": {}
+}

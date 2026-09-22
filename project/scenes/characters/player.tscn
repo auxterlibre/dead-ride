@@ -1,0 +1,316 @@
+[gd_scene format=3 uid="uid://bvl1ed7xc5vag"]
+
+[ext_resource type="PackedScene" uid="uid://bht486pchaoui" path="res://scenes/characters/character_base.tscn" id="1_base"]
+[ext_resource type="Resource" uid="uid://lsi4ovhrbg8f" path="res://data/characters/player.tres" id="2_data"]
+[ext_resource type="Script" uid="uid://d4l0uk2osoxus" path="res://scripts/components/player/player_movement.gd" id="3_pmove"]
+[ext_resource type="Script" uid="uid://7ktp8ncu74er" path="res://scripts/components/player/player_aim.gd" id="4_paim"]
+[ext_resource type="Script" uid="uid://cb1jv1ehacgkb" path="res://scripts/components/player/player_weapons.gd" id="5_pweap"]
+[ext_resource type="AudioStream" uid="uid://de27q2au5hmt5" path="res://assets/audio/weapons/misc/weapon_swap.ogg" id="6_swap"]
+[ext_resource type="Shader" uid="uid://dtnvc3ogscmg" path="res://shaders/xray.gdshader" id="8_xray"]
+[ext_resource type="Script" uid="uid://b6vdvx6qm7o0j" path="res://scripts/components/player/player_xray.gd" id="8_xraycomp"]
+[ext_resource type="ArrayMesh" uid="uid://g42j3u7brt3p" path="res://assets/meshes/characters/skeleton/arm_left.tres" id="9_xarml"]
+[ext_resource type="Skin" uid="uid://bejyprmofc73e" path="res://assets/meshes/characters/skeleton/arm_left_skin.tres" id="10_xarmls"]
+[ext_resource type="ArrayMesh" uid="uid://dooeqf84enewm" path="res://assets/meshes/characters/skeleton/arm_right.tres" id="11_xarmr"]
+[ext_resource type="Skin" uid="uid://dxfcjuu1bwlrc" path="res://assets/meshes/characters/skeleton/arm_right_skin.tres" id="12_xarmrs"]
+[ext_resource type="ArrayMesh" uid="uid://c24es3k7qymf7" path="res://assets/meshes/characters/skeleton/body.tres" id="13_xbody"]
+[ext_resource type="Skin" uid="uid://sibqovqf441a" path="res://assets/meshes/characters/skeleton/body_skin.tres" id="14_xbodys"]
+[ext_resource type="ArrayMesh" uid="uid://w5y0vgryy3of" path="res://assets/meshes/characters/skeleton/head.tres" id="15_xhead"]
+[ext_resource type="Skin" uid="uid://b3e07qnl6e0q2" path="res://assets/meshes/characters/skeleton/head_skin.tres" id="16_xheads"]
+[ext_resource type="ArrayMesh" uid="uid://d2gaowg5smwof" path="res://assets/meshes/characters/skeleton/leg_left.tres" id="17_xlegl"]
+[ext_resource type="Skin" uid="uid://bsv5ss13hmfg0" path="res://assets/meshes/characters/skeleton/leg_left_skin.tres" id="18_xlegls"]
+[ext_resource type="ArrayMesh" uid="uid://bqm81c6imx8wr" path="res://assets/meshes/characters/skeleton/leg_right.tres" id="19_xlegr"]
+[ext_resource type="Skin" uid="uid://c02o0ej8tmpos" path="res://assets/meshes/characters/skeleton/leg_right_skin.tres" id="20_xlegrs"]
+[ext_resource type="ArrayMesh" uid="uid://ctka3avh5x2eb" path="res://assets/meshes/characters/skeleton/minion_jaw.tres" id="21_xjaw"]
+[ext_resource type="Skin" uid="uid://crqbtr2lqnbix" path="res://assets/meshes/characters/skeleton/minion_jaw_skin.tres" id="22_xjaws"]
+[ext_resource type="ArrayMesh" uid="uid://v6k6i2oqqrxt" path="res://assets/meshes/characters/skeleton/minion_eyes.tres" id="23_xeyes"]
+[ext_resource type="Skin" uid="uid://bgm75n7ho5ysy" path="res://assets/meshes/characters/skeleton/minion_eyes_skin.tres" id="24_xeyess"]
+[ext_resource type="Script" uid="uid://wkd11slejxf0" path="res://scripts/components/player/player_inventory.gd" id="25_pinv"]
+[ext_resource type="Script" uid="uid://nd4bykahajaa" path="res://scripts/components/player/player_throw.gd" id="26_pthrow"]
+[ext_resource type="Script" uid="uid://cbpg5gmwnuk0x" path="res://scripts/components/player/player_consume.gd" id="27_pcons"]
+[ext_resource type="Script" uid="uid://dl5ccm5a5yfvc" path="res://scripts/components/player/throw_preview.gd" id="28_tprev"]
+[ext_resource type="Script" uid="uid://dlpxnliy5tt3g" path="res://scripts/components/player/player_energy.gd" id="29_penergy"]
+[ext_resource type="Script" uid="uid://uyff2dh50m5e" path="res://scripts/components/player/player_heat.gd" id="29_pheat"]
+[ext_resource type="Script" uid="uid://ba6fmenuyjxg3" path="res://scripts/components/player/player_persistence.gd" id="30_persist"]
+[ext_resource type="Material" path="res://assets/materials/vfx/sand_dust_material.tres" id="31_scorch"]
+[ext_resource type="Script" uid="uid://bfxphiiyq8ff" path="res://scripts/components/player/player_build.gd" id="32_pbuild"]
+[ext_resource type="Script" uid="uid://sh3ws4v6r4hq" path="res://scripts/components/player/player_interactions.gd" id="33_pinter"]
+[ext_resource type="Script" uid="uid://cno6xa233t75v" path="res://scripts/components/player/player_carry.gd" id="34_pcarry"]
+[ext_resource type="Resource" path="res://data/buildables/fuel_barrel.tres" id="35_cbarrel"]
+[ext_resource type="ArrayMesh" uid="uid://cs6jvwkkars5e" path="res://assets/meshes/props/resource_bits/fuel_barrel.tres" id="36_cbmesh"]
+[ext_resource type="Script" uid="uid://b5ygboyvpjrqq" path="res://scripts/components/player/player_dodge.gd" id="37_pdodge"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xray"]
+render_priority = 10
+shader = ExtResource("8_xray")
+shader_parameter/color = Color(0.35, 0.8, 1, 1)
+shader_parameter/glow_strength = 2.5
+shader_parameter/fresnel_power = 2.5
+shader_parameter/occlusion_bias = 1.2
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qjalk"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_arc"]
+transparency = 1
+cull_mode = 2
+no_depth_test = true
+shading_mode = 0
+disable_fog = true
+vertex_color_use_as_albedo = true
+
+[sub_resource type="ImmediateMesh" id="ImmediateMesh_arc"]
+
+[sub_resource type="Gradient" id="Gradient_scorch"]
+offsets = PackedFloat32Array(0, 0.12, 0.55, 1)
+colors = PackedColorArray(0.78, 0.75, 0.72, 0, 0.64, 0.62, 0.6, 0.95, 0.52, 0.5, 0.49, 0.75, 0.44, 0.42, 0.42, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_scorch"]
+gradient = SubResource("Gradient_scorch")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_scorch"]
+resource_name = "heat_scorch_process"
+lifetime_randomness = 0.3
+emission_shape = 3
+emission_box_extents = Vector3(0.575, 0.815, 0.425)
+direction = Vector3(0, 1, 0)
+spread = 22.0
+initial_velocity_min = 0.35
+initial_velocity_max = 0.7
+gravity = Vector3(0, 0.5, 0)
+damping_min = 0.3
+damping_max = 0.7
+scale_min = 1.3
+scale_max = 2.3
+color_ramp = SubResource("GradientTexture1D_scorch")
+
+[sub_resource type="QuadMesh" id="QuadMesh_scorch"]
+material = ExtResource("31_scorch")
+size = Vector2(0.5, 0.5)
+
+[node name="Player" unique_id=1957524462 groups=["player"] instance=ExtResource("1_base")]
+collision_layer = 32
+collision_mask = 92
+data = ExtResource("2_data")
+
+[node name="Skeleton3D" parent="BodyContainer/Rig_Medium" parent_id_path=PackedInt32Array(197859434) index="0" unique_id=1078746776]
+bones/1/position = Vector3(0, 0.3916575, 0)
+bones/1/rotation = Quaternion(0.00026088045, 0.04315775, 1.1272153e-05, 0.9990683)
+bones/1/scale = Vector3(0.99999994, 1, 0.99999994)
+bones/2/rotation = Quaternion(0.9922441, 0.058117, 0.07047597, 0.084305085)
+bones/2/scale = Vector3(0.9999999, 0.9999997, 1.0000008)
+bones/3/rotation = Quaternion(0.26584688, 6.575944e-08, -1.8184224e-07, 0.9640153)
+bones/3/scale = Vector3(1.0000004, 0.99999994, 1.0000001)
+bones/4/rotation = Quaternion(-0.5317611, -0.11429072, 0.04207586, 0.8380916)
+bones/4/scale = Vector3(1.0000004, 1.0000007, 0.9999993)
+bones/5/rotation = Quaternion(1.1906939e-05, 0.9202549, -0.39131966, -2.6347852e-06)
+bones/5/scale = Vector3(1.0000001, 0.9999975, 1.0000027)
+bones/6/rotation = Quaternion(0.0005095261, 3.3268195e-09, 4.4103443e-05, 0.99999994)
+bones/6/scale = Vector3(1.0000001, 1, 1.0000001)
+bones/7/rotation = Quaternion(0.00455867, 2.4467812e-09, 0.00039458834, 0.9999895)
+bones/7/scale = Vector3(1, 0.9999999, 1)
+bones/8/position = Vector3(-0.21200736, 0.13413227, 8.62731e-08)
+bones/8/rotation = Quaternion(-0.56085134, 0.0462543, 0.7365549, 0.37522432)
+bones/8/scale = Vector3(0.9999992, 0.9999988, 0.9999998)
+bones/9/rotation = Quaternion(-1.1985075e-09, 4.391579e-08, 0.3770762, 0.9261823)
+bones/9/scale = Vector3(1.0000004, 0.99999976, 1.0000001)
+bones/11/rotation = Quaternion(-0.21232077, 0.38385278, -0.13976721, 0.88771737)
+bones/11/scale = Vector3(0.9999995, 0.99999994, 1.0000005)
+bones/12/rotation = Quaternion(-0.0038910713, -0.031341523, -0.00021421006, 0.9995012)
+bones/12/scale = Vector3(0.99999994, 1, 1)
+bones/13/position = Vector3(0.21200737, 0.13413215, 8.216504e-08)
+bones/13/rotation = Quaternion(-0.533863, -0.1161892, -0.7713914, 0.32626018)
+bones/13/scale = Vector3(0.9999993, 0.99999905, 0.9999998)
+bones/14/rotation = Quaternion(-1.7433243e-09, -6.695707e-08, -0.35944152, 0.93316764)
+bones/14/scale = Vector3(1.0000004, 0.9999998, 1)
+bones/16/rotation = Quaternion(-0.22202432, -0.34568408, 0.18428935, 0.8928859)
+bones/16/scale = Vector3(0.99999976, 1.0000001, 1.0000004)
+bones/17/rotation = Quaternion(0.9972467, -0.029523535, 0.031506017, 0.060289714)
+bones/17/scale = Vector3(0.9999999, 0.99999976, 1.0000008)
+bones/18/rotation = Quaternion(0.27689552, -6.599257e-08, 1.942823e-07, 0.9609001)
+bones/18/scale = Vector3(0.99999994, 0.99999976, 0.99999994)
+bones/19/rotation = Quaternion(-0.5606182, 0.11449453, -0.008871514, 0.8200728)
+bones/19/scale = Vector3(0.99999976, 1.0000006, 0.9999992)
+bones/20/scale = Vector3(1.0000002, 0.9999979, 1.0000024)
+bones/21/position = Vector3(5.138494e-10, 0.096125126, -0.057500005)
+bones/21/rotation = Quaternion(0.00010068925, 0.000100700854, -0.70673716, 0.70747626)
+bones/21/scale = Vector3(1, 1, 1)
+bones/22/position = Vector3(-1.5415026e-08, 0.096125185, -0.057500005)
+bones/22/rotation = Quaternion(0.00010068452, -0.00010070556, 0.70673716, 0.70747626)
+bones/22/scale = Vector3(1, 1.0000001, 1.0000001)
+
+[node name="HandSlotRight" parent="BodyContainer/Rig_Medium/Skeleton3D" index="7" unique_id=373278852]
+transform = Transform3D(2.080371e-06, -0.26254952, -0.9649188, -0.9999985, -0.00081977143, 0.00022195512, -0.000849878, 0.9649175, -0.26254934, -0.4240996, 0.5352738, 0.081641085)
+
+[node name="HandSlotLeft" parent="BodyContainer/Rig_Medium/Skeleton3D" index="8" unique_id=1266539436]
+transform = Transform3D(-8.504429e-05, 0.26272428, 0.9648711, 0.99999857, -0.0009846379, 0.0003569001, 0.0010441894, 0.96486986, -0.2627241, 0.42548633, 0.53801435, 0.08668118)
+
+[node name="FaceWear" parent="BodyContainer/Rig_Medium/Skeleton3D" index="9" unique_id=39931717]
+transform = Transform3D(0.9997204, -1.5133992e-09, 0.02364656, 6.863853e-05, 0.99999547, -0.0029018149, -0.023646463, 0.0029026223, 0.99971634, -4.420859e-09, 1.2274036, 0.0035548047)
+
+[node name="Glasses" parent="BodyContainer/Rig_Medium/Skeleton3D/FaceWear" index="0" unique_id=1081182067]
+mesh = null
+
+[node name="XrayArmLeft" type="MeshInstance3D" parent="BodyContainer/Rig_Medium/Skeleton3D" index="11" unique_id=364920432]
+material_override = SubResource("ShaderMaterial_xray")
+cast_shadow = 0
+mesh = ExtResource("9_xarml")
+skin = ExtResource("10_xarmls")
+
+[node name="XrayArmRight" type="MeshInstance3D" parent="BodyContainer/Rig_Medium/Skeleton3D" index="12" unique_id=306255797]
+material_override = SubResource("ShaderMaterial_xray")
+cast_shadow = 0
+mesh = ExtResource("11_xarmr")
+skin = ExtResource("12_xarmrs")
+
+[node name="XrayBody" type="MeshInstance3D" parent="BodyContainer/Rig_Medium/Skeleton3D" index="13" unique_id=1024667731]
+material_override = SubResource("ShaderMaterial_xray")
+cast_shadow = 0
+mesh = ExtResource("13_xbody")
+skin = ExtResource("14_xbodys")
+
+[node name="XrayHead" type="MeshInstance3D" parent="BodyContainer/Rig_Medium/Skeleton3D" index="14" unique_id=611460036]
+material_override = SubResource("ShaderMaterial_xray")
+cast_shadow = 0
+mesh = ExtResource("15_xhead")
+skin = ExtResource("16_xheads")
+
+[node name="XrayLegLeft" type="MeshInstance3D" parent="BodyContainer/Rig_Medium/Skeleton3D" index="15" unique_id=2139633897]
+material_override = SubResource("ShaderMaterial_xray")
+cast_shadow = 0
+mesh = ExtResource("17_xlegl")
+skin = ExtResource("18_xlegls")
+
+[node name="XrayLegRight" type="MeshInstance3D" parent="BodyContainer/Rig_Medium/Skeleton3D" index="16" unique_id=1744403925]
+material_override = SubResource("ShaderMaterial_xray")
+cast_shadow = 0
+mesh = ExtResource("19_xlegr")
+skin = ExtResource("20_xlegrs")
+
+[node name="XrayJaw" type="MeshInstance3D" parent="BodyContainer/Rig_Medium/Skeleton3D" index="17" unique_id=2009896999]
+material_override = SubResource("ShaderMaterial_xray")
+cast_shadow = 0
+mesh = ExtResource("21_xjaw")
+skin = ExtResource("22_xjaws")
+
+[node name="XrayEyes" type="MeshInstance3D" parent="BodyContainer/Rig_Medium/Skeleton3D" index="18" unique_id=1724566588]
+material_override = SubResource("ShaderMaterial_xray")
+cast_shadow = 0
+mesh = ExtResource("23_xeyes")
+skin = ExtResource("24_xeyess")
+
+[node name="CarriedBarrel" type="MeshInstance3D" parent="BodyContainer" parent_id_path=PackedInt32Array(1221062730) index="3" unique_id=1320788729]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0.42)
+visible = false
+mesh = ExtResource("36_cbmesh")
+
+[node name="HurtBox" parent="." index="3" unique_id=120537074]
+collision_layer = 1
+monitorable = true
+
+[node name="CollisionShape3D" parent="HurtBox" index="0" unique_id=1908814420]
+shape = SubResource("CapsuleShape3D_qjalk")
+
+[node name="CameraSpot" type="Marker3D" parent="." index="6" unique_id=1734643794]
+
+[node name="AudioListener3D" type="AudioListener3D" parent="." index="7" unique_id=1104899359]
+current = true
+
+[node name="CharacterAnimator" parent="." index="8" unique_id=838391787 node_paths=PackedStringArray("movement")]
+movement = NodePath("../PlayerMovement")
+
+[node name="PlayerXray" type="Node" parent="." index="10" unique_id=1041224823]
+script = ExtResource("8_xraycomp")
+
+[node name="PlayerMovement" type="Node" parent="." index="11" unique_id=894058479 node_paths=PackedStringArray("visual")]
+script = ExtResource("3_pmove")
+visual = NodePath("../BodyContainer")
+
+[node name="PlayerAim" type="Node" parent="." index="12" unique_id=601814401 node_paths=PackedStringArray("visual")]
+script = ExtResource("4_paim")
+visual = NodePath("../BodyContainer")
+
+[node name="PlayerWeapons" type="Node" parent="." index="13" unique_id=1763423336 node_paths=PackedStringArray("aim", "movement", "throwing", "consuming", "building", "carrying", "dodging", "animator", "hand_slot")]
+script = ExtResource("5_pweap")
+aim = NodePath("../PlayerAim")
+movement = NodePath("../PlayerMovement")
+throwing = NodePath("../PlayerThrow")
+consuming = NodePath("../PlayerConsume")
+building = NodePath("../PlayerBuild")
+carrying = NodePath("../PlayerCarry")
+dodging = NodePath("../PlayerDodge")
+animator = NodePath("../CharacterAnimator")
+hand_slot = NodePath("../BodyContainer/Rig_Medium/Skeleton3D/HandSlotRight")
+
+[node name="AudioWeaponSwap" type="AudioStreamPlayer3D" parent="PlayerWeapons" index="0" unique_id=1922742899]
+stream = ExtResource("6_swap")
+bus = &"SFX"
+
+[node name="PlayerInventory" type="Node" parent="." index="14" unique_id=1293235911 node_paths=PackedStringArray("weapons")]
+script = ExtResource("25_pinv")
+weapons = NodePath("../PlayerWeapons")
+
+[node name="PlayerConsume" type="Node" parent="." index="15" unique_id=1819693688 node_paths=PackedStringArray("carried", "energy", "animator")]
+script = ExtResource("27_pcons")
+carried = NodePath("../PlayerInventory")
+energy = NodePath("../PlayerEnergy")
+animator = NodePath("../CharacterAnimator")
+
+[node name="AudioUse" type="AudioStreamPlayer3D" parent="PlayerConsume" index="0" unique_id=1592379457]
+bus = &"SFX"
+
+[node name="PlayerThrow" type="Node" parent="." index="16" unique_id=1293235912 node_paths=PackedStringArray("carried", "aim", "animator", "preview")]
+script = ExtResource("26_pthrow")
+carried = NodePath("../PlayerInventory")
+aim = NodePath("../PlayerAim")
+animator = NodePath("../CharacterAnimator")
+preview = NodePath("TrajectoryPreview")
+
+[node name="TrajectoryPreview" type="MeshInstance3D" parent="PlayerThrow" index="0" unique_id=1293235913 node_paths=PackedStringArray("throw")]
+top_level = true
+visible = false
+material_override = SubResource("StandardMaterial3D_arc")
+cast_shadow = 0
+mesh = SubResource("ImmediateMesh_arc")
+script = ExtResource("28_tprev")
+throw = NodePath("..")
+
+[node name="PlayerEnergy" type="Node" parent="." index="17" unique_id=1473907065 node_paths=PackedStringArray("movement")]
+script = ExtResource("29_penergy")
+movement = NodePath("../PlayerMovement")
+
+[node name="PlayerPersistence" type="Node" parent="." index="18" unique_id=1524599583 node_paths=PackedStringArray("carried", "energy")]
+script = ExtResource("30_persist")
+carried = NodePath("../PlayerInventory")
+energy = NodePath("../PlayerEnergy")
+
+[node name="PlayerHeat" type="Node" parent="." index="19" unique_id=94219484 node_paths=PackedStringArray("smoke")]
+script = ExtResource("29_pheat")
+smoke = NodePath("../HeatSmoke")
+
+[node name="HeatSmoke" type="GPUParticles3D" parent="." index="20" unique_id=687841132]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2456079, -0.05479586)
+emitting = false
+amount = 26
+lifetime = 1.7
+fixed_fps = 0
+process_material = SubResource("ParticleProcessMaterial_scorch")
+draw_pass_1 = SubResource("QuadMesh_scorch")
+
+[node name="PlayerBuild" type="Node" parent="." index="21" unique_id=580434844]
+script = ExtResource("32_pbuild")
+
+[node name="PlayerInteractions" type="Node" parent="." index="22" unique_id=1644636040]
+script = ExtResource("33_pinter")
+
+[node name="PlayerCarry" type="Node" parent="." index="23" unique_id=1567085257 node_paths=PackedStringArray("carried", "animator", "visual")]
+script = ExtResource("34_pcarry")
+barrel_data = ExtResource("35_cbarrel")
+carried = NodePath("../PlayerInventory")
+animator = NodePath("../CharacterAnimator")
+visual = NodePath("../BodyContainer/CarriedBarrel")
+
+[node name="PlayerDodge" type="Node" parent="." index="24" unique_id=1187392902 node_paths=PackedStringArray("movement", "animator", "weapons", "energy")]
+script = ExtResource("37_pdodge")
+movement = NodePath("../PlayerMovement")
+animator = NodePath("../CharacterAnimator")
+weapons = NodePath("../PlayerWeapons")
+energy = NodePath("../PlayerEnergy")

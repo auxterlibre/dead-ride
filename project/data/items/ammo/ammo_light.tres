@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="AmmoData" format=3 uid="uid://dvvyr8xfksomp"]
+
+[ext_resource type="Texture2D" uid="uid://b00fv13yuriu8" path="res://assets/textures/thumbnails/ammo/ammo_light.png" id="1_m1sjg"]
+[ext_resource type="Script" uid="uid://bvf203sgg02kc" path="res://scripts/data/items/ammo_data.gd" id="1_script"]
+[ext_resource type="PackedScene" uid="uid://bxqoeo4eqwcus" path="res://scenes/items/ammo/ammo_light.tscn" id="2_8f5bc"]
+
+[resource]
+script = ExtResource("1_script")
+name = "Light Rounds"
+weight = 0.01
+icon = ExtResource("1_m1sjg")
+model = ExtResource("2_8f5bc")
+price = 1
+icon_yaw = 15.0
+icon_pitch = 45.0
+icon_roll = 30.0
+icon_zoom = 1.15

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="CropData" format=3 uid="uid://ctfsm2ho2iibh"]
+
+[ext_resource type="Script" uid="uid://c2aiovtol1l2f" path="res://scripts/data/crop_data.gd" id="1_script"]
+[ext_resource type="Resource" uid="uid://dvvyr8xfksomp" path="res://data/items/ammo/ammo_light.tres" id="2_ammo"]
+
+[resource]
+script = ExtResource("1_script")
+name = "Light Ammo Bush"
+produce = ExtResource("2_ammo")
+seed_item = ExtResource("2_ammo")
+seed_count = 20

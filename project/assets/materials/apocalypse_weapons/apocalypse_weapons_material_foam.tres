@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cgq22meta3ahg"]
+
+[ext_resource type="Texture2D" uid="uid://5uy10tcgmb" path="res://_not_exported/textures/Foam_Normal.png" id="1_yp3qb"]
+
+[resource]
+resource_name = "apocalypse_weapons_material_foam"
+cull_mode = 2
+albedo_color = Color(0.15313266, 0.15313266, 0.15313266, 1)
+normal_enabled = true
+normal_scale = 0.75
+normal_texture = ExtResource("1_yp3qb")

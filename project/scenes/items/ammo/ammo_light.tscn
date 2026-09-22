@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bxqoeo4eqwcus"]
+
+[ext_resource type="ArrayMesh" uid="uid://dt1rur7nswy5e" path="res://assets/meshes/items/ammo/ammo_light.tres" id="1_3ihro"]
+
+[node name="AmmoLight" type="MeshInstance3D" unique_id=1155323788]
+mesh = ExtResource("1_3ihro")

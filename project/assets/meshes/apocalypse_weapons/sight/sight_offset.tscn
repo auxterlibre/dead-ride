@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bnsu7s5gfay1o"]
+
+[ext_resource type="ArrayMesh" uid="uid://cli6urwdt8yxt" path="res://assets/meshes/apocalypse_weapons/smg/parts/sight_offset.tres" id="1_ejeu6"]
+[ext_resource type="ArrayMesh" uid="uid://q5c6qy1pxowg" path="res://assets/meshes/apocalypse_weapons/smg/parts/sight_offset_crosshair.tres" id="2_6q8y0"]
+
+[node name="SightOffset" type="MeshInstance3D" unique_id=117546553]
+mesh = ExtResource("1_ejeu6")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Sight_Offset_Crosshair" type="MeshInstance3D" parent="." unique_id=1015652901]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.058819104, 0.016973495, 0.02375865)
+mesh = ExtResource("2_6q8y0")
+skeleton = NodePath("")
+metadata/extras = {
+"hops": {}
+}

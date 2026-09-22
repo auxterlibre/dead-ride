@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://bu3xa8x6rmgtq"]
+
+[ext_resource type="PackedScene" uid="uid://ba48m1ipo7as7" path="res://scenes/items/weapons/weapon_ranged_base.tscn" id="1_base"]
+[ext_resource type="ArrayMesh" uid="uid://cf5480pw6dfxx" path="res://assets/meshes/items/weapons/ranged/shotgun.tres" id="2_mesh"]
+[ext_resource type="AudioStream" uid="uid://4lqbd2troos4" path="res://assets/audio/weapons/shotgun/shotgun_shoot.ogg" id="3_shoot"]
+[ext_resource type="Material" uid="uid://ck1g0yhnu17d0" path="res://assets/materials/vfx/muzzle_flash_material.tres" id="4_flash"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_flash"]
+material = ExtResource("4_flash")
+size = Vector2(2, 2)
+orientation = 1
+
+[node name="Shotgun" unique_id=1650166880 instance=ExtResource("1_base")]
+
+[node name="Mesh" parent="." index="0"]
+transform = Transform3D(-0.0172254, 0.094438, 0.995383, -0.0700642, 0.992969, -0.0954216, -0.997394, -0.071384, -0.0104875, -0.000983514, 0.00807083, 0.031148)
+mesh = ExtResource("2_mesh")
+
+[node name="ProjectileSpawn" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.997029, 0.230028, -0.000455976)
+
+[node name="AudioShoot" parent="." index="2"]
+stream = ExtResource("3_shoot")
+
+[node name="MuzzleFlashLight" parent="." index="5"]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 1.0211129, 0.30453402, 0)
+
+[node name="MuzzleFlash" parent="." index="6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7097508, 0.23, 0)
+mesh = SubResource("QuadMesh_flash")
+
+[node name="Smoke" parent="." index="7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9866976, 0.17803952, 0)
+amount = 5

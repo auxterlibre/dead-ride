@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="TrinketData" format=3 uid="uid://b7gt685gal6tp"]
+
+[ext_resource type="Script" uid="uid://k1ab4a665p2a" path="res://scripts/data/items/trinket_data.gd" id="1_script"]
+[ext_resource type="PackedScene" uid="uid://dl8wjfuu8jhas" path="res://scenes/items/trinkets/cog.tscn" id="2_model"]
+[ext_resource type="Texture2D" uid="uid://ci1x5xts7462a" path="res://assets/textures/thumbnails/trinkets/cog.png" id="3_icon"]
+
+[resource]
+script = ExtResource("1_script")
+name = "Cog"
+weight = 0.6
+icon = ExtResource("3_icon")
+model = ExtResource("2_model")
+price = 9

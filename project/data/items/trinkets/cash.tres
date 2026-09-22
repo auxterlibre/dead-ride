@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="TrinketData" format=3 uid="uid://cy8nj32tf6k01"]
+
+[ext_resource type="PackedScene" uid="uid://b5p1vcm8r2646" path="res://scenes/items/trinkets/cash.tscn" id="1_alf38"]
+[ext_resource type="Script" uid="uid://k1ab4a665p2a" path="res://scripts/data/items/trinket_data.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://hbj23v54lfem" path="res://assets/textures/thumbnails/trinkets/cash.png" id="1_syhct"]
+
+[resource]
+script = ExtResource("1_script")
+name = "Cash"
+icon = ExtResource("1_syhct")
+model = ExtResource("1_alf38")
+price = 1

@@ -1,0 +1,118 @@
+[gd_resource type="Resource" script_class="LootTableData" format=3 uid="uid://ds1cn5xndt2c1"]
+
+[ext_resource type="Script" uid="uid://dw5y35g1pt77" path="res://scripts/data/loot_table_data.gd" id="1_table"]
+[ext_resource type="Script" uid="uid://dub55b5neqcfx" path="res://scripts/data/loot_entry_data.gd" id="2_entry"]
+[ext_resource type="Resource" uid="uid://dvvyr8xfksomp" path="res://data/items/ammo/ammo_light.tres" id="3_light"]
+[ext_resource type="Resource" uid="uid://c02dayi07pp67" path="res://data/items/ammo/ammo_medium.tres" id="4_medium"]
+[ext_resource type="Resource" uid="uid://bxmj8smbnfpnx" path="res://data/items/ammo/ammo_shotgun.tres" id="5_shotgun"]
+[ext_resource type="Resource" uid="uid://ca7dwplly8kbn" path="res://data/items/ammo/ammo_heavy.tres" id="6_heavy"]
+[ext_resource type="Resource" uid="uid://dethn64qlnwh2" path="res://data/items/explosives/grenade.tres" id="7_grenade"]
+[ext_resource type="Resource" path="res://data/items/trinkets/machined_bearing.tres" id="8_bearing"]
+[ext_resource type="Resource" path="res://data/items/trinkets/servo_motor.tres" id="9_servo"]
+[ext_resource type="Resource" uid="uid://ct4fmrmkqcwox" path="res://data/items/weapons/ranged/pistol.tres" id="10_pistol"]
+[ext_resource type="Resource" uid="uid://ci77gufv1t8sf" path="res://data/items/weapons/ranged/shotgun.tres" id="11_shotgun_w"]
+[ext_resource type="Resource" uid="uid://d2oxan1t1ho3s" path="res://data/items/weapons/ranged/revolver.tres" id="12_revolver"]
+[ext_resource type="Resource" uid="uid://bgaiw355fdx7y" path="res://data/items/weapons/ranged/assault_rifle.tres" id="13_rifle"]
+[ext_resource type="Resource" uid="uid://cjnlowp1frjup" path="res://data/items/weapons/ranged/sniper_rifle.tres" id="14_sniper"]
+[ext_resource type="Resource" uid="uid://crea3bgntuyjk" path="res://data/items/weapons/ranged/smg.tres" id="15_smg"]
+[ext_resource type="Resource" path="res://data/items/consumables/field_bandage.tres" id="16_bandage"]
+[ext_resource type="Resource" uid="uid://bx4dci6ipar01" path="res://data/items/consumables/water_bottle.tres" id="17_water"]
+[ext_resource type="Resource" uid="uid://ti8xtcartr6l" path="res://data/items/tools/fuel_can.tres" id="18_can"]
+[ext_resource type="Resource" uid="uid://b7gt685gal6tp" path="res://data/items/trinkets/cog.tres" id="19_cog"]
+
+[sub_resource type="Resource" id="Resource_light"]
+script = ExtResource("2_entry")
+item = ExtResource("3_light")
+weight = 4.0
+count = Vector2i(12, 30)
+
+[sub_resource type="Resource" id="Resource_medium"]
+script = ExtResource("2_entry")
+item = ExtResource("4_medium")
+weight = 4.0
+count = Vector2i(8, 24)
+
+[sub_resource type="Resource" id="Resource_shotgun"]
+script = ExtResource("2_entry")
+item = ExtResource("5_shotgun")
+weight = 2.5
+count = Vector2i(6, 14)
+
+[sub_resource type="Resource" id="Resource_heavy"]
+script = ExtResource("2_entry")
+item = ExtResource("6_heavy")
+weight = 1.5
+count = Vector2i(4, 10)
+
+[sub_resource type="Resource" id="Resource_grenade"]
+script = ExtResource("2_entry")
+item = ExtResource("7_grenade")
+weight = 1.5
+count = Vector2i(1, 2)
+
+[sub_resource type="Resource" id="Resource_bearing"]
+script = ExtResource("2_entry")
+item = ExtResource("8_bearing")
+weight = 2.0
+count = Vector2i(1, 2)
+
+[sub_resource type="Resource" id="Resource_servo"]
+script = ExtResource("2_entry")
+item = ExtResource("9_servo")
+
+[sub_resource type="Resource" id="Resource_pistol"]
+script = ExtResource("2_entry")
+item = ExtResource("10_pistol")
+weight = 0.8
+
+[sub_resource type="Resource" id="Resource_shotgun_w"]
+script = ExtResource("2_entry")
+item = ExtResource("11_shotgun_w")
+weight = 0.6
+
+[sub_resource type="Resource" id="Resource_revolver"]
+script = ExtResource("2_entry")
+item = ExtResource("12_revolver")
+weight = 0.5
+
+[sub_resource type="Resource" id="Resource_rifle"]
+script = ExtResource("2_entry")
+item = ExtResource("13_rifle")
+weight = 0.4
+
+[sub_resource type="Resource" id="Resource_sniper"]
+script = ExtResource("2_entry")
+item = ExtResource("14_sniper")
+weight = 0.2
+
+[sub_resource type="Resource" id="Resource_smg"]
+script = ExtResource("2_entry")
+item = ExtResource("15_smg")
+weight = 0.6
+
+[sub_resource type="Resource" id="Resource_bandage"]
+script = ExtResource("2_entry")
+item = ExtResource("16_bandage")
+weight = 1.5
+count = Vector2i(1, 2)
+
+[sub_resource type="Resource" id="Resource_water"]
+script = ExtResource("2_entry")
+item = ExtResource("17_water")
+weight = 1.5
+count = Vector2i(1, 2)
+
+[sub_resource type="Resource" id="Resource_can"]
+script = ExtResource("2_entry")
+item = ExtResource("18_can")
+weight = 0.7
+
+[sub_resource type="Resource" id="Resource_cog"]
+script = ExtResource("2_entry")
+item = ExtResource("19_cog")
+weight = 2.0
+count = Vector2i(1, 2)
+
+[resource]
+script = ExtResource("1_table")
+entries = Array[ExtResource("2_entry")]([SubResource("Resource_light"), SubResource("Resource_medium"), SubResource("Resource_shotgun"), SubResource("Resource_heavy"), SubResource("Resource_grenade"), SubResource("Resource_bearing"), SubResource("Resource_servo"), SubResource("Resource_pistol"), SubResource("Resource_shotgun_w"), SubResource("Resource_revolver"), SubResource("Resource_rifle"), SubResource("Resource_sniper"), SubResource("Resource_smg"), SubResource("Resource_bandage"), SubResource("Resource_water"), SubResource("Resource_can"), SubResource("Resource_cog")])

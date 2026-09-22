@@ -1,0 +1,129 @@
+[gd_scene format=3 uid="uid://doe0bvpwtv2ar"]
+
+[ext_resource type="ArrayMesh" uid="uid://bo43cpmig3n31" path="res://assets/meshes/apocalypse_weapons/smg/parts/smg_7_base.tres" id="1_cw0xv"]
+[ext_resource type="ArrayMesh" uid="uid://ck4wrcbvppwv" path="res://assets/meshes/apocalypse_weapons/smg/parts/sight_05.tres" id="2_udbn2"]
+[ext_resource type="ArrayMesh" uid="uid://clm6ccfkv71uo" path="res://assets/meshes/apocalypse_weapons/smg/parts/sight_05_crosshair.tres" id="3_co7ie"]
+[ext_resource type="ArrayMesh" uid="uid://cjiqdl6uep02d" path="res://assets/meshes/apocalypse_weapons/smg/parts/sight_05_glass.tres" id="4_e8bqa"]
+[ext_resource type="ArrayMesh" uid="uid://d3waa4i8fmyjj" path="res://assets/meshes/apocalypse_weapons/smg/parts/sight_05_projection.tres" id="5_rtqhp"]
+[ext_resource type="ArrayMesh" uid="uid://cj5sntnhni4vu" path="res://assets/meshes/apocalypse_weapons/smg/parts/smg_7_bolt.tres" id="6_egmaa"]
+[ext_resource type="ArrayMesh" uid="uid://cf6amrfltmva5" path="res://assets/meshes/apocalypse_weapons/smg/parts/smg_7_buttstock_heavy.tres" id="7_kolk0"]
+[ext_resource type="ArrayMesh" uid="uid://etk2xcajbfqg" path="res://assets/meshes/apocalypse_weapons/smg/parts/smg_7_magazine_extended.tres" id="8_xqj3l"]
+[ext_resource type="ArrayMesh" uid="uid://5rr06b7luie7" path="res://assets/meshes/apocalypse_weapons/smg/parts/smg_7_sight.tres" id="9_ebwqx"]
+[ext_resource type="ArrayMesh" uid="uid://tjpt5qw2idu4" path="res://assets/meshes/apocalypse_weapons/smg/parts/smg_7_trigger.tres" id="10_u283m"]
+
+[node name="Smg7Base001" type="MeshInstance3D" unique_id=1058994592]
+mesh = ExtResource("1_cw0xv")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Place_SMG7_Buttstock_001" type="Node3D" parent="." unique_id=398714946]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12264919, -0.023869514)
+metadata/extras = {
+"MM": {}
+}
+
+[node name="Place_SMG7_Charm_001" type="Node3D" parent="." unique_id=503313781]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.020512158, 0.08238125, 0.015851974)
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Place_SMG7_Magazine_001" type="Node3D" parent="." unique_id=1037437359]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.108846664, 0.2521267)
+metadata/extras = {
+"MM": {}
+}
+
+[node name="Place_SMG7_Muzzle_001" type="Node3D" parent="." unique_id=151924844]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00090306246, 0.1387968, 0.5663214)
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Place_SMG7_Sight_001" type="Node3D" parent="." unique_id=1294314303]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.419992e-05, 0.18656874, 0.2588253)
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Sight_05_001" type="MeshInstance3D" parent="." unique_id=1121860135]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.419901e-05, 0.18656874, 0.2588253)
+mesh = ExtResource("2_udbn2")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Sight_05_Crosshair_001" type="MeshInstance3D" parent="Sight_05_001" unique_id=978208458]
+mesh = ExtResource("3_co7ie")
+skeleton = NodePath("")
+metadata/extras = {
+"hops": {}
+}
+
+[node name="Sight_05_Glass_001" type="MeshInstance3D" parent="Sight_05_001" unique_id=1678810195]
+mesh = ExtResource("4_e8bqa")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Sight_05_Projection_001" type="MeshInstance3D" parent="Sight_05_001" unique_id=1704120742]
+mesh = ExtResource("5_rtqhp")
+skeleton = NodePath("")
+metadata/extras = {
+"hops": {}
+}
+
+[node name="SMG7_Bolt_001" type="MeshInstance3D" parent="." unique_id=44899994]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0041317013, 0.08583927, 0.19393158)
+mesh = ExtResource("6_egmaa")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="SMG7_ButtstockHeavy_001" type="MeshInstance3D" parent="." unique_id=513253084]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12264919, -0.023869514)
+mesh = ExtResource("7_kolk0")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="SMG7_MagazineExtended_001" type="MeshInstance3D" parent="." unique_id=2001204125]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.108846664, 0.25212765)
+mesh = ExtResource("8_xqj3l")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="SMG7_Sight_001" type="MeshInstance3D" parent="." unique_id=1072870938]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.419992e-05, 0.18656874, 0.25882626)
+mesh = ExtResource("9_ebwqx")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="SMG7_Trigger_001" type="MeshInstance3D" parent="." unique_id=925276659]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00012317831, 0.06301117, 0.06404781)
+mesh = ExtResource("10_u283m")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}

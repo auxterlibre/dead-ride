@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://b11752001igh3"]
+
+[ext_resource type="PackedScene" uid="uid://ba48m1ipo7as7" path="res://scenes/items/weapons/weapon_ranged_base.tscn" id="1_v8t0o"]
+[ext_resource type="ArrayMesh" uid="uid://civ4fv08ww3r1" path="res://assets/meshes/items/weapons/ranged/sniper_rifle.tres" id="2_v8t0o"]
+[ext_resource type="AudioStream" uid="uid://busgmg8xmy2yq" path="res://assets/audio/weapons/assault_rifle/rifle_1.ogg" id="3_ryvo4"]
+[ext_resource type="AudioStream" uid="uid://cjw00kpu7gf7u" path="res://assets/audio/weapons/assault_rifle/assault_rifle_reload.ogg" id="4_231fg"]
+[ext_resource type="AudioStream" uid="uid://bny4nwvtkwclw" path="res://assets/audio/weapons/sniper_rifle/sniper_rifle_eject.wav" id="5_eject"]
+
+[node name="SniperRifle" unique_id=1117649110 instance=ExtResource("1_v8t0o")]
+
+[node name="Mesh" parent="." index="0" unique_id=1960326227]
+transform = Transform3D(-0.017225452, 0.09443791, 0.9953817, -0.07006419, 0.99296814, -0.09542141, -0.9973937, -0.07138429, -0.0104876105, -0.000983514, 0.00807083, 0.031148)
+mesh = ExtResource("2_v8t0o")
+
+[node name="ProjectileSpawn" parent="." index="1" unique_id=2001151894]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7718604, 0, -0.064)
+
+[node name="AudioShoot" parent="." index="2" unique_id=738062007]
+stream = ExtResource("3_ryvo4")
+
+[node name="AudioReload" parent="." index="4" unique_id=906187122]
+stream = ExtResource("4_231fg")
+
+[node name="MuzzleFlashLight" parent="." index="5" unique_id=649159004]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 1.7352499, 0.001802206, 0)
+
+[node name="MuzzleFlash" parent="." index="6" unique_id=948393663]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9843788, -0.012104854, 0)
+
+[node name="Smoke" parent="." index="7" unique_id=1367432190]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7812172, -0.0009944141, 0)
+
+[node name="AudioEject" type="AudioStreamPlayer3D" parent="." index="8" unique_id=918365252]
+stream = ExtResource("5_eject")
+bus = &"SFX"
