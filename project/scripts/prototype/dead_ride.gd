@@ -11,7 +11,7 @@ const RESTART_DELAY: float = 3.0
 @export var scatter_seed: int = 7
 @export var zombie_loot_chance: float = 0.15
 @export var loot_pockets: StorageData = preload("res://data/storage/body_pockets.tres")
-@export var loot_ammo: ItemData = preload("res://data/items/ammo/ammo_light.tres")
+@export var loot_item: ItemData = preload("res://data/items/trinkets/cash.tres")
 
 var over: bool = false
 
@@ -69,7 +69,7 @@ func on_zombie_killed(p_position: Vector3):
 	var drop: LootDrop = spawner.loot_scene.instantiate()
 	drop.storage = Inventory.new()
 	drop.storage.setup(loot_pockets)
-	drop.storage.add(loot_ammo, randi_range(3, 6))
+	drop.storage.add(loot_item, 1)
 	add_child(drop)
 	drop.global_position = p_position
 

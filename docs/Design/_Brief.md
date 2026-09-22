@@ -10,7 +10,7 @@ The player only ever drives. Aiming and firing belong to the crew: each characte
 
 1. **Drive.** Pick a route into the desert. Enemies engage as you pass through their territory.
 2. **Fight.** The crew auto-fires from the back of the truck. The player positions the truck to give them lines of fire, run enemies down, or get out of trouble.
-3. **Loot.** Dead enemies and wrecked vehicles drop weapons, ammo, gear, and parts.
+3. **Loot.** Dead enemies and wrecked vehicles drop weapons, gear, and parts.
 4. **Upgrade.** Back at base, spend the haul on the truck, the crew's levels, and their loadouts. Then drive out further.
 
 ## Pillars
@@ -18,6 +18,7 @@ The player only ever drives. Aiming and firing belong to the crew: each characte
 - **The truck is the character.** Speed, armour, handling, and how many crew fit in the bed are the player's main stats.
 - **The crew does the shooting.** Their weapons, levels, and gear decide how a fight goes. The player decides where the fight happens.
 - **Loot is the reward for every kill.** No farming, no shopkeeping between fights.
+- **No ammo.** Guns never run out. A gunfight is decided by fire rate and reload time, and loot goes to the truck and the crew, never to bullets.
 
 ## Carried over from Nowhere
 

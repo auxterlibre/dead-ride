@@ -319,14 +319,9 @@ func reload_amount() -> int:
 	return draw_rounds(current_weapon.max_ammo - current_weapon.current_ammo)
 
 
-# Reloading on an empty reserve would only play the animation for nothing.
 func can_reload() -> bool:
-	return carried == null \
-			or carried.ammo_count(current_weapon.ammo_type) > 0
+	return true
 
 
-# Takes rounds OUT of the pack; a character without one just fills for free.
 func draw_rounds(p_amount: int) -> int:
-	if carried == null:
-		return p_amount
-	return carried.spend_ammo(current_weapon.ammo_type, p_amount)
+	return p_amount

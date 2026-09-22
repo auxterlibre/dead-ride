@@ -184,7 +184,7 @@ func load_magazines():
 	for entry in weapon_entries():
 		var weapon: WeaponData = entry.item as WeaponData
 		if weapon and weapon.is_ranged and weapon.current_ammo == -1:
-			weapon.current_ammo = spend_ammo(weapon.ammo_type, weapon.max_ammo)
+			weapon.current_ammo = weapon.max_ammo
 
 
 # The active ITEM slot's item - null while a weapon is drawn or holstered.

@@ -41,8 +41,7 @@ func _ready():
 	Input.action_press("attack")
 	await settle(3)
 	Input.action_release("attack")
-	check(note.visible and note.label.text == ("RELOAD" if reserve > 0
-			else "OUT OF AMMO"), "an empty click banners what the RESERVE says",
+	check(note.visible and note.label.text == "RELOAD", "an empty click asks for a reload",
 			"%s with %d in reserve" % [note.label.text, reserve])
 	player.carried.spend_ammo(revolver.ammo_type, reserve)
 	note.hide_message()
@@ -51,8 +50,8 @@ func _ready():
 	Input.action_press("attack")
 	await settle(3)
 	Input.action_release("attack")
-	check(note.label.text == "OUT OF AMMO",
-			"and a dry reserve turns the same click negative", note.label.text)
+	check(note.label.text == "RELOAD",
+			"and a dry reserve still only asks for a reload - rounds are free", note.label.text)
 
 	player.heat.burning = true
 	await settle(2)
