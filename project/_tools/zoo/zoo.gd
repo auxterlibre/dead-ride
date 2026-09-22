@@ -6,6 +6,7 @@ const KITS: Array = [
 	{"name": "junkyard", "turn": PI},
 	{"name": "apocalypse", "turn": PI},
 	{"name": "apocalypse_weapons", "turn": PI / 2.0},
+	{"name": "zombies", "turn": PI},
 ]
 const LABEL_SIZE: float = 0.18
 const LABEL_FRONT: float = 1.0

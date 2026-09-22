@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dofkfnmffp4qo"]
+
+[ext_resource type="ArrayMesh" uid="uid://cf6ylbudqh38t" path="res://assets/meshes/zombies/garden_shears/parts/garden_shears.tres" id="1_yh0m3"]
+[ext_resource type="ArrayMesh" uid="uid://bq5xno870m1vu" path="res://assets/meshes/zombies/garden_shears/parts/weapon.tres" id="2_yv3lq"]
+
+[node name="GardenShears" type="MeshInstance3D" unique_id=416590589]
+mesh = ExtResource("1_yh0m3")
+skeleton = NodePath("")
+metadata/extras = {
+"hops": {}
+}
+
+[node name="Weapon_005_001" type="MeshInstance3D" parent="." unique_id=4048276]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.06773949, 0.46405816, 0.0039945096)
+mesh = ExtResource("2_yv3lq")
+skeleton = NodePath("")
+metadata/extras = {
+"hops": {}
+}

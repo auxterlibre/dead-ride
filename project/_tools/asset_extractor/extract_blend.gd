@@ -34,6 +34,8 @@ const KITS: Array = [
 			}},
 	{"name": "apocalypse_weapons", "source": "res://_not_exported/Apocalypse_Weapons.blend",
 			"family": "prefix", "skip": []},
+	{"name": "zombies", "source": "res://_not_exported/Zombies.blend",
+			"family": "prefix", "skip": ["Plane", "Text"]},
 ]
 const MESH_ROOT: String = "res://assets/meshes"
 const MATERIAL_ROOT: String = "res://assets/materials"

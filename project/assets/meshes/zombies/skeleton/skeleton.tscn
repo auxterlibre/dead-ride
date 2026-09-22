@@ -1,0 +1,2775 @@
+[gd_scene format=3 uid="uid://bfc33xwj77yv8"]
+
+[ext_resource type="ArrayMesh" uid="uid://hjxyeut7w6tk" path="res://assets/meshes/zombies/skeleton/parts/athlete_outwear.tres" id="1_kai6t"]
+[ext_resource type="ArrayMesh" uid="uid://cpokuw56ocobs" path="res://assets/meshes/zombies/skeleton/parts/athlete_shoes.tres" id="2_80cwt"]
+[ext_resource type="ArrayMesh" uid="uid://d22b6liyyfi8y" path="res://assets/meshes/zombies/skeleton/parts/athlete_shorts.tres" id="3_pjgk7"]
+[ext_resource type="ArrayMesh" uid="uid://cqtemgfesxwgw" path="res://assets/meshes/zombies/skeleton/parts/body_a_1.tres" id="4_01o50"]
+[ext_resource type="ArrayMesh" uid="uid://b4toke1yu5voo" path="res://assets/meshes/zombies/skeleton/parts/body_a_2.tres" id="5_mocl6"]
+[ext_resource type="ArrayMesh" uid="uid://ctkn112hxc0gg" path="res://assets/meshes/zombies/skeleton/parts/body_a_3.tres" id="6_7p15c"]
+[ext_resource type="ArrayMesh" uid="uid://c0d1fyv0lxkn8" path="res://assets/meshes/zombies/skeleton/parts/body_b_1.tres" id="7_drcj8"]
+[ext_resource type="ArrayMesh" uid="uid://0fdcj7x6lftp" path="res://assets/meshes/zombies/skeleton/parts/body_b_2.tres" id="8_l5wr0"]
+[ext_resource type="ArrayMesh" uid="uid://bpq3uixcspy24" path="res://assets/meshes/zombies/skeleton/parts/body_b_3.tres" id="9_v3qce"]
+[ext_resource type="ArrayMesh" uid="uid://bqljpk4ox8pt6" path="res://assets/meshes/zombies/skeleton/parts/body_c_1.tres" id="10_vkjs3"]
+[ext_resource type="ArrayMesh" uid="uid://c374jv42uj4me" path="res://assets/meshes/zombies/skeleton/parts/body_c_2.tres" id="11_wj2yt"]
+[ext_resource type="ArrayMesh" uid="uid://bdttotbc8q3xq" path="res://assets/meshes/zombies/skeleton/parts/body_c_3.tres" id="12_740o3"]
+[ext_resource type="ArrayMesh" uid="uid://b3fkkdksbs10l" path="res://assets/meshes/zombies/skeleton/parts/body_d_1.tres" id="13_mceki"]
+[ext_resource type="ArrayMesh" uid="uid://bn11bpuppcke" path="res://assets/meshes/zombies/skeleton/parts/body_d_2.tres" id="14_kjl5q"]
+[ext_resource type="ArrayMesh" uid="uid://diwwfb0hryw4v" path="res://assets/meshes/zombies/skeleton/parts/body_d_3.tres" id="15_4mmd1"]
+[ext_resource type="ArrayMesh" uid="uid://dxkbavqbot0oh" path="res://assets/meshes/zombies/skeleton/parts/boxer_gloves.tres" id="16_gyxp3"]
+[ext_resource type="ArrayMesh" uid="uid://cj02fpvnxgbmb" path="res://assets/meshes/zombies/skeleton/parts/boxer_hat.tres" id="17_a8l7c"]
+[ext_resource type="ArrayMesh" uid="uid://bb8b4axbmoo1x" path="res://assets/meshes/zombies/skeleton/parts/boxer_shoes.tres" id="18_o1ams"]
+[ext_resource type="ArrayMesh" uid="uid://ci8wlpnky7dhe" path="res://assets/meshes/zombies/skeleton/parts/boxer_shorts.tres" id="19_swerq"]
+[ext_resource type="ArrayMesh" uid="uid://djv6mecfbhdwo" path="res://assets/meshes/zombies/skeleton/parts/builder_gloves.tres" id="20_v0a6n"]
+[ext_resource type="ArrayMesh" uid="uid://bh5pak4lo3jt6" path="res://assets/meshes/zombies/skeleton/parts/builder_hat.tres" id="21_1wbpo"]
+[ext_resource type="ArrayMesh" uid="uid://dbbj3y5r4sx5u" path="res://assets/meshes/zombies/skeleton/parts/builder_outwear.tres" id="22_jeswg"]
+[ext_resource type="ArrayMesh" uid="uid://bf3bf7fhycof3" path="res://assets/meshes/zombies/skeleton/parts/builder_pants.tres" id="23_jcx50"]
+[ext_resource type="ArrayMesh" uid="uid://cnguh0sc8a0yq" path="res://assets/meshes/zombies/skeleton/parts/builder_shoes.tres" id="24_r4yn4"]
+[ext_resource type="ArrayMesh" uid="uid://bew3x60bn3o52" path="res://assets/meshes/zombies/skeleton/parts/businessman_glasses.tres" id="25_smt63"]
+[ext_resource type="ArrayMesh" uid="uid://dvhw44nkbp7hw" path="res://assets/meshes/zombies/skeleton/parts/businessman_outwear.tres" id="26_1xmb7"]
+[ext_resource type="ArrayMesh" uid="uid://b8o6r5vnjc6ix" path="res://assets/meshes/zombies/skeleton/parts/businessman_pants.tres" id="27_tb5yo"]
+[ext_resource type="ArrayMesh" uid="uid://cluubw101rc8r" path="res://assets/meshes/zombies/skeleton/parts/businessman_shirt.tres" id="28_wyb8y"]
+[ext_resource type="ArrayMesh" uid="uid://b15sbqdnnco35" path="res://assets/meshes/zombies/skeleton/parts/businessman_shoes.tres" id="29_i4vfn"]
+[ext_resource type="ArrayMesh" uid="uid://dxmewtqhhg2hu" path="res://assets/meshes/zombies/skeleton/parts/chef_apron.tres" id="30_trvx5"]
+[ext_resource type="ArrayMesh" uid="uid://dsi3ywbdxkqen" path="res://assets/meshes/zombies/skeleton/parts/chef_hat.tres" id="31_s20m3"]
+[ext_resource type="ArrayMesh" uid="uid://bl3bkdkjvlgts" path="res://assets/meshes/zombies/skeleton/parts/chef_outwear.tres" id="32_a53as"]
+[ext_resource type="ArrayMesh" uid="uid://tl1ccwihr1oe" path="res://assets/meshes/zombies/skeleton/parts/chef_pants.tres" id="33_i2w2e"]
+[ext_resource type="ArrayMesh" uid="uid://la1ig6s3xpw" path="res://assets/meshes/zombies/skeleton/parts/chef_shoes.tres" id="34_nmej0"]
+[ext_resource type="ArrayMesh" uid="uid://cpi81vxayu05w" path="res://assets/meshes/zombies/skeleton/parts/clerk_glasses.tres" id="35_ph6sk"]
+[ext_resource type="ArrayMesh" uid="uid://cuar0svwnlssx" path="res://assets/meshes/zombies/skeleton/parts/clerk_outwear.tres" id="36_8mhcd"]
+[ext_resource type="ArrayMesh" uid="uid://bglrw313p8rys" path="res://assets/meshes/zombies/skeleton/parts/clerk_pants.tres" id="37_djfa4"]
+[ext_resource type="ArrayMesh" uid="uid://funccl21e84b" path="res://assets/meshes/zombies/skeleton/parts/clerk_shoes.tres" id="38_fbutp"]
+[ext_resource type="ArrayMesh" uid="uid://doe0c8yambb4a" path="res://assets/meshes/zombies/skeleton/parts/commando_armor.tres" id="39_2gui5"]
+[ext_resource type="ArrayMesh" uid="uid://e26m1qnakm2a" path="res://assets/meshes/zombies/skeleton/parts/commando_gloves.tres" id="40_jsqi7"]
+[ext_resource type="ArrayMesh" uid="uid://b780dq30mdc8k" path="res://assets/meshes/zombies/skeleton/parts/commando_hat.tres" id="41_h3x1x"]
+[ext_resource type="ArrayMesh" uid="uid://brjduo8hwdgye" path="res://assets/meshes/zombies/skeleton/parts/commando_outwear.tres" id="42_w44sm"]
+[ext_resource type="ArrayMesh" uid="uid://cejq0oon666pg" path="res://assets/meshes/zombies/skeleton/parts/commando_pants.tres" id="43_5f730"]
+[ext_resource type="ArrayMesh" uid="uid://vlpg6f27ccfu" path="res://assets/meshes/zombies/skeleton/parts/commando_shoes.tres" id="44_yc66w"]
+[ext_resource type="ArrayMesh" uid="uid://cf03rfohabxbl" path="res://assets/meshes/zombies/skeleton/parts/doctor_mask.tres" id="45_pryhj"]
+[ext_resource type="ArrayMesh" uid="uid://c8mu72kwvamxv" path="res://assets/meshes/zombies/skeleton/parts/doctor_outwear.tres" id="46_pkncf"]
+[ext_resource type="ArrayMesh" uid="uid://dm60cain0rmcx" path="res://assets/meshes/zombies/skeleton/parts/doctor_pants.tres" id="47_dcd6s"]
+[ext_resource type="ArrayMesh" uid="uid://b8fnmxtexg6my" path="res://assets/meshes/zombies/skeleton/parts/doctor_shoes.tres" id="48_7y5f0"]
+[ext_resource type="ArrayMesh" uid="uid://but0gsyff7jbt" path="res://assets/meshes/zombies/skeleton/parts/eyelids_1.tres" id="49_xrb7x"]
+[ext_resource type="ArrayMesh" uid="uid://hakga0f6u43o" path="res://assets/meshes/zombies/skeleton/parts/eyelids_2.tres" id="50_nuac6"]
+[ext_resource type="ArrayMesh" uid="uid://b0jb0hudfbn6e" path="res://assets/meshes/zombies/skeleton/parts/eyelids_3.tres" id="51_77vsx"]
+[ext_resource type="ArrayMesh" uid="uid://dsxxldwlehwbr" path="res://assets/meshes/zombies/skeleton/parts/eyelids_4.tres" id="52_udcmx"]
+[ext_resource type="ArrayMesh" uid="uid://jev8b6oqjri3" path="res://assets/meshes/zombies/skeleton/parts/eyelids_5.tres" id="53_vdo3v"]
+[ext_resource type="ArrayMesh" uid="uid://b4eeexmgj660t" path="res://assets/meshes/zombies/skeleton/parts/eyelids_6.tres" id="54_jc8r8"]
+[ext_resource type="ArrayMesh" uid="uid://bmwjolhf81d6o" path="res://assets/meshes/zombies/skeleton/parts/eyelids_7.tres" id="55_7boij"]
+[ext_resource type="ArrayMesh" uid="uid://dmsb7ntmyg4su" path="res://assets/meshes/zombies/skeleton/parts/eyelids_8.tres" id="56_vr71s"]
+[ext_resource type="ArrayMesh" uid="uid://dsafq7q54diny" path="res://assets/meshes/zombies/skeleton/parts/eyes_1.tres" id="57_vvqeh"]
+[ext_resource type="ArrayMesh" uid="uid://b0ny37puwxmaa" path="res://assets/meshes/zombies/skeleton/parts/eyes_2.tres" id="58_b4naq"]
+[ext_resource type="ArrayMesh" uid="uid://1kg7ytp3fd40" path="res://assets/meshes/zombies/skeleton/parts/eyes_3.tres" id="59_krsmd"]
+[ext_resource type="ArrayMesh" uid="uid://c8lssy8dvlchr" path="res://assets/meshes/zombies/skeleton/parts/eyes_4.tres" id="60_o7fuw"]
+[ext_resource type="ArrayMesh" uid="uid://c7016p5qr5unq" path="res://assets/meshes/zombies/skeleton/parts/eyes_5.tres" id="61_tb7pd"]
+[ext_resource type="ArrayMesh" uid="uid://dsauod3vv7a4f" path="res://assets/meshes/zombies/skeleton/parts/eyes_6.tres" id="62_km2s2"]
+[ext_resource type="ArrayMesh" uid="uid://calj8b54bn80t" path="res://assets/meshes/zombies/skeleton/parts/eyes_7.tres" id="63_7gu83"]
+[ext_resource type="ArrayMesh" uid="uid://cio17ilxahuan" path="res://assets/meshes/zombies/skeleton/parts/eyes_8.tres" id="64_vykuo"]
+[ext_resource type="ArrayMesh" uid="uid://d2rj3cuka7eei" path="res://assets/meshes/zombies/skeleton/parts/eyes_9.tres" id="65_07u8s"]
+[ext_resource type="ArrayMesh" uid="uid://bwfxr2oxm8pmu" path="res://assets/meshes/zombies/skeleton/parts/eyes_10.tres" id="66_25hbg"]
+[ext_resource type="ArrayMesh" uid="uid://d4j0ksnb4p6w5" path="res://assets/meshes/zombies/skeleton/parts/eyes_11.tres" id="67_icmvo"]
+[ext_resource type="ArrayMesh" uid="uid://d0m5qt2e36ae5" path="res://assets/meshes/zombies/skeleton/parts/eyes_12.tres" id="68_qmja6"]
+[ext_resource type="ArrayMesh" uid="uid://dlxo6ss0xm5iv" path="res://assets/meshes/zombies/skeleton/parts/eyes_13.tres" id="69_bkjjf"]
+[ext_resource type="ArrayMesh" uid="uid://chkqt1aunfa8j" path="res://assets/meshes/zombies/skeleton/parts/eyes_14.tres" id="70_ygs2f"]
+[ext_resource type="ArrayMesh" uid="uid://jc0uhlhqsny1" path="res://assets/meshes/zombies/skeleton/parts/eyes_15.tres" id="71_et4i4"]
+[ext_resource type="ArrayMesh" uid="uid://i72mlq3ocqqt" path="res://assets/meshes/zombies/skeleton/parts/eyes_16.tres" id="72_6aevd"]
+[ext_resource type="ArrayMesh" uid="uid://h43by0ygxx7o" path="res://assets/meshes/zombies/skeleton/parts/firefighter_hat.tres" id="73_f1ne2"]
+[ext_resource type="ArrayMesh" uid="uid://dtsfvdml8i7gw" path="res://assets/meshes/zombies/skeleton/parts/firefighter_outwear.tres" id="74_uirle"]
+[ext_resource type="ArrayMesh" uid="uid://dirndu12nlywq" path="res://assets/meshes/zombies/skeleton/parts/firefighter_pants.tres" id="75_r62k5"]
+[ext_resource type="ArrayMesh" uid="uid://6bb5qfq8om1q" path="res://assets/meshes/zombies/skeleton/parts/footballer_armor.tres" id="76_hwopj"]
+[ext_resource type="ArrayMesh" uid="uid://dlvam8oubsi5i" path="res://assets/meshes/zombies/skeleton/parts/footballer_gloves.tres" id="77_1qqsq"]
+[ext_resource type="ArrayMesh" uid="uid://bros1ukei5x84" path="res://assets/meshes/zombies/skeleton/parts/footballer_hat.tres" id="78_owfj2"]
+[ext_resource type="ArrayMesh" uid="uid://cgf8tbc1uu5uu" path="res://assets/meshes/zombies/skeleton/parts/footballer_outwear.tres" id="79_50uuj"]
+[ext_resource type="ArrayMesh" uid="uid://dqwtp22pftbkc" path="res://assets/meshes/zombies/skeleton/parts/footballer_pants.tres" id="80_hctqc"]
+[ext_resource type="ArrayMesh" uid="uid://j7shm7bxc0ei" path="res://assets/meshes/zombies/skeleton/parts/footballer_shoes.tres" id="81_t6cog"]
+[ext_resource type="ArrayMesh" uid="uid://cg382lc0483tf" path="res://assets/meshes/zombies/skeleton/parts/footballer_socks.tres" id="82_n23gs"]
+[ext_resource type="ArrayMesh" uid="uid://ukwmkn3g0ifp" path="res://assets/meshes/zombies/skeleton/parts/gloves_1.tres" id="83_lcv7k"]
+[ext_resource type="ArrayMesh" uid="uid://d3bcgh4v68n7h" path="res://assets/meshes/zombies/skeleton/parts/gloves_2.tres" id="84_6v2i6"]
+[ext_resource type="ArrayMesh" uid="uid://v4gg3fei0aox" path="res://assets/meshes/zombies/skeleton/parts/gloves_3.tres" id="85_j0gke"]
+[ext_resource type="ArrayMesh" uid="uid://bunk8w7febb6j" path="res://assets/meshes/zombies/skeleton/parts/gloves_4.tres" id="86_817yk"]
+[ext_resource type="ArrayMesh" uid="uid://v1fr3nbwloxo" path="res://assets/meshes/zombies/skeleton/parts/gloves_5.tres" id="87_cypcv"]
+[ext_resource type="ArrayMesh" uid="uid://bn5slyjfa8kk8" path="res://assets/meshes/zombies/skeleton/parts/gloves_6.tres" id="88_pxncw"]
+[ext_resource type="ArrayMesh" uid="uid://c3a4crhgwowdg" path="res://assets/meshes/zombies/skeleton/parts/gloves_7.tres" id="89_kmxuc"]
+[ext_resource type="ArrayMesh" uid="uid://djy1holythnhi" path="res://assets/meshes/zombies/skeleton/parts/gloves_8.tres" id="90_7urma"]
+[ext_resource type="ArrayMesh" uid="uid://cxbmjd82ulbuj" path="res://assets/meshes/zombies/skeleton/parts/gloves_9.tres" id="91_yc4bf"]
+[ext_resource type="ArrayMesh" uid="uid://bkmgvhhv2o8bu" path="res://assets/meshes/zombies/skeleton/parts/gloves_10.tres" id="92_dl07j"]
+[ext_resource type="ArrayMesh" uid="uid://bb625evbhx2yf" path="res://assets/meshes/zombies/skeleton/parts/gloves_11.tres" id="93_fmgw0"]
+[ext_resource type="ArrayMesh" uid="uid://b8wpsabprl33s" path="res://assets/meshes/zombies/skeleton/parts/gloves_12.tres" id="94_wd1qg"]
+[ext_resource type="ArrayMesh" uid="uid://ciftm7uqw3o6b" path="res://assets/meshes/zombies/skeleton/parts/gloves_13.tres" id="95_abqo5"]
+[ext_resource type="ArrayMesh" uid="uid://hwsr80myhbof" path="res://assets/meshes/zombies/skeleton/parts/gloves_14.tres" id="96_x8i70"]
+[ext_resource type="ArrayMesh" uid="uid://so3gm3ojiins" path="res://assets/meshes/zombies/skeleton/parts/hair_1.tres" id="97_3blh2"]
+[ext_resource type="ArrayMesh" uid="uid://c8nscrp837k28" path="res://assets/meshes/zombies/skeleton/parts/hair_2.tres" id="98_gw5wb"]
+[ext_resource type="ArrayMesh" uid="uid://p23dkfqhkgup" path="res://assets/meshes/zombies/skeleton/parts/hair_3.tres" id="99_hui2w"]
+[ext_resource type="ArrayMesh" uid="uid://cxvsxbo8ctq8s" path="res://assets/meshes/zombies/skeleton/parts/hair_4.tres" id="100_8ddlf"]
+[ext_resource type="ArrayMesh" uid="uid://de74okhk3f8fo" path="res://assets/meshes/zombies/skeleton/parts/hair_5.tres" id="101_2j42o"]
+[ext_resource type="ArrayMesh" uid="uid://bvy3u5y6jjmgo" path="res://assets/meshes/zombies/skeleton/parts/hair_6.tres" id="102_7xy5e"]
+[ext_resource type="ArrayMesh" uid="uid://c67dxvanxxpnw" path="res://assets/meshes/zombies/skeleton/parts/hair_7.tres" id="103_eo88g"]
+[ext_resource type="ArrayMesh" uid="uid://cddsdqugm0fd6" path="res://assets/meshes/zombies/skeleton/parts/hat_1.tres" id="104_g330e"]
+[ext_resource type="ArrayMesh" uid="uid://ct5d2mjxgbphk" path="res://assets/meshes/zombies/skeleton/parts/hat_2.tres" id="105_g375q"]
+[ext_resource type="ArrayMesh" uid="uid://bgxonv2tc61tt" path="res://assets/meshes/zombies/skeleton/parts/hat_3.tres" id="106_or0eh"]
+[ext_resource type="ArrayMesh" uid="uid://wgepoywdkpep" path="res://assets/meshes/zombies/skeleton/parts/hat_4.tres" id="107_52rso"]
+[ext_resource type="ArrayMesh" uid="uid://bx5lfl6jhvoi7" path="res://assets/meshes/zombies/skeleton/parts/hat_5.tres" id="108_y43sc"]
+[ext_resource type="ArrayMesh" uid="uid://j34hqsy4m62s" path="res://assets/meshes/zombies/skeleton/parts/hat_6.tres" id="109_k77v7"]
+[ext_resource type="ArrayMesh" uid="uid://dcgbohbmm2oxp" path="res://assets/meshes/zombies/skeleton/parts/hat_7.tres" id="110_6jpar"]
+[ext_resource type="ArrayMesh" uid="uid://crcjxljjnct8e" path="res://assets/meshes/zombies/skeleton/parts/hat_8.tres" id="111_rquhv"]
+[ext_resource type="ArrayMesh" uid="uid://hcxo0vsy76wn" path="res://assets/meshes/zombies/skeleton/parts/hat_9.tres" id="112_3w87g"]
+[ext_resource type="ArrayMesh" uid="uid://psw5ot17qny3" path="res://assets/meshes/zombies/skeleton/parts/hat_10.tres" id="113_gama8"]
+[ext_resource type="ArrayMesh" uid="uid://ct63id3fu4fm3" path="res://assets/meshes/zombies/skeleton/parts/hat_11.tres" id="114_hv2sg"]
+[ext_resource type="ArrayMesh" uid="uid://bptfypsgn1oyf" path="res://assets/meshes/zombies/skeleton/parts/hat_12.tres" id="115_5ph6c"]
+[ext_resource type="ArrayMesh" uid="uid://bugqehbqlb5iu" path="res://assets/meshes/zombies/skeleton/parts/hat_13.tres" id="116_eagxd"]
+[ext_resource type="ArrayMesh" uid="uid://b56b0xx6a6yeh" path="res://assets/meshes/zombies/skeleton/parts/hat_14.tres" id="117_ptdm1"]
+[ext_resource type="ArrayMesh" uid="uid://cld5hs36vdsk1" path="res://assets/meshes/zombies/skeleton/parts/hat_15.tres" id="118_2iggh"]
+[ext_resource type="ArrayMesh" uid="uid://ddaao02dcicq5" path="res://assets/meshes/zombies/skeleton/parts/hat_16.tres" id="119_fg873"]
+[ext_resource type="ArrayMesh" uid="uid://d0v1f6waauq13" path="res://assets/meshes/zombies/skeleton/parts/hat_17.tres" id="120_xrjbq"]
+[ext_resource type="ArrayMesh" uid="uid://b2e1svddv6mfy" path="res://assets/meshes/zombies/skeleton/parts/hat_18.tres" id="121_yladf"]
+[ext_resource type="ArrayMesh" uid="uid://cl0tsax2vw0jm" path="res://assets/meshes/zombies/skeleton/parts/hat_19.tres" id="122_teoni"]
+[ext_resource type="ArrayMesh" uid="uid://cstkvynyljint" path="res://assets/meshes/zombies/skeleton/parts/hat_20.tres" id="123_cwmqm"]
+[ext_resource type="ArrayMesh" uid="uid://bkynxu30pc1jv" path="res://assets/meshes/zombies/skeleton/parts/hat_21.tres" id="124_5wnvp"]
+[ext_resource type="ArrayMesh" uid="uid://dvoqnbplge0ai" path="res://assets/meshes/zombies/skeleton/parts/hat_22.tres" id="125_f8be0"]
+[ext_resource type="ArrayMesh" uid="uid://dw6nktc3o5n6d" path="res://assets/meshes/zombies/skeleton/parts/hat_23.tres" id="126_b363f"]
+[ext_resource type="ArrayMesh" uid="uid://cki8fobrrgvqq" path="res://assets/meshes/zombies/skeleton/parts/hat_24.tres" id="127_lr7gm"]
+[ext_resource type="ArrayMesh" uid="uid://c2fbgvv34rhli" path="res://assets/meshes/zombies/skeleton/parts/hat_25.tres" id="128_k80jl"]
+[ext_resource type="ArrayMesh" uid="uid://cl7xm8cnrseip" path="res://assets/meshes/zombies/skeleton/parts/hat_26.tres" id="129_fhysa"]
+[ext_resource type="ArrayMesh" uid="uid://bsop002skgjj5" path="res://assets/meshes/zombies/skeleton/parts/hat_27.tres" id="130_o1p31"]
+[ext_resource type="ArrayMesh" uid="uid://sitva2jyp1t4" path="res://assets/meshes/zombies/skeleton/parts/hat_28.tres" id="131_iw2i6"]
+[ext_resource type="ArrayMesh" uid="uid://c885x0kfei8ol" path="res://assets/meshes/zombies/skeleton/parts/hat_29.tres" id="132_35rcl"]
+[ext_resource type="ArrayMesh" uid="uid://cn0eyhqr1kd72" path="res://assets/meshes/zombies/skeleton/parts/hat_30.tres" id="133_rc4mk"]
+[ext_resource type="ArrayMesh" uid="uid://cn1goof35pd6n" path="res://assets/meshes/zombies/skeleton/parts/head_a_1.tres" id="134_kq44v"]
+[ext_resource type="ArrayMesh" uid="uid://ccnvv5cit581l" path="res://assets/meshes/zombies/skeleton/parts/head_a_2.tres" id="135_wm2i4"]
+[ext_resource type="ArrayMesh" uid="uid://cxi8qo6hnt0gh" path="res://assets/meshes/zombies/skeleton/parts/head_a_3.tres" id="136_xgm7n"]
+[ext_resource type="ArrayMesh" uid="uid://df5jgm0dlli8u" path="res://assets/meshes/zombies/skeleton/parts/head_b_1.tres" id="137_kyuis"]
+[ext_resource type="ArrayMesh" uid="uid://by6fmo778egtm" path="res://assets/meshes/zombies/skeleton/parts/head_b_2.tres" id="138_fetom"]
+[ext_resource type="ArrayMesh" uid="uid://dj7jw27twy7jy" path="res://assets/meshes/zombies/skeleton/parts/head_b_3.tres" id="139_yhh60"]
+[ext_resource type="ArrayMesh" uid="uid://cokgqkuubslv0" path="res://assets/meshes/zombies/skeleton/parts/head_c_1.tres" id="140_o5g3e"]
+[ext_resource type="ArrayMesh" uid="uid://sgq75ah73pib" path="res://assets/meshes/zombies/skeleton/parts/head_c_2.tres" id="141_sbqjh"]
+[ext_resource type="ArrayMesh" uid="uid://dohq6geu460sa" path="res://assets/meshes/zombies/skeleton/parts/head_c_3.tres" id="142_bivgp"]
+[ext_resource type="ArrayMesh" uid="uid://3mv84le1oxvu" path="res://assets/meshes/zombies/skeleton/parts/head_d_1.tres" id="143_lguav"]
+[ext_resource type="ArrayMesh" uid="uid://btccphg28wsbd" path="res://assets/meshes/zombies/skeleton/parts/head_d_2.tres" id="144_fi4a8"]
+[ext_resource type="ArrayMesh" uid="uid://qi306hk18gkm" path="res://assets/meshes/zombies/skeleton/parts/head_d_3.tres" id="145_pud7q"]
+[ext_resource type="ArrayMesh" uid="uid://blrlyiml5ie4a" path="res://assets/meshes/zombies/skeleton/parts/mime_gloves.tres" id="146_utsao"]
+[ext_resource type="ArrayMesh" uid="uid://dnwrmdb8jyqqf" path="res://assets/meshes/zombies/skeleton/parts/mime_hat.tres" id="147_7seqr"]
+[ext_resource type="ArrayMesh" uid="uid://c6m15prnt7l3a" path="res://assets/meshes/zombies/skeleton/parts/mime_outwear.tres" id="148_mss1l"]
+[ext_resource type="ArrayMesh" uid="uid://cb772ma2jsmgy" path="res://assets/meshes/zombies/skeleton/parts/mime_pants.tres" id="149_ias1v"]
+[ext_resource type="ArrayMesh" uid="uid://drup343p10jcf" path="res://assets/meshes/zombies/skeleton/parts/mime_shoes.tres" id="150_24t37"]
+[ext_resource type="ArrayMesh" uid="uid://5kt447gskeyy" path="res://assets/meshes/zombies/skeleton/parts/outwear_1.tres" id="151_gm2r7"]
+[ext_resource type="ArrayMesh" uid="uid://33kk27e4sv3s" path="res://assets/meshes/zombies/skeleton/parts/outwear_2.tres" id="152_y4pnd"]
+[ext_resource type="ArrayMesh" uid="uid://ck830bfoumkic" path="res://assets/meshes/zombies/skeleton/parts/outwear_3.tres" id="153_c4orf"]
+[ext_resource type="ArrayMesh" uid="uid://h7k853q0y6sh" path="res://assets/meshes/zombies/skeleton/parts/outwear_4.tres" id="154_jw041"]
+[ext_resource type="ArrayMesh" uid="uid://6hgn38u4rgw4" path="res://assets/meshes/zombies/skeleton/parts/outwear_5.tres" id="155_3n33l"]
+[ext_resource type="ArrayMesh" uid="uid://c0gnvgqypdle4" path="res://assets/meshes/zombies/skeleton/parts/outwear_6.tres" id="156_jypa5"]
+[ext_resource type="ArrayMesh" uid="uid://dfiw6igwo2p0e" path="res://assets/meshes/zombies/skeleton/parts/outwear_7.tres" id="157_wkpyf"]
+[ext_resource type="ArrayMesh" uid="uid://tvvku2lokdnx" path="res://assets/meshes/zombies/skeleton/parts/outwear_8.tres" id="158_hx5nk"]
+[ext_resource type="ArrayMesh" uid="uid://8uvf54t3nbu8" path="res://assets/meshes/zombies/skeleton/parts/outwear_9.tres" id="159_77crc"]
+[ext_resource type="ArrayMesh" uid="uid://ytvryoon27sb" path="res://assets/meshes/zombies/skeleton/parts/outwear_10.tres" id="160_hiosk"]
+[ext_resource type="ArrayMesh" uid="uid://blfqedjsv60h7" path="res://assets/meshes/zombies/skeleton/parts/outwear_11.tres" id="161_fdait"]
+[ext_resource type="ArrayMesh" uid="uid://bvahm7kr78t0u" path="res://assets/meshes/zombies/skeleton/parts/outwear_12.tres" id="162_xtv4g"]
+[ext_resource type="ArrayMesh" uid="uid://bflir62rssb0c" path="res://assets/meshes/zombies/skeleton/parts/outwear_13.tres" id="163_8rtxp"]
+[ext_resource type="ArrayMesh" uid="uid://byud3j60domcu" path="res://assets/meshes/zombies/skeleton/parts/outwear_14.tres" id="164_73jb3"]
+[ext_resource type="ArrayMesh" uid="uid://dm1rkp5akmgi" path="res://assets/meshes/zombies/skeleton/parts/outwear_15.tres" id="165_6niib"]
+[ext_resource type="ArrayMesh" uid="uid://dx8glre7qgtjd" path="res://assets/meshes/zombies/skeleton/parts/outwear_16.tres" id="166_ut8k7"]
+[ext_resource type="ArrayMesh" uid="uid://bhr6jwd65g1bm" path="res://assets/meshes/zombies/skeleton/parts/outwear_17.tres" id="167_8rn4o"]
+[ext_resource type="ArrayMesh" uid="uid://c3dvg12ke3t3t" path="res://assets/meshes/zombies/skeleton/parts/outwear_18.tres" id="168_5vnbo"]
+[ext_resource type="ArrayMesh" uid="uid://gakb8ipc8ad3" path="res://assets/meshes/zombies/skeleton/parts/outwear_19.tres" id="169_bi1d8"]
+[ext_resource type="ArrayMesh" uid="uid://b1a5gkkryi1hk" path="res://assets/meshes/zombies/skeleton/parts/outwear_20.tres" id="170_6kyx0"]
+[ext_resource type="ArrayMesh" uid="uid://c7k5lkwg62lph" path="res://assets/meshes/zombies/skeleton/parts/outwear_21.tres" id="171_337q3"]
+[ext_resource type="ArrayMesh" uid="uid://npy2h2willxr" path="res://assets/meshes/zombies/skeleton/parts/outwear_22.tres" id="172_3d13l"]
+[ext_resource type="ArrayMesh" uid="uid://dm1y3n7kwo714" path="res://assets/meshes/zombies/skeleton/parts/outwear_23.tres" id="173_phtvu"]
+[ext_resource type="ArrayMesh" uid="uid://d1hthrugge01b" path="res://assets/meshes/zombies/skeleton/parts/outwear_24.tres" id="174_kj8c7"]
+[ext_resource type="ArrayMesh" uid="uid://d685pxstsbwu" path="res://assets/meshes/zombies/skeleton/parts/outwear_25.tres" id="175_w6c8s"]
+[ext_resource type="ArrayMesh" uid="uid://cvt276ra2jg6o" path="res://assets/meshes/zombies/skeleton/parts/outwear_26.tres" id="176_o12hj"]
+[ext_resource type="ArrayMesh" uid="uid://kpwxtisiuqgr" path="res://assets/meshes/zombies/skeleton/parts/overall_1.tres" id="177_4cop0"]
+[ext_resource type="ArrayMesh" uid="uid://brj5wrjl50a0v" path="res://assets/meshes/zombies/skeleton/parts/overall_2.tres" id="178_hf3c8"]
+[ext_resource type="ArrayMesh" uid="uid://bkjsulrvbd0xd" path="res://assets/meshes/zombies/skeleton/parts/overall_3.tres" id="179_gv482"]
+[ext_resource type="ArrayMesh" uid="uid://c04bbjlvotj3m" path="res://assets/meshes/zombies/skeleton/parts/overall_4.tres" id="180_bp7kl"]
+[ext_resource type="ArrayMesh" uid="uid://cehraa0fwyual" path="res://assets/meshes/zombies/skeleton/parts/overall_5.tres" id="181_u40c5"]
+[ext_resource type="ArrayMesh" uid="uid://wnm124k7lhe" path="res://assets/meshes/zombies/skeleton/parts/overall_6.tres" id="182_7gqi0"]
+[ext_resource type="ArrayMesh" uid="uid://cd40oqdxid81i" path="res://assets/meshes/zombies/skeleton/parts/overall_7.tres" id="183_soyhj"]
+[ext_resource type="ArrayMesh" uid="uid://itr1fjj8dyek" path="res://assets/meshes/zombies/skeleton/parts/overall_8.tres" id="184_v6x0r"]
+[ext_resource type="ArrayMesh" uid="uid://cjjd4hckopuvi" path="res://assets/meshes/zombies/skeleton/parts/pants_1.tres" id="185_htps0"]
+[ext_resource type="ArrayMesh" uid="uid://cn65o3ydqg5pf" path="res://assets/meshes/zombies/skeleton/parts/pants_2.tres" id="186_khuaq"]
+[ext_resource type="ArrayMesh" uid="uid://c8rrsuuos0r84" path="res://assets/meshes/zombies/skeleton/parts/pants_3.tres" id="187_qvuh7"]
+[ext_resource type="ArrayMesh" uid="uid://cxkicwqs7i0vn" path="res://assets/meshes/zombies/skeleton/parts/pants_4.tres" id="188_3mrwh"]
+[ext_resource type="ArrayMesh" uid="uid://ciwtru7h1w3l0" path="res://assets/meshes/zombies/skeleton/parts/pants_5.tres" id="189_w0sfr"]
+[ext_resource type="ArrayMesh" uid="uid://bgo7stpvfmi5v" path="res://assets/meshes/zombies/skeleton/parts/pants_6.tres" id="190_kuayj"]
+[ext_resource type="ArrayMesh" uid="uid://bwr3tp55sk6b6" path="res://assets/meshes/zombies/skeleton/parts/pants_7.tres" id="191_mpoth"]
+[ext_resource type="ArrayMesh" uid="uid://bdw5mf8bhhyih" path="res://assets/meshes/zombies/skeleton/parts/pants_8.tres" id="192_xtbnw"]
+[ext_resource type="ArrayMesh" uid="uid://bl415w17c8lq1" path="res://assets/meshes/zombies/skeleton/parts/pants_9.tres" id="193_3blw7"]
+[ext_resource type="ArrayMesh" uid="uid://d23e8so0pfitk" path="res://assets/meshes/zombies/skeleton/parts/pants_10.tres" id="194_ls7q5"]
+[ext_resource type="ArrayMesh" uid="uid://b0m4oag55br81" path="res://assets/meshes/zombies/skeleton/parts/pants_11.tres" id="195_qlkqb"]
+[ext_resource type="ArrayMesh" uid="uid://btq3v46s5is7s" path="res://assets/meshes/zombies/skeleton/parts/policeman_hat.tres" id="196_o7ey7"]
+[ext_resource type="ArrayMesh" uid="uid://bx75xrnkyp21m" path="res://assets/meshes/zombies/skeleton/parts/policeman_outwear.tres" id="197_l2hqm"]
+[ext_resource type="ArrayMesh" uid="uid://delw7i1uf3lp2" path="res://assets/meshes/zombies/skeleton/parts/policeman_pants.tres" id="198_6m7ey"]
+[ext_resource type="ArrayMesh" uid="uid://cnae2mi0pbjh1" path="res://assets/meshes/zombies/skeleton/parts/policeman_shoes.tres" id="199_bl1xx"]
+[ext_resource type="ArrayMesh" uid="uid://cda7b6da6pq6f" path="res://assets/meshes/zombies/skeleton/parts/prisoner_hat.tres" id="200_p11ye"]
+[ext_resource type="ArrayMesh" uid="uid://bepxwvqttgxgm" path="res://assets/meshes/zombies/skeleton/parts/prisoner_outwear.tres" id="201_02owr"]
+[ext_resource type="ArrayMesh" uid="uid://ce0y1xvoe6fdq" path="res://assets/meshes/zombies/skeleton/parts/prisoner_pants.tres" id="202_gmoah"]
+[ext_resource type="ArrayMesh" uid="uid://c4vyr1q5swyfa" path="res://assets/meshes/zombies/skeleton/parts/prisoner_shoes.tres" id="203_vnosx"]
+[ext_resource type="ArrayMesh" uid="uid://rkox183j1qpe" path="res://assets/meshes/zombies/skeleton/parts/scientist_balloon.tres" id="204_k188t"]
+[ext_resource type="ArrayMesh" uid="uid://dpxfg5pawkya6" path="res://assets/meshes/zombies/skeleton/parts/scientist_gloves.tres" id="205_ld3ft"]
+[ext_resource type="ArrayMesh" uid="uid://dqsnav7lcgchn" path="res://assets/meshes/zombies/skeleton/parts/scientist_hat.tres" id="206_20bfo"]
+[ext_resource type="ArrayMesh" uid="uid://caila362h3ns3" path="res://assets/meshes/zombies/skeleton/parts/scientist_outwear.tres" id="207_bhs0c"]
+[ext_resource type="ArrayMesh" uid="uid://pkco13g60kar" path="res://assets/meshes/zombies/skeleton/parts/scientist_pants.tres" id="208_07r6j"]
+[ext_resource type="ArrayMesh" uid="uid://d3x8oinnxe12j" path="res://assets/meshes/zombies/skeleton/parts/scientist_shoes.tres" id="209_t7w75"]
+[ext_resource type="ArrayMesh" uid="uid://cu8sr5s0rhrvc" path="res://assets/meshes/zombies/skeleton/parts/shoes_1.tres" id="210_mo50m"]
+[ext_resource type="ArrayMesh" uid="uid://qmxuqcmm81eu" path="res://assets/meshes/zombies/skeleton/parts/shoes_2.tres" id="211_3lm5q"]
+[ext_resource type="ArrayMesh" uid="uid://b6ho15nty2fq7" path="res://assets/meshes/zombies/skeleton/parts/shoes_3.tres" id="212_iaeg4"]
+[ext_resource type="ArrayMesh" uid="uid://4xqbh6p22bgi" path="res://assets/meshes/zombies/skeleton/parts/shoes_4.tres" id="213_5ntaa"]
+[ext_resource type="ArrayMesh" uid="uid://cs68rtd1gdhgd" path="res://assets/meshes/zombies/skeleton/parts/shoes_5.tres" id="214_xbbxk"]
+[ext_resource type="ArrayMesh" uid="uid://doowvuhj54v4o" path="res://assets/meshes/zombies/skeleton/parts/shoes_6.tres" id="215_v6owj"]
+[ext_resource type="ArrayMesh" uid="uid://d30w1668kdg4p" path="res://assets/meshes/zombies/skeleton/parts/shoes_7.tres" id="216_4bk2g"]
+[ext_resource type="ArrayMesh" uid="uid://bex8x27tr3wy" path="res://assets/meshes/zombies/skeleton/parts/shoes_8.tres" id="217_p4ib8"]
+[ext_resource type="ArrayMesh" uid="uid://d23g4x6jutx7a" path="res://assets/meshes/zombies/skeleton/parts/shoes_9.tres" id="218_17gjk"]
+[ext_resource type="ArrayMesh" uid="uid://ckg3hy8t5qkit" path="res://assets/meshes/zombies/skeleton/parts/shoes_10.tres" id="219_58bha"]
+[ext_resource type="ArrayMesh" uid="uid://devficca801v7" path="res://assets/meshes/zombies/skeleton/parts/shoes_11.tres" id="220_5vr6s"]
+[ext_resource type="ArrayMesh" uid="uid://6fsp8qpopuif" path="res://assets/meshes/zombies/skeleton/parts/shoes_12.tres" id="221_0k5fr"]
+[ext_resource type="ArrayMesh" uid="uid://ctobwe3oaucew" path="res://assets/meshes/zombies/skeleton/parts/shorts_1.tres" id="222_ql23t"]
+[ext_resource type="ArrayMesh" uid="uid://bxy0f0xgyqhn4" path="res://assets/meshes/zombies/skeleton/parts/shorts_2.tres" id="223_uiqn4"]
+[ext_resource type="ArrayMesh" uid="uid://djf6gtbfb52if" path="res://assets/meshes/zombies/skeleton/parts/shorts_3.tres" id="224_gbwfi"]
+[ext_resource type="ArrayMesh" uid="uid://br5jcn1gd7fqa" path="res://assets/meshes/zombies/skeleton/parts/shorts_4.tres" id="225_0g5h3"]
+[ext_resource type="ArrayMesh" uid="uid://ciop66ftu0ebf" path="res://assets/meshes/zombies/skeleton/parts/shorts_5.tres" id="226_yr04m"]
+[ext_resource type="ArrayMesh" uid="uid://bpf0k1cm05wii" path="res://assets/meshes/zombies/skeleton/parts/shorts_6.tres" id="227_j3xp0"]
+[ext_resource type="ArrayMesh" uid="uid://dqlqfvtl2q538" path="res://assets/meshes/zombies/skeleton/parts/soldier_hat.tres" id="228_l3w1l"]
+[ext_resource type="ArrayMesh" uid="uid://7qrtdqpv4n1m" path="res://assets/meshes/zombies/skeleton/parts/soldier_outwear.tres" id="229_8uhv0"]
+[ext_resource type="ArrayMesh" uid="uid://cylero8otbw0l" path="res://assets/meshes/zombies/skeleton/parts/soldier_pants.tres" id="230_yf8g6"]
+[ext_resource type="ArrayMesh" uid="uid://br8w4mibk5mcm" path="res://assets/meshes/zombies/skeleton/parts/soldier_shoes.tres" id="231_i0x40"]
+[ext_resource type="ArrayMesh" uid="uid://d4dc6rr7gx1v4" path="res://assets/meshes/zombies/skeleton/parts/thief_gloves.tres" id="232_1q2pl"]
+[ext_resource type="ArrayMesh" uid="uid://46neiogvr7vg" path="res://assets/meshes/zombies/skeleton/parts/thief_hat.tres" id="233_xl2qs"]
+[ext_resource type="ArrayMesh" uid="uid://duc4mx5dxgtsj" path="res://assets/meshes/zombies/skeleton/parts/thief_outwear.tres" id="234_whjgd"]
+[ext_resource type="ArrayMesh" uid="uid://bmfhd0x4ikbb1" path="res://assets/meshes/zombies/skeleton/parts/thief_pants.tres" id="235_tt0a1"]
+[ext_resource type="ArrayMesh" uid="uid://xtd00i57yqlw" path="res://assets/meshes/zombies/skeleton/parts/thief_shoes.tres" id="236_tuvr5"]
+[ext_resource type="ArrayMesh" uid="uid://dmb0vgcly8nk8" path="res://assets/meshes/zombies/skeleton/parts/tourist_camera.tres" id="237_1mj27"]
+[ext_resource type="ArrayMesh" uid="uid://8nbbvvmyyjta" path="res://assets/meshes/zombies/skeleton/parts/tourist_hat.tres" id="238_sk8qm"]
+[ext_resource type="ArrayMesh" uid="uid://b1koxergu4mes" path="res://assets/meshes/zombies/skeleton/parts/tourist_outwear.tres" id="239_ho6s4"]
+[ext_resource type="ArrayMesh" uid="uid://kilx8il3wqjh" path="res://assets/meshes/zombies/skeleton/parts/tourist_shoes.tres" id="240_i8opp"]
+[ext_resource type="ArrayMesh" uid="uid://bwikdxrx6mqcu" path="res://assets/meshes/zombies/skeleton/parts/tourist_shorts.tres" id="241_jos2l"]
+[ext_resource type="ArrayMesh" uid="uid://dmi2p558vgquj" path="res://assets/meshes/zombies/skeleton/parts/waiter_apron.tres" id="242_8x8ot"]
+[ext_resource type="ArrayMesh" uid="uid://cpb3u5w75xmaq" path="res://assets/meshes/zombies/skeleton/parts/waiter_outwear.tres" id="243_ikenw"]
+[ext_resource type="ArrayMesh" uid="uid://5y2jxuj7ad12" path="res://assets/meshes/zombies/skeleton/parts/waiter_pants.tres" id="244_78x3d"]
+[ext_resource type="ArrayMesh" uid="uid://dili6wue810x5" path="res://assets/meshes/zombies/skeleton/parts/waiter_shoes.tres" id="245_cje3g"]
+
+[sub_resource type="Skin" id="Skin_a3jmk"]
+resource_name = "Skin"
+bind_count = 47
+bind/0/name = &"Root"
+bind/0/bone = -1
+bind/0/pose = Transform3D(1, 8.742278e-08, 8.742277e-08, -8.742279e-08, 1, 1.6292066e-07, -8.7422755e-08, -1.6292067e-07, 1, 0, 0, 0)
+bind/1/name = &"Hips"
+bind/1/bone = -1
+bind/1/pose = Transform3D(1, -8.746936e-07, -1.6706637e-06, -3.4721324e-08, 0.87723184, -0.48006693, 1.885471e-06, 0.48006693, 0.87723184, 7.6267355e-07, -0.6960368, -0.38055205)
+bind/2/name = &"LeftUpLeg"
+bind/2/bone = -1
+bind/2/pose = Transform3D(-0.006322487, 0.09232632, 0.9957088, -0.00451286, -0.9957213, 0.09229884, 0.99996996, -0.003909986, 0.006712079, -0.04045577, 0.7928652, -0.09465844)
+bind/3/name = &"LeftLeg"
+bind/3/bone = -1
+bind/3/pose = Transform3D(0.007826155, -0.123321764, 0.99233586, 0.008525014, -0.9923221, -0.1233872, 0.99993306, 0.009425276, -0.006714755, 0.0562105, 0.45017618, -0.10072892)
+bind/4/name = &"LeftFoot"
+bind/4/bone = -1
+bind/4/pose = Transform3D(-1, 7.479441e-06, 4.787647e-06, -9.537736e-08, -0.5452431, 0.838278, 8.842732e-06, 0.8382781, 0.545243, 0.09950947, 0.09129256, -0.057328507)
+bind/5/name = &"LeftToeBase"
+bind/5/bone = -1
+bind/5/pose = Transform3D(1, 1.6329064e-06, 1.156771e-06, -1.10008756e-07, -0.54524326, 0.83827794, 2.0370985e-06, -0.83827806, -0.5452432, -0.0995101, -0.047332056, 0.057327505)
+bind/6/name = &"RightUpLeg"
+bind/6/bone = -1
+bind/6/pose = Transform3D(-0.0063222926, -0.09232624, -0.99570864, 0.0045128413, -0.995721, 0.0922988, -0.99996793, -0.0039091925, 0.006711784, 0.04045584, 0.792865, -0.09465902)
+bind/7/name = &"RightLeg"
+bind/7/bone = -1
+bind/7/pose = Transform3D(0.007825973, 0.12332164, -0.99233574, -0.00852314, -0.99232185, -0.12338708, -0.99993116, 0.0094242105, -0.006714934, -0.056210443, 0.4501765, -0.10072867)
+bind/8/name = &"RightFoot"
+bind/8/bone = -1
+bind/8/pose = Transform3D(-0.9999981, -7.1809627e-06, -5.047923e-06, 2.1717823e-07, -0.5452432, 0.83827776, -9.327587e-06, 0.8382777, 0.5452432, -0.09950935, 0.09129237, -0.05732816)
+bind/9/name = &"RightToeBase"
+bind/9/bone = -1
+bind/9/pose = Transform3D(0.9999981, -2.327171e-06, -1.1625332e-06, 2.3901964e-07, -0.54524314, 0.8382778, -2.0290604e-06, -0.83827776, -0.54524314, 0.09950999, -0.04733237, 0.05732693)
+bind/10/name = &"Spine"
+bind/10/bone = -1
+bind/10/pose = Transform3D(1, 8.742279e-08, 8.742311e-08, -8.4370804e-08, 0.9994108, -0.034321204, -9.037195e-08, 0.034321234, 0.99941087, 1.0214052e-14, -0.90981084, -0.031244399)
+bind/11/name = &"Spine1"
+bind/11/bone = -1
+bind/11/pose = Transform3D(1, 8.7422606e-08, 8.7422784e-08, -8.334073e-08, 0.9989575, -0.045648765, -9.132227e-08, 0.04564879, 0.9989576, 1.7053026e-13, -1.1240026, -0.04398935)
+bind/12/name = &"LeftShoulder"
+bind/12/bone = -1
+bind/12/pose = Transform3D(-0.009430251, 0.009333513, 0.9999121, 0.98983747, -0.14180416, 0.010658754, 0.14189112, 0.98985076, -0.00790138, 0.0053880946, 0.16305673, -1.3639528)
+bind/13/name = &"LeftArm"
+bind/13/bone = -1
+bind/13/pose = Transform3D(0.11839374, -0.041982032, 0.99207896, 0.8603536, -0.49448478, -0.12359912, 0.49575683, 0.8681718, -0.022424538, 0.054613177, 0.5321945, -1.2551818)
+bind/14/name = &"LeftForeArm"
+bind/14/bone = -1
+bind/14/pose = Transform3D(-0.53903687, -0.84228206, -1.4901158e-07, 0.82907784, -0.53058654, 0.17637323, -0.14855626, 0.095071614, 0.98432344, 1.2403654, 0.31243762, -0.0024981059)
+bind/15/name = &"LeftHand"
+bind/15/bone = -1
+bind/15/pose = Transform3D(-0.81390244, -0.5765349, 0.07190418, 0.58055896, -0.81185937, 0.06193008, 0.022671057, 0.09214971, 0.9954871, 1.11692, 0.5360486, -0.10194804)
+bind/16/name = &"LeftHandIndex1"
+bind/16/bone = -1
+bind/16/pose = Transform3D(0.17675704, 0.033668324, -0.98367846, 0.41147837, -0.9104148, 0.042777687, -0.8941154, -0.41232374, -0.17477593, -0.12105866, 0.64441717, 1.0243374)
+bind/17/name = &"LeftHandIndex2"
+bind/17/bone = -1
+bind/17/pose = Transform3D(0.16095081, 0.026386531, -0.9866097, 0.41147965, -0.9104142, 0.042778056, -0.89709485, -0.41285503, -0.15738936, -0.10296263, 0.60540074, 1.0263153)
+bind/18/name = &"LeftHandMiddle1"
+bind/18/bone = -1
+bind/18/pose = Transform3D(0.08646469, 0.03522227, -0.99563205, 0.50455517, -0.8632769, 0.013277488, -0.85903865, -0.5034995, -0.09241447, -0.094844304, 0.53244936, 1.0870034)
+bind/19/name = &"LeftHandMiddle2"
+bind/19/bone = -1
+bind/19/pose = Transform3D(0.20122775, 0.102627955, -0.9741534, 0.50455683, -0.86327577, 0.013277663, -0.83960056, -0.4941878, -0.22549671, -0.24019462, 0.49132612, 1.064368)
+bind/20/name = &"LeftHandPinky1"
+bind/20/bone = -1
+bind/20/pose = Transform3D(-0.11393909, 0.111386605, -0.98722386, 0.44180667, -0.88435024, -0.15077023, -0.8898453, -0.45334065, 0.051550873, -0.10083332, 0.59909743, 1.0522884)
+bind/21/name = &"LeftHandPinky2"
+bind/21/bone = -1
+bind/21/pose = Transform3D(-0.08856437, 0.12424537, -0.9882912, 0.44181013, -0.8843485, -0.15077034, -0.8927263, -0.4499899, 0.02342906, -0.13074361, 0.5636684, 1.048994)
+bind/22/name = &"LeftHandProp"
+bind/22/bone = -1
+bind/22/pose = Transform3D(-2.1347819e-06, 0.9997858, -0.020691507, 0.00098344, 0.020691557, 0.9997855, 0.99999946, -1.8088396e-05, -0.0009834416, -0.94481707, 0.03819783, -0.6443917)
+bind/23/name = &"LeftHandRing1"
+bind/23/bone = -1
+bind/23/pose = Transform3D(0.012544877, 0.074338086, -0.99715424, 0.4300771, -0.9006788, -0.061735306, -0.90270495, -0.4280788, -0.043269865, -0.117750116, 0.62782514, 1.0369256)
+bind/24/name = &"LeftHandRing2"
+bind/24/bone = -1
+bind/24/pose = Transform3D(0.044479802, 0.08943999, -0.9949986, 0.4300777, -0.90067863, -0.061735835, -0.90169555, -0.42518073, -0.078528, -0.15436924, 0.5805257, 1.0321097)
+bind/25/name = &"LeftHandThumb1"
+bind/25/bone = -1
+bind/25/pose = Transform3D(0.9668747, 0.17759295, -0.18334067, 0.24692892, -0.83269197, 0.49563104, -0.06464555, -0.5244853, -0.84896183, -0.76741815, 0.7014851, 0.6186997)
+bind/26/name = &"LeftHandThumb2"
+bind/26/bone = -1
+bind/26/pose = Transform3D(0.9534333, 0.11736518, -0.27783102, 0.24692918, -0.8326918, 0.49563113, -0.17317761, -0.5411559, -0.82289714, -0.692818, 0.6490719, 0.7012301)
+bind/27/name = &"Neck"
+bind/27/bone = -1
+bind/27/pose = Transform3D(1, 8.742255e-08, 8.742271e-08, -1.01744575e-07, 0.98363113, 0.18019421, -7.0238556e-08, -0.18019417, 0.98363113, 2.4336091e-13, -1.3960655, 0.27876005)
+bind/28/name = &"Head"
+bind/28/bone = -1
+bind/28/pose = Transform3D(1, 8.742254e-08, 8.7422706e-08, -1.0174465e-07, 0.98363096, 0.18019517, -7.0238464e-08, -0.18019512, 0.98363096, 2.682299e-13, -1.4883883, 0.27876103)
+bind/29/name = &"Jaw"
+bind/29/bone = -1
+bind/29/pose = Transform3D(1, 1.2388979e-06, 3.9596105e-07, -6.181712e-08, -0.25882012, 0.96592563, 1.2991657e-06, -0.96592563, -0.25882027, -1.7334967e-06, 0.3169018, 1.45416)
+bind/30/name = &"LeftEye"
+bind/30/bone = -1
+bind/30/pose = Transform3D(1, -1.0172474e-06, 1.8201557e-07, -1.8201554e-07, -2.881011e-08, 1.0000001, -1.0172473e-06, -1.0000001, -1.3311856e-07, -0.06436352, -0.09723989, 1.6656972)
+bind/31/name = &"RightEye"
+bind/31/bone = -1
+bind/31/pose = Transform3D(1, -7.7882885e-07, 8.742263e-08, -8.742248e-08, 1.0530028e-07, 1.0000002, -7.7882873e-07, -1.0000001, -1.033161e-07, 0.063340515, -0.09720558, 1.6656971)
+bind/32/name = &"RightShoulder"
+bind/32/bone = -1
+bind/32/pose = Transform3D(-0.009430074, -0.009333514, -0.99991214, -0.98983747, -0.14180434, 0.010658581, -0.1418913, 0.98985076, -0.007901405, -0.005388105, 0.16305675, -1.3639528)
+bind/33/name = &"RightArm"
+bind/33/bone = -1
+bind/33/pose = Transform3D(0.11839391, 0.04198205, -0.9920789, -0.86035347, -0.49448496, -0.12359926, -0.495757, 0.86817175, -0.022424629, -0.054613177, 0.53219455, -1.2551819)
+bind/34/name = &"RightForeArm"
+bind/34/bone = -1
+bind/34/pose = Transform3D(-0.5390371, 0.8422818, -4.0978188e-07, -0.8290778, -0.5305868, 0.17637303, 0.14855574, 0.095072016, 0.98432344, -1.2403653, 0.31243774, -0.0024986991)
+bind/35/name = &"RightHand"
+bind/35/bone = -1
+bind/35/pose = Transform3D(-0.8139025, 0.57653457, -0.07190433, -0.58055884, -0.81185967, 0.06192996, -0.022671258, 0.09214971, 0.99548715, -1.1169199, 0.5360487, -0.101948045)
+bind/36/name = &"RightHandIndex1"
+bind/36/bone = -1
+bind/36/pose = Transform3D(0.176757, -0.03366826, 0.98367864, -0.4114785, -0.9104148, 0.042777643, 0.8941152, -0.41232362, -0.17477585, 0.1210587, 0.644417, 1.0243374)
+bind/37/name = &"RightHandIndex2"
+bind/37/bone = -1
+bind/37/pose = Transform3D(0.16095068, -0.026386501, 0.98660976, -0.4114797, -0.91041434, 0.04277793, 0.8970948, -0.4128548, -0.15738921, 0.10296267, 0.60540056, 1.0263152)
+bind/38/name = &"RightHandMiddle1"
+bind/38/bone = -1
+bind/38/pose = Transform3D(0.08646474, -0.035222378, 0.9956323, -0.5045553, -0.8632771, 0.013277371, 0.8590387, -0.5034993, -0.09241457, 0.09484458, 0.53244936, 1.0870035)
+bind/39/name = &"RightHandMiddle2"
+bind/39/bone = -1
+bind/39/pose = Transform3D(0.20122768, -0.10262796, 0.9741536, -0.5045571, -0.8632761, 0.013277556, 0.83960056, -0.4941876, -0.22549672, 0.24019471, 0.49132603, 1.0643678)
+bind/40/name = &"RightHandPinky1"
+bind/40/bone = -1
+bind/40/pose = Transform3D(-0.11393929, -0.11138663, 0.98722386, -0.44180673, -0.88435006, -0.15077034, 0.8898452, -0.45334053, 0.051551014, 0.10083329, 0.59909695, 1.0522883)
+bind/41/name = &"RightHandPinky2"
+bind/41/bone = -1
+bind/41/pose = Transform3D(-0.08856451, -0.12424534, 0.9882911, -0.44180998, -0.88434833, -0.15077038, 0.892726, -0.44998956, 0.023429185, 0.13074353, 0.5636679, 1.0489933)
+bind/42/name = &"RightHandProp"
+bind/42/bone = -1
+bind/42/pose = Transform3D(-5.602486e-07, -0.99923456, 0.039112892, -0.01590678, 0.039108027, 0.99910843, -0.9998734, -0.00062177965, -0.015894894, 0.9444612, 0.011174769, -0.64387316)
+bind/43/name = &"RightHandRing1"
+bind/43/bone = -1
+bind/43/pose = Transform3D(0.012544656, -0.07433807, 0.9971542, -0.4300769, -0.9006785, -0.061735425, 0.9027048, -0.42807856, -0.04326967, 0.11775008, 0.6278247, 1.0369251)
+bind/44/name = &"RightHandRing2"
+bind/44/bone = -1
+bind/44/pose = Transform3D(0.044479642, -0.08943998, 0.99499846, -0.4300774, -0.9006784, -0.061735936, 0.9016954, -0.4251804, -0.07852786, 0.15436925, 0.5805254, 1.0321094)
+bind/45/name = &"RightHandThumb1"
+bind/45/bone = -1
+bind/45/pose = Transform3D(0.9668747, -0.17759268, 0.1833409, -0.24692906, -0.832692, 0.49563104, 0.064645775, -0.52448523, -0.84896183, 0.767418, 0.70148516, 0.61869967)
+bind/46/name = &"RightHandThumb2"
+bind/46/bone = -1
+bind/46/pose = Transform3D(0.95343333, -0.117365174, 0.27783087, -0.24692938, -0.83269185, 0.49563122, 0.17317735, -0.5411559, -0.8228972, 0.69281816, 0.64907175, 0.7012298)
+
+[node name="Skeleton" type="Node3D" unique_id=1562828898]
+metadata/extras = {
+"hops": {}
+}
+
+[node name="Skeleton3D" type="Skeleton3D" parent="." unique_id=319327082]
+bones/0/name = "Root"
+bones/0/parent = -1
+bones/0/rest = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+bones/0/enabled = true
+bones/0/position = Vector3(0, 0, 0)
+bones/0/rotation = Quaternion(0, 0, 0, 1)
+bones/0/scale = Vector3(1, 1, 1)
+bones/1/name = "Hips"
+bones/1/parent = 0
+bones/1/rest = Transform3D(1, 5.684342e-14, 2.0041296e-06, -9.621165e-07, 0.87723184, 0.480067, -1.7580862e-06, -0.480067, 0.87723184, 2.144557e-12, 0.79327613, -0.00031200232)
+bones/1/enabled = true
+bones/1/position = Vector3(2.144557e-12, 0.79327613, -0.00031200232)
+bones/1/rotation = Quaternion(-0.24775812, 9.708224e-07, -2.4826969e-07, 0.96882194)
+bones/1/scale = Vector3(1, 1, 1)
+bones/2/name = "LeftUpLeg"
+bones/2/parent = 1
+bones/2/rest = Transform3D(-0.0063242903, -0.00451219, 0.9999697, -0.39701515, -0.9177878, -0.0066522732, 0.9177902, -0.3970452, 0.0040129493, 0.09797805, 0.014953913, -0.028238902)
+bones/2/enabled = true
+bones/2/position = Vector3(0.09797805, 0.014953913, -0.028238902)
+bones/2/rotation = Quaternion(0.6905525, -0.14536455, 0.69428474, -0.1413336)
+bones/2/scale = Vector3(0.9999999, 0.9999998, 0.9999999)
+bones/3/name = "LeftLeg"
+bones/3/parent = 2
+bones/3/rest = Transform3D(0.9766422, -0.21452908, -0.0121377865, 0.21435015, 0.976649, -0.014517313, 0.014968743, 0.011576483, 0.99982095, -5.6810677e-08, 0.33969003, -3.9998167e-07)
+bones/3/enabled = true
+bones/3/position = Vector3(-5.6810677e-08, 0.33969003, -3.9998167e-07)
+bones/3/rotation = Quaternion(0.006562022, -0.0068167024, 0.1078538, 0.99412173)
+bones/3/scale = Vector3(1, 0.99999994, 1)
+bones/4/name = "LeftFoot"
+bones/4/parent = 3
+bones/4/rest = Transform3D(-0.007822276, 0.8990936, 0.4376864, -0.0085329125, 0.43762392, -0.8991175, -0.999933, -0.010767887, 0.0042486712, 2.3591565e-07, 0.3595284, 4.9735536e-07)
+bones/4/enabled = true
+bones/4/position = Vector3(2.3591565e-07, 0.3595284, 4.9735536e-07)
+bones/4/rotation = Quaternion(0.37091282, 0.60024947, -0.37896147, 0.5987592)
+bones/4/scale = Vector3(1, 0.99999994, 0.9999999)
+bones/5/name = "LeftToeBase"
+bones/5/parent = 4
+bones/5/rest = Transform3D(-1, 1.46294825e-08, -1.087983e-05, 1.4631591e-08, 0.99999994, -1.9371548e-07, 1.0879831e-05, -1.9371564e-07, -0.99999994, -6.1736216e-10, 0.13862462, 6.7826875e-08)
+bones/5/enabled = true
+bones/5/position = Vector3(-6.1736216e-10, 0.13862462, 6.7826875e-08)
+bones/5/rotation = Quaternion(7.3152684e-09, 1, -9.685779e-08, -5.4399156e-06)
+bones/5/scale = Vector3(1, 0.99999994, 0.99999994)
+bones/6/name = "RightUpLeg"
+bones/6/parent = 1
+bones/6/rest = Transform3D(-0.0063203583, 0.004513264, -0.9999718, 0.3970157, -0.9177879, -0.0066517117, -0.91779023, -0.39704576, 0.004008918, -0.097977936, 0.014953934, -0.028239155)
+bones/6/enabled = true
+bones/6/position = Vector3(-0.097977936, 0.014953934, -0.028239155)
+bones/6/rotation = Quaternion(-0.6905539, -0.1453648, 0.69428325, 0.14133365)
+bones/6/scale = Vector3(1.0000001, 1.0000001, 1.0000019)
+bones/7/name = "RightLeg"
+bones/7/parent = 6
+bones/7/rest = Transform3D(0.9766422, 0.21452892, 0.012137843, -0.21435001, 0.97664905, -0.014515455, -0.014968399, 0.011574659, 0.99982095, 7.98027e-08, 0.3396897, -4.122312e-07)
+bones/7/enabled = true
+bones/7/position = Vector3(7.98027e-08, 0.3396897, -4.122312e-07)
+bones/7/rotation = Quaternion(0.006561096, 0.006816631, -0.10785373, 0.99412173)
+bones/7/scale = Vector3(0.99999994, 1, 1)
+bones/8/name = "RightFoot"
+bones/8/parent = 7
+bones/8/rest = Transform3D(-0.007822037, -0.8990934, -0.43768683, 0.00853157, 0.43762425, -0.89911747, 0.999933, -0.0107670855, 0.004247566, -2.2462336e-07, 0.35952896, 4.869944e-07)
+bones/8/enabled = true
+bones/8/position = Vector3(-2.2462336e-07, 0.35952896, 4.869944e-07)
+bones/8/rotation = Quaternion(0.3709131, -0.60024965, 0.37896085, 0.5987591)
+bones/8/scale = Vector3(1, 0.9999999, 1)
+bones/9/name = "RightToeBase"
+bones/9/parent = 8
+bones/9/rest = Transform3D(-1, -2.184177e-08, 1.1356668e-05, -2.1841432e-08, 0.99999994, 2.9803537e-08, -1.1356669e-05, 2.980329e-08, -0.99999994, -3.748994e-09, 0.13862473, -9.9991496e-08)
+bones/9/enabled = true
+bones/9/position = Vector3(-3.748994e-09, 0.13862473, -9.9991496e-08)
+bones/9/rotation = Quaternion(-1.09208e-08, 1, 1.4901708e-08, 5.6783347e-06)
+bones/9/scale = Vector3(1, 0.99999994, 0.99999994)
+bones/10/name = "Spine"
+bones/10/parent = 1
+bones/10/rest = Transform3D(1, -9.012099e-07, -1.7900719e-06, -1.1368684e-13, 0.8931915, -0.44967642, 2.00413e-06, 0.44967642, 0.8931915, -1.13186786e-07, 0.1025487, 0.05647569)
+bones/10/enabled = true
+bones/10/position = Vector3(-1.13186786e-07, 0.1025487, 0.05647569)
+bones/10/rotation = Quaternion(0.23109357, -9.749407e-07, 2.3157072e-07, 0.97293156)
+bones/10/scale = Vector3(1, 0.99999994, 0.99999994)
+bones/11/name = "Spine1"
+bones/11/parent = 10
+bones/11/rest = Transform3D(1, 1.6343807e-13, 3.315614e-13, -1.671863e-13, 0.9999357, 0.011336442, -3.2968734e-13, -0.011336442, 0.9999357, 3.901046e-14, 0.2146181, -6.705522e-08)
+bones/11/enabled = true
+bones/11/position = Vector3(3.901046e-14, 0.2146181, -6.705522e-08)
+bones/11/rotation = Quaternion(-0.005668313, 1.6531486e-13, -8.265743e-14, 0.9999839)
+bones/11/scale = Vector3(1, 0.99999994, 0.99999994)
+bones/12/name = "LeftShoulder"
+bones/12/parent = 11
+bones/12/rest = Transform3D(-0.00943005, 0.9898372, 0.14189117, -0.03632089, -0.14214289, 0.98917955, 0.9992956, 0.004174399, 0.037292194, 0.032184117, 0.24856478, 0.0008106184)
+bones/12/enabled = true
+bones/12/position = Vector3(0.032184117, 0.24856478, 0.0008106184)
+bones/12/rotation = Quaternion(0.52331173, 0.4555203, 0.5451755, -0.47056326)
+bones/12/scale = Vector3(0.9999999, 0.9999999, 0.99999994)
+bones/13/name = "LeftArm"
+bones/13/parent = 12
+bones/13/rest = Transform3D(0.99048316, -0.13631673, -0.018994562, 0.13371821, 0.92041254, 0.36736926, -0.032595742, -0.36641303, 0.9298812, 4.8195943e-08, 0.12703063, 4.228641e-07)
+bones/13/enabled = true
+bones/13/position = Vector3(4.8195943e-08, 0.12703063, 4.228641e-07)
+bones/13/rotation = Quaternion(-0.18720941, 0.0034700609, 0.06889385, 0.979895)
+bones/13/scale = Vector3(0.99999994, 1, 1)
+bones/14/name = "LeftForeArm"
+bones/14/parent = 13
+bones/14/rest = Transform3D(-0.02845812, 0.29540905, 0.954947, -0.04726659, 0.9538677, -0.2964837, -0.99847686, -0.05357446, -0.013182302, 2.1606684e-07, 0.29205754, 2.0791776e-07)
+bones/14/enabled = true
+bones/14/position = Vector3(2.1606684e-07, 0.29205754, 2.0791776e-07)
+bones/14/rotation = Quaternion(0.08783028, 0.7063123, -0.123903476, 0.6914165)
+bones/14/scale = Vector3(1, 1.0000001, 1)
+bones/15/name = "LeftHand"
+bones/15/parent = 14
+bones/15/rest = Transform3D(0.9243285, 0.37087208, -0.0898368, -0.3562049, 0.9230133, 0.14548011, 0.13687505, -0.10247111, 0.985274, 2.7001212e-07, 0.23034143, -3.4295954e-07)
+bones/15/enabled = true
+bones/15/position = Vector3(2.7001212e-07, 0.23034143, -3.4295954e-07)
+bones/15/rotation = Quaternion(-0.06332696, -0.0579024, -0.1856961, 0.9788534)
+bones/15/scale = Vector3(0.9999999, 1, 1)
+bones/16/name = "LeftHandIndex1"
+bones/16/parent = 15
+bones/16/rest = Transform3D(-0.23400438, 0.19305864, 0.9528746, 0.014364548, 0.98066586, -0.19516172, -0.9721293, -0.031981096, -0.23225331, -0.011883922, 0.105740964, 0.038882334)
+bones/16/enabled = true
+bones/16/position = Vector3(-0.011883922, 0.105740964, 0.038882334)
+bones/16/rotation = Quaternion(0.06630055, 0.7821323, -0.0726037, 0.61530644)
+bones/16/scale = Vector3(0.9999998, 0.99999994, 0.9999998)
+bones/17/name = "LeftHandIndex2"
+bones/17/parent = 16
+bones/17/rest = Transform3D(0.99984425, -1.2257047e-07, -0.017647337, 1.4751308e-07, 1, 1.4120905e-06, 0.017647337, -1.4144738e-06, 0.99984425, -2.4959445e-07, 0.03901508, -1.17812306e-07)
+bones/17/enabled = true
+bones/17/position = Vector3(-2.4959445e-07, 0.03901508, -1.17812306e-07)
+bones/17/rotation = Quaternion(-7.066687e-07, -0.008824013, 6.752352e-08, 0.9999611)
+bones/17/scale = Vector3(0.99999994, 1, 0.99999994)
+bones/18/name = "LeftHandMiddle1"
+bones/18/parent = 15
+bones/18/rest = Transform3D(-0.16227068, 0.088005334, 0.98281413, -0.040057417, 0.99460655, -0.09567508, -0.9859329, -0.05489426, -0.1578702, -0.013651209, 0.106670916, 0.005375744)
+bones/18/enabled = true
+bones/18/position = Vector3(-0.013651209, 0.106670916, 0.005375744)
+bones/18/rotation = Quaternion(0.015757518, 0.76071465, -0.049482845, 0.6470057)
+bones/18/scale = Vector3(1, 1.0000002, 1.0000001)
+bones/19/name = "LeftHandMiddle2"
+bones/19/parent = 18
+bones/19/rest = Transform3D(0.9909122, 8.619154e-09, 0.13450965, -2.7915948e-07, 1.0000001, 1.9924473e-06, -0.13450964, -2.0118905e-06, 0.99091226, -2.53669e-07, 0.041121002, 5.325055e-07)
+bones/19/enabled = true
+bones/19/position = Vector3(-2.53669e-07, 0.041121002, 5.325055e-07)
+bones/19/rotation = Quaternion(-1.0033666e-06, 0.067408144, -7.2108676e-08, 0.9977255)
+bones/19/scale = Vector3(0.99999994, 1.0000001, 1)
+bones/20/name = "LeftHandPinky1"
+bones/20/parent = 15
+bones/20/rest = Transform3D(-0.04246843, 0.1394303, 0.9893208, -0.21771763, 0.96512556, -0.14536631, -0.9750874, -0.22156604, -0.0106309345, -0.011945397, 0.08885834, -0.056342926)
+bones/20/enabled = true
+bones/20/position = Vector3(-0.011945397, 0.08885834, -0.056342926)
+bones/20/rotation = Quaternion(-0.027553486, 0.71032125, -0.1291431, 0.6913802)
+bones/20/scale = Vector3(1, 0.9999998, 1)
+bones/21/name = "LeftHandPinky2"
+bones/21/parent = 20
+bones/21/rest = Transform3D(0.9995948, -1.0899464e-07, 0.028464004, -9.611973e-10, 1.0000001, 3.8629637e-06, -0.028464004, -3.8614266e-06, 0.9995948, -1.1995435e-06, 0.035425093, 2.863817e-07)
+bones/21/enabled = true
+bones/21/position = Vector3(-1.1995435e-06, 0.035425093, 2.863817e-07)
+bones/21/rotation = Quaternion(-1.9312931e-06, 0.014233444, 2.7011092e-08, 0.9998987)
+bones/21/scale = Vector3(1, 1.0000001, 1)
+bones/22/name = "LeftHandProp"
+bones/22/parent = 15
+bones/22/rest = Transform3D(-0.57789755, 0.059158802, -0.8139623, -0.8129684, 0.045689285, 0.5805125, 0.07153171, 0.9972024, 0.021690607, 0.044142164, 0.1402744, -0.05847738)
+bones/22/enabled = true
+bones/22/position = Vector3(0.044142164, 0.1402744, -0.05847738)
+bones/22/rotation = Quaternion(-0.29779303, 0.6328302, 0.6232774, -0.349815)
+bones/22/scale = Vector3(0.99999994, 0.99999994, 0.9999999)
+bones/23/name = "LeftHandRing1"
+bones/23/parent = 15
+bones/23/rest = Transform3D(-0.12476825, 0.16479297, 0.97840476, -0.114823066, 0.9770865, -0.1792134, -0.9855194, -0.13470358, -0.10298734, -0.015765468, 0.094919614, -0.026632588)
+bones/23/enabled = true
+bones/23/position = Vector3(-0.015765468, 0.094919614, -0.026632588)
+bones/23/rotation = Quaternion(0.016826356, 0.7424356, -0.10570514, 0.6613114)
+bones/23/scale = Vector3(0.99999994, 0.9999999, 0.9999998)
+bones/24/name = "LeftHandRing2"
+bones/24/parent = 23
+bones/24/rest = Transform3D(0.99937373, 5.4624985e-07, 0.035385896, -5.6668057e-07, 1, 5.6733853e-07, -0.0353859, -5.870358e-07, 0.9993737, -7.450581e-09, 0.047298793, -3.8649887e-08)
+bones/24/enabled = true
+bones/24/position = Vector3(-7.450581e-09, 0.047298793, -3.8649887e-08)
+bones/24/rotation = Quaternion(-2.8863883e-07, 0.017695721, -2.782762e-07, 0.9998434)
+bones/24/scale = Vector3(1, 1, 0.99999994)
+bones/25/name = "LeftHandThumb1"
+bones/25/parent = 15
+bones/25/rest = Transform3D(-0.9025134, 0.31473777, 0.2939555, 0.40579313, 0.85008025, 0.33570153, -0.14422785, 0.4222602, -0.89492714, 0.021660782, 0.04344454, 0.04485088)
+bones/25/enabled = true
+bones/25/position = Vector3(0.021660782, 0.04344454, 0.04485088)
+bones/25/rotation = Quaternion(0.18863562, 0.95492417, 0.19843505, 0.11471679)
+bones/25/scale = Vector3(1.0000001, 1, 1)
+bones/26/name = "LeftHandThumb2"
+bones/26/parent = 25
+bones/26/rest = Transform3D(0.9936318, 2.676776e-07, -0.11267622, -2.464124e-07, 1, 2.0265482e-07, 0.11267622, -1.7359945e-07, 0.9936318, -3.8277358e-07, 0.052412838, -5.5134296e-07)
+bones/26/enabled = true
+bones/26/position = Vector3(-3.8277358e-07, 0.052412838, -5.5134296e-07)
+bones/26/rotation = Quaternion(-9.4213675e-08, -0.056428015, -1.2872759e-07, 0.9984067)
+bones/26/scale = Vector3(1, 1, 1)
+bones/27/name = "Neck"
+bones/27/parent = 11
+bones/27/rest = Transform3D(1, 7.541292e-14, 5.9786946e-14, -6.0034294e-14, 0.9743799, -0.2249079, -7.521617e-14, 0.22490789, 0.97437996, 7.771561e-16, 0.29899088, -0.0016214661)
+bones/27/enabled = true
+bones/27/position = Vector3(7.771561e-16, 0.29899088, -0.0016214661)
+bones/27/rotation = Quaternion(0.11318123, 3.3969054e-14, -3.40808e-14, 0.9935744)
+bones/27/scale = Vector3(1, 0.9999998, 0.9999999)
+bones/28/name = "Head"
+bones/28/parent = 27
+bones/28/rest = Transform3D(1, 2.6645361e-15, 1.7763556e-15, -2.6645344e-15, 1, -9.685755e-07, -1.7763581e-15, 9.685755e-07, 1, -2.7752865e-16, 0.09232307, 4.5774505e-07)
+bones/28/enabled = true
+bones/28/position = Vector3(-2.7752865e-16, 0.09232307, 4.5774505e-07)
+bones/28/rotation = Quaternion(4.8428774e-07, 8.881784e-16, -1.3322676e-15, 1)
+bones/28/scale = Vector3(1, 1, 1)
+bones/29/name = "Jaw"
+bones/29/parent = 28
+bones/29/rest = Transform3D(1, -4.263256e-14, 1.1920953e-06, 1.1882237e-06, -0.08052849, -0.9967523, 9.599768e-08, 0.9967523, -0.08052849, -1.1723952e-13, -0.013431369, 0.079989575)
+bones/29/enabled = true
+bones/29/position = Vector3(-1.1723952e-13, -0.013431369, 0.079989575)
+bones/29/rotation = Quaternion(0.73502666, 4.0414298e-07, 4.3811087e-07, 0.6780382)
+bones/29/scale = Vector3(1, 1, 1)
+bones/30/name = "LeftEye"
+bones/30/parent = 28
+bones/30/rest = Transform3D(1, -9.4593176e-08, -1.1046698e-06, -1.0695422e-06, 0.1801949, -0.9836309, 2.9210068e-07, 0.98363084, 0.1801949, 0.06436535, 0.16756493, 0.07425875)
+bones/30/enabled = true
+bones/30/position = Vector3(0.06436535, 0.16756493, 0.07425875)
+bones/30/rotation = Quaternion(0.6402364, -4.5457261e-07, -3.172927e-07, 0.768178)
+bones/30/scale = Vector3(1, 0.9999999, 0.99999994)
+bones/31/name = "RightEye"
+bones/31/parent = 28
+bones/31/rest = Transform3D(1, 2.8421704e-14, -8.6625124e-07, -8.520715e-07, 0.18019506, -0.9836309, 1.5609419e-07, 0.9836308, 0.18019508, -0.06333907, 0.1675586, 0.0742248)
+bones/31/enabled = true
+bones/31/position = Vector3(-0.06333907, 0.1675586, 0.0742248)
+bones/31/rotation = Quaternion(0.64023626, -3.3271763e-07, -2.7730272e-07, 0.76817805)
+bones/31/scale = Vector3(1, 0.9999999, 1)
+bones/32/name = "RightShoulder"
+bones/32/parent = 11
+bones/32/rest = Transform3D(-0.009430051, -0.9898372, -0.14189118, 0.036320925, -0.14214289, 0.9891796, -0.9992956, 0.004174395, 0.037292227, -0.032184117, 0.24856478, 0.0008106093)
+bones/32/enabled = true
+bones/32/position = Vector3(-0.032184117, 0.24856478, 0.0008106093)
+bones/32/rotation = Quaternion(-0.52331173, 0.4555203, 0.5451755, 0.47056332)
+bones/32/scale = Vector3(0.9999999, 0.9999999, 1)
+bones/33/name = "RightArm"
+bones/33/parent = 32
+bones/33/rest = Transform3D(0.9904832, 0.13631673, 0.018994562, -0.13371822, 0.92041254, 0.36736926, 0.032595746, -0.36641303, 0.92988116, -5.727634e-08, 0.12703064, 3.638852e-07)
+bones/33/enabled = true
+bones/33/position = Vector3(-5.727634e-08, 0.12703064, 3.638852e-07)
+bones/33/rotation = Quaternion(-0.18720941, -0.0034700609, -0.06889385, 0.979895)
+bones/33/scale = Vector3(1, 1, 0.99999994)
+bones/34/name = "RightForeArm"
+bones/34/parent = 33
+bones/34/rest = Transform3D(-0.028457645, -0.29540902, -0.9549469, 0.047266804, 0.95386773, -0.2964836, 0.99847704, -0.053574517, -0.01318178, -2.2351742e-07, 0.2920575, 1.549488e-07)
+bones/34/enabled = true
+bones/34/position = Vector3(-2.2351742e-07, 0.2920575, 1.549488e-07)
+bones/34/rotation = Quaternion(0.08783022, -0.7063121, 0.123903506, 0.6914167)
+bones/34/scale = Vector3(1.0000001, 1.0000001, 0.9999999)
+bones/35/name = "RightHand"
+bones/35/parent = 34
+bones/35/rest = Transform3D(0.9243286, -0.37087202, 0.08983631, 0.35620493, 0.9230133, 0.14548004, -0.1368746, -0.10247124, 0.985274, -2.930973e-07, 0.23034148, -3.4621917e-07)
+bones/35/enabled = true
+bones/35/position = Vector3(-2.930973e-07, 0.23034148, -3.4621917e-07)
+bones/35/rotation = Quaternion(-0.06332698, 0.057902165, 0.18569608, 0.9788534)
+bones/35/scale = Vector3(1, 1, 0.99999994)
+bones/36/name = "RightHandIndex1"
+bones/36/parent = 35
+bones/36/rest = Transform3D(-0.2340045, -0.19305842, -0.95287484, -0.014364593, 0.9806661, -0.19516143, 0.9721294, -0.031981, -0.23225345, 0.011883867, 0.10574095, 0.038882326)
+bones/36/enabled = true
+bones/36/position = Vector3(0.011883867, 0.10574095, 0.038882326)
+bones/36/rotation = Quaternion(0.066300474, -0.7821323, 0.07260358, 0.61530644)
+bones/36/scale = Vector3(1, 1.0000001, 1)
+bones/37/name = "RightHandIndex2"
+bones/37/parent = 36
+bones/37/rest = Transform3D(0.9998443, 5.9239884e-08, 0.017647412, -8.232115e-08, 0.99999994, 1.3071851e-06, -0.017647414, -1.3084343e-06, 0.9998442, 2.5704503e-07, 0.039015133, -4.1909516e-09)
+bones/37/enabled = true
+bones/37/position = Vector3(2.5704503e-07, 0.039015133, -4.1909516e-09)
+bones/37/rotation = Quaternion(-6.539304e-07, 0.00882405, -3.5391636e-08, 0.9999611)
+bones/37/scale = Vector3(1, 0.99999994, 0.9999999)
+bones/38/name = "RightHandMiddle1"
+bones/38/parent = 35
+bones/38/rest = Transform3D(-0.16227102, -0.08800513, -0.9828141, 0.04005741, 0.99460655, -0.09567489, 0.9859328, -0.054894257, -0.15787055, 0.013651099, 0.10667082, 0.005375725)
+bones/38/enabled = true
+bones/38/position = Vector3(0.013651099, 0.10667082, 0.005375725)
+bones/38/rotation = Quaternion(0.01575745, -0.7607148, 0.049482774, 0.64700556)
+bones/38/scale = Vector3(1, 1.0000002, 1.0000001)
+bones/39/name = "RightHandMiddle2"
+bones/39/parent = 38
+bones/39/rest = Transform3D(0.99091226, -7.457586e-09, -0.13450949, 2.793897e-07, 0.9999999, 2.0027815e-06, 0.13450947, -2.0221612e-06, 0.9909123, 2.5698682e-07, 0.04112121, 7.234994e-07)
+bones/39/enabled = true
+bones/39/position = Vector3(2.5698682e-07, 0.04112121, 7.234994e-07)
+bones/39/rotation = Quaternion(-1.0085296e-06, -0.06740806, 7.18753e-08, 0.9977255)
+bones/39/scale = Vector3(0.99999994, 0.9999999, 1)
+bones/40/name = "RightHandPinky1"
+bones/40/parent = 35
+bones/40/rest = Transform3D(-0.04246843, -0.13942999, -0.98932093, 0.21771766, 0.9651259, -0.14536598, 0.97508746, -0.22156613, -0.010631006, 0.011945177, 0.0888584, -0.05634296)
+bones/40/enabled = true
+bones/40/position = Vector3(0.011945177, 0.0888584, -0.05634296)
+bones/40/rotation = Quaternion(-0.027553622, -0.71032125, 0.12914298, 0.6913802)
+bones/40/scale = Vector3(1, 1.0000001, 1.0000001)
+bones/41/name = "RightHandPinky2"
+bones/41/parent = 40
+bones/41/rest = Transform3D(0.9995949, 1.3273348e-07, -0.02846404, -2.7454039e-08, 1.0000001, 3.6990732e-06, 0.02846404, -3.696793e-06, 0.9995949, 1.1920929e-06, 0.03542509, 2.6985072e-07)
+bones/41/enabled = true
+bones/41/position = Vector3(1.1920929e-06, 0.03542509, 2.6985072e-07)
+bones/41/rotation = Quaternion(-1.8491537e-06, -0.01423346, -4.005093e-08, 0.9998987)
+bones/41/scale = Vector3(1.0000001, 1.0000001, 1.0000001)
+bones/42/name = "RightHandProp"
+bones/42/parent = 35
+bones/42/rest = Transform3D(-0.5789055, -0.036346372, 0.8145842, 0.8136612, 0.03935952, 0.5800056, -0.053142745, 0.998564, 0.0067881844, -0.045270905, 0.14058757, -0.058544762)
+bones/42/enabled = true
+bones/42/position = Vector3(-0.045270905, 0.14058757, -0.058544762)
+bones/42/rotation = Quaternion(0.3061645, 0.6347198, 0.6217584, 0.3417756)
+bones/42/scale = Vector3(1.0000001, 1.0000001, 0.99999994)
+bones/43/name = "RightHandRing1"
+bones/43/parent = 35
+bones/43/rest = Transform3D(-0.12476815, -0.16479288, -0.978405, 0.11482318, 0.977087, -0.17921326, 0.9855196, -0.13470371, -0.10298725, 0.015765304, 0.094919614, -0.026632607)
+bones/43/enabled = true
+bones/43/position = Vector3(0.015765304, 0.094919614, -0.026632607)
+bones/43/rotation = Quaternion(0.016826265, -0.7424355, 0.10570511, 0.66131145)
+bones/43/scale = Vector3(1.0000001, 1.0000004, 1)
+bones/44/name = "RightHandRing2"
+bones/44/parent = 43
+bones/44/rest = Transform3D(0.99937373, -5.283651e-07, -0.03538595, 5.4684676e-07, 0.9999999, 5.12608e-07, 0.035385955, -5.316376e-07, 0.9993737, -1.8626451e-09, 0.047298744, -1.2933742e-07)
+bones/44/enabled = true
+bones/44/position = Vector3(-1.8626451e-09, 0.047298744, -1.2933742e-07)
+bones/44/rotation = Quaternion(-2.6110231e-07, -0.017695751, 2.6884507e-07, 0.9998434)
+bones/44/scale = Vector3(1, 0.9999999, 0.99999994)
+bones/45/name = "RightHandThumb1"
+bones/45/parent = 35
+bones/45/rest = Transform3D(-0.9025134, -0.31473765, -0.29395556, -0.40579298, 0.8500803, 0.3357016, 0.1442279, 0.4222602, -0.8949273, -0.021660838, 0.04344444, 0.044850875)
+bones/45/enabled = true
+bones/45/position = Vector3(-0.021660838, 0.04344444, 0.044850875)
+bones/45/rotation = Quaternion(-0.18863556, 0.9549242, 0.19843505, -0.114716806)
+bones/45/scale = Vector3(1, 0.99999994, 1.0000001)
+bones/46/name = "RightHandThumb2"
+bones/46/parent = 45
+bones/46/rest = Transform3D(0.9936318, -2.7430974e-07, 0.112675756, 2.3978032e-07, 0.9999999, 3.2000142e-07, -0.112675756, -2.9094613e-07, 0.9936318, 3.3155084e-07, 0.052413076, -5.9232116e-07)
+bones/46/enabled = true
+bones/46/position = Vector3(3.3155084e-07, 0.052413076, -5.9232116e-07)
+bones/46/rotation = Quaternion(-1.5298065e-07, 0.056427788, 1.2872763e-07, 0.9984067)
+bones/46/scale = Vector3(0.99999994, 0.9999999, 0.99999994)
+
+[node name="Athlete_Outwear" type="MeshInstance3D" parent="Skeleton3D" unique_id=1435608566]
+mesh = ExtResource("1_kai6t")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Athlete_Shoes" type="MeshInstance3D" parent="Skeleton3D" unique_id=89076657]
+mesh = ExtResource("2_80cwt")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"ant_landscape": {},
+"currentUVSet": "map1",
+"hops": {},
+"rigify_owner_rig": {}
+}
+
+[node name="Athlete_Shorts" type="MeshInstance3D" parent="Skeleton3D" unique_id=578797818]
+mesh = ExtResource("3_pjgk7")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Body_A_1" type="MeshInstance3D" parent="Skeleton3D" unique_id=373490223]
+mesh = ExtResource("4_01o50")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Body_A_2" type="MeshInstance3D" parent="Skeleton3D" unique_id=1313665890]
+mesh = ExtResource("5_mocl6")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Body_A_3" type="MeshInstance3D" parent="Skeleton3D" unique_id=1135303025]
+mesh = ExtResource("6_7p15c")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Body_B_1" type="MeshInstance3D" parent="Skeleton3D" unique_id=748262037]
+mesh = ExtResource("7_drcj8")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Body_B_2" type="MeshInstance3D" parent="Skeleton3D" unique_id=200050025]
+mesh = ExtResource("8_l5wr0")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Body_B_3" type="MeshInstance3D" parent="Skeleton3D" unique_id=958229459]
+mesh = ExtResource("9_v3qce")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Body_C_1" type="MeshInstance3D" parent="Skeleton3D" unique_id=194593174]
+mesh = ExtResource("10_vkjs3")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Body_C_2" type="MeshInstance3D" parent="Skeleton3D" unique_id=1588629488]
+mesh = ExtResource("11_wj2yt")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Body_C_3" type="MeshInstance3D" parent="Skeleton3D" unique_id=1777519874]
+mesh = ExtResource("12_740o3")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Body_D_1" type="MeshInstance3D" parent="Skeleton3D" unique_id=1100501766]
+mesh = ExtResource("13_mceki")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Body_D_2" type="MeshInstance3D" parent="Skeleton3D" unique_id=1299640492]
+mesh = ExtResource("14_kjl5q")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Body_D_3" type="MeshInstance3D" parent="Skeleton3D" unique_id=125197484]
+mesh = ExtResource("15_4mmd1")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Boxer_Gloves" type="MeshInstance3D" parent="Skeleton3D" unique_id=1049835192]
+mesh = ExtResource("16_gyxp3")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Boxer_Hat" type="MeshInstance3D" parent="Skeleton3D" unique_id=689847381]
+mesh = ExtResource("17_a8l7c")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"hops": {}
+}
+
+[node name="Boxer_Shoes" type="MeshInstance3D" parent="Skeleton3D" unique_id=1617184018]
+mesh = ExtResource("18_o1ams")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"ant_landscape": {},
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Boxer_Shorts" type="MeshInstance3D" parent="Skeleton3D" unique_id=270966260]
+mesh = ExtResource("19_swerq")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Builder_Gloves" type="MeshInstance3D" parent="Skeleton3D" unique_id=1398270558]
+mesh = ExtResource("20_v0a6n")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Builder_Hat" type="MeshInstance3D" parent="Skeleton3D" unique_id=1479022708]
+mesh = ExtResource("21_1wbpo")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"hops": {}
+}
+
+[node name="Builder_Outwear" type="MeshInstance3D" parent="Skeleton3D" unique_id=574471402]
+mesh = ExtResource("22_jeswg")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Builder_Pants" type="MeshInstance3D" parent="Skeleton3D" unique_id=1165939646]
+mesh = ExtResource("23_jcx50")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Builder_Shoes" type="MeshInstance3D" parent="Skeleton3D" unique_id=1912654732]
+mesh = ExtResource("24_r4yn4")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"ant_landscape": {},
+"currentUVSet": "map1",
+"hops": {},
+"rigify_owner_rig": {}
+}
+
+[node name="Businessman_Glasses" type="MeshInstance3D" parent="Skeleton3D" unique_id=25753268]
+mesh = ExtResource("25_smt63")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Businessman_Outwear" type="MeshInstance3D" parent="Skeleton3D" unique_id=443020776]
+mesh = ExtResource("26_1xmb7")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Businessman_Pants" type="MeshInstance3D" parent="Skeleton3D" unique_id=641469227]
+mesh = ExtResource("27_tb5yo")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Businessman_Shirt" type="MeshInstance3D" parent="Skeleton3D" unique_id=1483664479]
+mesh = ExtResource("28_wyb8y")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Businessman_Shoes" type="MeshInstance3D" parent="Skeleton3D" unique_id=2142767951]
+mesh = ExtResource("29_i4vfn")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"ant_landscape": {},
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Chef_Apron" type="MeshInstance3D" parent="Skeleton3D" unique_id=1420171587]
+mesh = ExtResource("30_trvx5")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Chef_Hat" type="MeshInstance3D" parent="Skeleton3D" unique_id=317157399]
+mesh = ExtResource("31_s20m3")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"ant_landscape": {},
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Chef_Outwear" type="MeshInstance3D" parent="Skeleton3D" unique_id=1993140328]
+mesh = ExtResource("32_a53as")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Chef_Pants" type="MeshInstance3D" parent="Skeleton3D" unique_id=396810239]
+mesh = ExtResource("33_i2w2e")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Chef_Shoes" type="MeshInstance3D" parent="Skeleton3D" unique_id=1044292344]
+mesh = ExtResource("34_nmej0")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"ant_landscape": {},
+"currentUVSet": "map1",
+"hops": {},
+"rigify_owner_rig": {}
+}
+
+[node name="Clerk_Glasses" type="MeshInstance3D" parent="Skeleton3D" unique_id=10727570]
+mesh = ExtResource("35_ph6sk")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Clerk_Outwear" type="MeshInstance3D" parent="Skeleton3D" unique_id=1476420662]
+mesh = ExtResource("36_8mhcd")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Clerk_Pants" type="MeshInstance3D" parent="Skeleton3D" unique_id=1996190117]
+mesh = ExtResource("37_djfa4")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Clerk_Shoes" type="MeshInstance3D" parent="Skeleton3D" unique_id=104471445]
+mesh = ExtResource("38_fbutp")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"ant_landscape": {},
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Commando_Armor" type="MeshInstance3D" parent="Skeleton3D" unique_id=269426966]
+mesh = ExtResource("39_2gui5")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Commando_Gloves" type="MeshInstance3D" parent="Skeleton3D" unique_id=14222395]
+mesh = ExtResource("40_jsqi7")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Commando_Hat" type="MeshInstance3D" parent="Skeleton3D" unique_id=1511829406]
+mesh = ExtResource("41_h3x1x")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Commando_Outwear" type="MeshInstance3D" parent="Skeleton3D" unique_id=877869639]
+mesh = ExtResource("42_w44sm")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Commando_Pants" type="MeshInstance3D" parent="Skeleton3D" unique_id=1423640505]
+mesh = ExtResource("43_5f730")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Commando_Shoes" type="MeshInstance3D" parent="Skeleton3D" unique_id=946343750]
+mesh = ExtResource("44_yc66w")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"ant_landscape": {},
+"currentUVSet": "map1",
+"hops": {},
+"rigify_owner_rig": {}
+}
+
+[node name="Doctor_Mask" type="MeshInstance3D" parent="Skeleton3D" unique_id=606902390]
+mesh = ExtResource("45_pryhj")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Doctor_Outwear" type="MeshInstance3D" parent="Skeleton3D" unique_id=1891089751]
+mesh = ExtResource("46_pkncf")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Doctor_Pants" type="MeshInstance3D" parent="Skeleton3D" unique_id=609087193]
+mesh = ExtResource("47_dcd6s")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Doctor_Shoes" type="MeshInstance3D" parent="Skeleton3D" unique_id=1161825965]
+mesh = ExtResource("48_7y5f0")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"ant_landscape": {},
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Eyelids_1" type="MeshInstance3D" parent="Skeleton3D" unique_id=2090353037]
+mesh = ExtResource("49_xrb7x")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Eyelids_2" type="MeshInstance3D" parent="Skeleton3D" unique_id=109501456]
+mesh = ExtResource("50_nuac6")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Eyelids_3" type="MeshInstance3D" parent="Skeleton3D" unique_id=1770204636]
+mesh = ExtResource("51_77vsx")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Eyelids_4" type="MeshInstance3D" parent="Skeleton3D" unique_id=760047026]
+mesh = ExtResource("52_udcmx")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Eyelids_5" type="MeshInstance3D" parent="Skeleton3D" unique_id=1542964210]
+mesh = ExtResource("53_vdo3v")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Eyelids_6" type="MeshInstance3D" parent="Skeleton3D" unique_id=1135435306]
+mesh = ExtResource("54_jc8r8")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Eyelids_7" type="MeshInstance3D" parent="Skeleton3D" unique_id=71050378]
+mesh = ExtResource("55_7boij")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Eyelids_8" type="MeshInstance3D" parent="Skeleton3D" unique_id=511697938]
+mesh = ExtResource("56_vr71s")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Eyes_1" type="MeshInstance3D" parent="Skeleton3D" unique_id=465877157]
+mesh = ExtResource("57_vvqeh")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Eyes_2" type="MeshInstance3D" parent="Skeleton3D" unique_id=733366850]
+mesh = ExtResource("58_b4naq")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Eyes_3" type="MeshInstance3D" parent="Skeleton3D" unique_id=965611922]
+mesh = ExtResource("59_krsmd")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Eyes_4" type="MeshInstance3D" parent="Skeleton3D" unique_id=1752386842]
+mesh = ExtResource("60_o7fuw")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Eyes_5" type="MeshInstance3D" parent="Skeleton3D" unique_id=650719197]
+mesh = ExtResource("61_tb7pd")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Eyes_6" type="MeshInstance3D" parent="Skeleton3D" unique_id=303523196]
+mesh = ExtResource("62_km2s2")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Eyes_7" type="MeshInstance3D" parent="Skeleton3D" unique_id=364954508]
+mesh = ExtResource("63_7gu83")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Eyes_8" type="MeshInstance3D" parent="Skeleton3D" unique_id=1557300334]
+mesh = ExtResource("64_vykuo")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Eyes_9" type="MeshInstance3D" parent="Skeleton3D" unique_id=1446406729]
+mesh = ExtResource("65_07u8s")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Eyes_10" type="MeshInstance3D" parent="Skeleton3D" unique_id=2097386697]
+mesh = ExtResource("66_25hbg")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Eyes_11" type="MeshInstance3D" parent="Skeleton3D" unique_id=940628724]
+mesh = ExtResource("67_icmvo")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Eyes_12" type="MeshInstance3D" parent="Skeleton3D" unique_id=585645817]
+mesh = ExtResource("68_qmja6")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Eyes_13" type="MeshInstance3D" parent="Skeleton3D" unique_id=1409565714]
+mesh = ExtResource("69_bkjjf")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Eyes_14" type="MeshInstance3D" parent="Skeleton3D" unique_id=969835629]
+mesh = ExtResource("70_ygs2f")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Eyes_15" type="MeshInstance3D" parent="Skeleton3D" unique_id=768016420]
+mesh = ExtResource("71_et4i4")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Eyes_16" type="MeshInstance3D" parent="Skeleton3D" unique_id=1192259325]
+mesh = ExtResource("72_6aevd")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Firefighter_Hat" type="MeshInstance3D" parent="Skeleton3D" unique_id=1047979053]
+mesh = ExtResource("73_f1ne2")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"hops": {}
+}
+
+[node name="Firefighter_Outwear" type="MeshInstance3D" parent="Skeleton3D" unique_id=1026007107]
+mesh = ExtResource("74_uirle")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Firefighter_Pants" type="MeshInstance3D" parent="Skeleton3D" unique_id=436489997]
+mesh = ExtResource("75_r62k5")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Footballer_Armor" type="MeshInstance3D" parent="Skeleton3D" unique_id=1836459760]
+mesh = ExtResource("76_hwopj")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Footballer_Gloves" type="MeshInstance3D" parent="Skeleton3D" unique_id=1887273447]
+mesh = ExtResource("77_1qqsq")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Footballer_Hat" type="MeshInstance3D" parent="Skeleton3D" unique_id=390645973]
+mesh = ExtResource("78_owfj2")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"hops": {}
+}
+
+[node name="Footballer_Outwear" type="MeshInstance3D" parent="Skeleton3D" unique_id=981919296]
+mesh = ExtResource("79_50uuj")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Footballer_Pants" type="MeshInstance3D" parent="Skeleton3D" unique_id=951273137]
+mesh = ExtResource("80_hctqc")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Footballer_Shoes" type="MeshInstance3D" parent="Skeleton3D" unique_id=2053965799]
+mesh = ExtResource("81_t6cog")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"ant_landscape": {},
+"currentUVSet": "map1",
+"hops": {},
+"rigify_owner_rig": {}
+}
+
+[node name="Footballer_Socks" type="MeshInstance3D" parent="Skeleton3D" unique_id=1990336232]
+mesh = ExtResource("82_n23gs")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Gloves_1" type="MeshInstance3D" parent="Skeleton3D" unique_id=1983985704]
+mesh = ExtResource("83_lcv7k")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Gloves_2" type="MeshInstance3D" parent="Skeleton3D" unique_id=1175617526]
+mesh = ExtResource("84_6v2i6")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Gloves_3" type="MeshInstance3D" parent="Skeleton3D" unique_id=1719350759]
+mesh = ExtResource("85_j0gke")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Gloves_4" type="MeshInstance3D" parent="Skeleton3D" unique_id=911042722]
+mesh = ExtResource("86_817yk")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Gloves_5" type="MeshInstance3D" parent="Skeleton3D" unique_id=499814336]
+mesh = ExtResource("87_cypcv")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Gloves_6" type="MeshInstance3D" parent="Skeleton3D" unique_id=144781147]
+mesh = ExtResource("88_pxncw")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Gloves_7" type="MeshInstance3D" parent="Skeleton3D" unique_id=192004548]
+mesh = ExtResource("89_kmxuc")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Gloves_8" type="MeshInstance3D" parent="Skeleton3D" unique_id=1408580653]
+mesh = ExtResource("90_7urma")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Gloves_9" type="MeshInstance3D" parent="Skeleton3D" unique_id=1185465626]
+mesh = ExtResource("91_yc4bf")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Gloves_10" type="MeshInstance3D" parent="Skeleton3D" unique_id=136076906]
+mesh = ExtResource("92_dl07j")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Gloves_11" type="MeshInstance3D" parent="Skeleton3D" unique_id=652025847]
+mesh = ExtResource("93_fmgw0")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Gloves_12" type="MeshInstance3D" parent="Skeleton3D" unique_id=1887481989]
+mesh = ExtResource("94_wd1qg")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Gloves_13" type="MeshInstance3D" parent="Skeleton3D" unique_id=712925909]
+mesh = ExtResource("95_abqo5")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Gloves_14" type="MeshInstance3D" parent="Skeleton3D" unique_id=1706767359]
+mesh = ExtResource("96_x8i70")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Hair_1" type="MeshInstance3D" parent="Skeleton3D" unique_id=860156868]
+mesh = ExtResource("97_3blh2")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Hair_2" type="MeshInstance3D" parent="Skeleton3D" unique_id=501764204]
+mesh = ExtResource("98_gw5wb")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Hair_3" type="MeshInstance3D" parent="Skeleton3D" unique_id=661354461]
+mesh = ExtResource("99_hui2w")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Hair_4" type="MeshInstance3D" parent="Skeleton3D" unique_id=1626718716]
+mesh = ExtResource("100_8ddlf")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Hair_5" type="MeshInstance3D" parent="Skeleton3D" unique_id=674174250]
+mesh = ExtResource("101_2j42o")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Hair_6" type="MeshInstance3D" parent="Skeleton3D" unique_id=232377073]
+mesh = ExtResource("102_7xy5e")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Hair_7" type="MeshInstance3D" parent="Skeleton3D" unique_id=347356076]
+mesh = ExtResource("103_eo88g")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Hat_1" type="MeshInstance3D" parent="Skeleton3D" unique_id=1284474214]
+mesh = ExtResource("104_g330e")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Hat_2" type="MeshInstance3D" parent="Skeleton3D" unique_id=1744099929]
+mesh = ExtResource("105_g375q")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Hat_3" type="MeshInstance3D" parent="Skeleton3D" unique_id=1511537756]
+mesh = ExtResource("106_or0eh")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"ant_landscape": {},
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Hat_4" type="MeshInstance3D" parent="Skeleton3D" unique_id=556659792]
+mesh = ExtResource("107_52rso")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"ant_landscape": {},
+"currentUVSet": "map1",
+"hops": {},
+"rigify_owner_rig": {}
+}
+
+[node name="Hat_5" type="MeshInstance3D" parent="Skeleton3D" unique_id=624706681]
+mesh = ExtResource("108_y43sc")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"ant_landscape": {},
+"currentUVSet": "map1",
+"hops": {},
+"rigify_owner_rig": {}
+}
+
+[node name="Hat_6" type="MeshInstance3D" parent="Skeleton3D" unique_id=2021296457]
+mesh = ExtResource("109_k77v7")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"ant_landscape": {},
+"currentUVSet": "map1",
+"hops": {},
+"rigify_owner_rig": {}
+}
+
+[node name="Hat_7" type="MeshInstance3D" parent="Skeleton3D" unique_id=2086787429]
+mesh = ExtResource("110_6jpar")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"ant_landscape": {},
+"currentUVSet": "map1",
+"hops": {},
+"rigify_owner_rig": {}
+}
+
+[node name="Hat_8" type="MeshInstance3D" parent="Skeleton3D" unique_id=633854601]
+mesh = ExtResource("111_rquhv")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"ant_landscape": {},
+"currentUVSet": "map1",
+"hops": {},
+"ht_props": {
+"hair_settings": {}
+},
+"rigify_owner_rig": {}
+}
+
+[node name="Hat_9" type="MeshInstance3D" parent="Skeleton3D" unique_id=534307151]
+mesh = ExtResource("112_3w87g")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"ant_landscape": {},
+"currentUVSet": "map1",
+"hops": {},
+"rigify_owner_rig": {}
+}
+
+[node name="Hat_10" type="MeshInstance3D" parent="Skeleton3D" unique_id=1163465498]
+mesh = ExtResource("113_gama8")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"ant_landscape": {},
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Hat_11" type="MeshInstance3D" parent="Skeleton3D" unique_id=693781196]
+mesh = ExtResource("114_hv2sg")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Hat_12" type="MeshInstance3D" parent="Skeleton3D" unique_id=1440970229]
+mesh = ExtResource("115_5ph6c")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"ant_landscape": {},
+"currentUVSet": "map1",
+"hops": {},
+"rigify_owner_rig": {}
+}
+
+[node name="Hat_13" type="MeshInstance3D" parent="Skeleton3D" unique_id=1765764213]
+mesh = ExtResource("116_eagxd")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"ant_landscape": {},
+"currentUVSet": "map1",
+"hops": {},
+"rigify_owner_rig": {}
+}
+
+[node name="Hat_14" type="MeshInstance3D" parent="Skeleton3D" unique_id=1448319190]
+mesh = ExtResource("117_ptdm1")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"ant_landscape": {},
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Hat_15" type="MeshInstance3D" parent="Skeleton3D" unique_id=702937155]
+mesh = ExtResource("118_2iggh")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"ant_landscape": {},
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Hat_16" type="MeshInstance3D" parent="Skeleton3D" unique_id=753220656]
+mesh = ExtResource("119_fg873")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"hops": {}
+}
+
+[node name="Hat_17" type="MeshInstance3D" parent="Skeleton3D" unique_id=542563887]
+mesh = ExtResource("120_xrjbq")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"hops": {}
+}
+
+[node name="Hat_18" type="MeshInstance3D" parent="Skeleton3D" unique_id=346325769]
+mesh = ExtResource("121_yladf")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"ant_landscape": {},
+"currentUVSet": "map1",
+"hops": {},
+"rigify_owner_rig": {}
+}
+
+[node name="Hat_19" type="MeshInstance3D" parent="Skeleton3D" unique_id=2068015651]
+mesh = ExtResource("122_teoni")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"hops": {}
+}
+
+[node name="Hat_20" type="MeshInstance3D" parent="Skeleton3D" unique_id=1662028671]
+mesh = ExtResource("123_cwmqm")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"ant_landscape": {},
+"currentUVSet": "map1",
+"hops": {},
+"rigify_owner_rig": {}
+}
+
+[node name="Hat_21" type="MeshInstance3D" parent="Skeleton3D" unique_id=726507174]
+mesh = ExtResource("124_5wnvp")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"ant_landscape": {},
+"currentUVSet": "map1",
+"hops": {},
+"rigify_owner_rig": {}
+}
+
+[node name="Hat_22" type="MeshInstance3D" parent="Skeleton3D" unique_id=118082022]
+mesh = ExtResource("125_f8be0")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"ant_landscape": {},
+"currentUVSet": "map1",
+"hops": {},
+"rigify_owner_rig": {}
+}
+
+[node name="Hat_23" type="MeshInstance3D" parent="Skeleton3D" unique_id=1189541401]
+mesh = ExtResource("126_b363f")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"ant_landscape": {},
+"currentUVSet": "map1",
+"hops": {},
+"rigify_owner_rig": {}
+}
+
+[node name="Hat_24" type="MeshInstance3D" parent="Skeleton3D" unique_id=1267599626]
+mesh = ExtResource("127_lr7gm")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"ant_landscape": {},
+"currentUVSet": "map1",
+"hops": {},
+"rigify_owner_rig": {}
+}
+
+[node name="Hat_25" type="MeshInstance3D" parent="Skeleton3D" unique_id=982930551]
+mesh = ExtResource("128_k80jl")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"ant_landscape": {},
+"currentUVSet": "map1",
+"hops": {},
+"rigify_owner_rig": {}
+}
+
+[node name="Hat_26" type="MeshInstance3D" parent="Skeleton3D" unique_id=352659498]
+mesh = ExtResource("129_fhysa")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"ant_landscape": {},
+"currentUVSet": "map1",
+"hops": {},
+"rigify_owner_rig": {}
+}
+
+[node name="Hat_27" type="MeshInstance3D" parent="Skeleton3D" unique_id=402067712]
+mesh = ExtResource("130_o1p31")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"ant_landscape": {},
+"currentUVSet": "map1",
+"hops": {},
+"rigify_owner_rig": {}
+}
+
+[node name="Hat_28" type="MeshInstance3D" parent="Skeleton3D" unique_id=266235566]
+mesh = ExtResource("131_iw2i6")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Hat_29" type="MeshInstance3D" parent="Skeleton3D" unique_id=18490770]
+mesh = ExtResource("132_35rcl")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"ant_landscape": {},
+"currentUVSet": "map1",
+"hops": {},
+"rigify_owner_rig": {}
+}
+
+[node name="Hat_30" type="MeshInstance3D" parent="Skeleton3D" unique_id=878208812]
+mesh = ExtResource("133_rc4mk")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"ant_landscape": {},
+"currentUVSet": "map1",
+"hops": {},
+"rigify_owner_rig": {}
+}
+
+[node name="Head_A_1" type="MeshInstance3D" parent="Skeleton3D" unique_id=1991368804]
+mesh = ExtResource("134_kq44v")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Head_A_2" type="MeshInstance3D" parent="Skeleton3D" unique_id=1053390265]
+mesh = ExtResource("135_wm2i4")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Head_A_3" type="MeshInstance3D" parent="Skeleton3D" unique_id=969195907]
+mesh = ExtResource("136_xgm7n")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Head_B_1" type="MeshInstance3D" parent="Skeleton3D" unique_id=75932223]
+mesh = ExtResource("137_kyuis")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Head_B_2" type="MeshInstance3D" parent="Skeleton3D" unique_id=1772280609]
+mesh = ExtResource("138_fetom")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Head_B_3" type="MeshInstance3D" parent="Skeleton3D" unique_id=574378837]
+mesh = ExtResource("139_yhh60")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Head_C_1" type="MeshInstance3D" parent="Skeleton3D" unique_id=126900440]
+mesh = ExtResource("140_o5g3e")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Head_C_2" type="MeshInstance3D" parent="Skeleton3D" unique_id=768642630]
+mesh = ExtResource("141_sbqjh")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Head_C_3" type="MeshInstance3D" parent="Skeleton3D" unique_id=591956576]
+mesh = ExtResource("142_bivgp")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Head_D_1" type="MeshInstance3D" parent="Skeleton3D" unique_id=705506036]
+mesh = ExtResource("143_lguav")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Head_D_2" type="MeshInstance3D" parent="Skeleton3D" unique_id=27913905]
+mesh = ExtResource("144_fi4a8")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Head_D_3" type="MeshInstance3D" parent="Skeleton3D" unique_id=1250253153]
+mesh = ExtResource("145_pud7q")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Mime_Gloves" type="MeshInstance3D" parent="Skeleton3D" unique_id=291897167]
+mesh = ExtResource("146_utsao")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Mime_Hat" type="MeshInstance3D" parent="Skeleton3D" unique_id=1326355792]
+mesh = ExtResource("147_7seqr")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Mime_Outwear" type="MeshInstance3D" parent="Skeleton3D" unique_id=1882712505]
+mesh = ExtResource("148_mss1l")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Mime_Pants" type="MeshInstance3D" parent="Skeleton3D" unique_id=798500145]
+mesh = ExtResource("149_ias1v")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Mime_Shoes" type="MeshInstance3D" parent="Skeleton3D" unique_id=194513083]
+mesh = ExtResource("150_24t37")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"ant_landscape": {},
+"currentUVSet": "map1",
+"hops": {},
+"rigify_owner_rig": {}
+}
+
+[node name="Outwear_1" type="MeshInstance3D" parent="Skeleton3D" unique_id=1583536525]
+mesh = ExtResource("151_gm2r7")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Outwear_2" type="MeshInstance3D" parent="Skeleton3D" unique_id=302807992]
+mesh = ExtResource("152_y4pnd")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Outwear_3" type="MeshInstance3D" parent="Skeleton3D" unique_id=1704124098]
+mesh = ExtResource("153_c4orf")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Outwear_4" type="MeshInstance3D" parent="Skeleton3D" unique_id=1002825769]
+mesh = ExtResource("154_jw041")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Outwear_5" type="MeshInstance3D" parent="Skeleton3D" unique_id=1081562912]
+mesh = ExtResource("155_3n33l")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Outwear_6" type="MeshInstance3D" parent="Skeleton3D" unique_id=34740112]
+mesh = ExtResource("156_jypa5")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Outwear_7" type="MeshInstance3D" parent="Skeleton3D" unique_id=289539145]
+mesh = ExtResource("157_wkpyf")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Outwear_8" type="MeshInstance3D" parent="Skeleton3D" unique_id=414322754]
+mesh = ExtResource("158_hx5nk")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Outwear_9" type="MeshInstance3D" parent="Skeleton3D" unique_id=2129298053]
+mesh = ExtResource("159_77crc")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Outwear_10" type="MeshInstance3D" parent="Skeleton3D" unique_id=719567317]
+mesh = ExtResource("160_hiosk")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Outwear_11" type="MeshInstance3D" parent="Skeleton3D" unique_id=275234411]
+mesh = ExtResource("161_fdait")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Outwear_12" type="MeshInstance3D" parent="Skeleton3D" unique_id=1200528563]
+mesh = ExtResource("162_xtv4g")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Outwear_13" type="MeshInstance3D" parent="Skeleton3D" unique_id=1992232778]
+mesh = ExtResource("163_8rtxp")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Outwear_14" type="MeshInstance3D" parent="Skeleton3D" unique_id=1243558251]
+mesh = ExtResource("164_73jb3")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Outwear_15" type="MeshInstance3D" parent="Skeleton3D" unique_id=193782604]
+mesh = ExtResource("165_6niib")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Outwear_16" type="MeshInstance3D" parent="Skeleton3D" unique_id=1536248697]
+mesh = ExtResource("166_ut8k7")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Outwear_17" type="MeshInstance3D" parent="Skeleton3D" unique_id=945116434]
+mesh = ExtResource("167_8rn4o")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Outwear_18" type="MeshInstance3D" parent="Skeleton3D" unique_id=540648774]
+mesh = ExtResource("168_5vnbo")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Outwear_19" type="MeshInstance3D" parent="Skeleton3D" unique_id=1117974417]
+mesh = ExtResource("169_bi1d8")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Outwear_20" type="MeshInstance3D" parent="Skeleton3D" unique_id=465680318]
+mesh = ExtResource("170_6kyx0")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Outwear_21" type="MeshInstance3D" parent="Skeleton3D" unique_id=1856576952]
+mesh = ExtResource("171_337q3")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Outwear_22" type="MeshInstance3D" parent="Skeleton3D" unique_id=547651306]
+mesh = ExtResource("172_3d13l")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Outwear_23" type="MeshInstance3D" parent="Skeleton3D" unique_id=1882011543]
+mesh = ExtResource("173_phtvu")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Outwear_24" type="MeshInstance3D" parent="Skeleton3D" unique_id=33599104]
+mesh = ExtResource("174_kj8c7")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Outwear_25" type="MeshInstance3D" parent="Skeleton3D" unique_id=532797683]
+mesh = ExtResource("175_w6c8s")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Outwear_26" type="MeshInstance3D" parent="Skeleton3D" unique_id=1023737310]
+mesh = ExtResource("176_o12hj")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Overall_1" type="MeshInstance3D" parent="Skeleton3D" unique_id=966473168]
+mesh = ExtResource("177_4cop0")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Overall_2" type="MeshInstance3D" parent="Skeleton3D" unique_id=339079528]
+mesh = ExtResource("178_hf3c8")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Overall_3" type="MeshInstance3D" parent="Skeleton3D" unique_id=123583931]
+mesh = ExtResource("179_gv482")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Overall_4" type="MeshInstance3D" parent="Skeleton3D" unique_id=941880893]
+mesh = ExtResource("180_bp7kl")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Overall_5" type="MeshInstance3D" parent="Skeleton3D" unique_id=633450043]
+mesh = ExtResource("181_u40c5")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Overall_6" type="MeshInstance3D" parent="Skeleton3D" unique_id=2088175557]
+mesh = ExtResource("182_7gqi0")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Overall_7" type="MeshInstance3D" parent="Skeleton3D" unique_id=1344337118]
+mesh = ExtResource("183_soyhj")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Overall_8" type="MeshInstance3D" parent="Skeleton3D" unique_id=2081764344]
+mesh = ExtResource("184_v6x0r")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Pants_1" type="MeshInstance3D" parent="Skeleton3D" unique_id=190821947]
+mesh = ExtResource("185_htps0")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Pants_2" type="MeshInstance3D" parent="Skeleton3D" unique_id=976776773]
+mesh = ExtResource("186_khuaq")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Pants_3" type="MeshInstance3D" parent="Skeleton3D" unique_id=67292541]
+mesh = ExtResource("187_qvuh7")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Pants_4" type="MeshInstance3D" parent="Skeleton3D" unique_id=1294706107]
+mesh = ExtResource("188_3mrwh")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Pants_5" type="MeshInstance3D" parent="Skeleton3D" unique_id=2141078970]
+mesh = ExtResource("189_w0sfr")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Pants_6" type="MeshInstance3D" parent="Skeleton3D" unique_id=475987153]
+mesh = ExtResource("190_kuayj")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Pants_7" type="MeshInstance3D" parent="Skeleton3D" unique_id=1293165481]
+mesh = ExtResource("191_mpoth")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Pants_8" type="MeshInstance3D" parent="Skeleton3D" unique_id=919682985]
+mesh = ExtResource("192_xtbnw")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Pants_9" type="MeshInstance3D" parent="Skeleton3D" unique_id=1940427620]
+mesh = ExtResource("193_3blw7")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Pants_10" type="MeshInstance3D" parent="Skeleton3D" unique_id=23809988]
+mesh = ExtResource("194_ls7q5")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Pants_11" type="MeshInstance3D" parent="Skeleton3D" unique_id=1163675257]
+mesh = ExtResource("195_qlkqb")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Policeman_Hat" type="MeshInstance3D" parent="Skeleton3D" unique_id=2129057167]
+mesh = ExtResource("196_o7ey7")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"ant_landscape": {},
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Policeman_Outwear" type="MeshInstance3D" parent="Skeleton3D" unique_id=558664777]
+mesh = ExtResource("197_l2hqm")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Policeman_Pants" type="MeshInstance3D" parent="Skeleton3D" unique_id=1099015019]
+mesh = ExtResource("198_6m7ey")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Policeman_Shoes" type="MeshInstance3D" parent="Skeleton3D" unique_id=442260447]
+mesh = ExtResource("199_bl1xx")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"ant_landscape": {},
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Prisoner_Hat" type="MeshInstance3D" parent="Skeleton3D" unique_id=1190936550]
+mesh = ExtResource("200_p11ye")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"ant_landscape": {},
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Prisoner_Outwear" type="MeshInstance3D" parent="Skeleton3D" unique_id=633825990]
+mesh = ExtResource("201_02owr")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Prisoner_Pants" type="MeshInstance3D" parent="Skeleton3D" unique_id=1075065030]
+mesh = ExtResource("202_gmoah")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Prisoner_Shoes" type="MeshInstance3D" parent="Skeleton3D" unique_id=1590393929]
+mesh = ExtResource("203_vnosx")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"ant_landscape": {},
+"currentUVSet": "map1",
+"hops": {},
+"rigify_owner_rig": {}
+}
+
+[node name="Scientist_Balloon" type="MeshInstance3D" parent="Skeleton3D" unique_id=1426933233]
+mesh = ExtResource("204_k188t")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Scientist_Gloves" type="MeshInstance3D" parent="Skeleton3D" unique_id=1305626797]
+mesh = ExtResource("205_ld3ft")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Scientist_Hat" type="MeshInstance3D" parent="Skeleton3D" unique_id=1914245208]
+mesh = ExtResource("206_20bfo")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Scientist_Outwear" type="MeshInstance3D" parent="Skeleton3D" unique_id=346017968]
+mesh = ExtResource("207_bhs0c")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Scientist_Pants" type="MeshInstance3D" parent="Skeleton3D" unique_id=910667677]
+mesh = ExtResource("208_07r6j")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Scientist_Shoes" type="MeshInstance3D" parent="Skeleton3D" unique_id=1111829260]
+mesh = ExtResource("209_t7w75")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Shoes_1" type="MeshInstance3D" parent="Skeleton3D" unique_id=1146194173]
+mesh = ExtResource("210_mo50m")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"ant_landscape": {},
+"currentUVSet": "map1",
+"hops": {},
+"rigify_owner_rig": {}
+}
+
+[node name="Shoes_2" type="MeshInstance3D" parent="Skeleton3D" unique_id=474400162]
+mesh = ExtResource("211_3lm5q")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"ant_landscape": {},
+"currentUVSet": "map1",
+"hops": {},
+"rigify_owner_rig": {}
+}
+
+[node name="Shoes_3" type="MeshInstance3D" parent="Skeleton3D" unique_id=865635632]
+mesh = ExtResource("212_iaeg4")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"ant_landscape": {},
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Shoes_4" type="MeshInstance3D" parent="Skeleton3D" unique_id=2043833422]
+mesh = ExtResource("213_5ntaa")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"ant_landscape": {},
+"currentUVSet": "map1",
+"hops": {},
+"rigify_owner_rig": {}
+}
+
+[node name="Shoes_5" type="MeshInstance3D" parent="Skeleton3D" unique_id=1458760161]
+mesh = ExtResource("214_xbbxk")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"ant_landscape": {},
+"currentUVSet": "map1",
+"hops": {},
+"rigify_owner_rig": {}
+}
+
+[node name="Shoes_6" type="MeshInstance3D" parent="Skeleton3D" unique_id=328909210]
+mesh = ExtResource("215_v6owj")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"ant_landscape": {},
+"currentUVSet": "map1",
+"hops": {},
+"rigify_owner_rig": {}
+}
+
+[node name="Shoes_7" type="MeshInstance3D" parent="Skeleton3D" unique_id=160559688]
+mesh = ExtResource("216_4bk2g")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"ant_landscape": {},
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Shoes_8" type="MeshInstance3D" parent="Skeleton3D" unique_id=534628878]
+mesh = ExtResource("217_p4ib8")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"ant_landscape": {},
+"currentUVSet": "map1",
+"hops": {},
+"rigify_owner_rig": {}
+}
+
+[node name="Shoes_9" type="MeshInstance3D" parent="Skeleton3D" unique_id=1485769599]
+mesh = ExtResource("218_17gjk")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"ant_landscape": {},
+"currentUVSet": "map1",
+"hops": {},
+"rigify_owner_rig": {}
+}
+
+[node name="Shoes_10" type="MeshInstance3D" parent="Skeleton3D" unique_id=1395992689]
+mesh = ExtResource("219_58bha")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"ant_landscape": {},
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Shoes_11" type="MeshInstance3D" parent="Skeleton3D" unique_id=1493764614]
+mesh = ExtResource("220_5vr6s")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"ant_landscape": {},
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Shoes_12" type="MeshInstance3D" parent="Skeleton3D" unique_id=687469818]
+mesh = ExtResource("221_0k5fr")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"ant_landscape": {},
+"currentUVSet": "map1",
+"hops": {},
+"rigify_owner_rig": {}
+}
+
+[node name="Shorts_1" type="MeshInstance3D" parent="Skeleton3D" unique_id=1568235349]
+mesh = ExtResource("222_ql23t")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Shorts_2" type="MeshInstance3D" parent="Skeleton3D" unique_id=500468782]
+mesh = ExtResource("223_uiqn4")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Shorts_3" type="MeshInstance3D" parent="Skeleton3D" unique_id=2094407524]
+mesh = ExtResource("224_gbwfi")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Shorts_4" type="MeshInstance3D" parent="Skeleton3D" unique_id=698943685]
+mesh = ExtResource("225_0g5h3")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Shorts_5" type="MeshInstance3D" parent="Skeleton3D" unique_id=1102368369]
+mesh = ExtResource("226_yr04m")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Shorts_6" type="MeshInstance3D" parent="Skeleton3D" unique_id=1057668478]
+mesh = ExtResource("227_j3xp0")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Soldier_Hat" type="MeshInstance3D" parent="Skeleton3D" unique_id=1987446334]
+mesh = ExtResource("228_l3w1l")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Soldier_Outwear" type="MeshInstance3D" parent="Skeleton3D" unique_id=1162371126]
+mesh = ExtResource("229_8uhv0")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Soldier_Pants" type="MeshInstance3D" parent="Skeleton3D" unique_id=2031564283]
+mesh = ExtResource("230_yf8g6")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Soldier_Shoes" type="MeshInstance3D" parent="Skeleton3D" unique_id=1470157982]
+mesh = ExtResource("231_i0x40")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"ant_landscape": {},
+"currentUVSet": "map1",
+"hops": {},
+"rigify_owner_rig": {}
+}
+
+[node name="Thief_Gloves" type="MeshInstance3D" parent="Skeleton3D" unique_id=1732013760]
+mesh = ExtResource("232_1q2pl")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Thief_Hat" type="MeshInstance3D" parent="Skeleton3D" unique_id=208951077]
+mesh = ExtResource("233_xl2qs")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Thief_Outwear" type="MeshInstance3D" parent="Skeleton3D" unique_id=84560172]
+mesh = ExtResource("234_whjgd")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Thief_Pants" type="MeshInstance3D" parent="Skeleton3D" unique_id=993655318]
+mesh = ExtResource("235_tt0a1")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Thief_Shoes" type="MeshInstance3D" parent="Skeleton3D" unique_id=394991324]
+mesh = ExtResource("236_tuvr5")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"ant_landscape": {},
+"currentUVSet": "map1",
+"hops": {},
+"rigify_owner_rig": {}
+}
+
+[node name="Tourist_Camera" type="MeshInstance3D" parent="Skeleton3D" unique_id=1999824634]
+mesh = ExtResource("237_1mj27")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"hops": {}
+}
+
+[node name="Tourist_Hat" type="MeshInstance3D" parent="Skeleton3D" unique_id=355225125]
+mesh = ExtResource("238_sk8qm")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"ant_landscape": {},
+"currentUVSet": "map1",
+"hops": {},
+"rigify_owner_rig": {}
+}
+
+[node name="Tourist_Outwear" type="MeshInstance3D" parent="Skeleton3D" unique_id=232768246]
+mesh = ExtResource("239_ho6s4")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Tourist_Shoes" type="MeshInstance3D" parent="Skeleton3D" unique_id=461708260]
+mesh = ExtResource("240_i8opp")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"ant_landscape": {},
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Tourist_Shorts" type="MeshInstance3D" parent="Skeleton3D" unique_id=1411324076]
+mesh = ExtResource("241_jos2l")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Waiter_Apron" type="MeshInstance3D" parent="Skeleton3D" unique_id=1934573538]
+mesh = ExtResource("242_8x8ot")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Waiter_Outwear" type="MeshInstance3D" parent="Skeleton3D" unique_id=738831561]
+mesh = ExtResource("243_ikenw")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Waiter_Pants" type="MeshInstance3D" parent="Skeleton3D" unique_id=1213465257]
+mesh = ExtResource("244_78x3d")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"currentUVSet": "map1",
+"hops": {}
+}
+
+[node name="Waiter_Shoes" type="MeshInstance3D" parent="Skeleton3D" unique_id=1037112881]
+mesh = ExtResource("245_cje3g")
+skin = SubResource("Skin_a3jmk")
+metadata/extras = {
+"ant_landscape": {},
+"currentUVSet": "map1",
+"hops": {}
+}
