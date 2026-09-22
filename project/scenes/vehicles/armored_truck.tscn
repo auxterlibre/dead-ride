@@ -1,0 +1,292 @@
+[gd_scene format=3 uid="uid://dw0wfmq27jlse"]
+
+[ext_resource type="PackedScene" uid="uid://cpa8050ct0736" path="res://scenes/vehicles/vehicle_base.tscn" id="1_10xua"]
+[ext_resource type="ArrayMesh" uid="uid://chut6dkg041ep" path="res://assets/meshes/apocalypse/apocalypse/parts/apocalypse_car.tres" id="2_2fvti"]
+[ext_resource type="ArrayMesh" uid="uid://c5ka8s1p2jc5m" path="res://assets/meshes/apocalypse/apocalypse/parts/apocalypse_car_01_armor_01.tres" id="3_n0p2h"]
+[ext_resource type="ArrayMesh" uid="uid://bc8r8rxjl87pt" path="res://assets/meshes/apocalypse/apocalypse/parts/apocalypse_car_01_armor_02.tres" id="4_tesfn"]
+[ext_resource type="ArrayMesh" uid="uid://cs30p4qxcamsd" path="res://assets/meshes/apocalypse/apocalypse/parts/apocalypse_car_01_armor_03.tres" id="5_8wmbx"]
+[ext_resource type="ArrayMesh" uid="uid://ddxr3jwxlo2c7" path="res://assets/meshes/apocalypse/apocalypse/parts/apocalypse_car_01_armor_04.tres" id="6_oc4bv"]
+[ext_resource type="ArrayMesh" uid="uid://0m0l5e6fjtrs" path="res://assets/meshes/apocalypse/apocalypse/parts/apocalypse_car_01_armor_05.tres" id="7_qvrw5"]
+[ext_resource type="ArrayMesh" uid="uid://di2uq6a48lvhw" path="res://assets/meshes/apocalypse/apocalypse/parts/apocalypse_car_01_door_l.tres" id="8_txjpw"]
+[ext_resource type="ArrayMesh" uid="uid://cyl3kyj4wxknk" path="res://assets/meshes/apocalypse/apocalypse/parts/apocalypse_car_01_door_r.tres" id="9_ak1q0"]
+[ext_resource type="ArrayMesh" uid="uid://chmy23jqwowt0" path="res://assets/meshes/apocalypse/apocalypse/parts/apocalypse_car_01_needle_fuel.tres" id="10_vga63"]
+[ext_resource type="ArrayMesh" uid="uid://di1yp6x4k6258" path="res://assets/meshes/apocalypse/apocalypse/parts/apocalypse_car_01_needle_speedometer.tres" id="11_cijxq"]
+[ext_resource type="ArrayMesh" uid="uid://1btt1vpj068a" path="res://assets/meshes/apocalypse/apocalypse/parts/apocalypse_car_01_steering_wheel.tres" id="12_e7o4d"]
+[ext_resource type="ArrayMesh" uid="uid://p7t71gs1na5y" path="res://assets/meshes/apocalypse/apocalypse/parts/apocalypse_car_01_supplies_01.tres" id="13_2b411"]
+[ext_resource type="ArrayMesh" uid="uid://0ixftvdlh501" path="res://assets/meshes/apocalypse/apocalypse/parts/apocalypse_car_01_wheel_bl.tres" id="14_1sgp3"]
+[ext_resource type="PackedScene" path="res://scenes/characters/crew.tscn" id="15_crew"]
+[ext_resource type="Resource" path="res://data/crew/gunner_rifle.tres" id="16_rifle"]
+[ext_resource type="Resource" path="res://data/crew/gunner_smg.tres" id="17_smg"]
+
+[sub_resource type="Gradient" id="Gradient_dust"]
+offsets = PackedFloat32Array(0, 0.17313433, 0.7044776, 1)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 0.68, 1, 1, 1, 0.55, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_dust"]
+gradient = SubResource("Gradient_dust")
+
+[sub_resource type="Curve" id="Curve_4d2n8"]
+_limits = [0.0, 3.0, 0.0, 1.0]
+_data = [Vector2(0, 0.1353383), 0.0, 0.0, 0, 0, Vector2(1, 2.2), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_6iuvm"]
+curve = SubResource("Curve_4d2n8")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_q0xlp"]
+resource_local_to_scene = true
+lifetime_randomness = 0.4
+angle_min = -180.0
+angle_max = 180.0
+direction = Vector3(0, 0.35, -1)
+spread = 60.0
+initial_velocity_min = 1.4
+initial_velocity_max = 3.0
+gravity = Vector3(0, 0.25, 0)
+damping_min = 1.4
+damping_max = 2.4
+scale_min = 4.0
+scale_max = 16.0
+scale_curve = SubResource("CurveTexture_6iuvm")
+color = Color(0.8784314, 0.71541196, 0.18928054, 1)
+color_ramp = SubResource("GradientTexture1D_dust")
+turbulence_enabled = true
+turbulence_noise_strength = 0.55
+turbulence_noise_scale = 2.0
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_015me"]
+points = PackedVector3Array(-1.390377, 0.47852606, 2.3196821, 1.3620579, 0.64037853, 2.4008265, 1.0379409, 0.55955136, 2.7238812, -0.33800712, 2.1784723, 0.538568, 0.9981169, 0.34884286, -2.196321, -1.0907656, 0.35911563, -2.0874348, 0.95711374, 1.2875903, -2.1320891, -0.98543286, 1.2875903, -2.1320891, 0.71436274, 2.1784723, 0.21551284, 1.1998647, 0.23564827, 1.9149756, -0.9046057, 0.15462303, -1.3221688, -0.74241245, 2.1784723, 0.29614985, -0.33800712, 1.2069613, 2.238538, -1.2281839, 0.23564827, 1.9149756, 0.87628657, 0.15462303, -1.322676, 0.95711374, 1.2069613, 2.076757, -0.094986744, 0.47852606, 2.8866768, -1.390377, 0.64037853, 2.4008265, 1.0775809, 0.34776518, -2.1209419, 0.552439, 2.1784723, 0.538568, -0.9046057, 1.2069613, 2.076757, -1.06626, 0.55955136, 2.7243886, -0.45430824, 0.2491522, -2.0523827, -1.0237554, 0.35100827, -2.1897206, 0.3094186, 1.2069613, 2.238538, -0.6271365, 0.28518033, 2.3651855, 0.63326615, 0.64037853, 2.805533, -0.6615853, 0.64037853, 2.805533, 1.3620579, 0.47852606, 2.4008265, 0.9032132, 0.2873083, 2.284028, 1.3620579, 0.64037853, 2.238538, -1.06626, 0.47852606, 2.7243886)
+
+[node name="ArmoredTruck" unique_id=2063509715 instance=ExtResource("1_10xua")]
+
+[node name="ExhaustSmoke" parent="." index="9" unique_id=661430897]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.48510897, 0.28375882, -2.354578)
+
+[node name="DustBackLeft" parent="." index="11" unique_id=2111712101]
+process_material = SubResource("ParticleProcessMaterial_q0xlp")
+
+[node name="DustBackRight" parent="." index="12" unique_id=2082442299]
+process_material = SubResource("ParticleProcessMaterial_q0xlp")
+
+[node name="DustBackLeftAlt" parent="." index="13" unique_id=799610745]
+process_material = SubResource("ParticleProcessMaterial_q0xlp")
+
+[node name="DustBackRightAlt" parent="." index="14" unique_id=1255886666]
+process_material = SubResource("ParticleProcessMaterial_q0xlp")
+
+[node name="Flame" parent="." index="15" unique_id=1696408361]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.004092574, 1.8471072, 1.4350069)
+
+[node name="ApocalypseCar" type="MeshInstance3D" parent="." index="19" unique_id=1468152613]
+mesh = ExtResource("2_2fvti")
+skeleton = NodePath("")
+metadata/extras = {
+"M3": {},
+"MM": {},
+"bc": {},
+"hops": {}
+}
+
+[node name="Apocalypse_Car_01_Armor_01" type="MeshInstance3D" parent="ApocalypseCar" index="0" unique_id=1718655240]
+mesh = ExtResource("3_n0p2h")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"bc": {},
+"hops": {}
+}
+
+[node name="Apocalypse_Car_01_Armor_02" type="MeshInstance3D" parent="ApocalypseCar" index="1" unique_id=1054297195]
+mesh = ExtResource("4_tesfn")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"bc": {},
+"hops": {}
+}
+
+[node name="Apocalypse_Car_01_Armor_03" type="MeshInstance3D" parent="ApocalypseCar" index="2" unique_id=1793960158]
+mesh = ExtResource("5_8wmbx")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"bc": {},
+"hops": {}
+}
+
+[node name="Apocalypse_Car_01_Armor_04" type="MeshInstance3D" parent="ApocalypseCar" index="3" unique_id=1771194248]
+mesh = ExtResource("6_oc4bv")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"bc": {},
+"hops": {}
+}
+
+[node name="Apocalypse_Car_01_Armor_05" type="MeshInstance3D" parent="ApocalypseCar" index="4" unique_id=2080546852]
+mesh = ExtResource("7_qvrw5")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"bc": {},
+"hops": {}
+}
+
+[node name="Apocalypse_Car_01_Door_L" type="MeshInstance3D" parent="ApocalypseCar" index="5" unique_id=494655440]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0255728, 0.7427424, 0.79499745)
+mesh = ExtResource("8_txjpw")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"bc": {},
+"hops": {}
+}
+
+[node name="Apocalypse_Car_01_Door_R" type="MeshInstance3D" parent="ApocalypseCar" index="6" unique_id=1316336115]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0255747, 0.7427424, 0.79499745)
+mesh = ExtResource("9_ak1q0")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"bc": {},
+"hops": {}
+}
+
+[node name="Apocalypse_Car_01_Needle_Fuel" type="MeshInstance3D" parent="ApocalypseCar" index="7" unique_id=1660489937]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6429701, 1.2157977, 0.55809355)
+mesh = ExtResource("10_vga63")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Apocalypse_Car_01_Needle_Oil" type="MeshInstance3D" parent="ApocalypseCar" index="8" unique_id=882053684]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.36867046, 1.2157977, 0.55809355)
+mesh = ExtResource("10_vga63")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Apocalypse_Car_01_Needle_Speedometer" type="MeshInstance3D" parent="ApocalypseCar" index="9" unique_id=280895703]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5595007, 1.2478653, 0.5695187)
+mesh = ExtResource("11_cijxq")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Apocalypse_Car_01_Needle_Tachometer" type="MeshInstance3D" parent="ApocalypseCar" index="10" unique_id=1381834423]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.45214367, 1.2478653, 0.5695187)
+mesh = ExtResource("11_cijxq")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Apocalypse_Car_01_SteeringWheel" type="MeshInstance3D" parent="ApocalypseCar" index="11" unique_id=855768401]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.50370693, 1.1490982, 0.43944454)
+mesh = ExtResource("12_e7o4d")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Apocalypse_Car_01_Supplies_01" type="MeshInstance3D" parent="ApocalypseCar" index="12" unique_id=1248511223]
+mesh = ExtResource("13_2b411")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"bc": {},
+"hops": {}
+}
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="20" unique_id=933826690]
+shape = SubResource("ConvexPolygonShape3D_015me")
+
+[node name="WheelBackLeft" type="VehicleWheel3D" parent="." index="21" unique_id=1431652380]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.92537594, 0.37981778, -1.287252)
+use_as_traction = true
+wheel_roll_influence = 0.0
+wheel_radius = 0.4
+wheel_friction_slip = 1.5
+suspension_travel = 0.3
+suspension_stiffness = 220.0
+suspension_max_force = 20000.0
+
+[node name="Apocalypse_Car_01_Wheel_BL" type="MeshInstance3D" parent="WheelBackLeft" index="0" unique_id=648539142]
+mesh = ExtResource("14_1sgp3")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="WheelBackRight" type="VehicleWheel3D" parent="." index="22" unique_id=578174628]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.92537785, 0.37981778, -1.287252)
+use_as_traction = true
+wheel_roll_influence = 0.0
+wheel_radius = 0.4
+wheel_friction_slip = 1.5
+suspension_travel = 0.3
+suspension_stiffness = 220.0
+suspension_max_force = 20000.0
+
+[node name="Apocalypse_Car_01_Wheel_BR" type="MeshInstance3D" parent="WheelBackRight" index="0" unique_id=1128396558]
+mesh = ExtResource("14_1sgp3")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="WheelFrontLeft" type="VehicleWheel3D" parent="." index="23" unique_id=2108498495]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.92537594, 0.37981778, 1.3789351)
+use_as_steering = true
+wheel_roll_influence = 0.0
+wheel_radius = 0.4
+wheel_friction_slip = 1.4
+suspension_travel = 0.3
+suspension_stiffness = 220.0
+suspension_max_force = 20000.0
+
+[node name="Apocalypse_Car_01_Wheel_FL" type="MeshInstance3D" parent="WheelFrontLeft" index="0" unique_id=593942654]
+mesh = ExtResource("14_1sgp3")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="WheelFrontRight" type="VehicleWheel3D" parent="." index="24" unique_id=1855374966]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.92537785, 0.37981778, 1.378935)
+use_as_steering = true
+wheel_roll_influence = 0.0
+wheel_radius = 0.4
+wheel_friction_slip = 1.4
+suspension_travel = 0.3
+suspension_stiffness = 220.0
+suspension_max_force = 20000.0
+
+[node name="Apocalypse_Car_01_Wheel_FR" type="MeshInstance3D" parent="WheelFrontRight" index="0" unique_id=1977615845]
+mesh = ExtResource("14_1sgp3")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Characters" type="Node3D" parent="." index="25" unique_id=56767279]
+
+[node name="GunnerLeft" parent="Characters" index="0" instance=ExtResource("15_crew")]
+data = ExtResource("16_rifle")
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.30620784, 0.5082104, -0.7882941)
+
+[node name="GunnerRight" parent="Characters" index="1" instance=ExtResource("15_crew")]
+data = ExtResource("17_smg")
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -0.32388037, 0.5082104, -0.89584994)
