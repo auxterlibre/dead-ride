@@ -1,15 +1,13 @@
 # Game Loop
 
-### First days
+### A run
 
-Without a vehicle and proper tools to explore the map, the player can only walk around the area near the gas stop. Between 10am and 4pm the sun is too hot and being exposed drains your health pretty fast.
+The player drives out from base with a crew in the truck bed. Enemies engage along the route and the crew auto-fires at them while the player drives. Kills drop loot, which the truck carries back. A run ends when the player returns to base or the truck is destroyed.
 
-They can still find some places to scavenge around the Gas Stop and maybe find some values they can sell to the delivery truck that comes once a week.
+### Between runs
 
-### Mid game
+The haul is spent three ways: truck upgrades (armour, engine, bed capacity, mounted gear), character levels, and character loadouts (weapons, gear). Better crew and a better truck open routes with tougher enemies and better drops.
 
-Once the player has saved up enough from fuel sales and scavenged goods, they can repair or buy their first vehicle, opening up the wider desert map. The garden matures and starts producing higher-tier ammo and consumables. Gas Stop upgrades become affordable: shade structures to reduce heat drain, storage expansions, basic defenses against raiders.
+### Progression
 
-### Late game
-
-With the Gas Stop mostly self-sufficient, the player can recruit NPCs to automate day to day tasks like watering the garden, restocking the pump, or keeping watch. This frees up time to push deeper into the desert with better vehicles and gear. *(Open question: is there a defined end goal here, like paying off a debt on the station or reaching a specific location, or is this meant to stay an open-ended sandbox loop?)*
+Early: one or two crew with weak weapons, short runs near base. Mid: a full bed, weapon variety, enemy vehicles. Late: open questions. Is there an end goal such as a final territory or a destination, or is it open-ended?

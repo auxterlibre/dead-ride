@@ -1,33 +1,61 @@
-Genre: Survival / Farming 
+Genre: Vehicular action / Looter with RPG progression
 
 ```table-of-contents
 ```
 # Brief
 
-In the middle of the desert lies a lonely gas station. As the owner you have to embrace the solitude and survive. You can start exploring the nearby areas by foot, but to venture further into the desert you are going to need a vehicle.
+You drive a truck through a lawless desert. Your crew rides in the bed and shoots at anything hostile that gets close. Enemies come at you on foot and in vehicles of their own, and what they drop is yours to take.
 
-A truck come every week to refill your gas pump (for a price, of course) and buy any provisions you have to sell. You can scavenge for useful items and trinkets to sell, and Earth will provide ammunition. This land is not like any other, it needs fuel instead of water to grow your unique crops: bullet plants, grenade trees, etc.
+The player only ever drives. Aiming and firing belong to the crew: each character in the truck bed picks targets and fires on their own, so the player's skill is in where the truck goes, how fast, and which fights to take. Between runs the loot goes into three things: upgrading the truck, levelling the characters, and equipping them with better weapons and gear.
 
-But water is still important to refill the player's energy, that is used to walk or perform other strenuous activities.
+## Core loop
 
+1. **Drive.** Pick a route into the desert. Enemies engage as you pass through their territory.
+2. **Fight.** The crew auto-fires from the back of the truck. The player positions the truck to give them lines of fire, run enemies down, or get out of trouble.
+3. **Loot.** Dead enemies and wrecked vehicles drop weapons, ammo, gear, and parts.
+4. **Upgrade.** Back at base, spend the haul on the truck, the crew's levels, and their loadouts. Then drive out further.
+
+## Pillars
+
+- **The truck is the character.** Speed, armour, handling, and how many crew fit in the bed are the player's main stats.
+- **The crew does the shooting.** Their weapons, levels, and gear decide how a fight goes. The player decides where the fight happens.
+- **Loot is the reward for every kill.** No farming, no shopkeeping between fights.
+
+## Carried over from Nowhere
+
+The codebase started as a copy of Nowhere, a gas station survival prototype. These systems keep their role:
+
+- **Weapons and ammo**: the ranged and melee weapon set, the four ammo types, and throwables. See [[Items]].
+- **Vehicles**: the drivable truck, damage, and the vehicle AI that will drive enemy vehicles. See [[Vehicles]].
+- **Characters**: the shared character base and the enemy brain, which will become the auto-firing crew and the enemies they fight. See [[Enemies]].
+- **Inventory**: the grid inventory, now used for the loot haul and character loadouts.
+- **Loot boxes**: containers found in the desert. See [[Loot Boxes]].
+
+## Legacy, out of scope
+
+Crops, the gas pump economy, the weekly delivery truck, the energy and heat survival mechanics, and recruiting NPCs for chores are Nowhere's design, not this game's. Their docs stay in the vault until the systems are removed or repurposed: [[Crops]], [[Gas Stop]], [[Fuel]], [[NPCs]].
+
+## Open questions
+
+- What is "base"? A fixed garage, or the truck itself between runs?
+- Do enemies fight mostly on foot, mostly in vehicles, or a mix per territory?
+- Can the player ever leave the driver's seat during a run?
 
 ---
 
 # Game Loop
 
-### First days
+### A run
 
-Without a vehicle and proper tools to explore the map, the player can only walk around the area near the gas stop. Between 10am and 4pm the sun is too hot and being exposed drains your health pretty fast. 
+The player drives out from base with a crew in the truck bed. Enemies engage along the route and the crew auto-fires at them while the player drives. Kills drop loot, which the truck carries back. A run ends when the player returns to base or the truck is destroyed.
 
-They can still find some places to scavenge around the Gas Stop and maybe find some values they can sell to the delivery truck that comes once a week.
+### Between runs
 
-### Mid game
+The haul is spent three ways: truck upgrades (armour, engine, bed capacity, mounted gear), character levels, and character loadouts (weapons, gear). Better crew and a better truck open routes with tougher enemies and better drops.
 
-Once the player has saved up enough from fuel sales and scavenged goods, they can repair or buy their first vehicle, opening up the wider desert map. The garden matures and starts producing higher-tier ammo and consumables. Gas Stop upgrades become affordable: shade structures to reduce heat drain, storage expansions, basic defenses against raiders.
+### Progression
 
-### Late game
-
-With the Gas Stop mostly self-sufficient, the player can recruit NPCs to automate day to day tasks like watering the garden, restocking the pump, or keeping watch. This frees up time to push deeper into the desert with better vehicles and gear. *(Open question: is there a defined end goal here, like paying off a debt on the station or reaching a specific location, or is this meant to stay an open-ended sandbox loop?)*
+Early: one or two crew with weak weapons, short runs near base. Mid: a full bed, weapon variety, enemy vehicles. Late: open questions. Is there an end goal such as a final territory or a destination, or is it open-ended?
 
 ---
 # Gas Stop

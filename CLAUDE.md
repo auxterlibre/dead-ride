@@ -1,8 +1,10 @@
 # Dead Ride
 
-Godot 4.7 (Forward+) top-down 3D action prototype: a player, enemies, and a drivable car in a small navmesh test world with toon-shaded KayKit-style characters. Early stage — the main scene is a test arena, no menus or game loop yet.
+Godot 4.7 (Forward+) top-down 3D vehicular action game: the player drives a truck while a crew in the bed auto-fires at enemies; kills drop loot that upgrades the truck, levels the characters, and equips them. See `docs/Design/_Brief.md` for the pitch and pillars.
 
-The Godot project root is `Project/` (the repo root holds only this file and `Screenshots/`). All `res://` paths resolve from there. Main scene: `res://scenes/game.tscn`.
+The codebase is a copy of Nowhere, a gas station survival prototype. Weapons, vehicles, the character base and enemy brain, inventory, and loot boxes carry over. The station, crops, the delivery economy, and the energy and heat survival mechanics are LEGACY: still in the tree, documented under `docs/Architecture/`, and not the direction. Do not extend them; repurpose or remove as the new systems land.
+
+The Godot project root is `project/`; the repo root holds this file, `docs/` (the Obsidian vault) and `screenshots/`. All `res://` paths resolve from there. Main scene: `res://scenes/game.tscn`.
 
 ## Running / verifying
 
