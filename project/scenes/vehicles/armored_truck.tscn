@@ -15,6 +15,7 @@
 [ext_resource type="ArrayMesh" uid="uid://p7t71gs1na5y" path="res://assets/meshes/apocalypse/apocalypse/parts/apocalypse_car_01_supplies_01.tres" id="13_2b411"]
 [ext_resource type="ArrayMesh" uid="uid://0ixftvdlh501" path="res://assets/meshes/apocalypse/apocalypse/parts/apocalypse_car_01_wheel_bl.tres" id="14_1sgp3"]
 [ext_resource type="PackedScene" path="res://scenes/characters/crew.tscn" id="15_crew"]
+[ext_resource type="Resource" path="res://data/vehicles/crew_truck.tres" id="18_data"]
 [ext_resource type="Resource" path="res://data/crew/gunner_rifle.tres" id="16_rifle"]
 [ext_resource type="Resource" path="res://data/crew/gunner_smg.tres" id="17_smg"]
 
@@ -58,6 +59,14 @@ turbulence_noise_scale = 2.0
 points = PackedVector3Array(-1.390377, 0.47852606, 2.3196821, 1.3620579, 0.64037853, 2.4008265, 1.0379409, 0.55955136, 2.7238812, -0.33800712, 2.1784723, 0.538568, 0.9981169, 0.34884286, -2.196321, -1.0907656, 0.35911563, -2.0874348, 0.95711374, 1.2875903, -2.1320891, -0.98543286, 1.2875903, -2.1320891, 0.71436274, 2.1784723, 0.21551284, 1.1998647, 0.23564827, 1.9149756, -0.9046057, 0.15462303, -1.3221688, -0.74241245, 2.1784723, 0.29614985, -0.33800712, 1.2069613, 2.238538, -1.2281839, 0.23564827, 1.9149756, 0.87628657, 0.15462303, -1.322676, 0.95711374, 1.2069613, 2.076757, -0.094986744, 0.47852606, 2.8866768, -1.390377, 0.64037853, 2.4008265, 1.0775809, 0.34776518, -2.1209419, 0.552439, 2.1784723, 0.538568, -0.9046057, 1.2069613, 2.076757, -1.06626, 0.55955136, 2.7243886, -0.45430824, 0.2491522, -2.0523827, -1.0237554, 0.35100827, -2.1897206, 0.3094186, 1.2069613, 2.238538, -0.6271365, 0.28518033, 2.3651855, 0.63326615, 0.64037853, 2.805533, -0.6615853, 0.64037853, 2.805533, 1.3620579, 0.47852606, 2.4008265, 0.9032132, 0.2873083, 2.284028, 1.3620579, 0.64037853, 2.238538, -1.06626, 0.47852606, 2.7243886)
 
 [node name="ArmoredTruck" unique_id=2063509715 instance=ExtResource("1_10xua")]
+data = ExtResource("18_data")
+
+[node name="HurtBox" parent="." index="1"]
+collision_layer = 3
+monitorable = true
+
+[node name="HullHurtShape" type="CollisionShape3D" parent="HurtBox"]
+shape = SubResource("ConvexPolygonShape3D_015me")
 
 [node name="ExhaustSmoke" parent="." index="9" unique_id=661430897]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.48510897, 0.28375882, -2.354578)

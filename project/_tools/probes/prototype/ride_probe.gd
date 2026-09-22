@@ -36,8 +36,8 @@ func _ready():
 				weapon.name if weapon else "none")
 		check(body.movement != null and not body.movement.enabled,
 				"%s has locomotion off" % body.name, str(body.movement.enabled))
-		check(body.global_position.y > truck.global_position.y + 1.5,
-				"%s rides on top of the truck" % body.name, "%.2f" % body.global_position.y)
+		check(gunner.vehicle == truck and truck.to_local(body.global_position).length() < 3.0,
+				"%s rides aboard the truck" % body.name, str(truck.to_local(body.global_position).snapped(Vector3.ONE * 0.01)))
 	await settle(5)
 	for gunner in gunners:
 		var model: WeaponRanged = gunner.weapons.weapon_model as WeaponRanged

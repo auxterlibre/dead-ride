@@ -4,9 +4,7 @@
 [ext_resource type="Script" uid="uid://b0fxjvtgpfstj" path="res://addons/compositor_effects/vignette/post_process_vignette.gd" id="2_vignette"]
 [ext_resource type="Script" uid="uid://varrl0xf4vlu" path="res://scripts/components/camera_follow.gd" id="3_camera"]
 [ext_resource type="Script" uid="uid://c6n2deakwtghr" path="res://scripts/world/ground.gd" id="4_ground"]
-[ext_resource type="PackedScene" uid="uid://cybdinxiojqlp" path="res://scenes/vehicles/car.tscn" id="5_car"]
-[ext_resource type="PackedScene" path="res://scenes/characters/crew.tscn" id="6_crew"]
-[ext_resource type="Resource" path="res://data/crew/gunner_smg.tres" id="7_smg"]
+[ext_resource type="PackedScene" path="res://scenes/vehicles/armored_truck.tscn" id="5_car"]
 [ext_resource type="PackedScene" uid="uid://bvl1ed7xc5vag" path="res://scenes/characters/player.tscn" id="8_player"]
 [ext_resource type="Script" path="res://scripts/prototype/raider_spawner.gd" id="9_spawner"]
 [ext_resource type="PackedScene" uid="uid://cgqtho0svu7jw" path="res://scenes/characters/enemy.tscn" id="10_enemy"]
@@ -23,7 +21,6 @@
 [ext_resource type="PackedScene" path="res://scenes/props/tree_2_a.tscn" id="21_tree"]
 [ext_resource type="FontFile" uid="uid://16cr15homrlp" path="res://assets/fonts/JetBrainsMono-Regular.ttf" id="22_font"]
 [ext_resource type="Script" uid="uid://cat6ypyshc0y5" path="res://scripts/data/character_data.gd" id="23_cdata"]
-[ext_resource type="Resource" path="res://data/vehicles/crew_truck.tres" id="24_truck"]
 [ext_resource type="PackedScene" path="res://scenes/world/horde.tscn" id="25_horde"]
 
 [sub_resource type="Environment" id="Environment_ride"]
@@ -107,16 +104,6 @@ size = 32.0
 [node name="Truck" parent="." instance=ExtResource("5_car")]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
-data = ExtResource("24_truck")
-
-[node name="Crew" type="Node3D" parent="Truck"]
-
-[node name="GunnerLeft" parent="Truck/Crew" instance=ExtResource("6_crew")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.55, 2.3, -0.4)
-
-[node name="GunnerRight" parent="Truck/Crew" instance=ExtResource("6_crew")]
-transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, -0.55, 2.3, -0.4)
-data = ExtResource("7_smg")
 
 [node name="Player" parent="." instance=ExtResource("8_player")]
 unique_name_in_owner = true
