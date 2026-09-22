@@ -1,0 +1,186 @@
+[gd_resource type="AnimationLibrary" format=3 uid="uid://deikge6isl4i"]
+
+[ext_resource type="Animation" uid="uid://1in2q0df5tcy" path="res://assets/animations/humanoid/cheering.tres" id="1_gbpin"]
+[ext_resource type="Animation" uid="uid://flsjpilvkxqm" path="res://assets/animations/humanoid/crawling.tres" id="2_1dyrs"]
+[ext_resource type="Animation" uid="uid://sswe2yjotuh2" path="res://assets/animations/humanoid/crouching.tres" id="3_hn4i1"]
+[ext_resource type="Animation" uid="uid://0stenjdrf8ne" path="res://assets/animations/humanoid/death_a.tres" id="4_rfuc2"]
+[ext_resource type="Animation" uid="uid://csoxmmxyqr3jd" path="res://assets/animations/humanoid/death_a_pose.tres" id="5_skiyd"]
+[ext_resource type="Animation" uid="uid://dl2mcifnqp8gy" path="res://assets/animations/humanoid/death_b.tres" id="6_pllu7"]
+[ext_resource type="Animation" uid="uid://dgsek8q3wnxa2" path="res://assets/animations/humanoid/death_b_pose.tres" id="7_l473q"]
+[ext_resource type="Animation" uid="uid://caj3gn53xaj1p" path="res://assets/animations/humanoid/dodge_backward.tres" id="8_t7b3t"]
+[ext_resource type="Animation" uid="uid://dt36y03riiq1u" path="res://assets/animations/humanoid/dodge_forward.tres" id="9_g38np"]
+[ext_resource type="Animation" uid="uid://c32iubo1vx02h" path="res://assets/animations/humanoid/dodge_left.tres" id="10_xod4q"]
+[ext_resource type="Animation" uid="uid://dyxranp007mew" path="res://assets/animations/humanoid/dodge_right.tres" id="11_d1vwm"]
+[ext_resource type="Animation" uid="uid://dku0frw7h5c27" path="res://assets/animations/humanoid/hit_a.tres" id="12_culuc"]
+[ext_resource type="Animation" uid="uid://clkf2ytb0k38b" path="res://assets/animations/humanoid/hit_b.tres" id="13_33hnb"]
+[ext_resource type="Animation" uid="uid://dx26ldc51lqdg" path="res://assets/animations/humanoid/idle_a.tres" id="14_71xwl"]
+[ext_resource type="Animation" uid="uid://bs05g8iyhnrv7" path="res://assets/animations/humanoid/idle_b.tres" id="15_dv3aw"]
+[ext_resource type="Animation" uid="uid://73hw82843pu7" path="res://assets/animations/humanoid/interact.tres" id="16_nycym"]
+[ext_resource type="Animation" uid="uid://bx4v4kue61kd6" path="res://assets/animations/humanoid/jump_full_long.tres" id="17_jdkv4"]
+[ext_resource type="Animation" uid="uid://ck1ttk66cbxyg" path="res://assets/animations/humanoid/jump_full_short.tres" id="18_tw17r"]
+[ext_resource type="Animation" uid="uid://bvgbn28l6d02f" path="res://assets/animations/humanoid/jump_idle.tres" id="19_vmx38"]
+[ext_resource type="Animation" uid="uid://wdkxnad02424" path="res://assets/animations/humanoid/jump_land.tres" id="20_bnpei"]
+[ext_resource type="Animation" uid="uid://cc2xll66vpw1j" path="res://assets/animations/humanoid/jump_start.tres" id="21_yegwg"]
+[ext_resource type="Animation" uid="uid://mclu0q5hfwkw" path="res://assets/animations/humanoid/lie_down.tres" id="22_immhm"]
+[ext_resource type="Animation" uid="uid://ciu2absyogp35" path="res://assets/animations/humanoid/lie_idle.tres" id="23_ej6l3"]
+[ext_resource type="Animation" uid="uid://72tguo5uwgw5" path="res://assets/animations/humanoid/lie_stand_up.tres" id="24_uch6i"]
+[ext_resource type="Animation" uid="uid://cp631dbn105q2" path="res://assets/animations/humanoid/melee_1h_attack_chop.tres" id="25_eucsr"]
+[ext_resource type="Animation" uid="uid://beytne8q4p81k" path="res://assets/animations/humanoid/melee_1h_attack_jump_chop.tres" id="26_c3j5o"]
+[ext_resource type="Animation" uid="uid://b5mfnqn7hu17b" path="res://assets/animations/humanoid/melee_1h_attack_slice_diagonal.tres" id="27_6w50q"]
+[ext_resource type="Animation" uid="uid://cj1w3hlvufj4r" path="res://assets/animations/humanoid/melee_1h_attack_slice_horizontal.tres" id="28_3bno2"]
+[ext_resource type="Animation" uid="uid://eqfiunmdyl4c" path="res://assets/animations/humanoid/melee_1h_attack_stab.tres" id="29_5rs2v"]
+[ext_resource type="Animation" uid="uid://bx2u433g3e6kg" path="res://assets/animations/humanoid/melee_2h_attack_chop.tres" id="30_dsk4a"]
+[ext_resource type="Animation" uid="uid://cal2po7busq7b" path="res://assets/animations/humanoid/melee_2h_attack_slice.tres" id="31_54brv"]
+[ext_resource type="Animation" uid="uid://cakiv1pcw2ibm" path="res://assets/animations/humanoid/melee_2h_attack_spin.tres" id="32_o30s5"]
+[ext_resource type="Animation" uid="uid://dyux1xhycbhyc" path="res://assets/animations/humanoid/melee_2h_attack_spinning.tres" id="33_bo2sx"]
+[ext_resource type="Animation" uid="uid://oxuwj7tk2wvv" path="res://assets/animations/humanoid/melee_2h_attack_stab.tres" id="34_rygm5"]
+[ext_resource type="Animation" uid="uid://cv471nw35oj2m" path="res://assets/animations/humanoid/melee_2h_idle.tres" id="35_ju5uq"]
+[ext_resource type="Animation" uid="uid://cqpytwmttk7tr" path="res://assets/animations/humanoid/melee_block.tres" id="36_0wcip"]
+[ext_resource type="Animation" uid="uid://ykl1ktf8mo7v" path="res://assets/animations/humanoid/melee_block_attack.tres" id="37_rmefh"]
+[ext_resource type="Animation" uid="uid://bsbhtwuh6xwr2" path="res://assets/animations/humanoid/melee_block_hit.tres" id="38_4nis7"]
+[ext_resource type="Animation" uid="uid://dssdme3hgjkr0" path="res://assets/animations/humanoid/melee_blocking.tres" id="39_pvwwo"]
+[ext_resource type="Animation" uid="uid://bv4s2ox17ujvx" path="res://assets/animations/humanoid/melee_dualwield_attack_chop.tres" id="40_0ni62"]
+[ext_resource type="Animation" uid="uid://dcxw2whjb6hkc" path="res://assets/animations/humanoid/melee_dualwield_attack_slice.tres" id="41_j0fv1"]
+[ext_resource type="Animation" uid="uid://dyhokit83o67u" path="res://assets/animations/humanoid/melee_dualwield_attack_stab.tres" id="42_fa2mb"]
+[ext_resource type="Animation" uid="uid://dcetex26tb2gy" path="res://assets/animations/humanoid/melee_unarmed_attack_kick.tres" id="43_lmqw8"]
+[ext_resource type="Animation" uid="uid://dcoqra305sccn" path="res://assets/animations/humanoid/melee_unarmed_attack_punch_a.tres" id="44_n5srw"]
+[ext_resource type="Animation" uid="uid://du6ilbv736qxq" path="res://assets/animations/humanoid/melee_unarmed_idle.tres" id="45_4g7wt"]
+[ext_resource type="Animation" uid="uid://doaamxqfgshea" path="res://assets/animations/humanoid/pick_up.tres" id="46_dc5op"]
+[ext_resource type="Animation" uid="uid://2mmgeahnvsme" path="res://assets/animations/humanoid/push_ups.tres" id="47_0x7tx"]
+[ext_resource type="Animation" uid="uid://b565xciec5xmm" path="res://assets/animations/humanoid/ranged_1h_aiming.tres" id="48_hojkr"]
+[ext_resource type="Animation" uid="uid://b1hsp7efx6lbq" path="res://assets/animations/humanoid/ranged_1h_reload.tres" id="49_uahf8"]
+[ext_resource type="Animation" uid="uid://b7kfq0al2wxn8" path="res://assets/animations/humanoid/ranged_1h_shoot.tres" id="50_2j0wk"]
+[ext_resource type="Animation" uid="uid://bi5vhu1w8ty0q" path="res://assets/animations/humanoid/ranged_1h_shooting.tres" id="51_x0dll"]
+[ext_resource type="Animation" uid="uid://cs7h8tlhq6r0i" path="res://assets/animations/humanoid/ranged_2h_aiming.tres" id="52_b31f2"]
+[ext_resource type="Animation" uid="uid://clcc1uu3tfmdd" path="res://assets/animations/humanoid/ranged_2h_reload.tres" id="53_8jj2j"]
+[ext_resource type="Animation" uid="uid://5qt5oxcbfrfx" path="res://assets/animations/humanoid/ranged_2h_shoot.tres" id="54_dkq56"]
+[ext_resource type="Animation" uid="uid://d4j20ih7wxag4" path="res://assets/animations/humanoid/ranged_2h_shooting.tres" id="55_xpkvy"]
+[ext_resource type="Animation" uid="uid://dacr0agrgql4u" path="res://assets/animations/humanoid/ranged_bow_aiming_idle.tres" id="56_de6sk"]
+[ext_resource type="Animation" uid="uid://cfdklrm8np3ov" path="res://assets/animations/humanoid/ranged_bow_draw.tres" id="57_wy47b"]
+[ext_resource type="Animation" uid="uid://bwyxl0i8atqww" path="res://assets/animations/humanoid/ranged_bow_draw_up.tres" id="58_rl1wf"]
+[ext_resource type="Animation" uid="uid://d0161g5a38lmo" path="res://assets/animations/humanoid/ranged_bow_idle.tres" id="59_hus45"]
+[ext_resource type="Animation" uid="uid://c3k5w548pgtkf" path="res://assets/animations/humanoid/ranged_bow_release.tres" id="60_42hek"]
+[ext_resource type="Animation" uid="uid://cbb0o0w3hn0ec" path="res://assets/animations/humanoid/ranged_bow_release_up.tres" id="61_nr78a"]
+[ext_resource type="Animation" uid="uid://cjdrn7gpcpcmo" path="res://assets/animations/humanoid/ranged_magic_raise.tres" id="62_0unma"]
+[ext_resource type="Animation" uid="uid://76unqxspyfow" path="res://assets/animations/humanoid/ranged_magic_shoot.tres" id="63_jqx53"]
+[ext_resource type="Animation" uid="uid://cola1lvexmvaw" path="res://assets/animations/humanoid/ranged_magic_spellcasting.tres" id="64_nsbux"]
+[ext_resource type="Animation" uid="uid://pe43wp3v0eof" path="res://assets/animations/humanoid/ranged_magic_spellcasting_long.tres" id="65_dgaa5"]
+[ext_resource type="Animation" uid="uid://be0ja8lhs5hlg" path="res://assets/animations/humanoid/ranged_magic_summon.tres" id="66_jh8wo"]
+[ext_resource type="Animation" uid="uid://31sfssltxssm" path="res://assets/animations/humanoid/running_a.tres" id="67_6165y"]
+[ext_resource type="Animation" uid="uid://cn3sk24j0lrgs" path="res://assets/animations/humanoid/running_b.tres" id="68_rkiyj"]
+[ext_resource type="Animation" uid="uid://c1ccu8hsiefo2" path="res://assets/animations/humanoid/running_holding_bow.tres" id="69_qrtar"]
+[ext_resource type="Animation" uid="uid://dugygrl4eec4x" path="res://assets/animations/humanoid/running_holding_rifle.tres" id="70_wfxa8"]
+[ext_resource type="Animation" uid="uid://bofajjhj3wjx6" path="res://assets/animations/humanoid/running_strafe_left.tres" id="71_yrjhl"]
+[ext_resource type="Animation" uid="uid://sufl6uarrb0n" path="res://assets/animations/humanoid/running_strafe_right.tres" id="72_v6uud"]
+[ext_resource type="Animation" uid="uid://b771q3qhrxabo" path="res://assets/animations/humanoid/sit_chair_down.tres" id="73_4fek4"]
+[ext_resource type="Animation" uid="uid://drerbhq5uy8wm" path="res://assets/animations/humanoid/sit_chair_idle.tres" id="74_hcmp7"]
+[ext_resource type="Animation" uid="uid://csoyh1gf5gtgh" path="res://assets/animations/humanoid/sit_chair_stand_up.tres" id="75_65rwd"]
+[ext_resource type="Animation" uid="uid://b1uwp54gb5j5w" path="res://assets/animations/humanoid/sit_floor_down.tres" id="76_rpc0c"]
+[ext_resource type="Animation" uid="uid://bvy7jd2yx0rls" path="res://assets/animations/humanoid/sit_floor_idle.tres" id="77_vdcqj"]
+[ext_resource type="Animation" uid="uid://bn7s0wycdqajd" path="res://assets/animations/humanoid/sit_floor_stand_up.tres" id="78_kkhod"]
+[ext_resource type="Animation" uid="uid://bnln27fjmtoko" path="res://assets/animations/humanoid/sit_ups.tres" id="79_lsqmf"]
+[ext_resource type="Animation" uid="uid://bgl0fe574enkv" path="res://assets/animations/humanoid/sneaking.tres" id="80_tmxju"]
+[ext_resource type="Animation" uid="uid://cua5x1ph4bx4r" path="res://assets/animations/humanoid/spawn_air.tres" id="81_xj51t"]
+[ext_resource type="Animation" uid="uid://b7qxmpx67opxx" path="res://assets/animations/humanoid/spawn_ground.tres" id="82_fowri"]
+[ext_resource type="Animation" uid="uid://cbaxwn7ruo723" path="res://assets/animations/humanoid/throw.tres" id="83_71ibx"]
+[ext_resource type="Animation" uid="uid://dkpuhmphmr285" path="res://assets/animations/humanoid/use_item.tres" id="84_vju5m"]
+[ext_resource type="Animation" uid="uid://bnhdbqgv8fmk6" path="res://assets/animations/humanoid/walking_a.tres" id="85_5kekh"]
+[ext_resource type="Animation" uid="uid://rv3ewwewlrl1" path="res://assets/animations/humanoid/walking_b.tres" id="86_eorl8"]
+[ext_resource type="Animation" uid="uid://c47wcsun8yd20" path="res://assets/animations/humanoid/walking_backwards.tres" id="87_a5qqn"]
+[ext_resource type="Animation" uid="uid://ctj1mlj0tw504" path="res://assets/animations/humanoid/walking_c.tres" id="88_5psqd"]
+[ext_resource type="Animation" uid="uid://c0dmf62b1wssw" path="res://assets/animations/humanoid/waving.tres" id="89_csegh"]
+
+[resource]
+_data = {
+&"cheering": ExtResource("1_gbpin"),
+&"crawling": ExtResource("2_1dyrs"),
+&"crouching": ExtResource("3_hn4i1"),
+&"death_a": ExtResource("4_rfuc2"),
+&"death_a_pose": ExtResource("5_skiyd"),
+&"death_b": ExtResource("6_pllu7"),
+&"death_b_pose": ExtResource("7_l473q"),
+&"dodge_backward": ExtResource("8_t7b3t"),
+&"dodge_forward": ExtResource("9_g38np"),
+&"dodge_left": ExtResource("10_xod4q"),
+&"dodge_right": ExtResource("11_d1vwm"),
+&"hit_a": ExtResource("12_culuc"),
+&"hit_b": ExtResource("13_33hnb"),
+&"idle_a": ExtResource("14_71xwl"),
+&"idle_b": ExtResource("15_dv3aw"),
+&"interact": ExtResource("16_nycym"),
+&"jump_full_long": ExtResource("17_jdkv4"),
+&"jump_full_short": ExtResource("18_tw17r"),
+&"jump_idle": ExtResource("19_vmx38"),
+&"jump_land": ExtResource("20_bnpei"),
+&"jump_start": ExtResource("21_yegwg"),
+&"lie_down": ExtResource("22_immhm"),
+&"lie_idle": ExtResource("23_ej6l3"),
+&"lie_stand_up": ExtResource("24_uch6i"),
+&"melee_1h_attack_chop": ExtResource("25_eucsr"),
+&"melee_1h_attack_jump_chop": ExtResource("26_c3j5o"),
+&"melee_1h_attack_slice_diagonal": ExtResource("27_6w50q"),
+&"melee_1h_attack_slice_horizontal": ExtResource("28_3bno2"),
+&"melee_1h_attack_stab": ExtResource("29_5rs2v"),
+&"melee_2h_attack_chop": ExtResource("30_dsk4a"),
+&"melee_2h_attack_slice": ExtResource("31_54brv"),
+&"melee_2h_attack_spin": ExtResource("32_o30s5"),
+&"melee_2h_attack_spinning": ExtResource("33_bo2sx"),
+&"melee_2h_attack_stab": ExtResource("34_rygm5"),
+&"melee_2h_idle": ExtResource("35_ju5uq"),
+&"melee_block": ExtResource("36_0wcip"),
+&"melee_block_attack": ExtResource("37_rmefh"),
+&"melee_block_hit": ExtResource("38_4nis7"),
+&"melee_blocking": ExtResource("39_pvwwo"),
+&"melee_dualwield_attack_chop": ExtResource("40_0ni62"),
+&"melee_dualwield_attack_slice": ExtResource("41_j0fv1"),
+&"melee_dualwield_attack_stab": ExtResource("42_fa2mb"),
+&"melee_unarmed_attack_kick": ExtResource("43_lmqw8"),
+&"melee_unarmed_attack_punch_a": ExtResource("44_n5srw"),
+&"melee_unarmed_idle": ExtResource("45_4g7wt"),
+&"pick_up": ExtResource("46_dc5op"),
+&"push_ups": ExtResource("47_0x7tx"),
+&"ranged_1h_aiming": ExtResource("48_hojkr"),
+&"ranged_1h_reload": ExtResource("49_uahf8"),
+&"ranged_1h_shoot": ExtResource("50_2j0wk"),
+&"ranged_1h_shooting": ExtResource("51_x0dll"),
+&"ranged_2h_aiming": ExtResource("52_b31f2"),
+&"ranged_2h_reload": ExtResource("53_8jj2j"),
+&"ranged_2h_shoot": ExtResource("54_dkq56"),
+&"ranged_2h_shooting": ExtResource("55_xpkvy"),
+&"ranged_bow_aiming_idle": ExtResource("56_de6sk"),
+&"ranged_bow_draw": ExtResource("57_wy47b"),
+&"ranged_bow_draw_up": ExtResource("58_rl1wf"),
+&"ranged_bow_idle": ExtResource("59_hus45"),
+&"ranged_bow_release": ExtResource("60_42hek"),
+&"ranged_bow_release_up": ExtResource("61_nr78a"),
+&"ranged_magic_raise": ExtResource("62_0unma"),
+&"ranged_magic_shoot": ExtResource("63_jqx53"),
+&"ranged_magic_spellcasting": ExtResource("64_nsbux"),
+&"ranged_magic_spellcasting_long": ExtResource("65_dgaa5"),
+&"ranged_magic_summon": ExtResource("66_jh8wo"),
+&"running_a": ExtResource("67_6165y"),
+&"running_b": ExtResource("68_rkiyj"),
+&"running_holding_bow": ExtResource("69_qrtar"),
+&"running_holding_rifle": ExtResource("70_wfxa8"),
+&"running_strafe_left": ExtResource("71_yrjhl"),
+&"running_strafe_right": ExtResource("72_v6uud"),
+&"sit_chair_down": ExtResource("73_4fek4"),
+&"sit_chair_idle": ExtResource("74_hcmp7"),
+&"sit_chair_stand_up": ExtResource("75_65rwd"),
+&"sit_floor_down": ExtResource("76_rpc0c"),
+&"sit_floor_idle": ExtResource("77_vdcqj"),
+&"sit_floor_stand_up": ExtResource("78_kkhod"),
+&"sit_ups": ExtResource("79_lsqmf"),
+&"sneaking": ExtResource("80_tmxju"),
+&"spawn_air": ExtResource("81_xj51t"),
+&"spawn_ground": ExtResource("82_fowri"),
+&"throw": ExtResource("83_71ibx"),
+&"throw_arm_back": ExtResource("83_71ibx"),
+&"throw_arm_forward": ExtResource("83_71ibx"),
+&"use_item": ExtResource("84_vju5m"),
+&"walking_a": ExtResource("85_5kekh"),
+&"walking_b": ExtResource("86_eorl8"),
+&"walking_backwards": ExtResource("87_a5qqn"),
+&"walking_c": ExtResource("88_5psqd"),
+&"waving": ExtResource("89_csegh")
+}

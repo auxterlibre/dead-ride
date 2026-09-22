@@ -12,9 +12,9 @@ const GROUND_MASK:int = 16
 @export var min_speed:float = 0.5
 
 @onready var character:CharacterBody3D = get_parent()
-@onready var skeleton:Skeleton3D = character.find_child("Skeleton3D", true, false)
-@onready var foot_bones:Array[int] = [skeleton.find_bone("foot.l"),
-		skeleton.find_bone("foot.r")]
+@onready var skeleton:Skeleton3D = character.find_children("*", "Skeleton3D", true, false)[0]
+@onready var foot_bones:Array[int] = [Utils.rig_bone(skeleton, "LeftFoot", "foot.l"),
+		Utils.rig_bone(skeleton, "RightFoot", "foot.r")]
 
 # Feet start planted (idle pose is below the threshold), so both begin
 # disarmed - the first sound needs an actual lift and come-down.

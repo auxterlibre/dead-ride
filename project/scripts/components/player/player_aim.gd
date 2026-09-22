@@ -34,10 +34,11 @@ func _ready():
 	mouse_position = get_viewport().get_mouse_position()
 	if visual:
 		look_modifier = visual.find_child("AimLook", true, false)
-		skeleton = visual.find_child("Skeleton3D", true, false)
+		var skeletons: Array[Node] = visual.find_children("*", "Skeleton3D", true, false)
+		skeleton = skeletons[0] if not skeletons.is_empty() else null
 	aim_target = Utils.resolve_aim_target(body, look_modifier)
 	if skeleton:
-		chest_idx = skeleton.find_bone("chest")
+		chest_idx = Utils.rig_bone(skeleton, "Chest", "chest")
 
 
 func _input(event):

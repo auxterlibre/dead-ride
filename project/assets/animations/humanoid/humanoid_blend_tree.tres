@@ -1,0 +1,344 @@
+[gd_resource type="AnimationNodeBlendTree" format=3]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_dodgeb"]
+resource_name = "dodge_backward"
+animation = &"gen/dodge_backward"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_dodgef"]
+resource_name = "dodge_forward"
+animation = &"gen/dodge_forward"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_dodgel"]
+resource_name = "dodge_left"
+animation = &"gen/dodge_left"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_dodger"]
+resource_name = "dodge_right"
+animation = &"gen/dodge_right"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ktwj7"]
+resource_name = "melee_2h_idle"
+animation = &"gen/melee_2h_idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_unkick"]
+resource_name = "melee_unarmed_attack_kick"
+animation = &"gen/melee_unarmed_attack_kick"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_unpunch"]
+resource_name = "melee_unarmed_attack_punch_a"
+animation = &"gen/melee_unarmed_attack_punch_a"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_unidle"]
+resource_name = "melee_unarmed_idle"
+animation = &"gen/melee_unarmed_idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_8o8uy"]
+resource_name = "ranged_1h_aiming"
+animation = &"gen/ranged_1h_aiming"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_o1e53"]
+resource_name = "ranged_1h_idle"
+animation = &"gen/ranged_1h_idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_25j1q"]
+resource_name = "ranged_1h_reload"
+animation = &"gen/ranged_1h_reload"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_dyu50"]
+resource_name = "ranged_1h_shoot"
+animation = &"gen/ranged_1h_shoot"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_wc5vi"]
+resource_name = "ranged_2h_aiming"
+animation = &"gen/ranged_2h_aiming"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_0p1k2"]
+resource_name = "ranged_2h_idle"
+animation = &"gen/ranged_2h_idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_k76pj"]
+resource_name = "ranged_2h_reload"
+animation = &"gen/ranged_2h_reload"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_11aq6"]
+resource_name = "ranged_2h_shoot"
+animation = &"gen/ranged_2h_shoot"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_carry"]
+resource_name = "running_holding_rifle"
+animation = &"gen/running_holding_rifle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_thback"]
+resource_name = "throw_arm_back"
+animation = &"gen/throw_arm_back"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_thfwd"]
+resource_name = "throw_arm_forward"
+animation = &"gen/throw_arm_forward"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_useit"]
+resource_name = "use_item"
+animation = &"gen/use_item"
+
+[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_dodge"]
+sync = true
+fadein_time = 0.06
+fadeout_time = 0.12
+
+[sub_resource type="AnimationNodeTransition" id="AnimationNodeTransition_dodge"]
+input_0/name = "dodge_forward"
+input_0/auto_advance = false
+input_0/break_loop_at_end = false
+input_0/reset = true
+input_1/name = "dodge_backward"
+input_1/auto_advance = false
+input_1/break_loop_at_end = false
+input_1/reset = true
+input_2/name = "dodge_left"
+input_2/auto_advance = false
+input_2/break_loop_at_end = false
+input_2/reset = true
+input_3/name = "dodge_right"
+input_3/auto_advance = false
+input_3/break_loop_at_end = false
+input_3/reset = true
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_n6s7e"]
+resource_name = "idle_a"
+animation = &"gen/idle_a"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_t5dso"]
+resource_name = "walking_a"
+animation = &"gen/walking_a"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_f6bjk"]
+resource_name = "walking_backwards"
+animation = &"gen/walking_backwards"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_fh8rm"]
+resource_name = "walking_left"
+animation = &"gen/walking_left"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_anw3q"]
+resource_name = "walking_right"
+animation = &"gen/walking_right"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_hqei2"]
+resource_name = "running_a"
+animation = &"gen/running_a"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_q7ibo"]
+resource_name = "running_strafe_left"
+animation = &"gen/running_strafe_left"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_cnoup"]
+resource_name = "running_strafe_right"
+animation = &"gen/running_strafe_right"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_i646h"]
+resource_name = "running_backwards"
+animation = &"gen/running_backwards"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_2ls4u"]
+sync_mode = 1
+blend_point_0/node = SubResource("AnimationNodeAnimation_n6s7e")
+blend_point_0/pos = Vector2(0, 0)
+blend_point_0/name = &"0"
+blend_point_1/node = SubResource("AnimationNodeAnimation_t5dso")
+blend_point_1/pos = Vector2(0, 0.5)
+blend_point_1/name = &"1"
+blend_point_2/node = SubResource("AnimationNodeAnimation_f6bjk")
+blend_point_2/pos = Vector2(0, -0.5)
+blend_point_2/name = &"2"
+blend_point_3/node = SubResource("AnimationNodeAnimation_fh8rm")
+blend_point_3/pos = Vector2(-0.5, 0)
+blend_point_3/name = &"3"
+blend_point_4/node = SubResource("AnimationNodeAnimation_anw3q")
+blend_point_4/pos = Vector2(0.5, 0)
+blend_point_4/name = &"4"
+blend_point_5/node = SubResource("AnimationNodeAnimation_hqei2")
+blend_point_5/pos = Vector2(0, 1)
+blend_point_5/name = &"5"
+blend_point_6/node = SubResource("AnimationNodeAnimation_q7ibo")
+blend_point_6/pos = Vector2(-1, 0)
+blend_point_6/name = &"6"
+blend_point_7/node = SubResource("AnimationNodeAnimation_cnoup")
+blend_point_7/pos = Vector2(1, 0)
+blend_point_7/name = &"7"
+blend_point_8/node = SubResource("AnimationNodeAnimation_i646h")
+blend_point_8/pos = Vector2(0, -1)
+blend_point_8/name = &"8"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ly7oa"]
+resource_name = "crouching"
+animation = &"gen/crouching"
+
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_ly7oa"]
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_ly7oa"]
+
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_n6s7e"]
+filter_enabled = true
+filters = ["%GeneralSkeleton:Chest", "%GeneralSkeleton:Head", "%GeneralSkeleton:Hips", "%GeneralSkeleton:LeftLowerArm", "%GeneralSkeleton:RightLowerArm", "%GeneralSkeleton:Spine", "%GeneralSkeleton:LeftUpperArm", "%GeneralSkeleton:RightUpperArm", "%GeneralSkeleton:LeftHand", "%GeneralSkeleton:RightHand"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_2ls4u"]
+resource_name = "idle_a"
+animation = &"gen/idle_a"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_xylje"]
+resource_name = "walking_a"
+animation = &"gen/walking_a"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_hasvj"]
+resource_name = "running_a"
+animation = &"gen/running_a"
+
+[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_wc5vi"]
+sync_mode = 1
+blend_point_0/node = SubResource("AnimationNodeAnimation_2ls4u")
+blend_point_0/pos = 0.0
+blend_point_0/name = &"0"
+blend_point_1/node = SubResource("AnimationNodeAnimation_xylje")
+blend_point_1/pos = 0.5
+blend_point_1/name = &"1"
+blend_point_2/node = SubResource("AnimationNodeAnimation_hasvj")
+blend_point_2/pos = 1.0
+blend_point_2/name = &"2"
+
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_armdn"]
+filter_enabled = true
+filters = ["%GeneralSkeleton:Chest", "%GeneralSkeleton:Head", "%GeneralSkeleton:LeftLowerArm", "%GeneralSkeleton:RightLowerArm", "%GeneralSkeleton:Spine", "%GeneralSkeleton:LeftUpperArm", "%GeneralSkeleton:RightUpperArm", "%GeneralSkeleton:LeftHand", "%GeneralSkeleton:RightHand"]
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_n6s7e"]
+
+[sub_resource type="AnimationNodeTransition" id="AnimationNodeTransition_0g6kj"]
+xfade_time = 0.2
+input_0/name = "ranged_1h_aiming"
+input_0/auto_advance = false
+input_0/break_loop_at_end = false
+input_0/reset = false
+input_1/name = "melee_2h_idle"
+input_1/auto_advance = false
+input_1/break_loop_at_end = false
+input_1/reset = true
+input_2/name = "ranged_2h_aiming"
+input_2/auto_advance = false
+input_2/break_loop_at_end = false
+input_2/reset = false
+input_3/name = "ranged_1h_idle"
+input_3/auto_advance = false
+input_3/break_loop_at_end = false
+input_3/reset = true
+input_4/name = "ranged_2h_idle"
+input_4/auto_advance = false
+input_4/break_loop_at_end = false
+input_4/reset = true
+input_5/name = "ranged_1h_reload"
+input_5/auto_advance = false
+input_5/break_loop_at_end = false
+input_5/reset = true
+input_6/name = "ranged_2h_reload"
+input_6/auto_advance = false
+input_6/break_loop_at_end = false
+input_6/reset = true
+input_7/name = "ranged_1h_shoot"
+input_7/auto_advance = false
+input_7/break_loop_at_end = false
+input_7/reset = true
+input_8/name = "ranged_2h_shoot"
+input_8/auto_advance = false
+input_8/break_loop_at_end = false
+input_8/reset = true
+input_9/name = "throw_arm_back"
+input_9/auto_advance = false
+input_9/break_loop_at_end = false
+input_9/reset = true
+input_10/name = "throw_arm_forward"
+input_10/auto_advance = false
+input_10/break_loop_at_end = false
+input_10/reset = true
+input_11/name = "melee_unarmed_idle"
+input_11/auto_advance = false
+input_11/break_loop_at_end = false
+input_11/reset = true
+input_12/name = "melee_unarmed_attack_punch_a"
+input_12/auto_advance = false
+input_12/break_loop_at_end = false
+input_12/reset = true
+input_13/name = "melee_unarmed_attack_kick"
+input_13/auto_advance = false
+input_13/break_loop_at_end = false
+input_13/reset = true
+input_14/name = "use_item"
+input_14/auto_advance = false
+input_14/break_loop_at_end = false
+input_14/reset = true
+input_15/name = "running_holding_rifle"
+input_15/auto_advance = false
+input_15/break_loop_at_end = false
+input_15/reset = true
+
+[resource]
+nodes/sneak_speed/node = SubResource("AnimationNodeTimeScale_ly7oa")
+nodes/sneak_speed/position = Vector2(-213.33333, -240)
+nodes/upper_state/node = SubResource("AnimationNodeTransition_0g6kj")
+nodes/upper_state/position = Vector2(-440, 480)
+nodes/upper_blend/node = SubResource("AnimationNodeBlend2_armdn")
+nodes/upper_blend/position = Vector2(93.333336, -106.666664)
+nodes/anim_ranged_1h_aiming/node = SubResource("AnimationNodeAnimation_8o8uy")
+nodes/anim_ranged_1h_aiming/position = Vector2(-1253.3334, -120)
+nodes/anim_melee_2h_idle/node = SubResource("AnimationNodeAnimation_ktwj7")
+nodes/anim_melee_2h_idle/position = Vector2(-1360, 66.666664)
+nodes/sneak_blend/node = SubResource("AnimationNodeBlend2_ly7oa")
+nodes/sneak_blend/position = Vector2(-66.666664, -120)
+nodes/sneak_anim/node = SubResource("AnimationNodeAnimation_ly7oa")
+nodes/sneak_anim/position = Vector2(-400, -320)
+nodes/locomotion/node = SubResource("AnimationNodeBlendSpace2D_2ls4u")
+nodes/locomotion/position = Vector2(-450, -50)
+nodes/torso_locomotion/node = SubResource("AnimationNodeBlendSpace1D_wc5vi")
+nodes/torso_locomotion/position = Vector2(-960, -280)
+nodes/torso_blend/node = SubResource("AnimationNodeBlend2_n6s7e")
+nodes/torso_blend/position = Vector2(-250, -50)
+nodes/anim_ranged_2h_aiming/node = SubResource("AnimationNodeAnimation_wc5vi")
+nodes/anim_ranged_2h_aiming/position = Vector2(-1426.6666, 280)
+nodes/anim_ranged_1h_idle/node = SubResource("AnimationNodeAnimation_o1e53")
+nodes/anim_ranged_1h_idle/position = Vector2(-1426.6666, 493.33334)
+nodes/anim_ranged_2h_idle/node = SubResource("AnimationNodeAnimation_0p1k2")
+nodes/anim_ranged_2h_idle/position = Vector2(-1426.6666, 693.3333)
+nodes/anim_ranged_1h_reload/node = SubResource("AnimationNodeAnimation_25j1q")
+nodes/anim_ranged_1h_reload/position = Vector2(-1333.3334, 920)
+nodes/anim_ranged_2h_reload/node = SubResource("AnimationNodeAnimation_k76pj")
+nodes/anim_ranged_2h_reload/position = Vector2(-1266.6666, 1133.3334)
+nodes/upper_speed/node = SubResource("AnimationNodeTimeScale_n6s7e")
+nodes/upper_speed/position = Vector2(-250, 150)
+nodes/anim_ranged_1h_shoot/node = SubResource("AnimationNodeAnimation_dyu50")
+nodes/anim_ranged_1h_shoot/position = Vector2(-1026.6666, 1293.3334)
+nodes/anim_ranged_2h_shoot/node = SubResource("AnimationNodeAnimation_11aq6")
+nodes/anim_ranged_2h_shoot/position = Vector2(-746.6667, 1320)
+nodes/anim_throw_arm_back/node = SubResource("AnimationNodeAnimation_thback")
+nodes/anim_throw_arm_back/position = Vector2(-746.6667, 1440)
+nodes/anim_throw_arm_forward/node = SubResource("AnimationNodeAnimation_thfwd")
+nodes/anim_throw_arm_forward/position = Vector2(-746.6667, 1560)
+nodes/anim_use_item/node = SubResource("AnimationNodeAnimation_useit")
+nodes/anim_use_item/position = Vector2(-746.6667, 1680)
+nodes/anim_running_holding_rifle/node = SubResource("AnimationNodeAnimation_carry")
+nodes/anim_running_holding_rifle/position = Vector2(-746.6667, 1800)
+nodes/anim_melee_unarmed_idle/node = SubResource("AnimationNodeAnimation_unidle")
+nodes/anim_melee_unarmed_idle/position = Vector2(-1093.3334, 1440)
+nodes/anim_melee_unarmed_attack_punch_a/node = SubResource("AnimationNodeAnimation_unpunch")
+nodes/anim_melee_unarmed_attack_punch_a/position = Vector2(-1093.3334, 1560)
+nodes/anim_melee_unarmed_attack_kick/node = SubResource("AnimationNodeAnimation_unkick")
+nodes/anim_melee_unarmed_attack_kick/position = Vector2(-1093.3334, 1680)
+nodes/anim_dodge_forward/node = SubResource("AnimationNodeAnimation_dodgef")
+nodes/anim_dodge_forward/position = Vector2(-746.6667, 1960)
+nodes/anim_dodge_backward/node = SubResource("AnimationNodeAnimation_dodgeb")
+nodes/anim_dodge_backward/position = Vector2(-746.6667, 2080)
+nodes/anim_dodge_left/node = SubResource("AnimationNodeAnimation_dodgel")
+nodes/anim_dodge_left/position = Vector2(-746.6667, 2200)
+nodes/anim_dodge_right/node = SubResource("AnimationNodeAnimation_dodger")
+nodes/anim_dodge_right/position = Vector2(-746.6667, 2320)
+nodes/dodge_state/node = SubResource("AnimationNodeTransition_dodge")
+nodes/dodge_state/position = Vector2(-373.33334, 2080)
+nodes/dodge_shot/node = SubResource("AnimationNodeOneShot_dodge")
+nodes/dodge_shot/position = Vector2(320, -106.666664)
+node_connections = [&"output", 0, &"dodge_shot", &"sneak_speed", 0, &"sneak_anim", &"upper_state", 0, &"anim_ranged_1h_aiming", &"upper_state", 1, &"anim_melee_2h_idle", &"upper_state", 2, &"anim_ranged_2h_aiming", &"upper_state", 3, &"anim_ranged_1h_idle", &"upper_state", 4, &"anim_ranged_2h_idle", &"upper_state", 5, &"anim_ranged_1h_reload", &"upper_state", 6, &"anim_ranged_2h_reload", &"upper_state", 7, &"anim_ranged_1h_shoot", &"upper_state", 8, &"anim_ranged_2h_shoot", &"upper_state", 9, &"anim_throw_arm_back", &"upper_state", 10, &"anim_throw_arm_forward", &"upper_state", 11, &"anim_melee_unarmed_idle", &"upper_state", 12, &"anim_melee_unarmed_attack_punch_a", &"upper_state", 13, &"anim_melee_unarmed_attack_kick", &"upper_state", 14, &"anim_use_item", &"upper_state", 15, &"anim_running_holding_rifle", &"upper_blend", 0, &"sneak_blend", &"upper_blend", 1, &"upper_speed", &"sneak_blend", 0, &"torso_blend", &"sneak_blend", 1, &"sneak_speed", &"torso_blend", 0, &"locomotion", &"torso_blend", 1, &"torso_locomotion", &"upper_speed", 0, &"upper_state", &"dodge_state", 0, &"anim_dodge_forward", &"dodge_state", 1, &"anim_dodge_backward", &"dodge_state", 2, &"anim_dodge_left", &"dodge_state", 3, &"anim_dodge_right", &"dodge_shot", 0, &"upper_blend", &"dodge_shot", 1, &"dodge_state"]

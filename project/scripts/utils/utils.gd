@@ -71,3 +71,8 @@ static func print_log(message:String, add_time_stamp:bool = false):
 			print("%s\n%s\n\n" % [time, message])
 		else:
 			print("%s\n\n" % message)
+
+
+static func rig_bone(p_skeleton: Skeleton3D, p_profile_name: String, p_legacy_name: String) -> int:
+	var index: int = p_skeleton.find_bone(p_profile_name)
+	return index if index >= 0 else p_skeleton.find_bone(p_legacy_name)
