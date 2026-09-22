@@ -33,7 +33,7 @@ const KITS: Array = [
 				"Color_Dirt": DIRT, "Color_Dust": DUST,
 			}},
 	{"name": "apocalypse_weapons", "source": "res://_not_exported/Apocalypse_Weapons.blend",
-			"family": "prefix", "skip": []},
+			"family": "prefix", "skip": ["Frame"]},
 	{"name": "zombies", "source": "res://_not_exported/Zombies.blend",
 			"family": "prefix", "skip": ["Plane", "Text"]},
 ]
