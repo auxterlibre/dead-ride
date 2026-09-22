@@ -64,4 +64,20 @@ func _ready():
 	# --- the raw player path plays a death clip
 	var player: AnimationPlayer = body.get_node("BodyContainer/AnimationPlayer")
 	check(player.has_animation("character_library/death_a"), "the player carries the death clips", "")
+
+	# --- the kit's own zombie clips drive the same rig
+	player.add_animation_library("zombie", load("res://assets/animations/zombie/zombie_library.tres"))
+	check(player.has_animation("zombie/run_forward") and player.has_animation("zombie/attack_bite")
+			and player.has_animation("zombie/death_backward"), "the zombie library carries run, bite and death", "")
+	tree.active = false
+	player.play("zombie/run_forward")
+	poses.clear()
+	for i in 40:
+		await get_tree().process_frame
+		if i % 10 == 9:
+			poses.append(skeleton.get_bone_global_pose(leg).basis.get_euler())
+	moved = 0.0
+	for i in poses.size() - 1:
+		moved = maxf(moved, poses[i].distance_to(poses[i + 1]))
+	check(moved > 0.05, "the zombie run swings the leg", "%.3f rad between samples" % moved)
 	finish()
