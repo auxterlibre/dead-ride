@@ -1,6 +1,6 @@
 Genre: Survival / Farming
 
-# Nowhere
+# Dead Ride
 
 In the middle of the desert lies a lonely gas station. As the owner you have to embrace the solitude and survive. You can start exploring the nearby areas by foot, but to venture further into the desert you are going to need a vehicle.
 

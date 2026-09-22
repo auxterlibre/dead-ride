@@ -11,7 +11,7 @@ func _init():
 	var uvs:PackedVector2Array = arrays[Mesh.ARRAY_TEX_UV]
 	var indices:PackedInt32Array = arrays[Mesh.ARRAY_INDEX]
 	var atlas:Image = Image.load_from_file(
-			"C:/Projects/Godot/Nowhere/Project/assets/textures/environment/nature_texture.png")
+			"C:/Projects/Games/dead-ride/project/assets/textures/environment/nature_texture.png")
 	print("DBG %d vertices, %d indices (%d triangles)" % [
 			vertices.size(), indices.size(), indices.size() / 3.0])
 	for i in vertices.size():

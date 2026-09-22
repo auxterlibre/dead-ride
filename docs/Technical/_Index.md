@@ -1,6 +1,6 @@
 # Technical Documentation
 
-Reference for designers and developers working on Nowhere. Each doc covers the data structures, field meanings, and tuning guidelines for a system.
+Reference for designers and developers working on Dead Ride. Each doc covers the data structures, field meanings, and tuning guidelines for a system.
 
 ## Contents
 
