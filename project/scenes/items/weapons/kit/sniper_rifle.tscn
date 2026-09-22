@@ -1,0 +1,188 @@
+[gd_scene format=3 uid="uid://qqbj2pr8g0al"]
+
+[ext_resource type="Script" uid="uid://bb84leyvqya52" path="res://scripts/weapons/weapon_ranged.gd" id="1_a3yoh"]
+[ext_resource type="ArrayMesh" uid="uid://chmyl5texv7k7" path="res://assets/meshes/apocalypse_weapons/sr/parts/sr_1_base.tres" id="2_3k4ab"]
+[ext_resource type="ArrayMesh" uid="uid://cvqv7p2al4mwg" path="res://assets/meshes/apocalypse_weapons/sr/parts/sr_1_bipod.tres" id="3_ptdq2"]
+[ext_resource type="ArrayMesh" uid="uid://bmifncooo50do" path="res://assets/meshes/apocalypse_weapons/sr/parts/sr_1_bolt.tres" id="4_iox08"]
+[ext_resource type="ArrayMesh" uid="uid://dlpe84p8e563x" path="res://assets/meshes/apocalypse_weapons/sr/parts/sr_1_magazine.tres" id="5_3cyq1"]
+[ext_resource type="ArrayMesh" uid="uid://cbsajk7avxuub" path="res://assets/meshes/apocalypse_weapons/sr/parts/sr_1_magazine_extended.tres" id="6_bqqtw"]
+[ext_resource type="ArrayMesh" uid="uid://kic0rkbwoyl6" path="res://assets/meshes/apocalypse_weapons/sr/parts/sr_1_trigger.tres" id="7_luaic"]
+[ext_resource type="AudioStream" uid="uid://busgmg8xmy2yq" path="res://assets/audio/weapons/assault_rifle/rifle_1.ogg" id="8_nlm8h"]
+[ext_resource type="AudioStream" uid="uid://dy6lrrxt3n451" path="res://assets/audio/weapons/revolver/revolver_empty.ogg" id="9_wj01x"]
+[ext_resource type="AudioStream" uid="uid://cjw00kpu7gf7u" path="res://assets/audio/weapons/assault_rifle/assault_rifle_reload.ogg" id="10_3t6yx"]
+[ext_resource type="Material" uid="uid://ck1g0yhnu17d0" path="res://assets/materials/vfx/muzzle_flash_material.tres" id="11_4x2sk"]
+[ext_resource type="Material" uid="uid://bnk4228833aia" path="res://assets/materials/vfx/muzzle_smoke_process.tres" id="12_kmihh"]
+[ext_resource type="Material" uid="uid://dfxwur61miahe" path="res://assets/materials/vfx/muzzle_smoke_material.tres" id="13_gjup3"]
+[ext_resource type="AudioStream" uid="uid://bny4nwvtkwclw" path="res://assets/audio/weapons/sniper_rifle/sniper_rifle_eject.wav" id="14_jp3rd"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_flash"]
+material = ExtResource("11_4x2sk")
+size = Vector2(1.5, 1.5)
+orientation = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_smoke"]
+material = ExtResource("13_gjup3")
+size = Vector2(0.22, 0.22)
+
+[node name="SniperRifle" type="Node3D" unique_id=51067714]
+script = ExtResource("1_a3yoh")
+
+[node name="Model" type="MeshInstance3D" parent="." unique_id=1990531909]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+mesh = ExtResource("2_3k4ab")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Place_SR1_BarBottom" type="Node3D" parent="Model" unique_id=407287450]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.7951857e-05, 0.044541836, 0.4451313)
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Place_SR1_BarLeft" type="Node3D" parent="Model" unique_id=1698095703]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.032528784, 0.082321644, 0.39174843)
+metadata/extras = {
+"MM": {}
+}
+
+[node name="Place_SR1_BarRight" type="Node3D" parent="Model" unique_id=1874089311]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.032528773, 0.082321644, 0.39174843)
+metadata/extras = {
+"MM": {}
+}
+
+[node name="Place_SR1_Bipod" type="Node3D" parent="Model" unique_id=730263094]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.11326122, 0.5456009)
+metadata/extras = {
+"MM": {}
+}
+
+[node name="Place_SR1_Charm" type="Node3D" parent="Model" unique_id=421103015]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.021219054, 0.062812805, 0.23589993)
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Place_SR1_Magazine" type="Node3D" parent="Model" unique_id=44241624]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05009556, 0.2165165)
+metadata/extras = {
+"MM": {}
+}
+
+[node name="Place_SR1_Muzzle" type="Node3D" parent="Model" unique_id=364534703]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.11326218, 0.9727917)
+metadata/extras = {
+"MM": {}
+}
+
+[node name="Place_SR1_Sight" type="Node3D" parent="Model" unique_id=1290361970]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.4171996e-05, 0.14538383, 0.18491173)
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="SR1_Bipod" type="MeshInstance3D" parent="Model" unique_id=444416207]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.15004158, 0.5456009)
+visible = false
+mesh = ExtResource("3_ptdq2")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="SR1_Bolt" type="MeshInstance3D" parent="Model" unique_id=245053752]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.8036195e-06, 0.113265514, 0.12524319)
+mesh = ExtResource("4_iox08")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="SR1_Magazine" type="MeshInstance3D" parent="Model" unique_id=1736061995]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05009556, 0.2165165)
+mesh = ExtResource("5_3cyq1")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="SR1_MagazineExtended" type="MeshInstance3D" parent="Model" unique_id=1979324392]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.17740536, 0.2165165)
+visible = false
+mesh = ExtResource("6_bqqtw")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="SR1_Trigger" type="MeshInstance3D" parent="Model" unique_id=1995298757]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.031451702, 0.07591057)
+mesh = ExtResource("7_luaic")
+skeleton = NodePath("")
+metadata/extras = {
+"MM": {},
+"hops": {}
+}
+
+[node name="Mesh" type="MeshInstance3D" parent="." unique_id=1960326227]
+
+[node name="ProjectileSpawn" type="Marker3D" parent="." unique_id=2001151894]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9727917, 0.11326218, -4.2522075e-08)
+
+[node name="AudioShoot" type="AudioStreamPlayer3D" parent="." unique_id=738062007]
+stream = ExtResource("8_nlm8h")
+bus = &"SFX"
+
+[node name="AudioEmpty" type="AudioStreamPlayer3D" parent="." unique_id=2019555685]
+stream = ExtResource("9_wj01x")
+bus = &"SFX"
+
+[node name="AudioReload" type="AudioStreamPlayer3D" parent="." unique_id=906187122]
+stream = ExtResource("10_3t6yx")
+bus = &"SFX"
+
+[node name="MuzzleFlashLight" type="SpotLight3D" parent="." unique_id=649159004]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 0.9727917, 0.11326218, -4.2522075e-08)
+light_color = Color(1, 0.77186924, 0.39790225, 1)
+light_energy = 0.0
+shadow_enabled = true
+spot_range = 2.5
+spot_attenuation = 2.5
+spot_angle = 75.0
+spot_angle_attenuation = 2.0
+
+[node name="Core" type="OmniLight3D" parent="MuzzleFlashLight" unique_id=943718397]
+light_color = Color(1, 0.77186924, 0.39790225, 1)
+light_energy = 0.0
+omni_range = 1.5
+omni_attenuation = 1.5
+
+[node name="MuzzleFlash" type="MeshInstance3D" parent="." unique_id=948393663]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2727916, 0.11326218, -4.2522075e-08)
+visible = false
+cast_shadow = 0
+mesh = SubResource("QuadMesh_flash")
+
+[node name="Smoke" type="GPUParticles3D" parent="." unique_id=1367432190]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9727917, 0.11326218, -4.2522075e-08)
+emitting = false
+amount = 1
+lifetime = 1.4
+one_shot = true
+explosiveness = 0.9
+process_material = ExtResource("12_kmihh")
+draw_pass_1 = SubResource("QuadMesh_smoke")
+
+[node name="AudioEject" type="AudioStreamPlayer3D" parent="." unique_id=850589766]
+stream = ExtResource("14_jp3rd")
+bus = &"SFX"

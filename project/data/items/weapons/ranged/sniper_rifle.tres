@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="WeaponData" format=3 uid="uid://cjnlowp1frjup"]
 
 [ext_resource type="Texture2D" uid="uid://cov3pt58egby0" path="res://assets/textures/thumbnails/weapons/sniper_rifle.png" id="1_81gg3"]
-[ext_resource type="PackedScene" uid="uid://b11752001igh3" path="res://scenes/items/weapons/sniper_rifle.tscn" id="2_qr0c3"]
+[ext_resource type="PackedScene" path="res://scenes/items/weapons/kit/sniper_rifle.tscn" id="2_qr0c3"]
 [ext_resource type="Script" uid="uid://dmpo1qr4cr7tg" path="res://scripts/data/items/weapon_data.gd" id="3_nik0j"]
 
 [resource]

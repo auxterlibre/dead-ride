@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="WeaponData" format=3]
+
+[ext_resource type="Script" uid="uid://dmpo1qr4cr7tg" path="res://scripts/data/items/weapon_data.gd" id="1_script"]
+[ext_resource type="PackedScene" path="res://scenes/items/weapons/kit/bat.tscn" id="2_model"]
+
+[resource]
+script = ExtResource("1_script")
+type = 1
+weapon_class = 6
+damage = 45
+fire_rate = 5
+knockback_distance = 60
+noise = 0
+max_ammo = 0
+model = ExtResource("2_model")
+name = "Bat"
+weight = 1.0
+size = Vector2i(1, 3)

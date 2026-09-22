@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="WeaponData" format=3 uid="uid://crea3bgntuyjk"]
 
-[ext_resource type="PackedScene" uid="uid://c5smg2r7q8k4d" path="res://scenes/items/weapons/smg.tscn" id="1_model"]
+[ext_resource type="PackedScene" path="res://scenes/items/weapons/kit/smg.tscn" id="1_model"]
 [ext_resource type="Texture2D" uid="uid://df7877cquc1ip" path="res://assets/textures/thumbnails/weapons/smg.png" id="1_ykc8o"]
 [ext_resource type="Script" uid="uid://dmpo1qr4cr7tg" path="res://scripts/data/items/weapon_data.gd" id="2_script"]
 

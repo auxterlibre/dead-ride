@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="WeaponData" format=3 uid="uid://ci77gufv1t8sf"]
 
-[ext_resource type="PackedScene" uid="uid://bu3xa8x6rmgtq" path="res://scenes/items/weapons/shotgun.tscn" id="1_gxmej"]
+[ext_resource type="PackedScene" path="res://scenes/items/weapons/kit/shotgun.tscn" id="1_gxmej"]
 [ext_resource type="Texture2D" uid="uid://cw8pn6862tewa" path="res://assets/textures/thumbnails/weapons/shotgun.png" id="1_owo44"]
 [ext_resource type="Script" uid="uid://dmpo1qr4cr7tg" path="res://scripts/data/items/weapon_data.gd" id="2_owo44"]
 

@@ -5,6 +5,8 @@ extends ProbeBase
 
 const OUTFITS: PackedStringArray = ["res://data/outfits/survivor_a.tres",
 		"res://data/outfits/policeman.tres"]
+const WEAPONS: PackedStringArray = ["res://data/items/weapons/ranged/pistol.tres",
+		"res://data/items/weapons/ranged/assault_rifle.tres"]
 
 
 func _ready():
@@ -39,7 +41,7 @@ func _ready():
 		var body: Character = (load("res://scenes/characters/humanoid_base.tscn") as PackedScene).instantiate()
 		var data: CharacterData = CharacterData.new()
 		data.body_path = OUTFITS[i]
-		data.weapon_inventory = [load("res://data/items/weapons/ranged/pistol.tres")]
+		data.weapon_inventory = [load(WEAPONS[i])]
 		body.data = data
 		var movement: CharacterMovement = CharacterMovement.new()
 		movement.name = "CharacterMovement"

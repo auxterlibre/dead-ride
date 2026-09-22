@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="WeaponData" format=3 uid="uid://bgaiw355fdx7y"]
 
 [ext_resource type="Texture2D" uid="uid://dplec4wwtvpxv" path="res://assets/textures/thumbnails/weapons/assault_rifle.png" id="1_d0c5p"]
-[ext_resource type="PackedScene" uid="uid://b7khisfpkypb2" path="res://scenes/items/weapons/assault_rifle.tscn" id="2_3cgss"]
+[ext_resource type="PackedScene" path="res://scenes/items/weapons/kit/assault_rifle.tscn" id="2_3cgss"]
 [ext_resource type="Script" uid="uid://dmpo1qr4cr7tg" path="res://scripts/data/items/weapon_data.gd" id="3_p03eo"]
 
 [resource]

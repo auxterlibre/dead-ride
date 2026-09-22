@@ -1,4 +1,4 @@
-[gd_resource type="AnimationNodeBlendTree" format=3]
+[gd_resource type="AnimationNodeBlendTree" format=3 uid="uid://c1en85du5tavd"]
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_dodgeb"]
 resource_name = "dodge_backward"
@@ -179,7 +179,7 @@ animation = &"gen/crouching"
 
 [sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_n6s7e"]
 filter_enabled = true
-filters = ["%GeneralSkeleton:Chest", "%GeneralSkeleton:Head", "%GeneralSkeleton:Hips", "%GeneralSkeleton:LeftLowerArm", "%GeneralSkeleton:RightLowerArm", "%GeneralSkeleton:Spine", "%GeneralSkeleton:LeftUpperArm", "%GeneralSkeleton:RightUpperArm", "%GeneralSkeleton:LeftHand", "%GeneralSkeleton:RightHand"]
+filters = ["%GeneralSkeleton:Chest", "%GeneralSkeleton:Head", "%GeneralSkeleton:Hips", "%GeneralSkeleton:LeftHand", "%GeneralSkeleton:LeftLowerArm", "%GeneralSkeleton:LeftUpperArm", "%GeneralSkeleton:RightHand", "%GeneralSkeleton:RightLowerArm", "%GeneralSkeleton:RightUpperArm", "%GeneralSkeleton:Spine"]
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_2ls4u"]
 resource_name = "idle_a"
@@ -207,7 +207,7 @@ blend_point_2/name = &"2"
 
 [sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_armdn"]
 filter_enabled = true
-filters = ["%GeneralSkeleton:Chest", "%GeneralSkeleton:Head", "%GeneralSkeleton:LeftLowerArm", "%GeneralSkeleton:RightLowerArm", "%GeneralSkeleton:Spine", "%GeneralSkeleton:LeftUpperArm", "%GeneralSkeleton:RightUpperArm", "%GeneralSkeleton:LeftHand", "%GeneralSkeleton:RightHand"]
+filters = ["%GeneralSkeleton:Chest", "%GeneralSkeleton:Head", "%GeneralSkeleton:LeftHand", "%GeneralSkeleton:LeftLowerArm", "%GeneralSkeleton:LeftUpperArm", "%GeneralSkeleton:RightHand", "%GeneralSkeleton:RightLowerArm", "%GeneralSkeleton:RightUpperArm", "%GeneralSkeleton:Spine"]
 
 [sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_n6s7e"]
 

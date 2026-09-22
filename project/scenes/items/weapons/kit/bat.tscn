@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://c7x6f4i4vsbip"]
+
+[ext_resource type="Script" uid="uid://c83auvf3qviud" path="res://scripts/weapons/weapon_melee.gd" id="1_l6cte"]
+[ext_resource type="ArrayMesh" uid="uid://bcesaoekgluhx" path="res://assets/meshes/zombies/bat/bat.tres" id="2_hpsaq"]
+[ext_resource type="Script" uid="uid://cgl4k3cfb8jor" path="res://scripts/components/character/hit_box.gd" id="3_yb1u0"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_aga16"]
+size = Vector3(0.3, 0.53755844, 0.3)
+
+[node name="Bat" type="Node3D" unique_id=1710328740]
+script = ExtResource("1_l6cte")
+
+[node name="Mesh" type="MeshInstance3D" parent="." unique_id=1411196661]
+mesh = ExtResource("2_hpsaq")
+
+[node name="HitBox" type="Area3D" parent="." unique_id=1881407586]
+collision_layer = 0
+collision_mask = 0
+monitoring = false
+monitorable = false
+script = ExtResource("3_yb1u0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HitBox" unique_id=1738293539]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00012655556, 0.5025631, -7.450581e-09)
+shape = SubResource("BoxShape3D_aga16")
